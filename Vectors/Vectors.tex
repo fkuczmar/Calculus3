@@ -334,15 +334,28 @@ Given two spheres that intersect, we'll use vector arithmetic to find the center
 
 \begin{itemize}
 
-\item{Let the spheres have centers $(x_1, y_1, z_1)$, $(x_2, y_2, z_2)$ with respective radii $r_1$ and $r_2$.} 
+\item{Let the spheres have centers $(a_1, b_1, c_1)$, $(a_2, b_2, c_2)$ with respective radii $r_1$ and $r_2$.} 
 
 \item{Let ${\bf v}_1$ and ${\bf v}_2$ be the vectors from the origin to the respective centers.}
 
 \end{itemize}
 
-Express the vector ${\bf c}$ from the origin to the center of the circle of intersection in terms of the vectors ${\bf v}_1$, ${\bf v}_2$ and the scalars $r_1$, $r_2$. 
+Express the vector ${\bf c}$ from the origin to the center of the circle of intersection in terms of the vectors ${\bf v}_1$, ${\bf v}_2$ and the scalars $r_1$, $r_2$, $r_1$, $r_2$, and $|{\bf v}_1-{\bf v}_2|$. 
 
-Use desmos or geogebra to check your work. What happens if the spheres do not intersect?
+Do {\bf not} work with the components of ${\bf v}_1$ and ${\bf v}_2$, but just the vectors themselves. That way your expression for ${\bf c}$ should work for any number of dimensions. 
+
+Follow the directions in the demonstration below to check your work in two-dimensions. Desmos does not recognize the absolute value symbol for the magnitude of a vector. So use 
+\[
+    d = \sqrt{(a_1-a_2)^2 + (b_1-b_2)^2}
+\]
+in place of 
+\[
+   |{\bf v}_1-{\bf v}_2|.
+\]
+
+What happens if the circles do not intersect? Can you explain this?
+
+
 
 \pdfOnly{
 Access Desmos interactives through the online version of this text at
