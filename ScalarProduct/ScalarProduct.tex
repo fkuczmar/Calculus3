@@ -11,6 +11,65 @@ An introduction to vector and scalar projections
 
 \section{Vector Projections}
 
+It often helps in applications like physics to resolve a vector ${\bf v}$ into two components, one parallel to a given vector ${\bf w}$ and the other perpendicular to ${\bf w}$. For example, resolving the acceleration vector into components parallel and perpendicular to the velocity vector gives information about the external forces acting on an object and how they affect the object's speed and the rate at which it changes direction.
+
+The scalar projection of the vector ${\bf v}$ in the direction of the vector ${\bf w}$ is the vector ${\bf v}_{par}$ parallel to ${\bf w}$ that make the difference
+\[
+      {\bf v}_{perp} = {\bf v} - {\bf v}_{par}
+\]
+perpendicular to ${\bf w}$.
+
+In two dimensions slope makes it easy to determine if two vectors are parallel. But we cannot really talk about the slope of a vector in $\mathbb{R}^3$ or higher dimensions. So to resolve a vector into two components as just described, we need a way to determine whether two vectors in the same dimension are perpendicular. It you think about this problem from scratch (ie. ignoring what you may have read in another source), the solution is not immediately obvious.
+
+\begin{question}  \label{Q235r74:Scalar}
+Which of the following are equivalent to the condition that the non-zero vectors ${\bf a}, {\bf b} \in \mathbb{R}^n$ are perpendicular? Check all that apply. Draw pictures.
+
+\begin{selectAll}  
+    \choice{The vectors ${\bf a}+{\bf b}$ and ${\bf a}-{\bf b}$ are perpendicular.}  
+    \choice{The vector ${\bf a}+{\bf b}$ bisects the angle between ${\bf a}$ and ${\bf b}$.}  
+    \choice[correct]{$|{\bf a}+{\bf b}| = |{\bf a}-{\bf b}|$}  
+    \choice[correct]{$|{\bf a}+{\bf b}|^2 = |{\bf a}|^2 + |{\bf b}|^2$}
+      \choice{$|{\bf a}-{\bf b}|^2 = |{\bf a}|^2-|{\bf b}|^2$}
+    \choice[correct]{$|{\bf a}-{\bf b}|^2 = |{\bf a}|^2+|{\bf b}|^2$} 
+  \end{selectAll}  
+ \end{question}
+
+
+\begin{question}   \label{Q32erdf:Scalar}
+Use one of the correct conditions above to find an algebraic condition for the vectors 
+\[
+    {\bf v}_1= \langle x_1, y_1, z_1 \rangle, {\bf v}_2 = \langle  x_2, y_2, z_2\rangle \in \mathbb{R}^3 
+\]
+to be perpendicular.
+\end{question}
+
+
+\begin{question}   \label{Qrasd5r:Scalar}
+(a) Given vectors ${\bf v}, {\bf w} \in \mathbb{R}^n$, use the scalar product to determine the value of the number $\lambda\in \mathbb{R}$ that makes the vector
+\[
+     {\bf v}_{perp} = {\bf v} - \lambda {\bf w}
+\]
+perpendicular to ${\bf w}$.
+
+(b) Use part (a) to find an expression for the component of ${\bf v}$ in the direction of ${\bf w}$.
+\end{question}
+
+
+\begin{question}  \label{Qfgsadge:Scalar}
+Let ${\cal L}$ be the line through the origin and the point $A(3,1,4)$ and let $Q$ be the point with coordinates $(7,5,11)$.
+
+(a) Use a vector projection to find the coordinates of the point on ${\cal L}$ closest to $Q$.
+
+(b) Use calculus to find the coordinates of the point on ${\cal L}$ closest to $Q$.
+
+(c) Compare your solutions to (a) and (b).
+
+(d) Find an equation of the circular cylinder through $Q$ that is symmetric about ${\cal L}$. {\it Hint:} Start by descrbing the cylinder as a set of points satisfying some condition involving distance. Then translate this description into an equation.
+\end{question}
+
+
+\section{Reflecting off a Mirror}
+
 \pdfOnly{
 Access Geogebra interactives through the online version of this text at
  
