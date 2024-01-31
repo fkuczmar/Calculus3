@@ -138,13 +138,13 @@ Which of the following is a reasonable approximation of the rate at which point 
 \choice{$0.5$ rad/sec} 
 \choice{$12$ rad/sec}
 \end{multipleChoice}  
-\end{question}
-
 
 (b) Using the rate of rotation from part (a), compute the speed of $P$ as it moves around the circle of radius $20$ meters. 
 \[
    \answer{60} \text{ meters/sec}
 \]
+
+\end{question}
 
 
 \pdfOnly{
@@ -163,16 +163,16 @@ Access Desmos interactives through the online version of this text at
 (c) Suppose instead we wish to find the velocity of the point $P$ in the animation above. Velocity is a vector; it is the rate at which the position of an object changes with respect to time. The (instantaneous) velocity vector points in the direction of motion and is  tangent to the path. The magnitude of the velocity vector gives the speed of the motion. While the speed of point $P$ in the above animation is constant, its velocity is not. That's because the direction of motion keeps changing.
 
 \begin{question}   \label{Q3456457l:Cross}
-Activate the {\it Velocity and Position Vectors} folder Line 3 of the above animation by clicking the circle at the left of the line. We'll use Use the speed from part (b) to find the velocity ${\bf v}$ of $P$ as it passes the point $Q$ with coordinates $(12,16)$.
+Activate the {\it Velocity and Position Vectors} folder Line 3 of the above animation by clicking the circle at the left of the line. We'll use the speed from part (b) to find the velocity ${\bf v}$ of $P$ as it passes the point $Q$ with coordinates $(12,16)$.
 
-(i) First find the components of the vector ${\bf r}=\overrightarrow{OQ}$ that gives the position of $Q$ with respect to the origin.
+(i) First find the components of the vector ${\bf r}=\overrightarrow{OQ}$ that gives the position of $Q$ relative to the origin.
 \[
-    {\bf r} = \answer{12}{\bf i} + \answer{16}{\bf j} \text{ m}
+    {\bf r} = \answer{12}{\bf i} + \answer{16}{\bf j} \text{ meters}
 \]
 
-(ii) Next find the components of a vector ${\bf u}$ that points in the direction of the velocity vector ${\bf v}$ and has the same magnitudeas ${\bf r}$. {\it Hint:} Because the path is a circle, ${\bf v}$ is perpendicular to ${\bf r}$. Think about a dot product (instead of slope) to find the two possibilities for ${\bf u}$. Then choose the one with the correct direction.
+(ii) Next find the components of a vector ${\bf u}$ that points in the direction of the velocity vector ${\bf v}$ and has the same magnitude as ${\bf r}$. {\it Hint:} Because the path is a circle, ${\bf v}$ is perpendicular to ${\bf r}$. Think about a dot product (instead of slope) to find the two possibilities for ${\bf u}$. Then choose the one with the correct direction, pointing in the (forward) direction of motion.
 \[
-    {\bf u} =  \answer{-16}{\bf i} + \answer{12}{\bf j} \text{ m}
+    {\bf u} =  \answer{-16}{\bf i} + \answer{12}{\bf j} \text{ meters}
 \]
 
 (iii) Finally, find the components of the velocity vector ${\bf v}$ by scaling ${\bf u}$ so that it has the correct length.
@@ -189,28 +189,13 @@ Activate the {\it Velocity and Position Vectors} folder Line 3 of the above anim
  
 
 \section{Rotating Space About an Axis}
-There is a better way to compute the velocity of a point rotating in a plane and that's to consider the plane as being part of three-dimensional space and thinking about a rotation of that space.
+There is a better way to compute the velocity of a point rotating in a plane, by considering the plane as being part of three-dimensional space and thinking about a rotation of that space.
 
-We rotate space about about an axis, not a point. To describe both the sense and the rate of a rotation, we give a vector $\boldsymbol{\omega}$ parallel to the axis. The vector $\boldsymbol{\omega}$ is called the \emph{angular velocity} of the rotation. Its components have units of rad/sec and the magnitude $|\boldsymbol{\omega}|$ gives the rotation rate. The direction of $\boldsymbol{\omega}$ tells us the sense of rotation - point your right thumb in the direction of $\boldsymbol{\omega}$ and curl your fingers about the axis and your fingers give you the sense of rotation.
+We rotate space about about an axis, not a point. To describe both the sense and the rate of a rotation, we give a vector $\boldsymbol{\omega}$ parallel to the axis. The vector $\boldsymbol{\omega}$ is called the \emph{angular velocity} of the rotation. Its components have units of rad/sec and the magnitude $|\boldsymbol{\omega}|$ gives the rotation rate. The direction of $\boldsymbol{\omega}$ tells us the sense of rotation - point your right thumb in the direction of $\boldsymbol{\omega}$ and curl your fingers about the axis; your fingers give you the sense of rotation.
 
 \begin{exploration}  \label{Ex4gb3e3:Cross}
 
 (a) Check that the sense of rotation is correct in the animation below where the angular velocity is the vector $\boldsymbol{\omega} = \overrightarrow{OA}$. Drag points $P$ and $A$ to see if the sense of rotation remains correct.
-
-(b) What angle does the velocity vector of point $E$ make with the angular velocity vector $\boldsymbol{\omega}$? 
-\begin{question} \label{Qdsbhjj}
-\[
-   \answer{\pi/2} \text{ radians}
-\]
-\end{question}
-
-(c) What angle does the velocity vector of point $E$ make with the vector ${\overrightarrow{OE}}$? This one might be harder to see. It always is for me. If so, a physical model might help (or wait a bit for an easier way to visualize this angle).
-
-\begin{question} \label{Qddsghhhjj}
-\[
-   \answer{\pi/2} \text{ radians}
-\]
-\end{question}
 
 
 \pdfOnly{
@@ -224,6 +209,25 @@ Access Desmos interactives through the online version of this text at
 \geogebra{qmzanr8h}{900}{600}
 \end{center}
 \end{onlineOnly}
+
+\begin{question} \label{Qdsbhjj}
+What angle does the velocity vector of point $E$ make with the angular velocity vector $\boldsymbol{\omega}$? 
+\[
+   \answer{\pi/2} \text{ radians}
+\]
+\end{question}
+
+
+\begin{question} \label{Qddsghhhjj}
+What angle does the velocity vector of point $E$ make with the vector ${\overrightarrow{OE}}$? This one might be harder to see. It always is for me. If so, a physical model might help (or wait a bit for an easier way to visualize this angle).
+
+\[
+   \answer{\pi/2} \text{ radians}
+\]
+\end{question}
+
+
+
 
 \end{exploration}
 
@@ -240,7 +244,7 @@ Imagine the $xy$-coordinate system in the animation of Question 5  as being the 
 \begin{question}  \label{Qnjy55:Cross}
 Considering the animation in Question 5 as a slice of three-dimensional space rotating about the $z$-axis, let ${\bf r} = \overrightarrow{OP}$ be the position vector of any point $P$ in the $xy$-plane relative to the origin. Let ${\bf v}$ be the velocity of {\bf any} point $P$ in the plane and ${\bf r} = \overrightarrow{OP}$ the position of $P$ relative to the origin.
 
-(a) What angle does ${\bf v}$ make with ${\bf r}$? With $\boldsymbol{\omega}$?
+(a) What angle do the vectors ${\bf v}$,  ${\bf r}$, and $\boldsymbol{\omega}$ make with each other?
 \[
      \answer{\pi/2}\text{ radians}
 \]
@@ -248,13 +252,15 @@ Considering the animation in Question 5 as a slice of three-dimensional space ro
 (b) Express the speed $v$ (in meters/sec) of $P$ in terms of the distance $r = |{\bf r}|$ and the rotation rate $\omega  =\boldsymbol{\omega}$.
 
 (c) Parts (a) and (b) suggest a way to express the velocity of $P$ in terms of the vectors ${\bf r}$ and $\boldsymbol{\omega}$.
+There are two potential choices. To choose the correct one, think about how the direction of ${\bf v}$ is related to the directions of $\boldsymbol{\omega}$ and ${\bf r}$. 
 
 
-(a) Express the velocity ${\bf v}$ of $P$ in terms of the vectors ${\bf\omega}$ and ${\bf r}$. \it{Hint:} Think about how the direction of ${\bf v}$ is related to the directions of $\boldsymbol{\omega}$ and ${\bf r}$. Think also about the magnitude of ${\bf v}$, ie. the speed of $P$.
+sdfsaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
-(c) Check if your expression works when $P$ has coordinates $(12, 16,0)$.
 
-(d) Choose a specific point $O_1$on the $z$-axis other than the origin and let ${\bf r}_1 = \overrightarrow{O_1P}$ give the position of $P$ relative to $O_1$. Express the velocity ${\bf v}$ of $P$ in terms of the vectors ${\bf\omega}$ and ${\bf r}_1$. 
+(d) Check if your expression works when $P$ has coordinates $(12, 16,0)$.
+
+(e) Choose a specific point $O_1$on the $z$-axis other than the origin and let ${\bf r}_1 = \overrightarrow{O_1P}$ give the position of $P$ relative to $O_1$. Express the velocity ${\bf v}$ of $P$ in terms of the vectors ${\bf\omega}$ and ${\bf r}_1$. 
 
 
 (e) Do your expressions in parts (c) and (d) give the correct velocity of a point in the plane $z=7$ as it passes $(-20,0,7)$?
