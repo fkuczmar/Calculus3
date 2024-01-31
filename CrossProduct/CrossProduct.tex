@@ -150,12 +150,12 @@ Which of the following is a reasonable approximation of the rate at which point 
 \pdfOnly{
 Access Desmos interactives through the online version of this text at
  
-\href{https://www.desmos.com/calculator/azxm3dowby}.
+\href{https://www.desmos.com/calculator/cofbphrshd}.
 }
  
 \begin{onlineOnly}
     \begin{center}
-\desmos{azxm3dowby}{900}{600}
+\desmos{cofbphrshd}{900}{600}
 \end{center}
 \end{onlineOnly}
 
@@ -170,9 +170,9 @@ Activate the {\it Velocity and Position Vectors} folder Line 3 of the above anim
     {\bf r} = \answer{12}{\bf i} + \answer{16}{\bf j} \text{ m}
 \]
 
-(ii) Next find the components of a vector ${\bf u}$ that points in the direction of the velocity vector ${\bf v}$ and has the same magnitude (numerically) as ${\bf r}$. {\it Hint:} Because the path is a circle, ${\bf v}$ is perpendicular to ${\bf r}$. Think about a dot product (instead of slope) to find two possibilities for ${\bf u}$. Then choose the one with the correct direction.
+(ii) Next find the components of a vector ${\bf u}$ that points in the direction of the velocity vector ${\bf v}$ and has the same magnitudeas ${\bf r}$. {\it Hint:} Because the path is a circle, ${\bf v}$ is perpendicular to ${\bf r}$. Think about a dot product (instead of slope) to find the two possibilities for ${\bf u}$. Then choose the one with the correct direction.
 \[
-    {\bf u} =  \answer{-16}{\bf i} + \answer{12}{\bf j} \text{ m/s}
+    {\bf u} =  \answer{-16}{\bf i} + \answer{12}{\bf j} \text{ m}
 \]
 
 (iii) Finally, find the components of the velocity vector ${\bf v}$ by scaling ${\bf u}$ so that it has the correct length.
@@ -180,6 +180,7 @@ Activate the {\it Velocity and Position Vectors} folder Line 3 of the above anim
      {\bf v} = \answer{3} {\bf u} = \answer{-48}{\bf i} + \answer{36}{\bf j} \text{ m/s}
 \]
 
+(iv) What are the units of the scalar in the above expression for ${\bf v}$? What is the meaning of the scalar?
 
 \end{question}  
 
@@ -187,15 +188,29 @@ Activate the {\it Velocity and Position Vectors} folder Line 3 of the above anim
 
  
 
+\section{Rotating Space About an Axis}
+There is a better way to compute the velocity of a point rotating in a plane and that's to consider the plane as being part of three-dimensional space and thinking about a rotation of that space.
 
-\section{Rotating About an Axis in Space}
-A rotation in space is about an axis, not a point. To describe both the sense and the rate of a rotation about an axis, we give a vector $\boldsymbol{\omega}$ parallel to the axis. The vector $\boldsymbol{\omega}$ is called the \emph{angular velocity} of the rotation. The components have units of rad/sec and the magnitude $|\boldsymbol{\omega}|$ gives the rotation rate. The direction of $\boldsymbol{\omega}$ tells us the sense of rotation - point your right thumb in the direction of $\boldsymbol{\omega}$ and curl your fingers about the axis to see the sense of rotation.
+We rotate space about about an axis, not a point. To describe both the sense and the rate of a rotation, we give a vector $\boldsymbol{\omega}$ parallel to the axis. The vector $\boldsymbol{\omega}$ is called the \emph{angular velocity} of the rotation. Its components have units of rad/sec and the magnitude $|\boldsymbol{\omega}|$ gives the rotation rate. The direction of $\boldsymbol{\omega}$ tells us the sense of rotation - point your right thumb in the direction of $\boldsymbol{\omega}$ and curl your fingers about the axis and your fingers give you the sense of rotation.
 
-\begin{exploration}
+\begin{exploration}  \label{Ex4gb3e3:Cross}
 
-(a) Check that the sense of rotation is correct in the animation below, where $\boldsymbol{\omega} = \overrightarrow{OP}$. Drag points $P$ and $A$ to see if the sense of rotation remains correct.
+(a) Check that the sense of rotation is correct in the animation below where the angular velocity is the vector $\boldsymbol{\omega} = \overrightarrow{OA}$. Drag points $P$ and $A$ to see if the sense of rotation remains correct.
 
-(b) What angle does the velocity vector of the point $E$ make with the angular velocity vector $\boldsymbol{\omega}$? With the vector ${\overrightarrow{OE}}$?
+(b) What angle does the velocity vector of point $E$ make with the angular velocity vector $\boldsymbol{\omega}$? 
+\begin{question} \label{Qdsbhjj}
+\[
+   \answer{\pi/2} \text{ radians}
+\]
+\end{question}
+
+(c) What angle does the velocity vector of point $E$ make with the vector ${\overrightarrow{OE}}$? This one might be harder to see. It always is for me. If so, a physical model might help (or wait a bit for an easier way to visualize this angle).
+
+\begin{question} \label{Qddsghhhjj}
+\[
+   \answer{\pi/2} \text{ radians}
+\]
+\end{question}
 
 
 \pdfOnly{
