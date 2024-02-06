@@ -112,11 +112,17 @@ Access Geogebra interactives through the online version of this text at
 \section{Velocity Questions}
 
 \begin{question}  \label{Qvhyu55:Motion}
-Let $r,k\in\mathbb{R}$ be constants. Show that all the tangent lines to the cylindrical helix
+Let $r,k\in\mathbb{R}$ be positive constants. 
+
+(a) Show that all the tangent lines to the cylindrical helix
 \[
   {\bf r}(t) =  \langle r \cos (\theta) , r \sin (\theta) , k \theta \rangle \, , \, \theta \in \mathbb{R}, 
 \]
 make the same angle with the $z$-axis. Find this angle both with and without calculus. 
+
+(b) Express the angle $\phi$ the tangent lines make with the $xy$-plane in terms of $r$ and $k$.
+
+(c) Express the $z$-coordinate of the parameterization above in terms of $r$, $\phi$, and $\theta$.
 \end{question}
 
 
@@ -125,7 +131,7 @@ Between times $t=0$ and $t=5$ seconds past noon, a gnat flies in a smooth path. 
 \[
        {\bf r}(t) =  \langle  \frac{18 }{1+t} , 9\ln (1+4t) , 6\arctan(t/2) \rangle \, , \, 0\leq t \leq 2 ,
 \]
-expresses the position (in meters) of the gnat relative to the origin for the first two seconds of its motion. And between times $t=2$ and $t=5$ seconds past noon, the gnat flies with a constant velocity. Find a multi-part function that gives the gnat's position (in meters) relative to the origin between times $t=0$ and $t=5$. 
+expresses the position (in meters) of the gnat relative to the origin for the first two seconds of its motion. Between times $t=2$ and $t=5$ seconds past noon, the gnat flies with a constant velocity. Find a multi-part function that gives the gnat's position (in meters) relative to the origin between times $t=0$ and $t=5$. 
 
 \end{question}
 
@@ -133,14 +139,14 @@ expresses the position (in meters) of the gnat relative to the origin for the fi
 \begin{question} \label{Qcbh65y6:Motion}
 At a certain instant, a gnat has position
 \[
-   {\bf r} = \langle -2, 5, 4\rangle \text{ meters}
+   {\bf r}_0 = \langle -2, 5, 4\rangle \text{ meters}
 \]
 relative to the origin and is moving with velocity
 \[
-  {\bf v} = \langle  2, 1,-1  \rangle \text{ m/sec} .
+  {\bf v}_0 = \langle  2, 1,-1  \rangle \text{ m/sec} .
 \]
 
-Is the gnat flying away from or toward the origin at this instant? At what rate? Justify your answer.
+Is the distance between the gnat and the origin increasing or decreasing at this instant? At what rate? Justify your answer.
 
 \end{question}
 
@@ -149,7 +155,24 @@ Is the gnat flying away from or toward the origin at this instant? At what rate?
 
 \begin{exploration}
 
- 
+The animation below shows the motion
+\[
+   {\bf p}_b(t) = \langle a\cos (\omega t), b \sin (\omega t)  \rangle \, , \, 0\leq t \leq 2\pi 
+\]
+of the rear wheel of a bicycle around an ellipse, where the components are measured in meters and time $t$ in seconds.
+Here $a$, $b$, and $\omega$ are positive constants.
+
+(a) What are the units of $a$, $b$, and $\omega$? How do you know?
+
+(b) What is the meaning of $\omega$?
+
+(c) Suppose the bicyle's frame has length $L$ meters ($L$ is the distance between the front and back axles.) Parameterize the motion of the front wheel. Work in general, not with the specific motion given above. That is, express the position ${\bf p}_f(t)$
+of the front wheel (really the point where the wheel touches the ground) at time $t$ in terms of the vector ${\bf p}_b(t)$ and $L$.
+
+(d) Compare the speeds of the two wheels as the bicycle moves along its path.
+
+(e) More questions to follow.
+
 \begin{onlineOnly}
     \begin{center}
 \desmos{cuo1lynesx}{900}{600}
