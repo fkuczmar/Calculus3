@@ -5,10 +5,12 @@
 
 \begin{document}
 \begin{abstract}
-Motion
+Parameterizing motion in the plane and in space. 
 \end{abstract}
 \maketitle
 
+
+\section{The Velocity Vector}
 
 \begin{exploration}
 Suppose  you're driving your car along a winding road. The instantaneous velocity of your car at some moment is the rate of change in its position with repsect to time. Since position is a vector, so is velocity. It has a direction and magnitude. The direction points in the direction you are moving  and the magnitude gives your speed.
@@ -67,6 +69,9 @@ Access Geogebra interactives through the online version of this text at
 \end{onlineOnly}
 
 
+\section{Graphing the Velocity Function}
+One way to graph the velocity function, or the average velocity function computed over some constant time interval, is to pin the velocity vectors with their tails at a common point. The tips of these clustered velocity vectors (instantaneous or average) trace out a curve. The next two demonstrations show examples, the first for projectile motion in a uniform gravitational field, the second for motion along cycloids.
+
 Access Geogebra interactives through the online version of this text at
  
 \href{https://www.geogebra.org/classic/egzphw3q}{Projectile Motion}.
@@ -108,6 +113,56 @@ Access Geogebra interactives through the online version of this text at
 \end{exploration}
 
 
+\section{From Velocity to Position}
+
+
+\begin{question}  \label{Qdst65nvcy}
+Given the velocity function ${\bf v}(t)$ of a motion, which of the following are also necessray to determine the position function? Choose all that apply.
+\begin{selectAll}  
+    \choice{The acceleration function}  
+    \choice{The velocity at a particular time}  
+    \choice[correct]{The position at a particular time}  
+    \choice{The velocity function is sufficient. Nothing else is needed.}  
+  \end{selectAll}
+\end{question}
+
+
+Backing up for a moment, let's review a key idea from Integral Calculus.
+\begin{question}  \label{Qddggt5t6vcy}
+Suppose the continuous function 
+\[
+    r=g(t) , 0\leq t \leq 6 ,
+\]
+expresses the rate (in gallons/min) at which water flows into a tank in terms of the number of minutes past noon. Suppose also that the tank holds $20$ gallons at time $t=t_0$ minutes past noon. Which of the following expressions gives the volume of water (in gallons) in the tank at time $t$ minutes past noon? Choose all that apply.
+\begin{selectAll}  
+    \choice{$20 + r(t)$}  
+    \choice{$\int r(t)\, dt + C$}  
+    \choice{$20 + \int_{t_0}^u r(t)\, dt$}  
+    \choice[correct]{$20 + \int_{t_0}^t r(u)\, du$}  
+  \end{selectAll}
+\end{question}
+
+One way to approximte the volume function is to use a step function to approximate the rate function. That is, we partition the interval $t\in [0,6]$ into subintervals, usually of equal lengths, and assume that the rate of flow is constant over each interval. The resulting volume function is then piecewise linear. 
+
+Experiment with the Desmos demonstration below to see this.
+
+Access Desmos interactive at
+ 
+\href{https://https://www.desmos.com/calculator/zswxfftnnk}{163: Riemann Sums and Integration}
+
+ 
+\begin{onlineOnly}
+    \begin{center}
+\desmos{zswxfftnnk}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+
+
+
+
+
+
 
 \section{Curves and Velocity Questions}
 
@@ -115,7 +170,7 @@ Access Geogebra interactives through the online version of this text at
 \begin{question}  \label{Qvhsdsdgt:Motion}
 Let $r,k_1, k_2\in\mathbb{R}$ be positive constants and consider the cylindrical helix
 \[
-  {\bf p}(t) =  \langle a \cos (k_1 \phi) , r \sin (k_1 \phi) , k_2 \phi \rangle \, , \, \phi \in \mathbb{R}, 
+  {\bf p}(\phi) =  \langle a \cos (k_1 \phi) , a \sin (k_1 \phi) , k_2 \phi \rangle \, , \, \phi \in \mathbb{R}, 
 \]
 where the components of the vector ${\bf p}(t)$ (giving the position of a point on the helix relative to the origin) are measured in meters.
 
@@ -150,7 +205,7 @@ Let $r,k\in\mathbb{R}$ be positive constants.
 
 (a) Show that all the tangent lines to the cylindrical helix
 \[
-  {\bf p}(t) =  \langle r \cos (\theta) , r \sin (\theta) , k \theta \rangle \, , \, \theta \in \mathbb{R}, 
+  {\bf p}(\theta) =  \langle r \cos (\theta) , r \sin (\theta) , k \theta \rangle \, , \, \theta \in \mathbb{R}, 
 \]
 make the same angle with the $z$-axis. Find this angle both with and without calculus. 
 
