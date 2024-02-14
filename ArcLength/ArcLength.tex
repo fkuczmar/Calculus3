@@ -14,6 +14,8 @@ Parameterizing curves by arclength.
 
 \begin{question}  \label{Qgdghubhgfdg}
 
+Imagine a thread wrapped around a spool of radius $a$ cm. Grab the free end of the thread, and uwrap it from the spool, keeping the thread taut at all times. Drag the slider $u$ in the demonstration below to see this.
+
 \pdfOnly{
 Access Geogebra interactives through the online version of this text at
  
@@ -25,6 +27,32 @@ Access Geogebra interactives through the online version of this text at
 \geogebra{ynujwbty}{900}{600}
 \end{center}
 \end{onlineOnly}
+
+
+Our aim is to express the speed of the free end of the thread ($P$) at any particular instant in terms of the radius $a$, the length of unwound thread $s$ (in cm), and the rate $v$ (in cm/sec) at which the thread is unwound from the spool. In the demonstration above, $v$ is constant, but we will not assume this. 
+
+We'll proceed as follow:
+
+(a) First find an arclength parameterization of the circle of radius $a$ centered at the origin. Measure the arclength parameter $s$ counterclockwise around the circle, taking $s=0$ at the point $(a,0)$. Enter this parameterization in the line below, where the position vector ${\bf p}(s) = \overrightarrow{OA}$ runs from the origin to the point on the circle with arclength parameter $s$:
+\[
+    {\bf p}(s) = \langle \answer{a \cos (s/a)} , \answer{a \sin (s/a)}  \rangle \, , s\geq 0 
+\]
+
+(b) Next find a unit vector ${\bf T}(s)$ pointing in the direction of motion of point $A$ (this is the point where the unwrapped portion of the thread is tangent to the spool). 
+\[
+    {\bf T}(s) = \langle \answer{- \sin (s/a)} , \answer{\cos (s/a)}  \rangle \, , s\geq 0
+\]
+
+(c) Now find the components of the vector ${\bf q}(s) = \overrightarrow{AP}$, from $A$ to the free end of the thread. {\it Hint:} Think about the length of this vector and its direction.
+\[
+     {\bf q}(s) = \overrightarrow{AP} = \langle \answer{s \sin (s/a)} , \answer{-s \cos (s/a)}  \rangle \, , s\geq 0
+\]
+
+(d) Write the vector ${\bf r}(s) = \overrightarrow{OP}$ in terms of the vectors ${\bf p}(s)$ and ${\bf q}(s)$:
+\begin{align*}
+  {\bf r}(s)   &= {\bf p}(s) \answer{+} {\bf q}(s)   \\
+                  &= \langle \answer{a \cos (s/a)} , \answer{a \sin (s/a)}  \rangle  +  \langle \answer{s \sin (s/a)} , \answer{-s \cos (s/a)}
+\end{align*}
 
 \end{question}
 
