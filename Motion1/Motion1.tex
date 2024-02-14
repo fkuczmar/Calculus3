@@ -133,11 +133,12 @@ Suppose the continuous function
 \[
     r=g(t) , 0\leq t \leq 6 ,
 \]
-expresses the rate (in gallons/min) at which water flows into a tank in terms of the number of minutes past noon. Suppose also that the tank holds $20$ gallons at time $t=t_0$ minutes past noon. Which of the following expressions gives the volume of water (in gallons) in the tank at time $t$ minutes past noon? Choose all that apply.
+expresses the rate (in gallons/min) at which water flows into a tank in terms of the number of minutes past noon. Suppose also that the tank holds $20$ gallons at time $t=t_0$ minutes past noon. Which of the following expressions gives the volume of water (in gallons) in the tank at time $t$ minutes past noon? Choose all that apply. Explain your reasoning.
 \begin{selectAll}  
     \choice{$20 + r(t)$}  
     \choice{$\int r(t)\, dt + C$}  
-    \choice{$20 + \int_{t_0}^u r(t)\, dt$}  
+    \choice{$\int r(t)\, dt + C$}
+    \choice{$\int_{t_0}^t r(u)\, du$}  
     \choice[correct]{$20 + \int_{t_0}^t r(u)\, du$}  
   \end{selectAll}
 \end{question}
@@ -158,12 +159,15 @@ Access Desmos interactive at
 \end{onlineOnly}
 
 
-We can apply these same ideas to find the position function of a motion given its (continuous) velocity function ${\bf v}(t)$ (as a function of the number of seconds past noon and measured in say meters/sec) and the position ${\bf p}_0$ (in meters) at time $t=t_0$ seconds past noon.  
+
 
 \begin{question}    \label{Qedtrg78}
+We can apply these same ideas to find the position function of a motion given its (continuous) velocity function ${\bf v}(t)$ (as a function of the number of seconds past noon and measured in say meters/sec) and the position ${\bf p}_0$ (in meters) at time $t=t_0$ seconds past noon.  
+
 Which of the following expressions gives the position (in meters) at time $t$ seconds past noon? Choose all that apply.
 \begin{selectAll}  
       \choice{$\int {\bf v}(t)\, dt + C$}  
+       \choice{$\int_{t_0}^t r(u)\, du$} 
     \choice{${\bf p}_0 + \int_{t_0}^u {\bf v}(t)\, dt$}  
     \choice[correct]{${\bf p}_0 + \int_{t_0}^t r(u)\, du$}  
   \end{selectAll}
@@ -182,7 +186,11 @@ and that
 
 (a) Find an expression for the position function.
 
-(b) Play the slider $u$ in the demonstration below to see the velocity hodograph. Use the hodograph with $n=12$ (or maybe with $n=4$ first) to approximate the trajectory of the motion. Then click on the ``vectors" box to see how you did.
+(b) Change the first slider to $n=4$ in the demonstration below. Then drag slider $u$ to see the velocity hodograph. Use the four vectors in the hodograph to sketch a piece-wise linear approximation to the trajectory of the motion. Explain your reasoning.
+
+(c) Drag slider $u$ back to $u=0$. Then click the ``segments'' box in the upper left. Then drag the slider $u$. Explain what you see. How does the path compare with your approximation in part (b)?
+
+(d) Drag slider $u$ back to $u=0$. Increase the value of $n$ and drag slider $u$. Explain what you see. What happens as you increase $n$? 
 
 \begin{exploration}
 
