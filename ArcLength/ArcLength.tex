@@ -29,7 +29,7 @@ Access Geogebra interactives through the online version of this text at
 \end{onlineOnly}
 
 
-Our aim is to express the speed of the free end of the thread ($P$) at any particular instant in terms of the radius $a$, the length of unwound thread $s$ (in cm), and the rate $v$ (in cm/sec) at which the thread is unwound from the spool. In the demonstration above, $v$ is constant, but we will not assume this. 
+Our aim is to express the speed of the free end of the thread ($P$) at any particular instant in terms of the radius $a$, the length of unwound thread $s$ (in cm), and the rate $v_A$ (in cm/sec) at which the thread is unwound from the spool. In the demonstration above, the unwinding rate is constant, but we will not assume this. 
 
 We'll proceed as follow:
 
@@ -50,9 +50,45 @@ We'll proceed as follow:
 
 (d) Write the vector ${\bf r}(s) = \overrightarrow{OP}$ in terms of the vectors ${\bf p}(s)$ and ${\bf q}(s)$:
 \begin{align*}
-  {\bf r}(s)   &= {\bf p}(s) \answer{+} {\bf q}(s)   \\
-                  &= \langle \answer{a \cos (s/a)} , \answer{a \sin (s/a)}  \rangle  +  \langle \answer{s \sin (s/a)} , \answer{-s \cos (s/a)}
+  {\bf r}(s)   &= {\bf p}(s) + {\bf q}(s)   \\
+                  &= a \langle \answer{\cos (s/a)} , \answer{\sin (s/a)}  \rangle  +  s \langle \answer{\sin (s/a)} , \answer{-\cos (s/a)}
 \end{align*}
+
+
+(e) What is the meaning of the derivative $d{\bf r}(s)/dt$, where $t$ is time measured in seconds?
+\begin{multipleChoice}  
+\choice{The speed of point $A$}  
+\choice{The speed of point $P$}  
+\choice{The velocity of point $A$}  
+\choice[correct]{The velocity of point $P$} 
+\choice{The acceleration of point $P$} 
+\end{multipleChoice} 
+
+
+(f) Use your expression for ${\bf r}(s)$ from part (d), to find an expression for the derivative $d{\bf r}(s)/dt$, simplified as much as possible. Your expression should be in terms of $s$, $\theta$, and the unwinding rate $v_A$. Keep in mind that $v_A$ is also the speed of point $A$. Remember also that $s$ is a function of $t$.
+\[
+      \frac{d{\bf r}(s)}{dt} = \langle  \answer{\frac{s v_A}{a} \cos(s/a)}  , \answer{\frac{sv_A}{a} \sin(s/a)}   \rangle \, , \, s\geq 0 
+\]
+
+
+(f) What is the direction of the vector $d{\bf r}(s)/dt$? Choose all that apply.
+\begin{selectAll}  
+    \choice{$d{\bf r}(s)/dt$ is parallel to ${\bf q}(s)$}  
+    \choice[correct]{$d{\bf r}(s)/dt$ is perpendicular to ${\bf q}(s)$}  
+    \choice[correct]{$d{\bf r}(s)/dt$ is parallel to ${\bf p}(s)$}  
+    \choice{$d{\bf r}(s)/dt$ is perpendicular to ${\bf p}(s)$}  
+  \end{selectAll} 
+
+
+(g) What is the speed of $P$?
+\[
+   \answer{\frac{sv_A}{a}} \,    \frac{\text cm}{\text{sec}}
+\]
+
+
+(h) Check that your result for the speed has the correct units. Then write the speed as a multiple of the unwiding rate $v_A$ and interpret the meaning of the multiple.
+
+(i) Optional: Parameterize the motion of $A$ around the circle to make $P$ travel at a constant speed. This would mean expressing the arclength parameter $s$ as a function of $t$.
 
 \end{question}
 
@@ -60,6 +96,11 @@ We'll proceed as follow:
 
 
 \begin{question}  \label{Qgtu5uhgfdg}
+Repeat Question 1 for a string wrapped around the cylindrical helix
+\[
+   {\bf p}(\phi) = \langle a \cos \phi, a \sin \phi, b \phi  \rangle , \phi \geq 0 ,
+\]
+where $a$ and $b$ are constants with units of centimeters.
 
 \pdfOnly{
 Access Geogebra interactives through the online version of this text at
