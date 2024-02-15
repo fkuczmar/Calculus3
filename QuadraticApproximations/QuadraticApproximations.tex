@@ -9,6 +9,45 @@ Using quadratic power series to approximate curves in the plane and in space.
 \end{abstract}
 \maketitle
 
+\section{Linear Approximation}
+In differential calculus we learned about linear approximation. That's just a fancy term meaning that we approximate the graph of a function near a point with the tangent line at that point.
+
+So, for example, to find the linear approximation to the function $f(x) = \sin x$ at the point $P(5\pi/6,0)$, we just find an equation of the tangent line at $P$. And it's best to use the point-slope form of a line.
+
+\begin{question}  \label{Qegbygyyu}
+What is the point-slope equation of the tangent line above?
+\[
+    y = \answer{\frac{1}{2}} + \answer{-\frac{\sqrt{3}}{2}}\left( x - \answer{\frac{5\pi}{6}}  \right) .
+\]
+\end{question}
+
+\begin{question}   \label{Qt43666}
+More generally, what is the linear approximation to the differential function $y=f(x)$ at the point $P(a,f(a))$?
+\[
+     L(x) = \answer{f(a)} + \answer{f^\prime(a)} (x - \answer{a} ) .
+\]
+\end{question}
+
+
+We find the linear approximation to a curve ${\bf p}(t)$ at a point with position ${\bf p}(a)$ relative to the origin in much the same way, by finding a parameterization of the tangent line to the curve at ${\bf p}(a)$. But unlike for a function $y=f(x)$ where there is only one way to write a Cartesian equation of a line, we have many choices in parameterizing a line and we need to choose the {\bf one} that gives the best approximation. 
+
+\begin{question}   \label{Qggkuthds}
+Find the linear approximation to the curve
+\[
+   {\bf p}(t) = \langle 3 \cos t, 3\sin t, e^t \rangle, -2\leq t \leq 2 ,
+\]
+at the point $P(0,3,e^{\pi/2})$.
+
+The idea is that we replace the point-slope form of an equation of the tangent line to the graph of a function with the {\bf point-velocity} parameterization of the tangent line (here we regard the parameter $t$ as being time).
+
+For the curve ${\bf p}(t)$ above, what is the linear approximation at $P(0,3,e^{\pi/2})$?
+\[
+   \boldsymbol{\ell}(t) = \langle  \answer{0}, \answer{3}  , \answer{e^{\pi/2}}  \rangle  + (t - \answer{\pi/2}) \langle \answer{-3}, \answer{0}, e^{\pi/2}  \rangle , -2\leq t \leq 2 .
+\]
+
+
+\end{question}
+
 
 \begin{question}  \label{Qgtyhtsry}
 (a) Find quadratic approximations to the component functions of the space curve
