@@ -107,18 +107,42 @@ in the approximation near $t=1$.
 \begin{exploration}\label{Exp3:Comp}
 (a) Turn on the Linear Approximations folder in Line 10. You should see the linear approximation $y=f_1(t)$ (purple) and the error function $e_1(t)$ (green).
 
+(b) Now zoom in close to the point $(1,0)$ and adjust the slider $m$.
+\begin{question} \label{Qfdsg677}
+(i) Describe how the error function changes as you change the velocity $m$.
 
+(ii) What is special about the local behavior of the error function near $(1,0)$ when $m=0.5$?
+\end{question}
+
+(c) It's admittedly difficult to pick out the best linear approximation by looking at just the tangent line or the error function. The best approximation is the one with an error function that approaches zero (as $t\to 1$) faster than all the others. To better see this, we graph the function
+\[
+    y = \frac{e_1(t)}{t-1} .
+\]
+Input the above function (the error relative to $t-1$) on Line 27. Then vary the slider $m$.
+
+\begin{question} \label{Q3435rgg}
+What do you notice? 
+\end{question}
+
+
+
+But we can get a better sense of which linear approximation is the best by considering how fast the error function approaches zero near the point $(1,0)$. 
+
+To see this more clearly, we divide the error function by $t^2$ and graph this function: 
+\[
+   e_1(t) / t^2 .
+\]
 
 
 \pdfOnly{
 Access Desmos interactives through the online version of this text at
  
-\href{https://www.desmos.com/calculator/mbnqnznrlx}.
+\href{https://www.desmos.com/calculator/radek4mxwz}.
 }
  
 \begin{onlineOnly}
     \begin{center}
-\desmos{mbnqnznrlx}{900}{600}
+\desmos{radek4mxwz}{900}{600}
 \end{center}
 \end{onlineOnly}
 
