@@ -114,24 +114,33 @@ in the approximation near $t=1$.
 (ii) What is special about the local behavior of the error function near $(1,0)$ when $m=0.5$?
 \end{question}
 
-(c) It's admittedly difficult to pick out the best linear approximation by looking at just the tangent line or the error function. The best approximation is the one with an error function that approaches zero (as $t\to 1$) faster than all the others. To better see this, we graph the function
+(c) It's admittedly difficult to pick out the best linear approximation by looking at just the tangent line or the error function. The best approximation is the one with an error function that approaches zero (as $t\to 1$) faster than all the others. To better see which approximation is best turn on the relative error function
 \[
-    y = \frac{e_1(t)}{t-1} .
+    r_1 (t) = \frac{e_1(t)}{t-1} .
 \]
-Input the above function (the error relative to $t-1$) on Line 27. Then vary the slider $m$.
+in Line 17. Then vary the slider $m$.
 
 \begin{question} \label{Q3435rgg}
-What do you notice? 
+(i) What do you notice? 
+
+(ii) The graph of the relative error function might be a bit misleading. What is the value of $r_1(1)$?
+
+(iii) Use the graph of the relative error function to approximate 
+\[
+    \lim_{t\to 1}r_1(t) 
+\]
+when $m=0, 0.3, 0.5, 0.8$
 \end{question}
 
 
-
-But we can get a better sense of which linear approximation is the best by considering how fast the error function approaches zero near the point $(1,0)$. 
-
-To see this more clearly, we divide the error function by $t^2$ and graph this function: 
+\it{Key Point:} The linear approximation $p_1(t)=2+0.5(t-1)$ with velocity $m=0.5$ is the best among all possible linear approximations to $f(t)=2+0.5\ln t$ in the sense that it is the \emph{only} one with an error function that approaches zero faster than $t-1$ as $t\to 1$. That is,
 \[
-   e_1(t) / t^2 .
+          \lim_{t\to 1} \frac{f(t) - (2 + m(t-1))}{t-1} = 0
 \]
+if and only if $m=0.5$
+
+This is actually what it means for a function $f(t)$ to be differentiable at $t=a$; that $f(t)$ can be approximated with a linear function near $t=a$ for which the error in the error function appoaches zero faster than $t-a$. 
+
 
 
 \pdfOnly{
