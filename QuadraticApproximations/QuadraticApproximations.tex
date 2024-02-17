@@ -150,7 +150,6 @@ in Line 17. Then vary the slider $m$.
 for velocities $m=0, 0.3, 0.5, 0.8$
 \end{question}
 
-
 \it{Key Point:} The linear approximation $p_1(t)=2+0.5(t-1)$ with velocity $m=0.5$ is the best among all possible linear approximations to $f(t)=2+0.5\ln t$ in the sense that it is the \emph{only} one with an error function that approaches zero faster than $t-1$ as $t\to 1$. That is,
 \[
           \lim_{t\to 1} \frac{f(t) - (2 + m(t-1))}{t-1} = 0
@@ -167,10 +166,58 @@ This is actually what it means for a function $f(t)$ to be differentiable at $t=
 
 
 
-
-
-
 \section{Quadratic Approximations}
+The last activity suggested that of all possible linear approximations to the differentiable function $f(t)$ at $t=a$, the tangent line approximation
+\[
+ p_1(x) = f(a) + f^\prime(a)(x-a)
+\]
+is the best. It is the only one that makes the error function
+\[
+   e_1(t) = f(x) - p_1(x)
+\]
+approach zero faster than $(t-a)$ as $t\to a$ in the sense that
+\[
+   \lim_{t\to a} \frac{e_1(t)}{t-a} = 0 .
+\]
+This is actually what it means for a function $f(t)$ to be differentiable at $t=a$; that $f(t)$ can be approximated with a linear function near $t=a$ for which the error in the error function appoaches zero faster than $t-a$. 
+
+But how fast? The answer to that question depends upon whether $f(t)$ is twice differentiable at $t=a$. If so, and we will assume it is, then near $t=a$ the error function $e_1(t)$ approaches zero at the same rate as $(t-a)^2$. In other words, for $t\sim a$,
+\[
+  e_1(t) \sim k (t-a)^2 ,
+\]
+for some constant $k$. Or more precisely, 
+\[
+   \lim_{t\to a} \frac{e_1(t)}{(t-a)^2} = k .
+\]
+
+We can see this
+
+\begin{exploration}\label{Exp3:Comp}
+
+\pdfOnly{
+Access Desmos interactives through the online version of this text at
+ 
+\href{https://www.desmos.com/calculator/oswisy36tn}.
+}
+ 
+\begin{onlineOnly}
+    \begin{center}
+\desmos{fhbtcot3ld}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Access Desmos interactives through the online version of this text at
+ 
+\href{https://www.desmos.com/calculator/oswisy36tn}{163: Taylor Series 2}
+
+
+\end{exploration}
+
+
+
+
+
+\section{Curves in Space}
 
 
 \begin{question}  \label{Qgtyhtsry}
