@@ -190,7 +190,19 @@ for some constant $k$. Or more precisely,
    \lim_{t\to a} \frac{e_1(t)}{(t-a)^2} = k .
 \]
 
-We can see this
+You can see this in the demonstation below by zooming in on the point $(1,0)$ and seeing that the error function $e_1(t)$ looks like a parabola. To see exactly what parabola, zoom back out and activate the $m$-error function 
+\[
+   e_{11}(t) = \frac{f(t) - (2+m(t-1)}{(t-1)^2}
+\]
+on Line 38. Now slide $m$ on Line 38 and watch how the $m$-error function changes dramatically at $m=0.5$.
+
+\begin{question}  \label{Ertfgttree}
+(a) Use the graph of the $m$-error function with $m=0.5$ to approximate the constant $k$.
+
+(b) What are the units of $k$?
+\end{question}
+
+
 
 \begin{exploration}\label{Exp3:Comp}
 
