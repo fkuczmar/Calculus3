@@ -14,6 +14,18 @@ Linear approximations of functions of two or more independent variables.
 
 \begin{example}  \label{Edgtr543}
 
+The function
+\[
+    T = f(x,y) \, , \, x^2 + y^2 \leq 3
+\]
+expresses the temperature (in Celsius degrees) of a point on a hot plate in terms of its coordinates, measured in meters. 
+
+(a) Use the graph of some level curves of this function to approximate the partials
+\[
+    \frac{\partial T}{\partial x}\Big|_{(x,y)=(2,-1)} \text{ and } \frac{\partial T}{\partial y}\Big|_{(x,y)=(2,-1)} .
+\]
+Include units.
+
 \pdfOnly{
 Access Desmos interactives through the online version of this text at
  
@@ -26,9 +38,52 @@ Access Desmos interactives through the online version of this text at
 \end{center}
 \end{onlineOnly}
 
-
 \href{https://www.desmos.com/calculator/bphah69tkz}{Level Curves Hemisphere}
 
+\pskip \pskip
+
+(b) Suppose that 
+\[
+    T = f(x,y) = \sqrt{9-x^2-y^2} \, , \, x^2 + y^2 \leq 3 .
+\]
+Find the exact values of the two partials above and compare them with your estimates.
+
+\end{example}
+
+\section{Tangent Planes and Linear Approximations}
+
+
+\begin{example}  \label{Esdtr435r}
+This is a continuation of Example 1. 
+
+\pskip \pskip
+
+(c) Graph the surface
+\[
+  T = f(x,y) = \sqrt{9-x^2-y^2} \, , \, x^2 + y^2 \leq 3 .
+\]
+
+\pskip
+
+(d) Open the desmos deomonstration at
+
+\href{https://www.desmos.com/3d/d78d5a3138}{Tangent Planes to Sphere}
+
+\pskip
+
+(e) Parameterize the $x$-coordinate curve cut from the surface by the plane $x=2$.
+
+(f) Parameterize the tangent line to the $x$-coordinate curve at the point $P(2,-1,2)$ on the surface.
+
+(g) Parameterize the $y$-coordinate curve cut from the surface by the plane $y=-1$.
+
+(h) Parameterize the tangent line to the $y$-coordinate curve at the point $P(2,-1,2)$ on the surface.
+
+(i) Find an equation of the tangent plane to the surface at the point $P(2,-1,2)$.
+
+(j) Verify parts (b)-(h) geometrically.
+
+(k) Use the result of part (h) to approximate the temperature at the points with coordinates $(2.1, -1.1)$ and $(1.99, -0.99)$. Compare these approximations with the actual temperatures.
 
 \end{example}
 
