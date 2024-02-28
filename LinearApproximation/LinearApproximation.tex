@@ -32,29 +32,42 @@ expresses the temperature (in Celsius degrees) of a point on a hot plate in term
 
 \item{Follow the directions in Lines 21 and 23 to check your approximations.}
 
-\item{Include units.}
+\item{Include units for the partials and explain their meanings.}
 
 \end{itemize}
 
 \pdfOnly{
 Access Desmos interactives through the online version of this text at
  
-\href{https://www.desmos.com/calculator/et6f10fnti}.
+\href{https://www.desmos.com/calculator/mrbwyydrcm}.
 }
  
 \begin{onlineOnly}
     \begin{center}
-\desmos{et6f10fnti}{900}{600}
+\desmos{mrbwyydrcm}{900}{600}
 \end{center}
 \end{onlineOnly}
 
 Desmos activity available at
 
-\href{https://www.desmos.com/calculator/et6f10fnti}{Level Curves Hemisphere}
+\href{https://www.desmos.com/calculator/mrbwyydrcm}{163: Level Curves Hemisphere}
 
 \pskip \pskip
 
-(b) Suppose now that 
+
+(b) Write an expression for the average rate of change in temperature with respect to the change $w$ in the $x$-coordinate relative to the point $(2,-1)$. Enter this expression on Line 22 of the above worksheet and follow the directions there to approximate 
+\[
+   \frac{\partial T}{\partial x}\Big|_{(x,y)=(2,-1)} .
+\]
+Explain the idea.
+
+(c) Write an expression for the average rate of change in temperature with respect to the change $w$ in the $y$-coordinate relative to the point $(2,-1)$. Enter this expression on Line 24 of the above worksheet and follow the directions there to approximate 
+\[
+   \frac{\partial T}{\partial y}\Big|_{(x,y)=(2,-1)} .
+\]
+Explain the idea.
+
+(d) Suppose now that 
 \[
     T = f(x,y) = \sqrt{9-x^2-y^2} \, , \, x^2 + y^2 \leq 3 .
 \]
@@ -77,7 +90,7 @@ This is a continuation of Example 1.
 
 \pskip
 
-(d) Use the demonstration below to interpret the meanings of the average rates of change $\Delta T/Delta x$ and $\Delta T/Delta y$ and their respective limits as $\Delta x\to 0$ and $\Delta y\to 0$ geometrically.
+(d) Use the demonstration below to interpret the meanings of the average rates of change $\Delta T/\Delta x$ and $\Delta T/\Delta y$ and their respective limits as $\Delta x\to 0$ and $\Delta y\to 0$ geometrically.
 
 \pdfOnly{
 Access Geogebra interactives through the online version of this text at
@@ -116,7 +129,9 @@ Geogebra activity available at
 
 (k) Answer parts (b) and (j) geometrically without using calculus.
 
-(l) Use the result of part (j) to approximate the temperature at the points with coordinates $(2.1, -1.1)$ and $(1.99, -0.99)$. Compare these estimates with the actual temperatures.
+(l) Use the result of part (j) to find the linear approximation to the function $T=f(x,y)$ at the point $(2,-1)$.
+
+(M) Use your linear approximation from part (l) to estimate the temperatures at the points with coordinates $(2.1, -1.1)$ and $(1.99, -0.99)$. Without computing the actual temperatures, determine whether your estimates are greater or less than the actual values. Explain your reasoning.
 
 \end{example}
 
@@ -144,11 +159,6 @@ Access Desmos interactives through the online version of this text at
 
 
 
-\begin{exploration}  \label{Edf5khj4665}
-
-\href{https://www.desmos.com/3d/d78d5a3138}{Tangent Planes to Sphere}
-
-\end{exploration}
 
 \begin{exploration}  \label{Ede5fhj4665}
 \href{https://www.geogebra.org/m/Hud6Hnpk}{Partial Derivatives and Tangent Planes}
