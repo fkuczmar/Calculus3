@@ -75,7 +75,7 @@ Find the exact values of the two partials above and compare them with your estim
 
 \end{example}
 
-\section{Tangent Planes and Linear Approximations}
+\section{Coordinate Curves and Tangent Planes}
 
 
 \begin{example}  \label{Esdtr435r}
@@ -90,7 +90,11 @@ This is a continuation of Example 1.
 
 \pskip
 
-(d) Use the demonstration below to interpret the meanings of the average rates of change $\Delta T/\Delta x$ and $\Delta T/\Delta y$ and their respective limits as $\Delta x\to 0$ and $\Delta y\to 0$ geometrically.
+(d) Write expressions  for the partials
+\[
+    \frac{\partial T}{\partial x}\Big|_{(x,y)=(2,-1)} \text{ and } \frac{\partial T}{\partial y}\Big|_{(x,y)=(2,-1)} .
+\]
+as limits of average rates of change. Then use the demonstration below to give a geometric interpretation of the average rates of change $\Delta T/\Delta x$ and $\Delta T/\Delta y$ and their respective limits as $\Delta x\to 0$ and $\Delta y\to 0$.
 
 \pdfOnly{
 Access Geogebra interactives through the online version of this text at
@@ -134,6 +138,51 @@ Geogebra activity available at
 (M) Use your linear approximation from part (l) to estimate the temperatures at the points with coordinates $(2.1, -1.1)$ and $(1.99, -0.99)$. Without computing the actual temperatures, determine whether your estimates are greater or less than the actual values. Explain your reasoning.
 
 \end{example}
+
+
+
+\begin{example} \label{E4rt4t42}
+For this entire problem let
+\[
+   z = f(x,y) = \arctan(y/x) 
+\]
+and let $P$ be the point on the graph of the function $f$ with coordinates $(\sqrt{3},1,f(\sqrt{3},1))$.
+
+(a) Parameterize the $x$-coordinate curve cut from the surface $z=f(x,y)$ by the plane $y=1$. Use this parameterization to parameterize the tangent line to the curve at $P$.
+
+(b) Parameterize the $y$-coordinate curve cut from the surface $z=f(x,y)$ by the plane $x=\sqrt{3}$. Use this parameterization to parameterize the tangent line to the curve at $P$.
+
+(c) Use parts (a) and (b) to find an equation of the tangent plane to the surface $z=f(x,y)$ at $P$.
+
+(d) Parameterize the level curve of the function $z=f(x,y)$ through the point $(\sqrt{3},1,0)$. Use this parameterization to parameterize the curve on the surface $z=f(x,y)$ lying directly above the level curve (ie. lift the level curve to the surface).
+
+(e) Use the desmos link below to check your work by doing the following:
+
+\begin{itemize}
+\item{Input equations of the coordinate planes $x=\sqrt{3}$ and $y=1$.}
+
+\item{Input parameterizations of the two coordinate curves. Use $t$ for the parameter and choose the domain $t\in[-10,10]$.}
+
+\item{Input parameterizations of the two tangent lines. Use $t$ for the parameter and choose the domain $t\in[-10,10]$.}
+
+\item{Input an equation of the tangent plane.}
+
+\item{Input a parameterization for the lift of the level curve. Use $t$ for the parameter and choose the domain $t\in[-10,10]$.}
+
+\item{Include both one or several screenshots of your work and a link to your saved file.}
+
+\end{itemize}
+
+
+\pskip 
+
+\href{https://www.desmos.com/3d/ade9317b51}{163:Coordinate Curves Student Version}
+
+
+
+
+\end{example}
+
 
 
 
