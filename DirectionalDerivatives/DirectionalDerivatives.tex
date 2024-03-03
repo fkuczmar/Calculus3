@@ -10,7 +10,7 @@ Introduction to directional derivatives.
 \maketitle
 
 
-\section{Directional Derivatives, One Independent Variable}
+\section{Level Sets and Directional Derivatives, One Independent Variable}
 
 \begin{question}  \label{Qdsdfsddsf6bd}
 
@@ -79,25 +79,56 @@ Match each level set below with its function from the list below (there is one f
 \pdfOnly{
 Access Desmos interactives through the online version of this text at
  
-\href{https://www.desmos.com/calculator/dabb7tarx3}.
+\href{https://www.desmos.com/calculator/qhto2obz1x}.
 }
  
 \begin{onlineOnly}
     \begin{center}
-\desmos{dabb7tarx3}{900}{600}
+\desmos{qhto2obz1x}{900}{600}
 \end{center}
 \end{onlineOnly}
 
 Access Desmos interactives through the online version of this text at
  
-\href{https://www.desmos.com/calculator/dabb7tarx3}{163: Level Curves 151, Part 2}.
+\href{https://www.desmos.com/calculator/qhto2obz1x}{163: Level Curves 151, Part 2}.
 
 https://www.desmos.com/calculator/dabb7tarx3
 \end{exploration}
 
 
 
-\section{Directional Derivatives, Two Independent Variables}
+\section{Level Sets and Directional Derivatives, Two Independent Variables}
+
+Suppose now we're standing on a hot plate, where the temperature varies from point to point. Unlike in one dimension, where we have a  choice of only two directions to walk, we now have an entire circle of directions from which to choose. How can we compute the (instantaneous) rate of change in the temperature if we head off in an arbitrary direction from our point. As in the first example, the rate of change is with respect to distance. There is no time involved here.
+
+It might come as a surprise that knowing the rate of change in any two independent directions (ie. directions that are not directly opposite) allows us to find the rate of change in any direction, provided that the temperature is a differentiable function of position.
+
+Just as in one dimension, we can use the level curves of the temperature function to approximate the rate of change in any direction. But before we get to this, take a moment to think about the following question.
+
+\begin{question}  \label{Qwerder432}
+Suppose that from your current position, the temperature increases at the rate of $0.2^\circ$C/meter in the direction of the vector $\langle 1, 0 \rangle$ and that it increases at the rate of $0.4^\circ$C/meter in the direction of the vector $\langle 0,1\rangle$. What do you think is true about the rate at which the temperature changes in the direction of the vector ${\bf v} = \angle 1,1\rangle$?
+
+\pskip
+
+(a) The temperature increases at the rate of exactly $0.03^\circ$C/meter.
+
+(b) The temperature increases at a rate somewhere between $0.02^\circ$C/meter and $0.04^\circ$C/meter, but not necessarily at the exact rate of $0.03^\circ$C/meter.
+
+(c) The temperature increases at a rate less than $0.02^\circ$C/meter.
+
+(d) The temperature increases at a rate greater than $0.04^\circ$C/meter.
+
+(e) The temperature decreases.
+
+(f) We cannot say, even if we assume (as do the above choices) that the temperature is a differentiable function of position.
+
+\pskip
+
+Try to justify your response with an intuitive argument without doing any computations.
+
+
+\end{question}
+
 
 
 
@@ -115,35 +146,35 @@ Some level curves
 \]
 of the function $F$ are shown below. 
 
-1. Use the level curves along with the sliders $\Delta k$, $\theta$, and $s$ to approximate the following instantaneous rates of change of temperature in the direction of the vector ${\bf v} = \langle \cos\theta, \sin\theta \rangle$. The slider $s$ adjusts the length of the vector ${\bf v}$ (blue). Adjust $\Delta k$ to get better approximations.
+1. Use the level curves along with the sliders $\Delta k$, $\theta$, and $s$ to approximate the following instantaneous rates of change of temperature in the direction of the vector ${\bf v} = \langle \cos\theta, \sin\theta \rangle$. The slider $s$ adjusts the length of the vector ${\bf v}$ (blue). Adjust the slider $\Delta k$ to get better approximations.
 
 \pskip
 
-(a) At the point $A(2,2)$ in the direction of the vector ${\bf v} = \langle 1, 0 \rangle$.
+(a) At the point $A(-1,1)$ in the direction of the vector ${\bf v} = \langle 1, 0 \rangle$.
 
-(b)  At the point $A(2,2)$ in the direction of the vector ${\bf v} = \langle 0,1 \rangle$.
+(b)  At the point $A(-1,1)$ in the direction of the vector ${\bf v} = \langle 0,1 \rangle$.
 
-(c)  At the point $A(2,2)$ in the direction of the vector ${\bf v} = \langle 0, -1 \rangle$.
+(c)  At the point $A(-1,1)$ in the direction of the vector ${\bf v} = \langle 0, -1 \rangle$.
 
-(d)  At the point $A(2,2)$in the direction of the vector ${\bf v} = \langle 1,1 \rangle$.
+(d)  At the point $A(-1,1)$in the direction of the vector ${\bf v} = \langle 1,1 \rangle$.
 
-(e)  At the point $A(2,2)$ in the direction of the vector ${\bf v} = \langle -1,-1 \rangle$.
+(e)  At the point $A(-1,1)$ in the direction of the vector ${\bf v} = \langle -1,-1 \rangle$.
 
-(f)  At the point $A(2,2)$ in the direction of the vector ${\bf v} = \langle 1,-1 \rangle$..
+(f)  At the point $A(-1,1)$ in the direction of the vector ${\bf v} = \langle 1,-1 \rangle$..
 
 (g) At the origin in various directions of your choosing.
 
 \pskip \pskip
 
-2. In which direction from the point $A(2,2)$ does the function $F$ appear to increase at the fastest rate? Approximate this rate of change.
+2. In which direction from the point $A(-1,1)$ does the function $F$ appear to increase at the fastest rate? Approximate this rate of change.
 
 \pskip \pskip
 
-3. In which direction from the point $A(2,2)$ does the function $F$ appear to decrease at the fastest rate? Approximate this rate of change.
+3. In which direction from the point $A(-1,1)$ does the function $F$ appear to decrease at the fastest rate? Approximate this rate of change.
 
 \pskip \pskip
 
-4. 2. In which direction(s) from the point $A(2,2)$ does the function $F$ appear to remain constant? 
+4. 2. In which direction(s) from the point $A(-1,1)$ does the function $F$ appear to remain constant? 
 
 
 \pdfOnly{
