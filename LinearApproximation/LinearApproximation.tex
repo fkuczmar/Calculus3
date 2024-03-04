@@ -268,13 +268,13 @@ Access Desmos interactives through the online version of this text at
 
 
 \section{Error Analysis}
-When you do an experiment, you typically make measurements and use these measurements to compute something else. But measurements have errors and these errors lead to errors in the computations. We can use linear approximation to get an idea of the errors in the computations.
+When you do an experiment, you typically make measurements and use these measurements to compute something. But measurements have errors and these errors lead to errors in the computed values. We can use linear approximation to see how these errors are related.
 
 \begin{example}  \label{Edstrt4th}
 You measure the length and width of a rectangle and use these measurements to compute the area. Use a linear approximation to estimate the error and the relative error in computing the area. Assume the errors in the measurements are small.
 
 \begin{explanation}
-Let $L$ and $W$ be the measured lenght and width, in meters, and let
+Let $L$ and $W$ be the measured length and width, in meters, and let
 \[
   A =f(L,W) = LW ,
 \]
@@ -288,13 +288,67 @@ Then
                 &=  W\Delta L +  L \Delta W .
 \end{align*}
 
-So
+\begin{question}  \label{Qegffg545}
+Compare the above approximation to $\Delta A$ with the exact error
+\[
+    \Delta A = (L+\Delta L)(W + \Delta W) 
+\]
+and sketch a picture to illustrate the two errors (exact and approximate) geometrically.
+\end{question}
+
+
+So, for example, if we measured the dimesions of the rectangle as $L=20$, $W=10$, with respective errors $\Delta L = 0.1$ and $\Delta W = -0.2$, then the approximate error in the computed area would be
+\[
+    \Delta A \sim (10\text{ ft})(0.1 \text{ ft}) + (20 \text{ ft})(-0.2 \text{ ft}) = - 3 \text{ ft}^2 .
+\]
+
+This kind of analysis is typically not very useful because we usually do not know if our measurements are greater or less than the actual values.Rather, we might have some idea about the maximum possible errors in our measurements. We might know, for example, that
+\[
+      | \Delta L | \leq M \text{  and  }  |\Delta W| \leq N
+\]
+for some positive constants $M$ and $N$. We can then use these bounds on the errors in our measurements to approximate an upper bound for the error in the computed area. The key is to assume the worst possible case, that the errors in the measurements do not work in opposite directions (as they did in the last example). And for this we need the triangle inequality, that for real numbers $x$ and $y$.
+\[
+   | x \pm y | \leq |x| + |y| .
+\] 
+Actually, we've seen this inequality before in its more general, vector form, namely that for vectors ${\bf v}, {\bf w}\in \mathbb{R}^n$,
+\[
+      | {\bf v} \pm {\bf w}   |  \leq |{\bf v}| +  | {\bf w} | .
+\]
+
+\begin{question}  \label{Qdgbbhu7}
+(a) Draw two pictures that illustrate why the last inequality holds. 
+
+(b) Explain in words why that inequality is true.
+\end{question}
+
+Now continuing with our example, since
+\[
+  \Delta A \sim W\Delta L + L \Delta W ,
+\]
+the triangle inequality tells us that
+
 \begin{align*}
     | \Delta A |  &\sim |   W\Delta L +  L \Delta W | \\ \\
                       & \leq W|\Delta L| + L |\Delta W| .
 \end{align*}
 
-Now suppose the relative errors in measuring the length and width are at most $p\%$ and $q\%$, respectively, and that $p,q \sim 0$.  We wish to approximate the maximum relative error
+\begin{question}  \label{Q34gnyyt}
+ Suppose $L=20$, $W=10$, with respective errors $|\Delta L| \leq  0.1$ and $|\Delta W| \leq  0.2$, approximate an upper bound for $|\Delta A|$.
+\end{question}
+
+
+It is often more meaningful to think about relative errors instead of absolute errors. For example, I might approximate the distance from Seattle to Longmire to be $100$ miles with an absolute error of at most $5$ miles. Or the distance from Seattle to Spokane to be $250$ miles with an error of at most $10$ miles. In the first case, the relative error is
+\[
+          \frac{5 \text{ miles}}{100 \text{ miles}} = 5\% ,
+\]
+and in the second
+\[
+          \frac{10\text{ miles}}{250 \text{ miles}} = 4\% .
+\]
+
+
+
+Now suppose the relative errors in measuring the length and width of our rectangle are at most $p\%$ and $q\%$, respectively, and that $p,q \sim 0$.  We wish to approximate the maximum relative error
 \[
       \frac{|\Delta A|}{A}
 \]
@@ -336,20 +390,18 @@ You measure the mass and volume of a sample of gold with respective relative err
 
 
 \begin{question}  \label{Qerfgghym}
-You measure your distance from the base of a tree to be $s$ feet and the angle of elevation to the top of the tree to be $\theta$ radians.
+You measure your distance from the base of a tree and the angle of elevation to the top of the tree. You then use these measurements to compute the height of the tree above eye level. Suppose the measured distance to be $s$ feet and the computed height to be $h$ feet.
 
-(a) Approximate the error in the computed height of the tree above eye level (in feet) in terms of the errors in measuring the distance and angle.
+(a) Use the appropriate linear approximation to estimate the error in the computed height of the tree above eye level. Express the error in terms of $s$, $h$, the error $\Delta s$ (in feet) in measuring $s$, and the error $\Delta \theta$ (in radians) in measuring the angle of elevation. Your expression should not involve the measured angle of elevation $\theta$.
 
-(b) Approximate the relative error in the computed height of the tree above eye leve in terms of the relative error in the measured distance and the (absolute) error in the measured angle. 
+(b) Suppose the relative error in measuring the distance is at most $p\%$ and the absolute error in measuring the angle is at most $M$ radians (ie. that $|\Delta \theta|\leq M$). Approximate an upper bound for the relative error in the computed height of the tree above eye level. Your expression should be in terms of  $p\%$, $M$, $s$, and $h$.            %the relative error in the measured distance and the (absolute) error in the measured angle. 
 
-(c) Simplify the relative error in part (b) if $\theta=\pi/12$. Do not use a calculator.
-
-(d) Continuing with part (c), suppose you measure the distance to the tree with a relative error of at most $3\%$. Approximate the maximum error in measuring the angle of elevation to (almost) guarantee that the relative error in the computed height is at most $5\%$.
+(c) Suppose $s=100$, $h=200$, and $p=2$. Use part (b) to approximate the maximum error in measuring the angle of elevation to make the relative error in the computed height at most $5\%$.
 \end{question}
 
 
 \begin{question}  \label{QE4gb4ttb}
-You approximate a small island to be $6$ miles due east and $8$ miles due west of your current position. You use these approximations to compute both your distance and bearing in sailing to the island. 
+You approximate a small island to be $6$ miles due east and $8$ miles due west of your current position. You use these approximations to compute both the distance and bearing in sailing directly to the island. 
 
 (a) Use the appropriate linear approximations to estimate the errors in the computed distance and bearing.
 
