@@ -37,8 +37,60 @@ Describing sets of points in $\mathbb{R}^3$.
 Suppose we wish to compute the distance between the points $P_1$ and $P_2$ in space with respective coordinates $(x_1, y_1, z_1)$ and $(x_2, y_2, z_2)$. The idea is to draw a box with its edges parallel to the coordinate axes and with the points $P_1$ and $P_2$ as opposite vertices. The 12 edges of this box come in three sets of four, the four in each set being parallel to the coordinate axes. 
 
 \begin{question} \label{Q324tgtgt}
-The four edges parallel to the $x$-axis have length $\answer{|x_1-x_2 |}$.
+What is the length of the four edges parallel to the $x$-axis? Choose all that apply. 
+\begin{selectAll}
+\choice{$x_2-x_1$}
+\choice{$y_2-y_1$}
+\choice{$z_2-z_1$}
+\choice[correct]{$|x_2-x_1|$}
+\choice{$|y_2-y_1|$}
+\choice{$|z_2-z_1|$}
+\choice[correct]{$\sqrt{(x_1-x_2)^2}$}
+\end{selectAll}
 \end{question}
+
+\begin{question} \label{Q32sdfdsftgt}
+What is the length of a diagonal in one of the two faces parallell to the $yz$-plane? Choose all that apply. 
+\begin{selectAll}
+\choice{$\sqrt{(x_2-x_1)^2 +(y_2-y_1)^2 }$}
+\choice[correct]{$\sqrt{(y_2-y_1)^2 +(z_2-z_1)^2 }$}
+\choice{$\sqrt{(x_2-x_1)^2 +(z_2-z_1)^2 }$}
+\choice{$\sqrt{|x_2-x_1|^2 +|y_2-y_1|^2 }$}
+\choice[correct]{$\sqrt{|y_2-y_1|^2 +|z_2-z_1|^2 }$}
+\choice{$\sqrt{|x_2-x_1|^2 +|z_2-z_1|^2 }$}
+\end{selectAll}
+\end{question}
+
+\begin{question} \label{Q32sdfdsftgt}
+What is the length of the main diagonal $\overline{P_1P_2}$? Choose all that apply. 
+\begin{selectAll}
+\choice[correct]{$\sqrt{(x_2-x_1)^2 +(y_2-y_1)^2  + (z_2-z_1)^2}$}
+\choice[correct]{$\sqrt{(x_1-x_2)^2 +(y_2-y_1)^2  + (z_1-z_2)^2}$}
+\choice[correct]{$\sqrt{|x_2-x_1|^2 +|y_2-y_1|^2  + |z_2-z_1|^2}$}
+\end{selectAll}
+\end{question}
+
+\begin{question}
+\begin{freeResponse}
+Draw a picture of a box in a coordinate system to illustrate the above computations. Label the vertices $P_1$ and $P_2$,  three edges with their different lengths, and two diagonals with their different lengths. 
+\end{freeResponse}
+\end{question}
+
+\section*{Spheres}
+A sphere is the set of points in space that are all a given distance from a given point. The equation of a sphere is a consequence of this definition and the most important idea is to understand the logic behind the equation.
+
+\begin{question}   \label{QDfsdgfte}
+For example, a point $P$ lies on the sphere of radius $5$ centered at the point $A$ with coordinates $(3,1,-2)$ if and only if the distance $\text{dist}(A,P)$ between $P$ and $A$ is equal to $5$. So if $P$ has coordinates $(x,y,z)$ then $P$ lies on this sphere if and only if
+\[
+   \text{dist}(A,P) = 5 ,
+\]
+or if and only if 
+\[
+      \answer{\sqrt{(x-3)^2+ (y-1)^2 + (z+2)^2}} = 5   .
+\]
+And that's an equation of the sphere of radius $5$ centered at the point $(3,1,-2)$.
+\end{question}
+
 
 
 \section{Cylinders}
