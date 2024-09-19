@@ -68,7 +68,7 @@ and differential area
 (b) What is the meaning of $d\theta/dt$?
 \end{freeResponse}
 
-(c) Now just one more step. Remember, our goal is to show that $\overline{SP}$ sweeps out area at a constant rate. That is, we need to show that $dA/dt$ is constant. For this, we need an expression for the derivative $d\theta/dt$. I'll leave this to you. Here's a hint if you need help getting started.
+(c) Now just one more step. Remember, our goal is to show that $\overline{SP}$ sweeps out area at a constant rate. That is, we need to show that $dA/dt$ is constant. For this, we need an expression for the derivative $d\theta/dt$. I'll leave this to you. For a hint, click the \emph{Hint} tab at the start of this question.
 
 \begin{hint}
 Start by expressing $\theta$ in terms of $t$. You may assume $0 \leq \theta < \pi/2$. 
@@ -76,28 +76,87 @@ Start by expressing $\theta$ in terms of $t$. You may assume $0 \leq \theta < \p
     \theta = \answer{\arctan\left( \frac{b\sin (\omega t)}{a \cos (\omega t)}\right)} .
 \]
 \end{hint}
+
+\pskip
+
+This proof was not easy and we'll learn a better way in this class, one that's easier and works in greater generality.
+
+\begin{freeResponse}   \label{Q:L98d7g33}
+Here's a related question. How would you cut an elliptical pizza into eight equal slices (having the same area)?
+\end{freeResponse}
+
 
 \end{question}
-
-\begin{hint}
-Start by expressing $\theta$ in terms of $t$. You may assume $0 \leq \theta < \pi/2$. 
-\[
-    \theta = \answer{\arctan\left( \frac{b\sin (\omega t)}{a \cos (\omega t)}\right)} .
-\]
-\end{hint}
-
-
 
 \section*{The Doppler Effect}
 
 
-\section*{Distances}
+\section*{Small Changes}
+Imagine flying a kite and letting out a little bit of string and the kite getting blown a small distance by the wind. How can we relate these two small changes, in the length of string and the little distance? We'll look at this general question later in the course, but you already know how to tackle a few special cases.
 
+
+\begin{question}  \label{Q:09df0g4444e}
+The general problem is three-dimensional, but we'll restrict ourselves to two dimensions by supposing the kite stays at a constant height, say $h$ meters, and moves along a straight path that lies directly above us. We'll let $s$ be the length of the string (in meters) and $x\geq 0$ the horizontal displacement of the kite (also in meters) measured from the point $B$ directly overhead at height $h$. Also, we'll let $\theta$ be the radian measure of the angle the string makes with the horizontal.
+
+The problem now is to approximate $\Delta s$ (the change in the string length) in terms of the angle $\theta$ and $\Delta x$ (the small horizontal displacement of the kite). You might recognize this kind of approximation problem from calculus and I'll let you try this yourself. But before starting, you should ask yourself a simple question. 
+
+\begin{freeResponse}
+Which would you expect to be greater, $|\Delta s|$ or $|Delta x|$? Explain.
+\end{freeResponse}
+
+Be sure to solve the problem in general, not using any numbers from the demonstration below. But you should use the demonstration to check your final result.
+
+Click the Hint tab if you need help getting started.
+
+\begin{hint}
+Use the Pythagorean theorem to relate $x$, $h$, and $s$. 
+\end{hint} 
+
+\begin{exploration}
+Move the slider $u$ a little and record the small changes $\Delta x$ and $\Delta s$. Use this information to check your result. 
+\begin{onlineOnly}
+    \begin{center}
+\desmos{7yad8xxxt8}{800}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/7yad8xxxt8}{163: Kite}
+\end{exploration}
+
+As a check, the final result is that
+\[
+    \Delta s \sim \answer{\Delta x \cos\theta} .
+\]
+
+\end{question}
 
 \section*{Reflections}
 
 
 \section*{Pendulums}
+
+\begin{question}  \label{QDfdfgrenhht44}
+The demonstration below shows the motion of a simple pendulum revolving (not oscillating) about its center.
+
+\begin{exploration}
+Move the slider $u$ a little and record the small changes $\Delta x$ and $\Delta s$. Use this information to check your result. 
+\begin{onlineOnly}
+    \begin{center}
+\desmos{9z2ivjrqk2}{800}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/9z2ivjrqk2}{163: Revolving Pendulum}
+\end{exploration}
+
+To describe a pendulum's motion, we would need to express the angular displacement from the stable equilibrium position (ie. low point) as a function $\phi = f(t)$ of time. While this is not possible, at least in terms of elementary functions, we can write the inverse function for a revolving pendulum as
+\[
+     t = f^{-1}(\phi) = \int_0^{\phi/2} \frac{k_1\, du}{\sqrt{1-k^2\sin^2u}} ,
+\]
+for some constants $k_1>0$ and $k$, $0<k<1$.
+
+
+\end{question}
 
 
 \section*{Conservation of Energy}
