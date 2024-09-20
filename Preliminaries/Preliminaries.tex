@@ -136,25 +136,28 @@ As a check, the final result is that
 \section*{Pendulums}
 
 \begin{question}  \label{QDfdfgrenhht44}
-The demonstration below shows the motion of a simple pendulum revolving (not oscillating) about its center.
+The demonstration below shows the motion of a simple pendulum revolving about its center.
 
 \begin{exploration}
-Move the slider $u$ a little and record the small changes $\Delta x$ and $\Delta s$. Use this information to check your result. 
+Stop the motion by pausing the Slider $v$. 
 \begin{onlineOnly}
     \begin{center}
-\desmos{9z2ivjrqk2}{800}{600}  
+\desmos{sg0gmx4kl9}{800}{600}  
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/calculator/9z2ivjrqk2}{163: Revolving Pendulum}
+\href{https://www.desmos.com/calculator/sg0gmx4kl9}{163: Revolving Pendulum}
 \end{exploration}
 
-To describe a pendulum's motion, we would need to express the angular displacement from the stable equilibrium position (ie. low point) as a function $\phi = f(t)$ of time. While this is not possible, at least in terms of elementary functions, we can write the inverse function for a revolving pendulum as
+To describe a pendulum's motion, we could express the angular displacement from the low point $E$ as a function $\phi = f(t)$ of time. While this is not possible, at least explicitly, we can write the inverse function as
 \[
-     t = f^{-1}(\phi) = \int_0^{\phi/2} \frac{k_1\, du}{\sqrt{1-k^2\sin^2u}} ,
+     t = f^{-1}(\phi) = \int_0^{\phi/2} \frac{R\, du}{v_0\sqrt{1-k^2\sin^2u}} ,
 \]
-for some constants $k_1>0$ and $k$, $0<k<1$.
-
+where $R$ is the pendulum's radius (in meters) and $v_0$ is the speed of the pendulum (in m/sec) as it passes $E$. The constant $k$ determines the shape of the motion and is equal to
+\[
+        k = \frac{2\sqrt{Rg}}{v_0} ,
+\]
+where $g$ is the magnitude of the graviational acceleration (in $m/sec^2$).
 
 \end{question}
 
