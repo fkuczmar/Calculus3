@@ -189,9 +189,6 @@ As a check, the final result is that
 
 \end{question}
 
-\section*{Reflections}
-
-
 \section*{Pendulums}
 
 \begin{question}  \label{QDfdfgrenhht44}
@@ -208,17 +205,23 @@ Stop the motion by pausing the Slider $v$.
 \href{https://www.desmos.com/calculator/nsfqtjr8fd}{163: Revolving Pendulum}
 %\end{exploration}
 
-To describe a pendulum's motion, we could express the angular displacement from the low point $E$ as a function $\phi = f(t)$ of time. While this is not possible, at least explicitly, we can write the inverse function as
+To describe a pendulum's motion, we'll express the angular displacement from the low point $E$ as a function $\phi = f(t)$ of time. While this is not possible, at least explicitly, we can write the inverse of this function as
 \[
      t = f^{-1}(\phi) = \int_0^{\phi/2} \frac{R\, du}{v_0\sqrt{1-k^2\sin^2u}} ,
 \]
-where $R$ is the pendulum's radius (in meters) and $v_0$ is the speed of the pendulum (in m/sec) as it passes $E$. The constant $k$ determines the shape of the motion and is equal to
+where $R$ is the pendulum's radius (in meters) and $v_0$ is the speed of the pendulum (in m/sec) as it passes $E$. The constant 
 \[
         k = \frac{2\sqrt{Rg}}{v_0} ,
 \]
-where $g$ is the magnitude of the gravitational acceleration (in $m/sec^2$).
+determines the shape of the motion, where $g$ is the magnitude of the gravitational acceleration (in $m/sec^2$).
 
-Our goal here is to study the motion of a revolving pendulum with radius $R=7$ and launch speed $v_0=7$ in a uniform graviational field where $g=3$. The question is to compare the speeds of the pendulum at points $E$, $F$, and $G$ above by computing the double ratio
+Our first goal here is qualitative. 
+\begin{freeResponse}
+Use the above animation to sketch by hand a graph of the function $v=g(t)$ that expresses the speed of above pendulum in terms of the number of seconds since the pendulum was launched from its low point $E$.
+\end{freeResponse}
+
+
+Next, we'll look more carefully at the motion of the revolving pendulum above with radius $R=7$ and launch speed $v_0=7$ in a uniform graviational field where $g=3$. The question is to compare the speeds of the pendulum at points $E$, $F$, and $G$ above by computing the double ratio
 \[
   v_E : v_F : v_G
 \]
@@ -236,22 +239,29 @@ The ratio is
       v_E : v_F : v_G = \answer{7}: \answer{5}:\answer{1} .
 \]
 
-
-
 \begin{hint}
 Start by finding an expression for the derivative $dt/d\phi$.
 \end{hint}
 
+Finally, you can use the expression for $f^{-1}$ above to find the second derivative
+\[
+    \frac{d^2\phi}{dt^2}.
+\]
+
+The answer is
+\[
+         \frac{d^2\phi}{dt^2} = \answer{-\frac{g}{R}\sin\phi} .
+\]
+
+
+\begin{freeResponse}
+Interpret the meaning of the expression
+\[
+   R \frac{d^2\phi}{dt^2}.
+\]
+\end{freeResponse}
+
 \end{question}
-
-
-\section*{Conservation of Energy}
-
-
-\section*{Bicycle Paths}
-
-
-
 
 \section*{Review Questions}
 
@@ -278,9 +288,21 @@ that expresses the volume of water in the tank (measured in gallons) in terms of
 \end{question}
 
 \begin{question}  \label{Q5434g54t5t}
-Kite?
+
 
 \end{question}
+
+
+
+\section*{Conservation of Energy}
+
+
+\section*{Bicycle Paths}
+
+
+\section*{Reflections}
+
+
 
 
 \end{document}
