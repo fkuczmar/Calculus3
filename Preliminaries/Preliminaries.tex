@@ -11,7 +11,7 @@ A preview of some applications.
 
 
 \section*{Planetary Motion}
-Kepler discovered that the planets orbit the sun in elliptical paths with the sun at a focus of the ellipse. Later Newton used calculus to prove this to be true. 
+Kepler discovered that the planets orbit the sun in elliptical paths with the sun at a focus of the ellipse. Later Newton used calculus to show why this is true. 
 
 The animation below shows a point $P$ orbiting the origin, its position (in meters) at time $t$ (measured in seconds) is given by the coordinate functions
 \[
@@ -29,7 +29,7 @@ The animation below shows a point $P$ orbiting the origin, its position (in mete
 \end{exploration}
 
 
-While the path is elliptical, the motion is not planetary-like because the ``sun'' is at the path's center and not at a focus. That is,  $P$'s acceleration points toward the origin at all times and not toward a focus of the ellipse. Equivalently, the force acting on $P$ points toward the center of the ellipse and not toward a focus as it would for a planet. %Or in terms of forces, the gravitational force of the sun acting on a planet points directly toward the sun and therefore toward 
+While the path is elliptical, the motion is not planetary-like because the ``sun'' is at the path's center and not at a focus. That is,  $P$'s acceleration points toward the center of the ellipse at all times and not toward a focus. This means the force acting on $P$ points toward the center of the ellipse and not toward a focus as it would for a planet. %Or in terms of forces, the gravitational force of the sun acting on a planet points directly toward the sun and therefore toward 
 
 Nevertheless, the force acting on $P$ is \emph{central} as it always points toward a fixed point $S$. And for any such force, the segment $\overline{SP}$ from the central point (the origin in our animation) to the moving point sweeps out area at a constant rate. And we don't need to rely on Newton to show this. You already know enough from your first two calculus classes. %Here's the idea.
 
@@ -51,12 +51,12 @@ a differential triangle $\Delta PSP^\prime$  with base $r=SP$ and height $\overl
 \[
              P^\prime Q = \answer{r d\theta}
 \]
-equal to the length of the circular arc centered at $S$ and subtended by the angle $d\theta$. So $\Delta SPP^\prime$ has differential area
+equal to the length of the circular arc centered at $S$ and subtended by the central angle $d\theta$. So $\Delta SPP^\prime$ has differential area
 \[
     dA = \answer{\frac{1}{2}r^2 d\theta} .
 \]
 
-(b) Next divide both sides of the last equation by the differential time $dt$ seconds it takes $P$ to turn through the differential angle $d\theta$. This tells us that $\overline{SP}$ sweeps out area at the rate
+(b) Next we'll divide both sides of the last equation by the differential time $dt$ seconds it takes $P$ to turn through the differential angle $d\theta$. This tells us that $\overline{SP}$ sweeps out area at the rate
 \[
   \frac{dA}{dt} = \answer{\frac{1}{2}r^2 \frac{d\theta}{dt}} .
 \]
@@ -67,12 +67,12 @@ equal to the length of the circular arc centered at $S$ and subtended by the ang
 (b) What is the meaning of $d\theta/dt$?
 \end{freeResponse}
 
-(c) Now just one more step. Remember, our goal is to show that $\overline{SP}$ sweeps out area at a constant rate. That is, we need to show that $dA/dt$ is constant. For this, we need an expression for the derivative $d\theta/dt$. I'll leave this to you. For a hint, click the \emph{Hint} tab at the start of this question.
+(c) Now just one more step. Remember, our goal is to show that $\overline{SP}$ sweeps out area at a constant rate. To do this we need to show that $dA/dt$ is constant. So we need an expression for the derivative $d\theta/dt$. I'll leave this to you. For a hint, click the \emph{Hint} tab at the start of this question.
 
 \begin{hint}
-Start by expressing $\theta$ in terms of $t$. You may assume $0 \leq \theta < \pi/2$. 
+Start by relating $\theta$ and $t$ with the tangent function. %You may assume $0 \leq \theta < \pi/2$. 
 \[
-    \theta = \answer{\arctan\left( \frac{b\sin (\omega t)}{a \cos (\omega t)}\right)} .
+    \tan \theta = \answer{ \frac{b\sin (\omega t)}{a \cos (\omega t)}} .
 \]
 \end{hint}
 
@@ -81,7 +81,20 @@ Start by expressing $\theta$ in terms of $t$. You may assume $0 \leq \theta < \p
 This proof was not easy and we'll learn a better way in this class, one that's easier and works in greater generality.
 
 \begin{freeResponse}   \label{Q:L98d7g33}
-Here's a related question. How would you cut an elliptical pizza into eight equal slices (having the same area)?
+Here's a related question. How would you cut an elliptical pizza into eight slices having equal areas? You can try this by moving the slider $u$ in the demonstration below.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{urbwsy8zqw}{800}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/urbwsy8zqw}{163: Elliptical Pizza}
+
+
+
+
+
 \end{freeResponse}
 
 
