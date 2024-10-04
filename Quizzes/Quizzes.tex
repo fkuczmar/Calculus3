@@ -1,5 +1,5 @@
 \documentclass{ximera}
-\title{Chapter Quizzes}
+\title{Quiz Solutions}
 
 
 \newcommand{\pskip}{\vskip 0.1 in}
@@ -203,6 +203,63 @@ Let ${\cal L}$ be the line through the origin and the point $(2,-1,1)$.
 \end{onlineOnly}
 
 \href{https://www.desmos.com/3d/wzv6plrbe6}{163: Quiz 1 Question 6}
+
+\begin{explanation}
+(a) I can see the surface is a right circular cone symmetric about the given line. The cone consists of all lines through the origin making an angle of $\pi/6$ radians with ${\cal L}$.
+
+(b) Here we need calculus to find the coordinates of the point on ${\cal L}$ closest to the point $P$ with coordinates $(x,y,z)$.
+
+Since ${\cal L}$ passes through the origin and the point $(2,-1,1)$, the points of ${\cal L}$ are of the form $(2t, -t, t)$, $t\in \mathbb{R}$. To find the coordinates of the point on ${\cal L}$ nearest $P(x,y,z)$, we'll minimize the square
+\[
+       s^2 = (x-2t)^2 +(y+t)^2 + (z-t)^2 \, , \, t\in \mathbb{R} .
+\]
+of the distance between $P(x,y,z)$ and the points $(2t, -t ,t )$ of the line ${\cal L}$. To do this, differentiate both sides with respect to $t$ and use the chain rule, giving
+\[
+        2s \frac{ds}{dt} = 2(-2)(x-2t) +2(1)(y+t)  + 2(-1)(z-t) .
+\]
+Since $s>0$, setting $ds/dt=0$ and solving for $t$ gives
+\[
+        t = \frac{2x - y + z}{2^2+1^2+(-1)^2} = \frac{2x-y+z}{6} .
+\]
+
+So the point $Q$ on ${\cal L}$ closest to $P(x,y,z)$ has coordinates
+\[
+   \left(  \frac{2x-y+z}{3} , \frac{-2x+y-z}{6}  , \frac{2x-y+z}{6}     \right) .
+\]
+
+We should check this, at least visually, by dragging the sliders $x_1$, $y_1$, $z_1$ in the worksheet below. Does this look correct?
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{m9ovrs1a4c}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/m9ovrs1a4c}{163: Quiz 1 Q4}
+
+So the distance from $P(x,y,z)$ to ${\cal L}$ is 
+\[
+   \text{dist}(P, {\cal L}) = \sqrt{\left( \frac{x+y-z}{3}\right)^2 + \left( \frac{2x+5y+z}{6}\right)^2 + \left( \frac{-2x+y+5z}{6}\right)^2}
+\]
+
+We should check this as well. Do you see how the worksheet above does this?
+
+Now we can find an equation of the set of points in $\mathbb{R}^3$ twice as far from the origin $O$ as from the line ${\cal L}$ through the point $(2,-1,1)$. A point $P(x,y,z)$ belongs to this set if and only if
+\[
+           \text{dist}(P,O) = 2\, \text{dist}(P,{\cal L}) .
+\]
+So the surface of all such points has equation
+\[
+        \sqrt{x^2 + y^2 + z^2} = \sqrt{\left( \frac{x+y-z}{3}\right)^2 + \left( \frac{2x+5y+z}{6}\right)^2 + \left( \frac{-2x+y+5z}{6}\right)^2} .
+\]
+
+And just to be sure, activate this equation in Line 12 in the worksheet above.
+
+
+\end{explanation}
+
+
+
 \end{question}
 
 
