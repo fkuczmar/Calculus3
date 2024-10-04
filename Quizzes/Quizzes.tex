@@ -13,15 +13,48 @@ Quiz solutions.
 
 \pskip
 
-\section*{Coordinates in Space}
+\section*{Quiz 1: Coordinates in Space}
 
 \begin{question}  \label{Q:943r34r34}
 A regulation limits the maximum dimension (length, width, or height) of a box taken onto a city bus to be at most $3.5$ feet. Can you find a way to carry a six-foot long fishing pole onto a bus? Explain.
+
+\begin{explanation}
+You can fit the pole in a box measuring $3.5'\times 3.5'\times 3.5'$ since the main diagonal of this box measures
+\[
+      \sqrt{3 (3.5)^2} \text{ ft} = \sqrt{36.75} \text{ ft} > 6 \text{ ft}.
+\]
+\end{explanation}
+
+
 \end{question}
 
 
 \begin{question}  \label{Q:9df33334}
-Find an equation of the sphere centered at the point $(3,-2,4)$ that passes through the point $(1,1,-3)$. Explain the \emph{logic} behind the equation.
+Find an equation of the sphere centered at the point $A(3,-2,4)$ that passes through the point $B(1,1,-3)$. Explain the \emph{logic} behind the equation.
+
+\begin{explanation}
+By the Pythagorean theorem, the sphere has radius 
+\[
+       \text{dist}(A,B) = \sqrt{(3-1)^2 + (-2-1)^2 + (4 - (-3))^2} = \sqrt{62} .
+\]
+
+The sphere is the set of points exactly $\sqrt{62}$ units from its center $A(3,-2,4)$. So a point $P$ with coordinates $(x,y,z)$ lies on the sphere if and only if 
+\[
+  \text{dist} (A,P) = \sqrt{62} .
+\]
+Using the Pythagorean theorem again, the distance $AP$ is
+\[
+        \text{dist} (A,P) = \sqrt{(x-3)^2 + (y+2)^2 + (z-4)^2} .
+\]
+So the point $P(x,y,z)$ lies on the sphere if and only if 
+\[
+   \sqrt{(x-3)^2 + (y+2)^2 + (z-4)^2} = \sqrt{62}.
+\]
+
+That's an equation of the sphere centered at $A(3,-2,4)$ passing through the point $B(1,1,-3)$.
+
+\end{explanation}
+
 \end{question}
 
 \begin{question}  \label{Q44435313}
@@ -30,6 +63,16 @@ Describe and sketch each of the following sets of points.
 (a) $\{ (x,y) \, | \, y=x^2 \}$
 
 (b) $\{ (x,y,z) \, | \, y=x^2 \}$
+
+\begin{explanation}
+(a) The curve is a parabola with vertex at the origin and symmetric about the $y$-axis. Sketch omitted.
+
+(b) The surface is a parabolic cylinder (sketch omitted). The cylinder is composed of lines parallel to the $z$-axis through the point of the parabola
+\[
+         \{  (t,t^2,0) , t \in \mathbb{R}     \} .
+\]
+\end{explanation}
+
 \end{question}
 
 
@@ -55,6 +98,48 @@ Start by finding an expression for the distance between the point with coordinat
 \href{https://www.desmos.com/3d/pzksnds2pe}{163: Quiz 1 Question 4}
 
 
+\begin{explanation}
+
+(a) I find it impossible to visualize such a surface. I can see that the lines
+\[
+      \{ (t,t,0) , t \in \mathbb{R}   \}
+\]
+and
+\[
+      \{ (t,-t,0) , t \in \mathbb{R}   \}
+\]
+lie on the surface, but that's about it.   %the minimum distance between $P$ and the points of ${\cal L}_1$. % 
+
+(b) We'll start by finding an expression for the distance from the point $P$ with coordinates $(x,y,z)$ to the line ${\cal L}_1$. To do this we need to find the coordinates of the point on the line closest to $P$.
+
+A point $Q$ on ${\cal L}_1$ has coordinates $(0,t,1)$ for some $t\in \mathbb{R}$. So the distance between $P(x,y,z)$ and $Q(0,t,1)$ is 
+\[
+       \text{dist}(P,Q) = \sqrt{x^2 + (y-t)^2 + (z-1)^2} .
+\] 
+This distance is minimized when we choose $t=y$. So the distance from $P$ to ${\cal L}_1$ is
+\[
+        \text{dist}(P,{\cal L}_1) = \sqrt{x^2 + (t-t)^2 + (z-1)^2} = \sqrt{x^2 + (z-1)^2} .
+\]
+
+Similarly, the distance from $P(x,y,z)$ to the line ${\cal L}_2$ is
+\[
+        \text{dist}(P,{\cal L}_2) = \sqrt{(t-t)^2 + y^2 + (z+1)^2} = \sqrt{y^2 + (z+1)^2} .
+\]
+
+So the point $P(x,y,z)$ lies on the set of points equidistant from the lines ${\cal L}_1$ and ${\cal L}_2$ if and only if
+\[
+      \sqrt{x^2 + (z-1)^2} = \sqrt{y^2 + (z+1)^2}  .
+\] 
+
+Simplifying, we get
+\[
+      z = \left( x^2 - y^2 \right)/4
+\]
+for an equation of this surface.
+\end{explanation}
+
+
+
 \end{question}
 
 \begin{question}  \label{Qpdfdsfe032}
@@ -71,6 +156,35 @@ Start by finding an expression for the distance between the point with coordinat
 \end{onlineOnly}
 
 \href{https://www.desmos.com/3d/qvin80o05t}{163: Quiz 1 Question 5}
+
+
+\begin{explanation}
+(a) This surface is also hard for me to visualize. Because of symmetry, I can see that the surface is a cylinder made up of lines parallel to the $y$-axis. But maybe not much more than that.
+
+(b) We need to find expressions for the distance from a point $P(x,y,z)$ to the $y$-axis and the plane $z=3$. 
+
+Reasoning similar to the previous question, the distance from $P(x,y,z)$ to the $y$-axis (where a point has coordinates $(0,t,0)$ for some $t\in \mathbb{R})$ is
+\[
+         \sqrt{(x-0)^2 + (t-t)^2 + (z-0)^2} = \sqrt{x^2 + z^2} .
+\] 
+
+Now the point on the plane $z=3$ nearest the point $P(x,y,z)$ has coordinates $(x,y,3)$. So the distance from $P$ to the plane $z=3$ is
+\[
+   \sqrt{(x-x)^2 + (y-y)^2 + (z-3)^2} = \sqrt{(z-3)^2}  = |  z - 3 |.
+\]
+
+So the point $P(x,y,z)$ is twice as far from the plane $z=3$ as it is from the $y$-axis if and only if 
+\[
+     \text{dist}(P, \text{plane } z= 3) = 2\, \text{dist}(P, y\text{-axis}) 
+\]
+and an equation of the set of all such points is
+\[
+         |  z - 3 |    = 2  \sqrt{x^2 + z^2}.
+\]
+This turns out to be an elliptic cylinder (ie. cross-sections perpendicular to the $y$-axis are ellipses).
+\end{explanation}
+
+
 \end{question}
 
 \begin{question}  \label{Q43532432423432}
