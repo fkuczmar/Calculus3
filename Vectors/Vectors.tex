@@ -217,21 +217,17 @@ Let $A(1,2,3)$ and $B(-3,5,-1)$ be points in $\mathbb{R}^3$ and let $O$ be the o
 
 
 \begin{question}  \label{Q:df945r435r34}
-Let $A(1,2,2)$, $B(3,-4,5)$, and $C(-2,1,4)$ be points in space.
+(a) Let $A(1,2,2)$, $B(3,-4,5)$, and $C(-2,1,4)$ be points in space. Let $D$ be the point in $\mathbb{R}^3$ that makes quadrilateral $ABCD$ a parallelogram. Express the vector $\overrightarrow{OD}$ in terms of the vectors $\overrightarrow{OA}$, $\overrightarrow{OB}$, and $\overrightarrow{OC}$. Draw the relevant vectors in the desmos worksheet below.
 
-(a) Use vectors to determine whether or not the points are colinear.
-
-(b) Let $D$ be the point in $\mathbb{R}^3$ that makes quadrilateral $ABCD$ a parallelogram. Express the vector $\overrightarrow{OD}$ in terms of the vectors $\overrightarrow{OA}$, $\overrightarrow{OB}$, and $\overrightarrow{OC}$. Draw the relevant vectors in the desmos worksheet below.
-
-(c) Use the result of part (b) to determine the coordinates of $D$.
+(b) Use the result of part (b) to determine the coordinates of $D$.
 
 \begin{onlineOnly}
     \begin{center}
-\desmosThreeD{qsww6nlulm}{900}{600}
+\desmosThreeD{hxegp3eszd}{900}{600}
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/3d/qsww6nlulm}{163: Parallelogram}
+\href{https://www.desmos.com/3d/hxegp3eszd}{163: Parallelogram}
 \end{question}
 
 
@@ -244,6 +240,27 @@ Let ${\cal L}$ be the line through the points $A(1,2,3)$ and $B(-2,1,1)$ and $O$
 \]
 First express the vector $\overrightarrow{OP}$ in terms of the vectors $\overrightarrow{OA}$ and $\overrightarrow{OB}$. Then use this expression to find the coordinates of $P$. Check your work in the desmos worksheet below.
 
+\begin{explanation}
+The idea is to think about how to get from the origin to point $P$. One path goes from the origin to $A$ and then from $A$ to $P$. In terms of vectors,
+\[
+   \overrightarrow{OP} = \overrightarrow{OA} + \overrightarrow{\answer{AP}}.
+\]
+Next we'll express vector $\overrightarrow{AP}$ in terms of $\overrightarrow{AB}$ using the given ratio.
+\[
+      \overrightarrow{AP} = \answer{3/8} \overrightarrow{AB} .
+\]
+Then
+\begin{align*}
+  \overrightarrow{OP} &= \overrightarrow{OA} + \overrightarrow{\answer{AP}}  \\
+                                &= \overrightarrow{OA} + \frac{3}{8} \overrightarrow{AB} \\
+                                &= \overrightarrow{OA} + \frac{3}{8} \left( \overrightarrow{\answer{OB}} - \overrightarrow{\answer{OA}}   \right) \\
+                                 &= \answer{\frac{5}{8}} \overrightarrow{OA} + \answer{\frac{3}{8}} \overrightarrow{OB}
+\end{align*}
+
+\begin{freeResponse}
+Enter this last expression, writing $A$ for $\overrightarrow{OA}$ and $B$ for $\overrightarrow{OB}$ in Line 10 of the worksheet below. Does this look correct?
+\end{freeResponse}
+
 \begin{onlineOnly}
     \begin{center}
 \desmosThreeD{kqq5ktp0jw}{900}{600}
@@ -252,12 +269,24 @@ First express the vector $\overrightarrow{OP}$ in terms of the vectors $\overrig
 
 \href{https://www.desmos.com/3d/kqq5ktp0jw}{163: Harmonic Conjugates}
 
+(b) So the vector $\overrightarrow{OP}$ has components
+\[
+    \overrightarrow{OP} = \langle \answer{-1/8} , \answer{13/8} , \answer{9/4}   \rangle .
+\]
+And since $O$ is the origin, $P$ has coordinates
+\[
+   (x,y,z) = (\answer{-1/8} , \answer{13/8} , \answer{9/4}) .
+\]
+
+\end{explanation}
+
 
 (b) Let $Q$ be the point on ${\cal L}$ \emph{not} between $A$ and $B$ such that
 \[
       \frac{|\overrightarrow{AQ}|}{|\overrightarrow{QB}|} = \frac{3}{5} . 
 \]
 First express the vector $\overrightarrow{OQ}$ in terms of the vectors $\overrightarrow{OA}$ and $\overrightarrow{OB}$. Then use this expression to find the coordinates of $Q$. Check your work in the desmos worksheet.
+
 
 \end{question}
 
