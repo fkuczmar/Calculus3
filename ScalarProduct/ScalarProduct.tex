@@ -15,7 +15,7 @@ It often helps in applications to resolve a vector ${\bf v}$ into two components
 
 
 \begin{exploration}
-Drag points $A$, $B$, $D$, and $E$ to see how the vector projection of ${\bf v}$ in the direction of ${\bf w}$ changes. Watch also the vector component of ${\bf v}$ perpendicular to ${\bf w}$.
+Drag points $A$, $B$, $D$, and $E$ to see how the vector projection ${\bf v}_{\text{par}}$ of ${\bf v}$ in the direction of ${\bf w}$ changes. Watch also the vector component ${\bf v}_{\text{perp}}$ of ${\bf v}$ perpendicular to ${\bf w}$.
 \pdfOnly{
 Access Geogebra interactives through the online version of this text at
  
@@ -33,7 +33,7 @@ Access Geogebra interactives through the online version of this text at
 
 
 
-The scalar projection of the vector ${\bf v}$ in the direction of the vector ${\bf w}$ is the vector ${\bf v}_{par}$ parallel to ${\bf w}$ that make the difference
+The \emph{vector projection} of the vector ${\bf v}$ in the direction of the vector ${\bf w}$ is the vector ${\bf v}_{par}$ parallel to ${\bf w}$ that makes the difference
 \[
       {\bf v}_{perp} = {\bf v} - {\bf v}_{par}
 \]
@@ -42,7 +42,7 @@ perpendicular to ${\bf w}$.
 In two dimensions slope makes it easy to determine if two vectors are parallel. But we cannot really talk about the slope of a vector in $\mathbb{R}^3$ or higher dimensions. So to resolve a vector into two components as just described, we need a way to determine whether two vectors in the same dimension are perpendicular. It you think about this problem from scratch (ie. ignoring what you may have read in another source), the solution is not immediately obvious.
 
 \begin{question}  \label{Q235r74:Scalar}
-Which of the following are equivalent to the condition that the non-zero vectors ${\bf a}, {\bf b} \in \mathbb{R}^n$ are perpendicular? Check all that apply. Draw pictures.
+Which of the following are equivalent to the condition that the non-zero vectors ${\bf a}, {\bf b} \in \mathbb{R}^n$ are perpendicular? Check all that apply. Draw pictures to explain your reasoning. No computations.
 
 \begin{selectAll}  
     \choice{The vectors ${\bf a}+{\bf b}$ and ${\bf a}-{\bf b}$ are perpendicular.}  
@@ -56,15 +56,44 @@ Which of the following are equivalent to the condition that the non-zero vectors
 
 
 \begin{question}   \label{Q32erdf:Scalar}
-Use one of the correct conditions above to find an algebraic condition for the vectors 
+Use one of the correct conditions above to find an algebraic condition for the non-zero vectors
 \[
     {\bf v}_1= \langle x_1, y_1, z_1 \rangle, {\bf v}_2 = \langle  x_2, y_2, z_2\rangle \in \mathbb{R}^3 
 \]
 to be perpendicular.
+
+\begin{explanation}
+It doesn't matter which of the three equivalent conditions we use, but for reasons of symmetry, we'll go with the first. Then ${\bf v}_1$ and ${\bf v}_2$ are perpendicular if and only if
+\[
+   |  {\bf v}_1 + {\bf v}_2 | = | {\bf v}_1 - {\bf v}_2 | ,
+\]
+or (squaring both sides) if and only if
+\[
+          (x_1 + x_2)^2 + (y_1 + y_2)^2 + (z_1 + z_2)^2 = \answer{(x_1 - x_2)^2 + (y_1 - y_2)^2 + (z_1 - z_2)^2} .
+\]
+
+After some algebra, we find that the non-zero vectors ${\bf v}_1$ and ${\bf v}_2$ are perpendicular if and only if
+\[
+      \answer{x_1 x_2 + y_1y_2 + z_1 z_2} = 0.
+\]
+\end{explanation}
 \end{question}
 
 \begin{question}  \label{Qgsdfbe34:Scalar}
 Find three vectors in $\mathbb{R}^3$, all pointing in different directions, that are perpendicular to the vector ${\bf v}= \langle -4,3,11\rangle$. 
+
+\begin{explanation}
+Using what we just learned, we know a non-zero vector ${\bf w} = \langle x, y, z \rangle \in \mathbb{R}^3$ is perpendicular to ${\bf v} = \langle 1,3,11\rangle$ if and only if
+\[
+     -x + \answer{3}y + \answer{11}z = \answer{0}.
+\]
+Now we've turned our geometric problem into an algebraic one. We can just let $y$ and $z$ take arbitrary real values and solve the above equation for $x$. 
+\begin{freeResponse}
+Carry out the above computations to find three vectors all pointing in different directions, that are perpendicular to ${\bf v}$.
+\end{freeResponse}
+
+
+\end{explanation}
 \end{question}
 
 
