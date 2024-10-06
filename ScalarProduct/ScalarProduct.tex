@@ -16,6 +16,8 @@ It often helps in applications to resolve a vector ${\bf v}$ into two components
 
 \begin{exploration}
 Drag points $A$, $B$, $D$, and $E$ to see how the vector projection ${\bf v}_{\text{par}}$ of ${\bf v}$ in the direction of ${\bf w}$ changes. Watch also the vector component ${\bf v}_{\text{perp}}$ of ${\bf v}$ perpendicular to ${\bf w}$.
+
+
 \pdfOnly{
 Access Geogebra interactives through the online version of this text at
  
@@ -67,7 +69,11 @@ It doesn't matter which of the three equivalent conditions we use, but for reaso
 \[
    |  {\bf v}_1 + {\bf v}_2 | = | {\bf v}_1 - {\bf v}_2 | ,
 \]
-or (squaring both sides) if and only if
+or in terms of components,
+\[
+        | \langle   x_1+x_2 , y_1+y_2, z_1 + z_2   \rangle  | = | \langle   x_1-x_2 , y_1-y_2, z_1 - z_2   \rangle  | .
+\]
+Squaring both sides gives the equivalent condition that
 \[
           (x_1 + x_2)^2 + (y_1 + y_2)^2 + (z_1 + z_2)^2 = \answer{(x_1 - x_2)^2 + (y_1 - y_2)^2 + (z_1 - z_2)^2} .
 \]
@@ -118,11 +124,30 @@ Access Geogebra interactives through the online version of this text at
 \begin{question}   \label{Qrasd5r:Scalar}
 (a) Given vectors ${\bf v}, {\bf w} \in \mathbb{R}^n$, use the scalar product to determine the value of the scalar $\lambda\in \mathbb{R}$ that makes the vector
 \[
-     {\bf v}_{perp} = {\bf v} - \lambda {\bf w}
+     {\bf v}_{\perp} = {\bf v} - \lambda {\bf w}
 \]
 perpendicular to ${\bf w}$.
 
-(b) Use part (a) to find an expression for the component of ${\bf v}$ in the direction of ${\bf w}$.
+(b) Use part (a) to find an expression for the vector component of ${\bf v}$ in the direction of ${\bf w}$.
+
+\begin{explanation}
+The vector ${\bf v}_{perp}$ is perpendicular to ${\bf w}$ if and only if
+\begin{align*}
+     0        &=   \textbf{v}_{\perp} \cdot \textbf{w}   \\ 
+               &= \left( {\bf v} - \lambda {\bf w} \right) \cdot {\bf w} \\
+               &= {\bf v}\cdot {\bf w} - \lambda ({\bf w}\cdot {\bf w}) .
+\end{align*}
+Solving the above equation for $\lambda$ tells us that
+\[
+    \lambda = \frac{\answer{{\bf v}\cdot {\bf w}}}{\answer{{\bf w}\cdot {\bf w}}}.
+\]
+So the vector component of ${\bf v}$ in the direction of ${\bf w}$ is
+\[
+    \text{proj}_{{\bf w}}({\bf v}) = {\bf v}_{par} = \left(  \frac{\answer{{\bf v}\cdot {\bf w}}}{\answer{{\bf w}\cdot {\bf w}}}    \right) \answer{\bf w}.
+\]
+\end{explanation}
+
+
 \end{question}
 
 
