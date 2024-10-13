@@ -121,6 +121,13 @@ For property (c), first use the scalar product to compute $\cos\theta$.
 \end{exploration}
 
 
+\begin{question} \label{Q344343222111}
+Find vectors ${\bf a}, {\bf b}\in \mathbb{R}^3$ such that
+\[
+       {\bf a} \times {\bf b} = \langle -2, 5, -3 \rangle .
+\]
+Explain your method.
+\end{question}
 
 
 \section{Squares and Cubes in Space}
@@ -198,37 +205,39 @@ We are given two orthogonal vectors $\overrightarrow{QA}$ and $\overrightarrow{Q
 
 \begin{onlineOnly}
     \begin{center}
-\desmos{m9x6pplcpw}{900}{600}
+\desmos{l6vw2hzhnb}{900}{600}
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/calculator/m9x6pplcpw}{163: Parameterizing Circles in the Plane}
+\href{https://www.desmos.com/calculator/l6vw2hzhnb}{163: Parameterizing Circles in the Plane}
 
 \begin{enumerate}
-\item{Our first goal is to express the vector $\overrightarrow{QP}$ in terms of the angle $\theta$ from $\overrightarrow{QA}$ to  $\theta$ from $\overrightarrow{QB}$. This angle is measured continuously and is taken to be positive in the counterclockwise direction. Do this as follows:}
+\item{Our first goal is to express the vector $\overrightarrow{QP}$ in terms of the angle $\phi$ from $\overrightarrow{QA}$ to  $\theta$ from $\overrightarrow{QB}$. This angle is measured continuously and is taken to be positive in the counterclockwise direction. Do this as follows:}
 
 \begin{enumerate}
 \item{Find the vector projection of $\overrightarrow{OP}$ onto $\overrightarrow{QA}$.
 \[
-    ( \answer{\cos \theta} )\overrightarrow{QA}
+    ( \answer{\cos \phi} )\overrightarrow{QA}
 \]
 }
  \item{Find the vector projection of $\overrightarrow{OP}$ onto $\overrightarrow{QB}$.
 \[
-    ( \answer{\sin \theta} ) \overrightarrow{QB}
+    ( \answer{\sin \phi} ) \overrightarrow{QB}
 \]
 }
 
 \item{Use the two previous results to write $\overrightarrow{OP}$ as a linear combination of  $\overrightarrow{QA}$ and $\overrightarrow{QB}$.
 \[
-  \overrightarrow{OP} = ( \answer{\cos \theta} )\overrightarrow{QA} + (\answer{\sin \theta}) \overrightarrow{QB}
+  \overrightarrow{OP} = ( \answer{\cos \phi} )\overrightarrow{QA} + (\answer{\sin \phi}) \overrightarrow{QB}
 \]
 }
 
 \end{enumerate}
 
-\item{Now express the vector $\overrightarrow{OP}$ in terms of the vectors $\overrightarrow{OA}$, $\overrightarrow{OB}$, $\overrightarrow{OQ}$, and the angle $\theta$. Enter this expression in Line 19 of the worksheet above to see if you are correct. But use $t$ in place of $\theta$ as required by desmos.
+\item{Now express the vector $\overrightarrow{OP}$ in terms of the vectors $\overrightarrow{OA}$, $\overrightarrow{OB}$, $\overrightarrow{OQ}$, and the angle $\phi$. Enter this expression in Line 19 of the worksheet above and play the slider $\phi$ to see if you are correct. 
 }
+
+\item{With the appropriate domain for $\phi$, we can regard the answer to the previous question as a parameterization of the circle centered at $Q$ through $A$ and $B$. But desmos requires we use the parameter $t$ to parameterize a curve. Enter this parameterization with the appropriate domain in Line 20 as a check.}
 
 \end{enumerate} 
 
