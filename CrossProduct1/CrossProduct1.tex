@@ -180,10 +180,23 @@ A vector ${\bf n}$ is normal to the plane if and only if ${\bf n}$ is normal to 
 
 
 
-
-
 \begin{question}  \label{Qdfdsffrr3tg}
 The idea of this problem is to construct an equilateral triangle $ABC$ in $\mathbb{R}^3$ given the vertices $A$, $B$ and a third point $P$ in the plane of the triangle. We assume that $A$, $B$, and $P$ are not colinear so that they determine a unique plane.
+
+\begin{enumerate}
+\item{Express the vector $\overrightarrow{OC}$ from the origin to the third vertex of equilateral triangle $\Delta ABC$ in terms of the vectors $\overrightarrow{OA}$, $\overrightarrow{OB}$ and 
+\[
+    {\bf n} = \overrightarrow{PA}  \times \overrightarrow{PB}.
+\]
+There are two possibilites. Choose one.
+}
+
+\item{Enter your expression for $\overrightarrow{OC}$ on Line 13 of the desmos worksheet below to check your work.}
+
+\item{Express the vector $\overrightarrow{OD}$ from the origin to the fourth vertex of the regular tethrahdron $\Delta ABCD$ in terms of the vectors $\overrightarrow{OA}$, $\overrightarrow{OB}$, $\overrightarrow{OC}$, and ${\bf n}$. The four faces of a regular tetrahedron are equilateral triangles).  
+}
+
+\end{enumerate}
 
 \begin{onlineOnly}
     \begin{center}
@@ -251,7 +264,7 @@ We are given two orthogonal vectors $\overrightarrow{QA}$ and $\overrightarrow{Q
 
 
 \begin{question}  \label{Qdfrr54r55thlnmvvc}
-Let's apply the idea of the previous question to parameterize a circle in $\mathbb{R}^3$. We'll suppose first the circle is centered at the point $Q(-1,4,1)$ and has radius $3$. 
+Let's apply the idea of the previous question to parameterize a circle in $\mathbb{R}^3$. We'll suppose the circle is centered at the point $Q(-1,4,1)$ and has radius $3$. 
 
 \begin{enumerate}
 
@@ -264,11 +277,11 @@ Let's apply the idea of the previous question to parameterize a circle in $\math
 \end{multipleChoice}
 }
 
-\item{To pick out one of the infinitely many circles with a given center and radius, we need to specify the plane in which the circle lies. To do that, we'll say that our particular circle with center $Q(-1,4,1)$ and radius $3$ that lies in the plane parallel to the vectors ${\bf u} = \langle -2, -1, 2 \rangle$ and ${\bf v}= \langle 3/\sqrt{2},0,3/\sqrt{2} \rangle$. These vectors are particularly convenient because
+\item{To pick out one of the infinitely many circles in space with a given center and radius, we need to specify the plane in which the circle lies. To do that, we'll say that our particular circle with center $Q(-1,4,1)$ and radius $3$ lies in the plane parallel to the vectors ${\bf u} = \langle -2, -1, 2 \rangle$ and ${\bf v}= \langle 3/\sqrt{2},0,3/\sqrt{2} \rangle$. These vectors are particularly convenient because
 \begin{enumerate}
 \item {${\bf u}$ and ${\bf v}$ are orthogonal.}
 
-\item{${\bf u} = {\bf v} = 3$.}
+\item{$|{\bf u}| = |{\bf v}| = 3$.}
 \end{enumerate}
 
 \begin{freeResponse}
@@ -276,7 +289,7 @@ Verify the two facts above.
 \end{freeResponse}
 }
 
-\item{Now we can draw the vectors ${\bf u}$ and ${\bf v}$ anywhere in space, but because our circle has center $Q(-1,4,1)$, we'll draw these vectors with their tails at $Q$ as shown below.
+\item{We can draw the vectors ${\bf u}$ and ${\bf v}$ anywhere in space, but because our circle has center $Q(-1,4,1)$, we'll draw these vectors with their tails at $Q$ as shown below.
 
 \begin{onlineOnly}
     \begin{center}
@@ -298,9 +311,15 @@ Now let $P(x,y,z)$ be a point on the circle such that the vector $\overrightarro
 
 \item{That's it. The above is a \emph{vector} equation of the circle with center $A$ and radius $r=|{\bf u}| = |{\bf v}|$ that lies in the plane parallel to the vectors ${\bf u}$ and ${\bf v}$. To enter this in the desmos worksheet above, remember that desmos treats points as vectors (not graphically, but algebraically), so we can write $U$ for ${\bf u}$, $V$ for ${\bf v}$, and $Q$ for $\overrightarrow{OQ}$. But we must use $t$ for the parameter. Try entering this parameterization on Line 8 in the worksheet above. Drag slider $\phi_1$ to change the angle and move $P$ around the circle.
 }
-
 \end{enumerate}
 
+\pskip
+
+{\bf Summary:} The parameterization
+\[
+      \overrightarrow{OP} = \overrightarrow{OQ} + (\cos t){\bf u} + (\sin t){\bf u}\, , \, 0\leq t < 2\pi ,
+\]
+expresses the positions relative the origin of the points on the circle of radius $|{\bf u}| = |{\bf v}|=3$ in the plane parallel to the vectors ${\bf u}$ and ${\bf v}$.
 \end{question}
 
 
@@ -316,7 +335,7 @@ Now the vectors ${\bf u}$ and ${\bf v}$ are \emph{not} orthogonal. As a result, 
 
 \href{https://www.desmos.com/3d/k5idcpjrep}{163: Circle in Space 2}
 
-How can we fix this? The idea is to replace one of the vectors, say ${\bf v}$ with another of length $3$ that is perpendicular to ${\bf u}$ and parallel to the plane of our circle (through $A$ parallel to the vectors ${\bf u}$ and ${\bf v}$). 
+How can we fix this? The idea is to replace one of the vectors, say ${\bf v}$ with another of length $3$ that is perpendicular to ${\bf u}$ and parallel to the plane of our circle (ie. the plane through $A$ parallel to the vectors ${\bf u}$ and ${\bf v}$). 
 
 \begin{hint}
 To do this you will need to use the cross product. Maybe more than once. 
@@ -329,7 +348,18 @@ To do this you will need to use the cross product. Maybe more than once.
 \begin{question}  \label{Q9df43r23rfddfs}
 The idea of this problem is to parameterize a circle in space that lies in the plane determined by the non-colinear points $A$, $B$ and $P$. The circle is centered at $A$ and passes through $B$.
 
-Enter the correct parameterization in Line 13 of the worksheet below.
+\begin{enumerate}
+\item{Use the ideas of the last two problems to express the vector $\overrightarrow{OP}$ from the origin to a point $P$ on the circle in terms of a parameter $t$ and the vectors $\overrightarrow{OA}$, $\overrightarrow{OB}$, and
+\[
+   {\bf n} = \overrightarrow{PA} \times \overrightarrow{PB} .
+\]
+}
+
+\item{Interpret the geometric meaning of the parameter above.}
+
+\item{Enter the correct parameterization in Line 13 of the worksheet below.}
+
+\end{enumerate}
 
 
 \begin{onlineOnly}
@@ -343,14 +373,17 @@ Enter the correct parameterization in Line 13 of the worksheet below.
 \end{question}
 
 
-\section{Straight Lines on a Sphere}
+\section{Geodesics on a Sphere}
 
 \begin{question}  \label{Q9df7udsftr}
-The problem here is to 
+A \emph{great circle} on a sphere is a circle centered at the sphere's center. It looks like a straight line to residents of the sphere. The shorter arc of a great circle through two given points is the shortest path on the sphere between the points.
+
 \begin{enumerate}
-\item{parameterize the great circle through given points $A$ and $B$ on a sphere of radius $R$. A great circle is centered at the sphere's center.}
-\item{parameterize the shorter arc of that great circle, and}
-\item{to compute the length of that arc.}
+\item{Parameterize the great circle through the given points $A$ and $B$ on a sphere of radius $R$ centered at the origin. The parametrization will be in terms of a parameter $t$ and the vectors $\overrightarrow{OA}$ and $\overrightarrow{OB}$. Include an appropriate domain.}
+
+\item{Parameterize the shorter arc of that great circle between $A$ and $B$.}
+\item{Compute the length of that arc and compare it to the radius of the sphere.}
+\item{Enter your parameterizations in the worksheet below to see if you are correct.}
 
 \end{enumerate}
 
