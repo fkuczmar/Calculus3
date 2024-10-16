@@ -264,7 +264,7 @@ Let's apply the idea of the previous question to parameterize a circle in $\math
 \end{multipleChoice}
 }
 
-\item{To pick out one of the infinitely many circles with a given center and radius, we need to specify the plane in which the circle lies. To do that, we'll say that our particular circle with center $A(1,4,-2)$ and radius $3$ lies in the plane parallel to the vectors ${\bf u} = \langle -2, -1, 2 \rangle$ and ${\bf v}= \langle 3/\sqrt{2},0,3/\sqrt{2} \rangle$. These vectors are particularly convenient because
+\item{To pick out one of the infinitely many circles with a given center and radius, we need to specify the plane in which the circle lies. To do that, we'll say that our particular circle with center $Q(-1,4,1)$ and radius $3$ that lies in the plane parallel to the vectors ${\bf u} = \langle -2, -1, 2 \rangle$ and ${\bf v}= \langle 3/\sqrt{2},0,3/\sqrt{2} \rangle$. These vectors are particularly convenient because
 \begin{enumerate}
 \item {${\bf u}$ and ${\bf v}$ are orthogonal.}
 
@@ -286,7 +286,7 @@ Verify the two facts above.
 
 \href{https://www.desmos.com/3d/ftosqazxfm}{163: Circle in Space 1}
 
-Now let $P(x,y,z)$ be a point on the circle such that the vector $\overrightarrow{QP}$ makes the angle $\phi_1$ with ${\bf u}$ (the blue vector), where the angle is measured toward ${\bf v}$. Our aim is to express the position $\overrightarrow{OP}$ of $P$ relative to the origin in terms of the vectors $\overrightarrow{OQ}$, ${\bf u}$ and ${\bf v}$. But this is exactly what we did in the previous question. 
+Now let $P(x,y,z)$ be a point on the circle such that the vector $\overrightarrow{QP}$ makes the angle $\phi_1$ with ${\bf u}$ (the blue vector), where the angle is measured toward ${\bf v}$. Our aim is to express the position $\overrightarrow{OP}$ of $P$ relative to the origin in terms of the vectors $\overrightarrow{OQ}$, ${\bf u}$ and ${\bf v}$. But this is exactly what we did in the previous question. Click the blue arrow (below right) to check your work.
 
 \begin{expandable}
 \begin{align*}
@@ -296,10 +296,32 @@ Now let $P(x,y,z)$ be a point on the circle such that the vector $\overrightarro
 \end{expandable}
 }
 
-\item{That's it. The above is a \emph{vector} equation of the circle with center $A$ and radius $r=|{\bf u}| = |{\bf v}|$ that lies in the plane parallel to the vectors ${\bf u}$ and ${\bf v}$. To enter this in the desmos worksheet above, remember that desmos treats points as vectors (not graphically, but algebraically), so we can write $U$ for ${\bf u}$, $V$ for ${\bf v}$, and $Q$ for $\overrightarrow{OQ}$. But we must use $t$ for the parameter. Try entering this parameterization on Line 8 in the worksheet above.
+\item{That's it. The above is a \emph{vector} equation of the circle with center $A$ and radius $r=|{\bf u}| = |{\bf v}|$ that lies in the plane parallel to the vectors ${\bf u}$ and ${\bf v}$. To enter this in the desmos worksheet above, remember that desmos treats points as vectors (not graphically, but algebraically), so we can write $U$ for ${\bf u}$, $V$ for ${\bf v}$, and $Q$ for $\overrightarrow{OQ}$. But we must use $t$ for the parameter. Try entering this parameterization on Line 8 in the worksheet above. Drag slider $\phi_1$ to change the angle and move $P$ around the circle.
 }
 
 \end{enumerate}
+
+\end{question}
+
+
+\begin{question}  \label{Q98de983234}
+This question is much like the last, but with one significant change. We wish to parameterize the circle with center $Q(-1,4,1)$ and radius $3$ that lies in the plane parallel to the vectors ${\bf u} = \langle -2, -1, 2 \rangle$ and ${\bf v}= \langle 3,0,0 \rangle$. 
+Now the vectors ${\bf u}$ and ${\bf v}$ are \emph{not} orthogonal. As a result, the same parameterization we used before does not give a circle but an ellipse. See below.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{k5idcpjrep}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/k5idcpjrep}{163: Circle in Space 2}
+
+How can we fix this? The idea is to replace one of the vectors, say ${\bf v}$ with another of length $3$ that is perpendicular to ${\bf u}$ and parallel to the plane of our circle (through $A$ parallel to the vectors ${\bf u}$ and ${\bf v}$). 
+
+\begin{hint}
+To do this you will need to use the cross product. Maybe more than once. 
+\end{hint}
+
 
 \end{question}
 
