@@ -142,7 +142,7 @@ We'll work in general with the vectors from the origin to the vertices of the sq
 
 \pskip
 
-(a) How many possibilites are there for the vertex $C$ of our square? Remember that $A$, $B$, $C$, $D$ are consecutiv vertices of square $ABCD$.
+(a) How many possibilites are there for the vertex $C$ of our square? Remember that $A$, $B$, $C$, $D$ are consecutive vertices of square $ABCD$.
 \begin{multipleChoice}
 \choice{none}
 \choice{one}
@@ -173,6 +173,47 @@ A vector ${\bf n}$ is normal to the plane if and only if ${\bf n}$ is normal to 
 (e) Change your expression for ${\bf c} = \overrightarrow{OC}$ in Line 14 to get the other square.
 
 (f) Try to construct the cube $ABCDB_1C_1D_1A_1$ where $A_1$ is the vertex opposite $A$, etc. 
+
+\end{question}
+
+
+\begin{question} \label{Q346563211}
+This problem is almost identical to the previous one. The only difference is that now we are given a pair of \emph{opposite} vertices $A$ and $C$ of square $ABCD$ lying in the plane through the non-colinear points $A$, $B$, and $P$.
+
+\begin{itemize}
+\item{ How many possibilites are there for vertex $A$ of our square? 
+\begin{multipleChoice}
+\choice{none}
+\choice[correct]{one}
+\choice]{two}
+\choice{infinitely many}
+\end{multipleChoice}
+}
+
+\item{Express the vector $\overrightarrow{OC}$ from the origin to $C$ in terms of the vectors $\overrightarrow{OA}$, $\overrightarrow{OC}$, and 
+\[
+   {\bf n} = ( {\bf b}-{\bf a}  ) \times ({\bf p}-{\bf a})  .
+\] 
+Click the Hint tab above for help if necessary. 
+\begin{hint}
+Start by expressing the vector $\overrightarrow{OM}$ from the origin to the midpoint $M$ of segment $\overline{AC}$ in terms of $\overrightarrow{OA}$ and $\overrightarrow{OC}$. 
+\end{hint}
+}
+
+\item{Find a similar expression for the vector $\overrightarrow{OD}$.}
+
+\item{Check your work in the desmos activity below by entering your expressions for $\overrightarrow{OB}$ and $\overrightarrow{OD}$ in Lines 14 and 15.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{n7pzbo9hum}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/n7pzbo9hum}{163: Square2}
+}
+
+\end{itemize}
 
 \end{question}
 
@@ -210,241 +251,6 @@ There are two possibilites. Choose one.
 
 
 
-\iffalse 
 
-*******************************************************************************
-
-
-\section{Circles in Space}
-
-\begin{question}  \label{Qdfds45rt54rr3tg}
-This problem is a first step toward parameterizing circles in space. 
-
-We are given two orthogonal vectors $\overrightarrow{QA}$ and $\overrightarrow{QB}$ with equal lengths as shown below. Let $P$ be a point on the circle through $A$ and $B$ centered at $Q$. 
-
-\begin{onlineOnly}
-    \begin{center}
-\desmos{arrfrcusn5}{900}{600}
-\end{center}
-\end{onlineOnly}
-
-\href{https://www.desmos.com/calculator/arrfrcusn5}{163: Parameterizing Circles in the Plane}
-
-\begin{enumerate}
-\item{Our first goal is to express the vector $\overrightarrow{QP}$ in terms of the angle $\phi$ from $\overrightarrow{QA}$ to  $\theta$ from $\overrightarrow{QB}$. This angle is measured continuously and is taken to be positive in the counterclockwise direction. Do this as follows:}
-
-\begin{enumerate}
-\item{Find the vector projection of $\overrightarrow{QP}$ onto $\overrightarrow{QA}$.
-\begin{multipleChoice}
-    \choice[correct]{$(\cos \phi)\overrightarrow{QA}$}
-     \choice{$(\sin \phi)\overrightarrow{QA}$}
-     \choice{$(\tan \phi)\overrightarrow{QA}$}
-\end{multipleChoice}
-}
- \item{Find the vector projection of $\overrightarrow{QP}$ onto $\overrightarrow{QB}$.
-\begin{multipleChoice}
-    \choice{$(\cos \phi)\overrightarrow{QB}$}
-     \choice[correct]{$(\sin \phi)\overrightarrow{QB}$}
-     \choice{$(\tan \phi)\overrightarrow{QB}$}
-\end{multipleChoice}
-}
-
-\item{Use the two previous results to write $\overrightarrow{QP}$ as a linear combination of  $\overrightarrow{QA}$ and $\overrightarrow{QB}$.
-\begin{multipleChoice}
-    \choice[correct]{$\overrightarrow{QP} = (\cos \phi)\overrightarrow{QA} + (\sin\phi)\overrightarrow{QB}$}
-     \choice{$\overrightarrow{QP} = (\sin \phi)\overrightarrow{QA} + (\cos\phi)\overrightarrow{QB}$}
-\end{multipleChoice}
-}
-
-\end{enumerate}
-
-\item{Now express the vector $\overrightarrow{OP}$ in terms of the vectors $\overrightarrow{OA}$, $\overrightarrow{OB}$, $\overrightarrow{OQ}$, and the angle $\phi$. Enter this expression in Line 19 of the worksheet above and play the slider $\phi$ to see if you are correct. Keep in mind that to write the vector $\overrightarrow{OA}$ in desmos, for example, you would just write $O$.
-}
-
-\item{With the appropriate domain for $\phi$, we can regard the answer to the previous question as a parameterization of the circle centered at $Q$ through $A$ and $B$. But desmos requires we use the parameter $t$ to parameterize a curve. Enter this parameterization with the appropriate domain in Line 20 as a check.}
-
-\end{enumerate} 
-
-\end{question}
-
-
-
-\begin{question}  \label{Qdfrr54r55thlnmvvc}
-Let's apply the idea of the previous question to parameterize a circle in $\mathbb{R}^3$. We'll suppose the circle is centered at the point $Q(-1,4,1)$ and has radius $3$. 
-
-\begin{enumerate}
-
-\item{How many such circles are there?
-\begin{multipleChoice}
-\choice{none}
-\choice{one}
-\choice{two}
-\choice[correct]{infinitely many}
-\end{multipleChoice}
-}
-
-\item{To pick out one of the infinitely many circles in space with a given center and radius, we need to specify the plane in which the circle lies. To do that, we'll say that our particular circle with center $Q(-1,4,1)$ and radius $3$ lies in the plane parallel to the vectors ${\bf u} = \langle -2, -1, 2 \rangle$ and ${\bf v}= \langle 3/\sqrt{2},0,3/\sqrt{2} \rangle$. These vectors are particularly convenient because
-\begin{enumerate}
-\item {${\bf u}$ and ${\bf v}$ are orthogonal.}
-
-\item{$|{\bf u}| = |{\bf v}| = 3$.}
-\end{enumerate}
-
-\begin{freeResponse}
-Verify the two facts above.
-\end{freeResponse}
-}
-
-\item{We can draw the vectors ${\bf u}$ and ${\bf v}$ anywhere in space, but because our circle has center $Q(-1,4,1)$, we'll draw these vectors with their tails at $Q$ as shown below.
-
-\begin{onlineOnly}
-    \begin{center}
-\desmosThreeD{ftosqazxfm}{900}{600}
-\end{center}
-\end{onlineOnly}
-
-\href{https://www.desmos.com/3d/ftosqazxfm}{163: Circle in Space 1}
-
-Now let $P(x,y,z)$ be a point on the circle such that the vector $\overrightarrow{QP}$ makes the angle $\phi_1$ with ${\bf u}$ (the blue vector), where the angle is measured toward ${\bf v}$. Our aim is to express the position $\overrightarrow{OP}$ of $P$ relative to the origin in terms of the vectors $\overrightarrow{OQ}$, ${\bf u}$ and ${\bf v}$. But this is exactly what we did in the previous question. Click the blue arrow (below right) to check your work.
-
-\begin{expandable}
-\begin{align*}
-   \overrightarrow{OP} &= \overrightarrow{OQ} + \overrightarrow{QP} \\
-                                   & = \overrightarrow{OQ} + (\cos\phi_1) {\bf u} + (\sin\phi_1){\bf v} , 0\leq \phi_1 \leq 2\pi .
-\end{align*}
-\end{expandable}
-}
-
-\item{That's it. The above is a \emph{vector} equation of the circle with center $A$ and radius $r=|{\bf u}| = |{\bf v}|$ that lies in the plane parallel to the vectors ${\bf u}$ and ${\bf v}$. To enter this in the desmos worksheet above, remember that desmos treats points as vectors (not graphically, but algebraically), so we can write $U$ for ${\bf u}$, $V$ for ${\bf v}$, and $Q$ for $\overrightarrow{OQ}$. But we must use $t$ for the parameter. Try entering this parameterization on Line 8 in the worksheet above. Drag slider $\phi_1$ to change the angle and move $P$ around the circle.
-}
-\end{enumerate}
-
-\pskip
-
-{\bf Summary:} The parameterization
-\[
-      \overrightarrow{OP} = \overrightarrow{OQ} + (\cos t){\bf u} + (\sin t){\bf u}\, , \, 0\leq t < 2\pi ,
-\]
-expresses the positions relative the origin of the points on the circle of radius $|{\bf u}| = |{\bf v}|=3$ in the plane parallel to the vectors ${\bf u}$ and ${\bf v}$.
-\end{question}
-
-
-\begin{question}  \label{Q98de983234}
-This question is much like the last, but with one significant change. We wish to parameterize the circle with center $Q(-1,4,1)$ and radius $3$ that lies in the plane parallel to the vectors ${\bf u} = \langle -2, -1, 2 \rangle$ and ${\bf v}= \langle 3,0,0 \rangle$. 
-Now the vectors ${\bf u}$ and ${\bf v}$ are \emph{not} orthogonal. As a result, the same parameterization we used before does not give a circle but an ellipse. See below.
-
-\begin{onlineOnly}
-    \begin{center}
-\desmosThreeD{k5idcpjrep}{900}{600}
-\end{center}
-\end{onlineOnly}
-
-\href{https://www.desmos.com/3d/k5idcpjrep}{163: Circle in Space 2}
-
-How can we fix this? The idea is to replace one of the vectors, say ${\bf v}$ with another of length $3$ that is perpendicular to ${\bf u}$ and parallel to the plane of our circle (ie. the plane through $A$ parallel to the vectors ${\bf u}$ and ${\bf v}$). 
-
-\begin{hint}
-To do this you will need to use the cross product. Maybe more than once. 
-\end{hint}
-
-
-\end{question}
-
-
-\begin{question}  \label{Q9df43r23rfddfs}
-The idea of this problem is to parameterize a circle in space that lies in the plane determined by the non-colinear points $A$, $B$ and $P$. The circle is centered at $A$ and passes through $B$.
-
-\begin{enumerate}
-\item{Use the ideas of the last two problems to express the vector $\overrightarrow{OP}$ from the origin to a point $P$ on the circle in terms of a parameter $t$ and the vectors $\overrightarrow{OA}$, $\overrightarrow{OB}$, and
-\[
-   {\bf n} = \overrightarrow{PA} \times \overrightarrow{PB} .
-\]
-}
-
-\item{Interpret the geometric meaning of the parameter above.}
-
-\item{Enter the correct parameterization in Line 13 of the worksheet below.}
-
-\end{enumerate}
-
-
-\begin{onlineOnly}
-    \begin{center}
-\desmosThreeD{4qvuqtp4lo}{900}{600}
-\end{center}
-\end{onlineOnly}
-
-\href{https://www.desmos.com/3d/4qvuqtp4lo}{163: Circle in Space}
-
-\end{question}
-
-
-\section{Geodesics on a Sphere}
-
-\begin{question}  \label{Q9df7udsftr}
-A \emph{great circle} on a sphere is a circle centered at the sphere's center. It looks like a straight line to residents of the sphere. The shorter arc of a great circle through two given points is the shortest path on the sphere between the points.
-
-\begin{enumerate}
-\item{Parameterize the great circle through the given points $A$ and $B$ on a sphere of radius $R$ centered at the origin. The parametrization will be in terms of a parameter $t$ and the vectors $\overrightarrow{OA}$ and $\overrightarrow{OB}$. Include an appropriate domain.}
-
-\item{Parameterize the shorter arc of that great circle between $A$ and $B$.}
-\item{Compute the length of that arc and compare it to the radius of the sphere.}
-\item{Enter your parameterizations in the worksheet below to see if you are correct.}
-
-\end{enumerate}
-
-\begin{onlineOnly}
-    \begin{center}
-\desmosThreeD{vulzde8gww}{900}{600}
-\end{center}
-\end{onlineOnly}
-
-\href{https://www.desmos.com/3d/vulzde8gww}{163: Great Circles 1}
-
-\end{question}
-
-
-\section{Intersecting Spheres}
-
-\begin{question} \label{Q:74dsfretg4444}
-Circles in the $xy$-plane centered at the points $A$ and $B$ intesect at point $Q$ as shown below. Our aim is to describe the second point of intersection by expressing the vector $\overrightarrow{OS}$ from the origin to that point in terms of the vectors ${\bf a} = \overrightarrow{OA}$, ${\bf b} = \overrightarrow{OB}$, and ${\bf q} = \overrightarrow{OQ}$. There are two steps.
-
-\begin{enumerate}
-\item Express the vector $\overrightarrow{OC}$ from $O$ the origin to the midpoint $C$ of segment $\overline{QS}$ in terms of the vectors ${\bf a}$, ${\bf b}$, and ${\bf q}$.
-\begin{hint}
-Think about a vector projection.
-\end{hint}
-Input your expression for $\overrightarrow{OC}$ in Line 8 below.
-
-
-\item Express the vector $\overrightarrow{OS}$ in terms of the vectors $\overrightarrow{OQ}$ and $\overrightarrow{OC}$. Then input this expression in Line 10 below.
-
-\end{enumerate}
-
-\begin{onlineOnly}
-    \begin{center}
-\desmosThreeD{nttmyvnge7}{900}{600}
-\end{center}
-\end{onlineOnly}
-
-\href{https://www.desmos.com/3d/nttmyvnge7}{163: Intersecting Circles}
-\end{question}
-
-
-
-\begin{question} \label{Q:743rf4rtg4444}
-
-\begin{onlineOnly}
-    \begin{center}
-\desmosThreeD{wftyxbvczm}{900}{600}
-\end{center}
-\end{onlineOnly}
-
-\href{https://www.desmos.com/3d/wftyxbvczm}{163: Intersecting Spheres}
-\end{question}
-
-***********************************************************
-
-\fi
 
 \end{document}
