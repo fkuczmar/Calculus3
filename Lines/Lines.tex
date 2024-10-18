@@ -37,56 +37,72 @@ Access Geogebra interactives through the online version of this text at
 \begin{question}  \label{Qdr5577:Lines}
 A light ray parallel to the vector ${\bf v} = \langle 3,2,-4 \rangle$ and passing through the point $P(12, 17,20)$ reflects off the $xy$-plane as if the plane were a mirror.
 
-(a) Parameterize the path of the incoming light ray. Include a domain.
+\begin{enumerate}
 
-(b) Parameterize the path of the reflected ray. Include a domain.
+\item Parameterize the path of the incoming light ray. Include a domain.
 
-(c) Repeat parts (a) and (b) for a light ray parallel to the vector ${\bf v} = \langle 2,1,4 \rangle$ through the point $P(-1,3,-7)$ that reflects off the plane through the origin that is normal to the vector ${\bf n} = \langle  1, -1, 2 \rangle$.
+\item Parameterize the path of the reflected ray. Include a domain.
 
-(d) More generally, suppose a light ray parallel to the vector ${\bf v}$ passing through the point $P$ reflects off the plane through the origin normal to the vector ${\bf n}$. Parameterize the reflected ray in terms of the vectors ${\bf v}$, ${\bf n}$, and ${\bf p} = \overrightarrow{OP}$ giving the position of $P$ relative to the origin. Avoid working with the components of these vectors. Include a domain for the parameterization.
+\item Repeat parts (a) and (b) for a light ray parallel to the vector ${\bf v} = \langle 2,1,4 \rangle$ through the point $P(-1,3,-7)$ that reflects off the plane through the origin that is normal to the vector ${\bf n} = \langle  1, -1, 2 \rangle$.
 
-Here is an outline of the solution to part (c):
+\end{enumerate}
 
-To parameterize the reflected ray, we need to find the coordinates of a point $Q$ on the reflected ray and a vector parallel to the reflected ray. 
+\end{question}
+
+\begin{question}  \label{Q324g4t324r}
+This question generalizes the previous one.
+
+A light ray parallel to the vector ${\bf v}$ passing through the point $P$ reflects off the plane through the origin normal to the vector ${\bf n}$. Parameterize the reflected ray in terms of the vectors ${\bf v}$, ${\bf n}$, and ${\bf p} = \overrightarrow{OP}$ giving the position of $P$ relative to the origin. Avoid working with the components of these vectors. Include a domain for the parameterization.
+
+Here is an outline of the approach:
+
+\begin{enumerate}
+\item To parameterize the reflected ray, we need to find the coordinates of a point $Q$ on the reflected ray and a vector parallel to the reflected ray. 
 
 The only possible choice for $Q$ is the point where the incoming ray intersects the plane. To find the vector $\overrightarrow{OQ}$ giving the position of $Q$ relative to the origin, do the following:
 
-\begin{itemize}
+\begin{enumerate}
 
 \item{First write a vector equation of the incoming ray with $t$ as the parameter. This equation will involve the vectors ${\bf v}$ and ${\bf  p}$ and is similar (but not identical) to the parameterization in Exploration 1 above.} 
 
 \item{Next use your vector equation of the incoming ray to find the value of the parameter $t$ that gives the vector $\overrightarrow{OQ}$. Do this by solving an equation that describes the geometric relationship between the vectors $\overrightarrow{OQ}$ and ${\bf n}$. }
 
-\item{Finally, use the value of the parameter in the previous step to find an expression for $\overrightarrow{OQ}$.}
+\item{Finally, use the value of the parameter in the previous step to find an expression for $\overrightarrow{OQ}$. Input this expression on Line 25 of the desmos worksheet below.}
 
-\end{itemize}
+\end{enumerate}
 
-Next we need to find a vector parallel to the reflected ray. For this, see the section {\bf Light Reflecting off a Mirror} in the {\bf Scalar Product} chapter of our class notes:
+\item Next find a vector ${\bf w}$ parallel to the reflected ray. Input this on Line 27. %For this, see the section {\bf Light Reflecting off a Mirror} in the {\bf Scalar Product} chapter of our class notes:
 
-\href{https://ximera.osu.edu/calc3/Calculus3/ScalarProduct/ScalarProduct}{Class Notes}
-
-Then put all this together to find a vector equation of the reflected ray. Include the appropriate domain.
-
-The last step is to check your work in Desmos. Unfortunately, Desmos does not have a function for the scalar product of two vectors. But we can get around this by defining three scalars,
-\[
-    s_{vn} = {\bf v}\cdot {\bf n} ,
-\]
-\[
-    s_{pn} =  {\bf p}\cdot {\bf n},
-\]
-and 
-\[
-       s_{nn} =  {\bf n}\cdot {\bf n} .
-\]
-
-These scalars are imbedded in the Desmos worksheet below and you will need to use them for the scalar products. Follow the directions in the worksheet to check your work. 
+%\href{https://ximera.osu.edu/calc3/Calculus3/ScalarProduct/ScalarProduct}{Class Notes}
 
 
-Access the Desmos worksheet at:
-
-\href{https://www.desmos.com/3d/85f82721d5}{163: Ray Reflecting Off a Plane Student Copy}
+\item Finally put all this together to find a vector equation of the reflected ray. Include the appropriate domain. Input this on Line 29. Does your result look reasonable?
 
 
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{znxtexpsnt}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/znxtexpsnt}{163: Ray Reflecting Off a Plane Student Copy 2}
+
+%\item The last step is to check your work in Desmos. %Unfortunately, Desmos does not have a function for the scalar product of two vectors. But we can get around this by defining three scalars,
+%\[
+%    s_{vn} = {\bf v}\cdot {\bf n} ,
+%\]
+%\[
+%    s_{pn} =  {\bf p}\cdot {\bf n},
+%\]
+%and 
+%\[
+%       s_{nn} =  {\bf n}\cdot {\bf n} .
+%\]
+
+%These scalars are imbedded in the Desmos worksheet below and you will need to use them for the scalar products. Follow the directions in the worksheet to check your work. 
+
+
+\end{enumerate}
 
 \end{question}
 
