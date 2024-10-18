@@ -82,7 +82,7 @@ Let's apply the idea of the previous question to parameterize a circle in $\math
 \begin{enumerate}
 \item {${\bf u}$ and ${\bf v}$ are orthogonal.}
 
-\item{$|{\bf u}| = |{\bf v}| = 3$.}
+\item{$|{\bf u}| = |{\bf v}|$.}
 \end{enumerate}
 
 \begin{freeResponse}
@@ -125,7 +125,7 @@ expresses the positions relative the origin of the points on the circle of radiu
 
 
 \begin{question}  \label{Q98de983234}
-This question is much like the last, but with one significant change. We wish to parameterize the circle with center $Q(-1,4,1)$ and radius $3$ that lies in the plane parallel to the vectors ${\bf u} = \langle -2, -1, 2 \rangle$ and ${\bf v}= \langle 3,0,0 \rangle$. 
+This question is much like the last, but with one significant change. We wish to parameterize the circle with center $Q(-1,4,1)$ that lies in the plane ${\cal P}$ parallel to the vectors ${\bf u} = \langle -2, -1, 2 \rangle$ and ${\bf v}= \langle 3,0,0 \rangle$. 
 Now the vectors ${\bf u}$ and ${\bf v}$ are \emph{not} orthogonal. As a result, the same parameterization we used before does not give a circle but an ellipse. See below.
 
 \begin{onlineOnly}
@@ -136,11 +136,43 @@ Now the vectors ${\bf u}$ and ${\bf v}$ are \emph{not} orthogonal. As a result, 
 
 \href{https://www.desmos.com/3d/k5idcpjrep}{163: Circle in Space 2}
 
-How can we fix this? The idea is to replace one of the vectors, say ${\bf v}$ with another of length $3$ that is perpendicular to ${\bf u}$ and parallel to the plane of our circle (ie. the plane through $A$ parallel to the vectors ${\bf u}$ and ${\bf v}$). 
+How can we fix this? We will not assume that the vectors ${\bf u}$ and ${\bf v}$ have equal lengths as they do here, and we'll parameterize the circle with radius $r = |{\bf u}|$ centered at $Q$ that lies in the plane ${\cal P}$. 
 
-\begin{hint}
-To do this you will need to use the cross product. Maybe more than once. 
-\end{hint}
+The idea is to replace ${\bf v}$ with another, call it ${\bf w}$, with the \emph{same} of length as ${\bf u}$ that is perpendicular to ${\bf u}$ and parallel to the plane ${\cal P}$. 
+
+\begin{explanation}
+We first compute the vector
+\[
+   {\bf n} = {\bf u}\times {\bf v}
+\]
+perpendicular to the plane ${\cal P}$. Now the since the vector ${\bf w}$ is orthogonal to both ${\bf u}$ and ${\bf n}$, it is parallel to either% compute it as either the cross product
+\[
+      {\bf n} \times {\bf u} = ({\bf u}\times {\bf v})\times {\bf u}
+\] 
+or
+\[
+       {\bf u} \times {\bf n} =  {\bf u} \times ({\bf u}\times {\bf v}) .
+\]
+Either direction would work. But suppose we wish the parameter $t$ to measure the angle from ${\bf u}$ to $\overrightarrow{OP}$ in the \emph{same sense} as the angle from ${\bf u}$ to ${\bf v}$ (here $P$ is a point on the circle where the vector  $\overrightarrow{OP}$ makes the angle $t$ with ${\bf u}$). Then only one of these two possible directions for ${\bf w}$ would work. Which one?
+\begin{multipleChoice}
+\choice[correct]{$({\bf u}\times {\bf v})\times {\bf u}$}
+\choice{${\bf u} \times ({\bf u}\times {\bf v})$}
+\end{multipleChoice}
+
+Now to get the vector ${\bf w}$, we just need to scale this double cross product to have the same length as ${\bf u}$. So
+\begin{align*}
+    {\bf w} &= \frac{|{\bf u}|}{|({\bf u}\times {\bf v})\times {\bf u}|}  \left(  ({\bf u}\times {\bf v})\times {\bf u}\right) \\
+                &=\frac{|{\bf u}|}{|{\bf u}\times{\bf v}||{\bf u}| \sin(\pi/2)}  \left(  ({\bf u}\times {\bf v})\times {\bf u}\right) \\
+                &= \frac{({\bf u}\times {\bf v})\times {\bf u}}{|{\bf u}\times {\bf v}|} .
+\end{align*}
+
+The vectors ${\bf u}$ and ${\bf w}$ have the same length and are orthogonal. So we can express the postion of a point $P$ (relative to the origin) on the circle centered at $Q$ with radius $r = |{\bf u}|$ in terms of the angle $t$ as
+\begin{align*}
+   \overrightarrow{OP}  &= \overrightarrow{OQ} + \overrightarrow{\answer{QP}} \\
+                                  &= \overrightarrow{OQ} + (\answer{\cos t}) {\bf u} + (\answer{\sin t}){\bf w} \, , \, 0\leq t < 2\pi .  
+\end{align*}
+
+\end{explanation}
 
 
 \end{question}
