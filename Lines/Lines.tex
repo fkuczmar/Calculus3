@@ -34,6 +34,86 @@ Access Geogebra interactives through the online version of this text at
 \end{exploration}
 
 
+\begin{question} \label{Qf4tlhlnm4}
+\begin{enumerate}
+
+\item Which of the following determine a unique line in $\mathbb{R}^2$? Select all that apply.
+\begin{selectAll}
+\choice[correct]{Two distinct points}
+\choice[correct]{A point and a slope}
+\choice[correct]{A point and a vector parllel to the line}
+\choice[correct]{A point and a vector orthogonal to the line}
+\end{selectAll}
+
+\item Which of the following determine a unique line in $\mathbb{R}^3$? Select all that apply.
+\begin{selectAll}
+\choice[correct]{Two distinct points}
+\choice{A point and a slope}
+\choice[correct]{A point and a vector parllel to the line}
+\choice{A point and a vector orthogonal to the line}
+\end{selectAll}
+
+\end{enumerate}
+\end{question}
+
+\begin{example} \label{Ex3434523093}
+\begin{enumerate}
+\item Find a vector equation of the line in $\mathbb{R}^3$ through the point $A(3,-2,1)$ parallel to the vector ${\bf v}  =\langle 1,4,-2\rangle$.
+
+\item Parameterize the line in part (a).
+
+\item Find the coordinates of the point where the line intesects the $xz$-plane.
+
+\end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+\item A vector equation expresses the positions of all points on the line relative to the origin $O$. For this line (call it ${\cal L}$), a point $P$ lies on ${\cal L}$ if and only if the vector $\overrightarrow{AP}$ is parallel (or anti-parallel) to the vector ${\bf v}$. And this is true if and only if
+\[
+       \overrightarrow{AP} = t {\bf v} \text{ for some scalar } t\in \mathbb{R} .
+\]
+But since
+\[
+    \overrightarrow{AP} = \overrightarrow{OP} - \overrightarrow{OA} ,
+\]
+a point $P$ lies on ${\cal L}$ if and only if
+\[
+    \overrightarrow{OP} = \overrightarrow{OA} + t {\bf v} \text{ for some scalar } t\in \mathbb{R}.
+\]
+This is a vector equation of ${\cal L}$. Think of it as giving directions from the origin to a point $P$ on ${\cal L}$ - first go to the point $A$ and then move some distance in the same or the opposite direction of the vector ${\bf v}$.
+
+What distance?
+\begin{multipleChoice}
+\choice{$t$}
+\choice{$|{\bf v}|$}
+\choice{$t|{\bf v}|$}
+\choice[correct]{$|t{\bf v}|$}
+\end{multipleChoice}
+
+\item A line is a set of points, not a set of vectors, and a parameterization of the line expresses the coordinates of all points on the line in terms of some parameter. Supposing a general point $P$ on the line has coordinates $(x,y,z)$, that $A$ has coordinates $(3,-2,1)$, and ${\bf v} = \langle 1,4,-2\rangle$, we can rewrite the vector equation
+\[
+    \overrightarrow{OP} = \overrightarrow{OA} + t {\bf v} \text{ for some scalar } t\in \mathbb{R}.
+\]
+as
+\[
+    \langle x, y, z \rangle = \langle \answer{3}, \answer{-2}, \answer{1} \rangle + t \langle \answer{1}, \answer{4}, \answer{-2} \rangle \text{ for some scalar} t\in \mathbb{R}.
+\]
+Equating the components of these vectors gives a parameterization of the line ${\cal L}$ as 
+\[
+   (x,y,z) = (3+t , -2 + 4t, \answer{1-2t}) \, , \, t\in \mathbb{R} .
+\]
+
+\item The point $P(x,y,z)$ lies on both the line and the $xz$-plane exactly when
+\[
+     y = -2 + 4t = 0 
+\]
+or exactly when $t=1/2$. So the point where the line intersects the $xz$-plane has coordinates $(\answer{5/2}, \answer{0}, \answer{2})$.
+\end{enumerate} 
+\end{explanation}
+
+\end{example} 
+
+
 \begin{question}  \label{Qdr5577:Lines}
 A light ray parallel to the vector ${\bf v} = \langle 3,2,-4 \rangle$ and passing through the point $P(12, 17,20)$ reflects off the $xy$-plane as if the plane were a mirror.
 
@@ -108,9 +188,9 @@ The only possible choice for $Q$ is the point where the incoming ray intersects 
 
 
 
-Drawing a Square in Space
+%Drawing a Square in Space
 
-\href{https://www.desmos.com/3d/3a19b63ef0}{Square in Space 2}
+%\href{https://www.desmos.com/3d/3a19b63ef0}{Square in Space 2}
 
 
 \end{document}
