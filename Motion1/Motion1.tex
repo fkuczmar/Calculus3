@@ -15,9 +15,9 @@ Parameterizing motion in the plane and in space.
 \begin{exploration}
 \emph{Velocity} is the rate of change of position with respect to time. Since position is a vector (position is measured relative to some point, usually the origin), so is velocity. 
 
-Just like any other rate of change, we can speak about average velocity or instantaneous velocity. These are both vectors. Average velocity is a change in position (a vector) divided by the time interval (a scalar) over which that change occurs. Instantaneous velocity is a limit of average velocities as the time interval approaches zero.
+Just like any other rate of change, we can speak about average velocity or instantaneous velocity. These are both vectors. Average velocity is a change in position (a vector) divided by the time interval (a scalar) over which that change occurs. Instantaneous velocity is a limit of average velocities as the time interval approaches zero. It is the derivative of position with respect to time.
 
-For example, the instantaneous velocity of a car at some moment is a vector that points in the direction of motion. The magnitude of this vector gives the speed. Both the vector and its magnitude have units, for a car typically miles/hour or kilometers/hour. But usually in physics velocity has units of meters/sec.
+For example, the instantaneous velocity of a car at some moment is a vector that points in the direction you're driving. The magnitude of this vector gives the speed. Both the vector and its magnitude have units, for a car typically miles/hour or kilometers/hour. But usually in physics velocity has units of meters/sec.
  
 %Suppose  you're driving your car along a winding road. The instantaneous velocity of your car at some moment is the rate of change in its position with repsect to time. Since position is a vector, so is velocity. It has a direction and magnitude. The direction points in the direction you are moving  and the magnitude gives your speed.
 
@@ -56,7 +56,7 @@ The magnitude $| {\bf v}_{avg} |$ of the average velocity vector measures the av
 \end{multipleChoice}  
 
 \begin{freeResponse}
-Explain the logic behind the answer to the previous True-False question.
+Which is greater, the average speed between times $u=-1.4$ and $u=1.6$ seconds or the magnitude $| {\bf v}_{avg} |$ of the average velocity over the same time interval? Explain your reasoning. %Explain the logic behind the answer to the previous True-False question.
 \end{freeResponse}
 
 
@@ -65,14 +65,14 @@ Explain the logic behind the answer to the previous True-False question.
 What can you say about the direction of this vector as $\Delta t \to 0$? What does this tell you about the direction of the instanstaneous velocity vector? 
 \end{freeResponse}
 
-\item We said that the magnitude of the instantaneous velocity vector gives the speed of the motion. 
-\begin{freeResponse}
-Try to reconcile this with part (c).
-\end{freeResponse}
+%\item We said that the magnitude of the instantaneous velocity vector gives the speed of the motion. 
+%\begin{freeResponse}
+%Try to reconcile this with part (c).
+%\end{freeResponse}
 
 %In light of part (c), is it true that the magnitude of the instantaneous velocity vector equals the speed of the motion? Explain your reasoning.
 
-\item Compare the speeds of the motion at times $u=1.4$ seconds and $u=0$ seconds.
+\item Compare the speeds of the motion at times $u=1.4$ seconds and $u=0$ seconds. Be as specific as possible.
 \begin{freeResponse}
 Briefly explain your reasoning.
 \end{freeResponse}
@@ -94,6 +94,30 @@ Access Geogebra interactives through the online version of this text at
 \geogebra{p2y4j2ap}{900}{600}
 \end{center}
 \end{onlineOnly}
+
+
+\section{More Velocity Vectors}
+\begin{question}  \label{Qd34trgetgyt}
+The function
+\[
+ {\bf p}(t) = \langle t, t^2, t^3 \rangle \, , \, 0\leq t \leq 2 .
+\]
+gives the position (measured in meters) of a fly relative to the origin in terms of the number of seconds past noon.  
+
+\begin{enumerate}
+\item Compute the fly's average velocity  between times $t=1$ and $t=1.5$ seconds.
+
+\item Compute the fly's average velocity  between times $t=1$ and $t=1.1$ seconds.
+
+\item Compute the fly's average velocity  between times $t=1$ and $t=1.01$ seconds.
+
+\item What does all this suggest about the fly's (instantaneous) velocity at time $t=1$ second?
+
+\item Compute and evaluate the appropriate derivative to find the fly's velocity at time $t=1$ second.
+
+
+\end{enumerate}
+\end{question}
 
 
 \section{Graphing the Velocity Function}
@@ -160,7 +184,7 @@ Suppose the continuous function
 \[
     r=g(t) , 0\leq t \leq 6 ,
 \]
-expresses the rate (in gallons/min) at which water flows into a tank in terms of the number of minutes past noon. Suppose also that the tank holds $20$ gallons at time $t=t_0$ minutes past noon. Which of the following functions gives the volume of water (in gallons) in the tank at time $t$ minutes past noon? Choose all that apply. Explain your reasoning.
+expresses the rate (in gal/min) at which water flows into a tank in terms of the number of minutes past noon. Suppose also that the tank holds $20$ gallons at time $t=t_0$ minutes past noon, for some $t_0\in [0,6]$. Which of the following functions gives the volume of water (in gallons in the tank) at time $t$ minutes past noon? Choose all that apply. Explain your reasoning.
 \begin{selectAll}  
     \choice{$f(t) = 20 + r(t)$}  
     \choice{$f(t) = \int r(t)\, dt + C$}  
@@ -235,6 +259,9 @@ Access Geogebra interactives through the online version of this desmos activity 
 
 \end{question}
 
+
+\section{From Acceleration to Position}
+\emph{Acceleration} is the rate of change of velocity with respect to time. Since velocity is a vector, so is acceleration.
 
 
 \section{Ball on an Inclined Plane}
