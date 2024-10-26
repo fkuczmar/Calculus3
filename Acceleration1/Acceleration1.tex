@@ -9,5 +9,77 @@ Acceleration and speed.
 \end{abstract}
 \maketitle
 
+In everday English we might say something like ``a car is accelerating'' to mean that the car is speeding up. But this is not really correct. Keep in mind that acceleration measures the rate of change of velocity with respect to time. And since velocity is a vector, so is acceleration. Velocity encodes both speed and direction, so acceleration encodes the rates of change of both speed and direction.
+
+This chapter focuses on determining the rate of change (with respect to time) in speed. For this, we'll need both the acceleration and velocity vectors, or really just the angle between these vectors and the magnitude of the acceleration vector.
+
+Before addressing this question, we'll jump up one level and consider an analogous question about position and velocity. But first, try the following question.
+
+\begin{question}  \label{Q34r05r34gtt}
+\begin{enumerate}
+\item Interpret the meanings of the expressions 
+\[ 
+      \Big| \frac{d}{dt} \left( {\bf p}(t) \right) \Big|
+\]
+and
+\[
+   \frac{d}{dt} \left( |{\bf p}(t)| \right) .
+\]
+for a motion with position function ${\bf p}(t)$ measured in meters (and $t$ in seconds). Inlude units in your interpretations. Be sure to state clearly whether each is a vector or a scalar.
+
+\item One of the expressions 
+\[ 
+      \Big| \frac{d}{dt} \left( {\bf v}(t) \right) \Big|
+\]
+and
+\[
+   \frac{d}{dt} \left( |{\bf v}(t)| \right) .
+\]
+is the magnitude (in $m/s^2)$ of the acceleration vector for a motion with  velocity function ${\bf v}(t)$ measured in meters/sec (and $t$ in seconds). Which one? Interpret the meaning of the other expression.
+ 
+\end{enumerate}
+\begin{freeResponse}
+\end{freeResponse}
+\end{question}
+
+
+
+\section{The Escape Lemma} 
+
+
+\begin{question}  \label{QErerttg}
+\begin{align*}
+\frac{d}{dt}\Big| {\bf p}(t)  \Big| &=  \frac{d}{dt} \left(\sqrt{x^2+y^2}\right)    &&   \frac{d}{dt}\Big| {\bf p}(t)  \Big| = \frac{d}{dt} \left(  \sqrt{{\bf p} \cdot {\bf p}} \right) \\
+ &= \frac{2x \answer{\frac{dx}{dt}} + 2y \answer{\frac{dy}{dt}}}{2\sqrt{x^2 + y^2}}  && \hskip 0.5 in = \frac{{\bf v}\cdot {\bf p} + {\bf p}\cdot {\bf v}}{2\sqrt{{\bf p}\cdot {\bf p}}} \\
+&= \frac{x \frac{dx}{dt} + y \frac{dy}{dt}}{\sqrt{x^2+y^2}}  &&  \hskip 0.5 in = \frac{{\bf v}\cdot {\bf p}}{|{\bf p}|} 
+\end{align*}
+\end{question}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \end{document}
