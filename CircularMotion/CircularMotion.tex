@@ -10,11 +10,12 @@ Circular motion, uniform and not.
 \maketitle
 
 \section{Uniform Circular Motion}
+\begin{question}  \label{Q34trgr5t5t344}
 Uniform circular motion means motion around a circle at a constant speed.
 
-We'll take our circle to be centered at the origin and have radius $a$. We'll suppose our motion starts at position 
+We'll take our circle to be centered at the origin and have radius $r$. We'll suppose our motion has position 
 \[
-     {\bf p}(0) = \langle a, 0 \rangle \, \text{meters}
+     {\bf p}(0) = \langle r, 0 \rangle \, \text{meters}
 \]
 at time $t=0$ seconds and that it rotates counterclockwise about the origin at the constant rate of $\omega$ rad/sec.
 
@@ -27,7 +28,7 @@ at time $t=0$ seconds and that it rotates counterclockwise about the origin at t
 \href{https://www.geogebra.org/classic/uu2jshcp}{Uniform Circlular Motion}
 
 \begin{enumerate}
-\item Find an expression for the position function ${\bf p}(t)$ that gives the positon of the motion relative to the origin (in meters) in terms of the number of seconds since time $t=0$.
+\item Find an expression for the function ${\bf p}(t)$ that gives the positon of the motion relative to the origin (in meters) in terms of the number of seconds since time $t=0$.
 
 \item Find an expression for the velocity ${\bf v}(t)$ of the motion. What are its units? Check that your expression has these units.
 
@@ -37,17 +38,65 @@ at time $t=0$ seconds and that it rotates counterclockwise about the origin at t
 
 \item Find an expression for the speed of the motion. Check that your expression has the correct units.
 
-\item Find an expression for the magnitude of the accerlation. Check that your expression has the correct units.
+\item Find an expression for the magnitude of the acceleration. Check that your expression has the correct units.
 
-\item How would you change the parameters $a$ and $\omega$ to keep the path and sense of rotation unchanged and double the velocity at each point of the path?
+\item How would you change one of the parameters $a$ and $\omega$ to keep the path and sense of rotation unchanged, and at the same time double the velocity at each point of the path?
 
 \item Predict how the change you made in the previous question would affect the acceleration vector at each point of the path. Then use the animation above to check if you were correct. Can you explain this change intuitively, without referencing the expression for the acceleration?
 
-
-
-
-
+\item Express the rotation rate in terms of the magnitude $a = | {\bf a}(t)|$ of the acceleration and the radius $r$.
 
 \end{enumerate}
+\end{question}
+
+\section{General Circular Motion}
+A motion around a circle need not be at a constant speed. 
+
+We'll assume as before that the path is a circle of radius $r$ centered at the origin. But to allow for a general motion, we'll suppose the angle $\theta$ from the positive $x$-axis to the position vector ${\bf p}(t)$ is a twice differentiable function
+\[
+   \theta = f(t)
+\]
+of time. As always, the angle $\theta$ is measured counterclockwise. 
+
+\begin{enumerate}
+\item Find an expression for the function ${\bf p}(t)$ that gives the positon of the motion relative to the origin (in meters) in terms time (measured in seconds).
+
+\item Find an expression for the velocity ${\bf v}(t)$ of the motion. What are its units? Check that your expression has these units.
+
+\item Find an expression for the acceleration ${\bf a}(t)$ of the motion. What are its units? Check that your expression has these units.
+
+\item Resolve the acceleration vector into two components, one tangent to the path, the other normal to the path. Write the acceleration vector as the sum of these component.
+
+\item Express the scalar projection of the acceleration vector in the direction of the velocity vector in terms of $r$, ${\bf v}(t)$ and $d\theta/dt$. Interpret the meaning of this scalar projection.
+
+\item Express the scalar projection of the acceleration vector in the direction of the inward pointing unit normal ${\bf n} = \langle -\cos\theta, -\sin\theta \rangle$ in terms of $r$, ${\bf v}(t)$ and $d\theta/dt$. Interpret the meaning of this scalar projection.
+
+\item A point mass moving counterclockwise around an origin-centered circle of radius $5$ meters passes the point $(-3,4)$ meters with accelration $\langle 2, -1\rangle \, m/s^2$.  
+
+\begin{enumerate}
+\item Is the mass speeding up or slowing down at this instant? At what rate?
+
+\item At what rate is the mass turning about the origin at this instant?
+
+\item What is the speed of the mass at this instant?
+\end{enumerate}
+
+\end{enumerate}
+
+
+\begin{question}  \label{Q6756456443gg}
+
+\begin{onlineOnly}
+    \begin{center}
+\geogebra{ssxun58x}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.geogebra.org/classic/ssxun58x}{163: Disco Dancing}
+
+\end{question}
+
+
+
 
 \end{document}
