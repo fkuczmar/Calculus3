@@ -17,7 +17,7 @@ We'll take our circle to be centered at the origin and have radius $r$. We'll su
 \[
      {\bf p}(0) = \langle r, 0 \rangle \, \text{meters}
 \]
-at time $t=0$ seconds and that it rotates counterclockwise about the origin at the constant rate of $\omega$ rad/sec.
+at time $t=0$ seconds and that it rotates about the origin at the constant rate of $\omega$ rad/sec. We'll allow negative values for $\omega$, in which case we'll suppose the sense of rotation is clockwise instead of counterclockwise (when $\omega > 0$). 
 
 \begin{onlineOnly}
     \begin{center}
@@ -40,11 +40,11 @@ at time $t=0$ seconds and that it rotates counterclockwise about the origin at t
 
 \item Find an expression for the magnitude of the acceleration. Check that your expression has the correct units.
 
-\item How would you change one of the parameters $a$ and $\omega$ to keep the path and sense of rotation unchanged, and at the same time double the velocity at each point of the path?
+\item How would you change one of the parameters $r$ and $\omega$ to keep the path and sense of rotation unchanged but double the velocity at each point of the path?
 
-\item Predict how the change you made in the previous question would affect the acceleration vector at each point of the path. Then use the animation above to check if you were correct. Can you explain this change intuitively, without referencing the expression for the acceleration?
+\item Predict how the change you made in the previous question would affect the acceleration vector at each point of the path. Then use the animation above to check if you were correct. Can you explain this change intuitively, without referencing the expression for the acceleration vector?
 
-\item Express the rotation rate in terms of the magnitude $a = | {\bf a}(t)|$ of the acceleration and the radius $r$.
+\item Express the magntitude of the rotation rate in terms of the magnitude $a = | {\bf a}(t)|$ of the acceleration and the radius $r$.
 
 \end{enumerate}
 \end{question}
@@ -52,6 +52,7 @@ at time $t=0$ seconds and that it rotates counterclockwise about the origin at t
 \section{General Circular Motion}
 A motion around a circle need not be at a constant speed. 
 
+\begin{question} \label{Q324234fgfg}
 We'll assume as before that the path is a circle of radius $r$ centered at the origin. But to allow for a general motion, we'll suppose the angle $\theta$ from the positive $x$-axis to the position vector ${\bf p}(t)$ is a twice differentiable function
 \[
    \theta = f(t)
@@ -65,9 +66,9 @@ of time. As always, the angle $\theta$ is measured counterclockwise.
 
 \item Find an expression for the acceleration ${\bf a}(t)$ of the motion. What are its units? Check that your expression has these units.
 
-\item Resolve the acceleration vector into two components, one tangent to the path, the other normal to the path. Write the acceleration vector as the sum of these components.
+\item Resolve the acceleration vector into two components, one tangent to the path, the other normal to the path. Write the acceleration vector as the sum of these vectors.
 
-\item Express the scalar projection of the acceleration vector in the direction of the velocity vector in terms of $r$, ${\bf v}(t)$ and $d\theta/dt$. For this you can assume that $d\theta / dt \geq 0$. Interpret the meaning of this scalar projection.
+\item Express the scalar projection of the acceleration vector in the direction of the velocity vector in terms of $r$, ${\bf v}(t)$ and $d^2\theta/dt^2$. For this you can assume that $d\theta / dt>0$. Interpret the meaning of this scalar projection.
 
 \item Express the scalar projection of the acceleration vector in the direction of the inward pointing unit normal ${\bf n} = \langle -\cos\theta, -\sin\theta \rangle$ in terms of $r$, ${\bf v}(t)$ and $d\theta/dt$. Interpret the meaning of this scalar projection.
 
@@ -83,6 +84,28 @@ of time. As always, the angle $\theta$ is measured counterclockwise.
 
 \end{enumerate}
 
+\end{question}
+
+\begin{question}  \label{Q32frr3r4r4}
+This question is also about circular motions.
+\begin{enumerate}
+
+\item Let $\phi$ be the angle between the acceleration and velocity vectors, both assumed to be non-zero. Show that $0< \phi \leq \pi/2$ radians.
+
+\item The figure below shows possible acceleration and velocity vectors (color-coded) at different points on a circular path. Which configurations are actually possible? Explain your reasoning.
+
+\begin{onlineOnly}
+    \begin{center}
+\geogebra{yzcwddhb}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.geogebra.org/classic/yzcwddhb}{163: Circular Motion Conceptual Question}
+
+\end{enumerate}
+
+\end{question}
+
 
 \begin{question}  \label{Q6756456443gg}
 A disco ball in a circular dance hall of radius $r$ meters rotates at a constant rate of $\omega$ rad/sec. The ball casts a small spot of light on the wall (point $P$ in the animation below) that moves about the room. We suppose the ball (point $A$ below) is $a$ meters from the room's center.  We wish to parameterize the motion of $P$ and determine where on the path the motion is speeding up at the fastest rate.
@@ -96,7 +119,7 @@ A disco ball in a circular dance hall of radius $r$ meters rotates at a constant
 \href{https://www.geogebra.org/classic/m38mqcpa}{163: Disco Dancing 2}
 
 \begin{enumerate}
-\item Begin by looking at the animiation above. Along what part of the path is the motion speeding up? Slowing down?
+\item Begin by looking at the animation above. Along what part of the path is the motion speeding up? Slowing down?
 
 \item Use your observations to sketch a few acceleration vectors along the path. Think about both their directions and magnitudes. It should help to watch the hodograph as well.
 
@@ -110,6 +133,38 @@ A disco ball in a circular dance hall of radius $r$ meters rotates at a constant
 
 \href{https://www.desmos.com/calculator/vtjgmmjt5c}{163: Disco Dancing 2}
 
+\item Show that with $\phi = \omega t$, the speed of the motion is
+\[
+     v = f(\phi) = r \omega \left( 1- \frac{a\cos\phi}{\sqrt{r^2-a^2\sin^2\phi}}   \right) .
+\]
+
+\item Show that
+\[
+      \frac{dv}{d \phi} = \frac{ r\omega(r^2-a^2)\sin\phi}{r^2- a^2\sin^2\phi} .
+\]
+
+\begin{hint}
+Activate the folder on Line 31 in the desmos demonstration above. 
+\begin{enumerate}
+\item Use the law of sines in $\Delta OAP$ to express $\alpha = \angle OPA$ in terms of $a$ and $\angle PAB = \pi - \angle PAB =  \pi -\phi$.
+\[
+   \alpha  = \arcsin \left( \answer{\frac{a\sin \phi}{r}} \right)
+\]
+
+\item Then express $\theta = \angle POB$ in terms of $\phi$ and $\alpha$. 
+\[
+  \theta = \answer{\phi - \alpha} .
+\]
+
+\item Finally, note that the speed of $P$ is
+\[
+   v = \frac{d}{dt} (r\theta) = r\omega \frac{d\theta}{d\phi}
+\]
+
+\end{enumerate}
+\end{hint}
+
+\item What values of $\phi$ maximize/minimize the derivative above? No need for calculus here.
 
 \end{enumerate}
 
