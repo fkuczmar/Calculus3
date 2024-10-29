@@ -110,7 +110,16 @@ The expression in part (d) resolves the acceleration vector in exactly this way.
 \item Express the scalar projection of the acceleration vector in the direction of the velocity vector in terms of $r$, ${\bf v}(t)$ and $d^2\theta/dt^2$. For this you can assume that $d\theta / dt>0$. Interpret the meaning of this scalar projection.
 
 \begin{expandable}
-If $d\theta/dt >0$, the scalar projection is
+We first use the expression for the velocity vector from part (b) to find the unit vector parallel to the velocity. This unit vector is
+\[
+   \frac{{\bf v}}{|{\bf v|}} = \frac{\frac{d\theta}{dt}}{|\frac{d\theta}{dt}|} \langle -\sin\theta, \cos\theta \rangle.
+\]
+
+Next we use the expression for the acceleration vector from part (d) and the unit vector above to compute the scalar projection of the acceleration vector in the direction of the velocity vector as
+\[
+    {\bf a}\cdot \frac{{\bf v}}{|{\bf v|}} = r \left( \frac{d^2\theta}{dt^2} \right)\left(\frac{\frac{d\theta}{dt}}{|\frac{d\theta}{dt}|}\right).
+\]
+So if $d\theta/dt >0$, the scalar projection is
 \[
    {\bf a}\cdot \frac{{\bf v}}{|{\bf v|}} =  r \left( \frac{d^2\theta}{dt^2} \right)
 \]
@@ -121,7 +130,7 @@ And if $d\theta/dt <0$,
 
 To interpret the meaning of these scalar projections, first suppose $d\theta/dt >0$. Then we know the speed is
 \[
-   v = r \left( \frac{d\theta}{dt} \right) .
+   v =   r \Big| \frac{d\theta}{dt} \Big|    = r \left( \frac{d\theta}{dt} \right) .
 \] 
 So
 \[
@@ -131,8 +140,22 @@ This tells us that the scalar projection of the acceleration vector onto the vel
 
 If on the other hand, $d\theta/dt < 0$, then (I'll leave this for you to work out) the result is still the same.
 
-\emph{KEY POINT: The scalar projection of the acceleration vector (measured in $m/s^2$) onto the velocity vector (measured in $m/s$) gives the rate at which the speed is changing with respect to time. The units of this rate of change are (meters/sec)/sec.
-} 
+\emph{To summarize, the key points are as follows.}
+
+\begin{enumerate}
+
+\item For any circular motion, the scalar projection of the acceleration vector (measured in $m/s^2$) onto the velocity vector (measured in $m/s$) gives the rate at which the speed is changing with respect to time. The units of this rate of change are $m/sec^2$.
+
+\item Given the angular position function $\theta = f(t)$ of the motion, we can compute this rate of change of speed with respect to time as either
+\[
+  \frac{dv}{dt} = r \left( \frac{d^2\theta}{dt^2} \right)  \text{ if } d\theta/dt > 0
+\]
+or
+\[
+   \frac{dv}{dt} = -r \left( \frac{d^2\theta}{dt^2} \right)  \text{ if } d\theta/dt < 0 .
+\] 
+
+\end{enumerate}
 
 \end{expandable}
 
@@ -215,9 +238,9 @@ But don't let this bother you. You'll need to modify our earlier results and adj
 
 \item Use the position function above to find expressions for the velocity and acceleration vectors.
 
-\item Find the velocity and acceleration vectors the first time $\theta = 0$ radians.
+\item Find the velocity and acceleration vectors the first time $\theta = 0$ radians. Is the pendulum speeding up or slowing down at this time? At what rate?
 
-\item  Find the velocity and acceleration vectors the second time $\theta = 0$ radians.
+\item  Find the velocity and acceleration vectors the second time $\theta = 0$ radians. Is the pendulum speeding up or slowing down at this time? At what rate?
 
 \item Is the pendulum speeding up or slowing down the first time $\theta = 0.1$ radian? At what rate? 
 
@@ -225,7 +248,9 @@ But don't let this bother you. You'll need to modify our earlier results and adj
 
 \item Is the pendulum speeding up or slowing down the first time $\theta = -0.2$ radians? At what rate? 
 
-\item Sketch by hand a graph of the speed function and a graph of its derivative. 
+\item What can you say about the maximum rate at which the speed of the pendulum increases and the times when this occurs?
+
+\item Sketch a graph of the speed function and a graph of its derivative. 
 
 \end{enumerate}
 
