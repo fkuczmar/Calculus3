@@ -86,18 +86,65 @@ The speed is
 \begin{align*}
   | {\bf v} |  & = \Big|  \left( r \frac{d\theta}{dt} \right) \langle -\sin \theta , \cos\theta \rangle \Big|   \\
                 & =  \Big| \left( r \frac{d\theta}{dt} \right) \Big| |  \langle -\sin \theta , \cos\theta \rangle  | \\
-                &= r \Big|\frac{d\theta}{dt} \Big| | .
+                &= r \Big|\frac{d\theta}{dt} \Big| .
 \end{align*}
 The speed is equal to the product of the radius (in meters) and the absolute (ie. unsigned) rotation rate (in rad/sec).
 \end{expandable}
 
 \item Find an expression for the acceleration ${\bf a}(t)$ of the motion. What are its units? Check that your expression has these units.
 
+\begin{expandable}
+Use the product rule to differentiate the velocity function in part (b) (because $r (d\theta/dt)$ and $\langle -\sin\theta, \cos\theta\rangle$ are both functions of $t$). This gives
+\[
+  {\bf a} =  \left( r \frac{d^2\theta}{dt^2} \right) \langle -\sin \theta , \cos\theta \rangle - r \left( \frac{d\theta}{dt} \right)^2 \langle -\cos\theta , -\sin\theta \rangle .
+\]
+\end{expandable}
+
+
 \item Resolve the acceleration vector into two components, one tangent to the path, the other normal to the path. Write the acceleration vector as the sum of these vectors.
+
+\begin{expandable}
+The expression in part (d) resolves the acceleration vector in exactly this way. The first term is parallel (or anti-parallel if $d^2\theta/dt^2<0$) to the velocity vector and hence parallel to the path, the second term points in the direction opposite the position vector and is thefore normal to the path.
+\end{expandable}
 
 \item Express the scalar projection of the acceleration vector in the direction of the velocity vector in terms of $r$, ${\bf v}(t)$ and $d^2\theta/dt^2$. For this you can assume that $d\theta / dt>0$. Interpret the meaning of this scalar projection.
 
+\begin{expandable}
+If $d\theta/dt >0$, the scalar projection is
+\[
+   {\bf a}\cdot \frac{{\bf v}}{|{\bf v|}} =  r \left( \frac{d^2\theta}{dt^2} \right)
+\]
+And if $d\theta/dt <0$, 
+\[
+   {\bf a}\cdot \frac{{\bf v}}{|{\bf v|}} =  - r \left( \frac{d^2\theta}{dt^2} \right) .
+\]
+
+To interpret the meaning of these scalar projections, first suppose $d\theta/dt >0$. Then we know the speed is
+\[
+   v = r \left( \frac{d\theta}{dt} \right) .
+\] 
+So
+\[
+  \frac{dv}{dt} = r \left( \frac{d^2\theta}{dt^2} \right) =  {\bf a}\cdot \frac{{\bf v}}{|{\bf v|}} .
+\]
+This tells us that the scalar projection of the acceleration vector onto the velocity vector gives the rate at which the speed is changing with respect to time. The units of this rate of change are (meters/sec)/sec.
+
+If on the other hand, $d\theta/dt < 0$, then (I'll leave this for you to work out) the result is still the same.
+
+\emph{KEY POINT: The scalar projection of the acceleration vector (measured in $m/s^2$) onto the velocity vector (measured in $m/s$) gives the rate at which the speed is changing with respect to time. The units of this rate of change are (meters/sec)/sec.
+} 
+
+\end{expandable}
+
 \item Express the scalar projection of the acceleration vector in the direction of the inward pointing unit normal ${\bf n} = \langle -\cos\theta, -\sin\theta \rangle$ in terms of $r$, ${\bf v}(t)$ and $d\theta/dt$. Interpret the meaning of this scalar projection.
+
+\begin{expandable}
+The scalar projection is
+\[
+   {\bf a}\cdot \frac{{\bf n}}{|{\bf n|}} =  r \left( \frac{d\theta}{dt} \right)^2 .
+\]
+The units are $m/s^2$. This scalar component of the acceleration vector in the direction of the inward-pointing normal is the product of the radius (in meters) and the square of the rotation rate (in $\text{rad}/\text{sec}^2$). More on this later in the course if time permits.
+\end{expandable}
 
 \item A point mass moving counterclockwise around an origin-centered circle of radius $5$ meters passes the point $(-3,4)$ meters with acceleration $\langle 2, -1\rangle \, m/s^2$.  
 
@@ -107,6 +154,9 @@ The speed is equal to the product of the radius (in meters) and the absolute (ie
 \item At what rate is the mass turning about the origin at this instant?
 
 \item What is the speed of the mass at this instant?
+
+\begin{freeResponse}
+\end{freeResponse}
 \end{enumerate}
 
 \end{enumerate}
@@ -119,7 +169,14 @@ This question is also about circular motions.
 
 \item Let $\phi$ be the angle between the acceleration and velocity vectors, both assumed to be non-zero. Show that $0< \phi \leq \pi/2$ radians.
 
-\item The figure below shows possible acceleration and velocity vectors (color-coded) at different points on a circular path. Which configurations are actually possible? Explain your reasoning.
+\begin{hint}
+See the work from part (g) of the previous question.
+\end{hint}
+
+\item The figure below shows possible acceleration and velocity vectors (color-coded) at different points on a circular path. Which configurations are actually possible? Explain your reasoning. \emph{Note: A missing vector indicates the vector vanishes (ie. is equal to the zero vector}.
+
+\begin{freeResponse}
+\end{freeResponse}
 
 \begin{onlineOnly}
     \begin{center}
