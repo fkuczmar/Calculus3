@@ -169,7 +169,7 @@ The animation below models the oscillation of a simple pendulum with an angular 
 
 The function 
 \[
-      \theta = f(t) = \cos (\pi t) \, , \, t\geq 0, 
+      \theta = f(t) = 0.2 \cos (\pi t) \, , \, t\geq 0, 
 \]
 expresses the angular displacement in terms of the number of seconds since the pendulum was released. 
 
@@ -182,7 +182,7 @@ in a uniform graviational field with acceleration of magnitude g=9.8 $m/s^2$.
 Because we are not measuring the angle $\theta$ from the positive $x$-axis, we need to adjust our function ${\bf p}(t)$ that gives the position of the pendulum $P$. Here we have
 \begin{align*}
    {\bf p}(t) &= \langle \sin \theta, -\cos\theta   \rangle  \\
-                  &= \langle \sin (\cos (\pi t), - \cos (\cos (\pi t)) \rangle  , t \geq 0.
+                  &= \langle \sin (0.2 \cos (\pi t)), - \cos (0.2 \cos (\pi t)) \rangle  , t \geq 0.
 \end{align*}
 
 But don't let this bother you. You'll need to modify our earlier results and adjust the components of the velocity and acceleration vectors accordingly, but the coordinate-free results (about the rate of change of speed with respect to time) still apply exactly as before.
