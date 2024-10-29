@@ -165,6 +165,27 @@ The units are $m/s^2$. This scalar component of the acceleration vector in the d
 
 
 \begin{question} \label{Qdsf3r34r5rt}
+The animation below models the oscillation of a simple pendulum with an angular amplitude $a=0.2$ radians. This means the angular displacement $\theta  = \angle OCP$ oscillates between $-0.2$ and $0.2$ radians. The angle is measured counterclockwise from $\overrightarrow{OC}$ and is positive when $P$ is in the fourth quadrant, negative when $P$ is in the third quadrant.
+
+The function 
+\[
+      \theta = f(t) = \cos (\pi t) \, , \, t\geq 0, 
+\]
+expresses the angular displacement in terms of the number of seconds since the pendulum was released. 
+
+The pendulum has length $L=1$ meter and period
+\[
+  T  = 2\pi \sqrt{L/g} \sim 2 \text{ sec}
+\]
+in a uniform graviational field with acceleration of magnitude g=9.8 $m/s^2$.
+
+Because we are not measuring the angle $\theta$ from the positive $x$-axis, we need to adjust our function ${\bf p}(t)$ that gives the position of the pendulum $P$. Here we have
+\begin{align*}
+   {\bf p}(t) &= \langle \sin \theta, -\cos\theta   \rangle  \\
+                  &= \langle \sin (\cos (\pi t), - \cos (\cos (\pi t)) \rangle  , t \geq 0.
+\end{align*}
+
+But don't let this bother you. You'll need to modify our earlier results and adjust the components of the velocity and acceleration vectors accordingly, but the coordinate-free results (about the rate of change of speed with respect to time) still apply exactly as before.
 
 
 \begin{onlineOnly}
@@ -174,6 +195,41 @@ The units are $m/s^2$. This scalar component of the acceleration vector in the d
 \end{onlineOnly}
 
 \href{https://www.geogebra.org/classic/gkbsdkrd}{163: Simple Pendulum 1}
+
+\begin{enumerate}
+\item The first step is to watch the animation above and then draw the acceleration vectors (by hand) at various points along the path. Don't do any computations for this. Just use the animation. Then click the Acceleration box at the upper left to see how you did. Then do the following.
+\begin{enumerate}
+\item Draw your picture of what you thought the acceleration vectors would look like.
+
+\item Describe how the acceleration vector actually varies along the pendulum's path. Include a picture.
+
+\item Is there anything about the acceleration vector that surprised you? Explain.
+
+\item What did you learn from this animation?
+
+\item What questions do you have?
+\end{enumerate}
+
+\begin{freeResponse}
+\end{freeResponse}
+
+\item Use the position function above to find expressions for the velocity and acceleration vectors.
+
+\item Find the velocity and acceleration vectors the first time $\theta = 0$ radians.
+
+\item  Find the velocity and acceleration vectors the second time $\theta = 0$ radians.
+
+\item Is the pendulum speeding up or slowing down the first time $\theta = 0.1$ radian? At what rate? 
+
+\item Is the pendulum speeding up or slowing down the first time $\theta = -0.1$ radian? At what rate?
+
+\item Is the pendulum speeding up or slowing down the first time $\theta = -0.2$ radians? At what rate? 
+
+\item Sketch by hand a graph of the speed function and a graph of its derivative. 
+
+\end{enumerate}
+
+
 \end{question}
 
 \begin{question}  \label{Q32frr3r4r4}
