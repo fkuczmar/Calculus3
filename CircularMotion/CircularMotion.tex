@@ -60,7 +60,7 @@ We'll assume as before that the path is a circle of radius $r$ centered at the o
 of time. As always, the angle $\theta$ is measured counterclockwise. 
 
 \begin{enumerate}
-\item Find an expression for the function ${\bf p}(t)$ that gives the positon of the motion relative to the origin (in meters) in terms time (measured in seconds).
+\item Find an expression for the function ${\bf p}(t)$ that gives the positon of the motion relative to the origin (in meters) in terms time (measured in seconds). Click the arrow at the lower right for the answer.
 
 \begin{expandable}
 \[
@@ -69,6 +69,25 @@ of time. As always, the angle $\theta$ is measured counterclockwise.
 \end{expandable}
 
 \item Find an expression for the velocity ${\bf v}(t)$ of the motion. What are its units? Check that your expression has these units.
+\begin{expandable}
+\begin{align*}
+   {\bf v} &= \frac{d{\bf p}}{dt}    \\
+               &= \left( r \frac{d\theta}{dt} \right) \langle -\sin \theta , \cos\theta \rangle                                 
+\end{align*}
+The units of the velocity $d{\bf p}/dt$ are meters/sec. To check this, note that the radius $r$ is measured in meters and the signed rotation rate (counterclockwise if postive, clockwise if negative) of the motion about the origin $d\theta/dt$ is measured in rad/sec.
+\end{expandable}
+
+\item Find an expression for the speed of the motion.
+
+\begin{expandable}
+The speed is
+\begin{align*}
+  | {\bf v} |  & = \Big|  \left( r \frac{d\theta}{dt} \right) \langle -\sin \theta , \cos\theta \rangle \Big|   \\
+                & =  \Big| \left( r \frac{d\theta}{dt} \right) \Big| |  \langle -\sin \theta , \cos\theta \rangle  | \\
+                &= r \Big|\frac{d\theta}{dt} \Big| | .
+\end{align*}
+The speed is equal to the product of the radius (in meters) and the absolute (ie. unsigned) rotation rate (in rad/sec).
+\end{expandable}
 
 \item Find an expression for the acceleration ${\bf a}(t)$ of the motion. What are its units? Check that your expression has these units.
 
