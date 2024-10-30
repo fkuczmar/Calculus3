@@ -44,8 +44,8 @@ is the magnitude (in $m/s^2)$ of the acceleration vector for a motion with  velo
 
 
 
-\section{The Escape Lemma} 
-
+\section{Escaping from the Origin} 
+This section under construction. Ignore it for now.
 
 \begin{question}  \label{QErerttg}
 \begin{align*}
@@ -57,14 +57,46 @@ is the magnitude (in $m/s^2)$ of the acceleration vector for a motion with  velo
 
 
 
+\section{Speed and Acceleration}
+We saw in the last chapter that for a circular motion, we can compute the rate of change in speed with respect to time as the scalar projection of the acceleration vector in the direction of the velocity vector. The same is true for any motion and the proof in this more general case turns out to be very quick.
 
+The idea is to forget about the position function. Instead we'll imagine the hodograph and write the velocity function of a motion
+in polar form as
+\[
+    {\bf v} = v \langle \cos \phi, \sin \phi \rangle .
+\]
+Here $v = | {\bf v}|$ is the speed and $\phi$ the angle from the positive $x$-axis to the velocity vector, measured counterclockwise. 
 
+Now differentiate with respect to time, keeping in mind that both $v$ and $\phi$ are functions of time. Using the product rule, we find that the acceleration vector is
+\[
+    {\bf a} = \frac{d{\bf v}}{dt} = \frac{dv}{dt} \langle \cos\phi, \sin\phi \rangle + v \frac{d\phi}{dt} \langle -\sin\phi, \cos \phi \rangle .
+\] 
 
+The reason for doing this is that the derivative $dv/dt$ is exactly what we want to compute. It is the rate of change of speed with respect to time. So we just take the scalar product with the unit vector
+\[
+   \frac{{\bf v}}{|{\bf v}|} = \langle \cos\phi, \sin \phi \rangle
+\]
+in the direction of motion. This tells us
+\begin{align*}
+{\bf a} \cdot \frac{{\bf v}}{|{\bf v}|} &= {\bf a} \cdot \langle \cos\phi, \sin \phi \rangle \\
+ & = \left(     \frac{dv}{dt} \langle \cos\phi, \sin\phi \rangle + v \frac{d\phi}{dt} \langle -\sin\phi, \cos \phi \rangle      \right) \cdot \langle \cos\phi, \sin \phi \rangle \\
+                    & = \frac{dv}{dt} .
+\end{align*} 
+And that's what we wanted to show.
 
+\emph{The rate of change in the speed of a motion with respect to time is the scalar projection of the acceleration vector in the direction of the velocity vector.}
 
+The advantage of this proof is that it is simple. A disadvantage is that it works only for motions in the plane. The same fact holds for motions in space, but we'll skip the proof for now. Let's look at some examples first.
 
+\section{Projectile Motion}
 
+\begin{onlineOnly}
+    \begin{center}
+\geogebra{vbnga9rj}{900}{600}
+\end{center}
+\end{onlineOnly}
 
+\href{https://www.geogebra.org/classic/vbnga9rj}{163: Projectile Motion Plane}
 
 
 
