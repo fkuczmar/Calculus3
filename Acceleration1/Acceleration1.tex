@@ -172,6 +172,9 @@ First find a vector ${\bf n}$ normal to the plane of the trajectory by using two
 
 \section{Motion Along a Cycloid}
 \begin{question} \label{Q4950504333}
+This problem is about the motion of a point attached to a circle that rolls on a line. You can imagine a pebble attached to a tire of your car as you drive in a straight line. The pebble traces out a curve called a cycloid.
+
+We suppose the circle has radius $r$ meters. The motion starts with the pebble at the origin at time $t=0$ seconds and the circle rolls in the direction of the postive $x$-axis with constant speed $v$ m/sec.
 
 \begin{onlineOnly}
     \begin{center}
@@ -180,7 +183,53 @@ First find a vector ${\bf n}$ normal to the plane of the trajectory by using two
 \end{onlineOnly}
 
 \href{https://www.geogebra.org/classic/rrzgbtfr}{163: Cycloid}
+
+\begin{enumerate}
+\item Our first step is to parameterize the cycloid in terms of the rotation angle $\theta = \angle CBP$ of the circle, measured from its starting point (see the marked angle in the demonstration above). Do this as follows.
+
+\begin{enumerate}
+\item First express the components of the vector $\overrightarrow{OB}$ from the origin to the center of the circle ${\cal C}$ in terms of $r$ and $\theta$. Note that because ${\cal C}$ rolls without slipping, the distance $OC$ from the origin to the point on the $x$-axis in contact with ${\cal C}$ is equal to the length of the (blue) arc subtended by $\angle CBP$.
+
+\item Next express the components of the vector $\overrightarrow{BP}$ from $B$ to the pebble in terms of $r$ and $\theta$.
+
+\item Then use vector arithmetic to express the position of $\overrightarrow{OP}$ of $P$ relative to the origin in terms of $r$ and $\theta$.
+\end{enumerate}
+
+\item Our next step is to investigate how the pebble's speed varies as the wheel's center moves at a constant speed of $v$ m/sec.
+First change the slider $w = \omega$ (the wheel's rotation rate) to something other than $1$ rad/sec.
+\begin{enumerate}
+\item Use your result from part (a) to find an expression for the position function ${\bf p}(t)$ of $P$ relative to the origin (measured in meters) in terms of the number of seconds since the pebble left the origin. Do this by first finding an expression for the rotation rate of the wheel $\omega$ (measured in rad/sec) in terms of $r$ and $v$.
+
+\item Find expressions for the velocity ${\bf v}(t)$ (in m/s) and acceleration ${\bf a}(t)$ (in $m/s^2$) functions of $P$.
+
+\item Use vector arithmetic to show that ${\bf v}(t)$ is orthogonal to $\overrightarrow{ CP}$.
+
+\item Express the speed of $P$ in terms $r$, $v$, and $\theta$. Then express this speed in terms of the length of vector $\overrightarrow{CP}$ and $\omega$.
+
+\item At what point(s) of the path is the pebble's speed a minimum? What is this speed?
+
+\item At what point(s) of the path is the pebble's speed a maximum? What is this speed?
+\end{enumerate}
+
+\item Our final step is to look at the acceleration vector of the motion.
+
+\begin{enumerate}
+\item Activate the \emph{acceleration box} at the upper left of the activity to see the acceleration vector. Then use vector arithmetic to show that the acceleration vector points directly toward $B$ and has constant magntitude. Find an expression for this magnitude.
+
+\item Try to visualize the normal and tangential components of acceleration along the path of the motion. Sketch by hand each of these components along separate copies of the cycloid. Then activate the \emph{normal component} and \emph{tangential component} boxes in the activity to see how you did.
+
+\item Does the normal component of the acceleration have constant length? What does this suggest about the path?
+
+\item Is the scalar component of the acceleration in the direction of the velocity vector constant? What does this component suggest about the speed of the motion? Try to be precise.
+
+\item At what point(s) of the path is the pebble speeding up at the fastest rate? Slowing down at the fastest rate? Or if there are no such points, what can you say about the maximum rates at which the pebble speeds up and slows down? Be precise. Graph the speed function to help you.
+
+\end{enumerate}
+
+\end{enumerate}
+
 \end{question}
+
 
 
 \end{document}
