@@ -13,14 +13,14 @@ Shoreline Community College is just off Exit 176 of I-5. The exit number is not 
 
 It helps to keep this image in mind when we parameterize a curve by arclength. What this means is to first establish a number line along the curve, much like the exit numbers on I-5 in Washington state. We then express the position (relative to the origin) of each point on the curve in terms of its exit number, or really in terms of its place on the number line.
 
-In establishing a number line along a curve we have two choices. Where to put the zero marker (the Washington-Oregon border in our example) and which direction to take as positive along the curve (the northward direction along I-5). One subtle point. Despite the name, arclength is negative for points on the negative side of the number line. So rightly speaking, were we to continue our arclength parameterization of I-5 into Oregon, the exits numbers in Oregon would be negative. 
+In establishing a number line along a curve we have two choices. The first is where to put the zero marker (the Washington-Oregon border in our example) and the second is which direction to take as positive along the curve (the northward direction along I-5 in our example). One subtle point. Despite the name, arclength is negative for points on the negative half of the number line. So rightly speaking, were we to continue our arclength parameterization of I-5 into Oregon, the exits numbers in Oregon would be negative. Oregonians might object.
 
 Here are some simple examples to illustrate this idea.
 
 \section{Parameterizing Lines by ArcLength}
 
 \begin{example} \label{E324tg4tg45te}
-Parameterize the line $x=3$ in the $xy$-plane in terms of arclength. Take the arclength parameter $s$ to be zero at the point $(3,5)$ and the positive direction to point ``downward" (ie. in the direction of the vector $\langle 0, -1 \rangle$). Suppose the coordinates are measured in meters.
+Parameterize the line $x=3$ in the $xy$-plane by arclength. Take the arclength parameter $s$ to be zero at the point $(3,5)$ and the positive direction to point ``downward" (ie. in the direction of the vector $\langle 0, -1 \rangle$). Suppose the coordinates are measured in meters.
 
 \begin{explanation}
 The point $(x,y)$ on the line $x=3$ at arclength parameter $s$ on our number line has coordinates 
@@ -42,7 +42,7 @@ What are the units of the arclength parameter in this example?
 \begin{multipleChoice}
 \choice{pounds}
 \choice{None. The parameter is dimensionless.}
-\choice{meters}
+\choice[correct]{meters}
 \end{multipleChoice}
 \end{question}
 
@@ -51,15 +51,15 @@ What are the units of the arclength parameter in this example?
 
 
 \begin{question}  \label{Egrett4tt3}
-Parameterize the line in $\mathbb{R}^3$ through the point $A(4,-1,3)$ and $B(-1,1,0)$. Take the arlength parameter to be zero at $A$ and the positive direction to point in the direction of the vector $\overrightarrow{AB}$. The coordinates are measured in meters.
+Parameterize the line in $\mathbb{R}^3$ through the point $A(4,-1,3)$ and $B(-1,1,0)$ by arclength. Take the arlength parameter to be zero at $A$ and the positive direction to point in the direction of the vector $\overrightarrow{AB}$. The coordinates are measured in meters.
 
 \begin{onlineOnly}
     \begin{center}
-\desmosThreeD{47j5swwl31}{900}{600}
+\desmosThreeD{dyxjd322mo}{900}{600}
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/3d/47j5swwl31}{163: ArcLength Parameterization Line 1}
+\href{https://www.desmos.com/3d/dyxjd322mo}{163: ArcLength Parameterization Line 1}
 
 
 \begin{explanation}
@@ -73,31 +73,42 @@ in the positive direction of our number line. This unit vector is
    {\bf  u} =   \answer{\frac{1}{\sqrt{38}}} \overrightarrow{AB} .
 \]
 
-So the position (relative to the origin $O$) of the point $Q$ at arclength parameter $s=2$, for example, is
+So the position (relative to the origin $O$) of the point $Q$ at arclength parameter $s=4$, for example, is
 \begin{align*}
-  \overrightarrow{OP} &= \overrightarrow{OA} + \answer{2}{\bf u} \\
-                                &= \langle 4, -1, 3\rangle + \frac{2}{\sqrt{38}} \langle \answer{-5}, \answer{2}, \answer{-3} \rangle .
+  \overrightarrow{OP} &= \overrightarrow{OA} + \answer{4}{\bf u} \\
+                                &= \langle 4, -1, 3\rangle + \frac{4}{\sqrt{38}} \langle \answer{-5}, \answer{2}, \answer{-3} \rangle .
 \end{align*}
 
 And more generally, the position of the point $P$ at arclength parameter $s\in \mathbb{R}$ is
 \begin{align*}
    \overrightarrow{OP} &= \overrightarrow{OA} + \answer{s}{\bf u} \\ 
-                                 &= \langle 4, -1, 3\rangle + \frac{2}{\sqrt{38}} \langle \answer{-5}, \answer{2}, \answer{-3} \rangle \, , \, s\in\mathbb{R}.
+                                 &= \langle 4, -1, 3\rangle + \frac{2}{\sqrt{38}} \langle \answer{-5}, \answer{2}, \answer{-3} \rangle .
 \end{align*}
-This is our arclength parameterization.
+And our arclength parameterization of the line is
+\[
+    {\bf p}(t) =    \langle 4, -1, 3\rangle + \frac{s}{\sqrt{38}} \langle \answer -5, 2, -3 \rangle              \, , \, s\in\mathbb{R}.
+\]
 
-\item Check this in the desmos worksheet above by activating Line 15 and thereby plotting the points on the line at the arclength parameters $s=-5, -4, \ldots , 14, 15$. These should be spaced $\answer{1}$ meter apart. Do they look like it?
+\item Here are a few questions about this example.
+
+\begin{enumerate}
+
+\item Check this parameterization in the desmos worksheet above by activating Line 15 and thereby plotting the points on the line at the arclength parameters $s=-5, -4, \ldots , 14, 15$. These should be spaced $\answer{1}$ meter apart. Do they look like it?
 
 \item Compute the derivative 
 \[
-     {\bf T}(s) = \frac{d}{ds}\left( {\bf p}(s) \right)  
+     {\bf T}(s) = \frac{d}{ds}\left( {\bf p}(s) \right) . 
 \]
-and its length
+What are its units?
+
+\item Compute the scalar
 \[
-   \Big| {\bf T}(s) \Big|  = \Big|  \frac{d}{ds}\left( {\bf p}(s) \right) \Big| 
+   \Big| {\bf T}(s) \Big|  = \Big|  \frac{d}{ds}\left( {\bf p}(s) \right) \Big| .
 \]
+What are its units? 
 \begin{freeResponse}
 \end{freeResponse}
+\end{enumerate}
 
 \end{enumerate}
 
@@ -107,7 +118,67 @@ and its length
 
 
 \section{Parameterizing Circles by ArcLength}
+\begin{question}  \label{Qewr9erergg}
+Parameterize by arclength the circle of radius $a$ centered at the origin and lying the the $xz$-plane. Take $s=0$ (the arclength parameter) at the point $A(a,0,0)$ and the positive direction to be counterclockwise as viewed from the point $(0,1,0)$. The coordinates have units of meters.
 
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{6uvzmng195}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/6uvzmng195}{163: ArcLength Parameterization Circle}
+
+
+
+\begin{explanation}
+Looking from the point $(0,1,0)$ toward our circle, the counterclockwise sense of rotation swings from the vector $\overrightarrow{OA} = \langle a, 0, 0\rangle$ toward the vector $\overrightarrow{OB} = \langle 0,0,-a \rangle$. So we'll start by expressing the position of a point $P$ (relative to the origin) in terms of its polar angle $\theta = \angle AOP$, and the vectors $\overrightarrow{OA}$ and $\overrightarrow{OB}$.  
+
+\begin{align}
+   \overrightarrow{OP} &= (\answer{\cos \theta}) \overrightarrow{OA} + (\answer{\sin\theta} )\overrightarrow{OB} \\
+                                 &= \langle  \answer{a\cos\theta} , \answer{0}   ,  \answer{-a\sin\theta}   \rangle .
+\end{align}
+
+
+Now suppose $P$ has arclength parameter $s$. The next step is to express the radian measure $\theta$ of the angle $\angle AOP$ in terms of $s$ and $a$. By the definition of what it means to measure an angle in radians,
+\[
+    \theta = \answer{s/a} .
+\]
+
+Finally, by substitution, we get the arclength parameterization of our circle:
+\[
+   {\bf p}(s) = \langle  \answer{a\cos (s/a)} , \answer{0}   ,  \answer{-a\sin (s/a)}   \rangle , -\pi a \leq s \leq \pi a.
+\]
+
+Here are a few questions about this example.
+
+\begin{enumerate}
+\item Check this parameterization in the desmos worksheet above by activating Line 17 and thereby plotting the points on the circle $1$ meter apart. Does it look correct? %Show the screenshot.
+
+\item Compute the derivative 
+\[
+     {\bf T}(s) = \frac{d}{ds}\left( {\bf p}(s) \right) . 
+\]
+What are its units?
+
+\item Compute the scalar
+\[
+   \Big| {\bf T}(s) \Big|  = \Big|  \frac{d}{ds}\left( {\bf p}(s) \right) \Big| .
+\]
+What are its units? 
+
+\item Find another possible domain for the above parameterization.
+
+\begin{freeResponse}
+\end{freeResponse}
+
+\end{enumerate}
+
+
+\end{explanation}
+
+
+\end{question}
 
 
 
