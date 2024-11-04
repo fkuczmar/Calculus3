@@ -180,9 +180,38 @@ What are its units?
 
 
 
-\section{Parameterizing a Cylindrical Helix}
+\section{Parameterizing a Cylindrical Helix by ArcLength}
+Draw a line on a piece of paper that makes the \emph{pitch} angle $\phi$ with the horizontal. Then bend the paper into a cylinder of radius $a$ meters symmetric about the $z$-axis by dragging the slider $k$ to $k=1$ in the demonstration below. This action bends the line into a cylindrical helix.
 
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{6kxuirukgv}{900}{600}
+\end{center}
+\end{onlineOnly}
 
+\href{https://www.desmos.com/3d/6kxuirukgv}{163: Cylindrical Helix 1}
+
+We'll assume the helix passes through the point $A(a,0,0)$ and wraps counterclocwise around the $z$-axis when viewed from above. Our goal is to parameterize the helix by arclength taking $s=0$ (the arc length parameter) at $A$ with the positive direction pointing upward along the helix. I'll leave this to you, but you can click on the arrow (below right) to reveal some hints.
+
+\begin{expandable}
+Let $P$ be a point on the helix at arclength parameter $s$. Let $Q$ be the orthogonal projection of $P$ onto the $xy$-plane.
+Let $O$ be the origin as usual. And let $\theta = \angle AOQ$, measured in radians.
+
+\begin{enumerate}
+\item Express the vector $\overrightarrow{OQ}$ in terms of $a$ and $\theta$.
+
+\item Express the arclength $t$ of the circular arc $AQ$ in terms of $a$ and $\theta$
+
+\item Express the vector $\overrightarrow{QP}$ in terms of $a$, $\theta$, and $\phi$.
+
+\item Use the previous parts to express $\overrightarrow{OP}$ in terms of $a$, $\theta$, and $\phi$.
+
+\item Express $s$ in terms of $a$, $\theta$, and $\phi$.
+
+\item Finally, express ${\bf p}(s) = \overrightarrow{OP}$ in terms of $s$, $a$, and $\phi$. Include the appropriate domain for the helix to wrap once around the cylinder as shown.
+
+\end{enumerate}
+\end{expandable}
 
 
 
