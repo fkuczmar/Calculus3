@@ -181,6 +181,7 @@ What are its units?
 
 
 \section{Sliding Down a Cylindrical Helix}
+\begin{question}  \label{Qdef54356452}
 Draw a line on a piece of paper that makes the \emph{pitch} angle $\phi$ with the horizontal. Then bend the paper into a cylinder of radius $a$ meters symmetric about the $z$-axis by dragging the slider $k$ to $k=1$ in the demonstration below. This action bends the line into a cylindrical helix.
 
 \begin{onlineOnly}
@@ -191,27 +192,60 @@ Draw a line on a piece of paper that makes the \emph{pitch} angle $\phi$ with th
 
 \href{https://www.desmos.com/3d/vrrpxfddv2}{163: Cylindrical Helix 1}
 
-We'll assume the helix passes through the point $A(a,0,0)$ and wraps counterclocwise around the $z$-axis when viewed from above. Our goal is to parameterize the helix by arclength taking $s=0$ (the arc length parameter) at $A$ with the positive direction pointing upward along the helix. I'll leave this to you, but you can click on the arrow (below right) to reveal some hints.
+We'll assume the helix passes through the point $A(a,0,0)$ and wraps counterclocwise around the $z$-axis when viewed from above. Our goal is to parameterize the helix by arclength, taking $s=0$ (the arc length parameter) at $A$ with the positive direction pointing upward along the helix. Click on the arrow (below right) to reveal some hints.
 
 \begin{expandable}
 Let $P$ be a point on the helix at arclength parameter $s$. Let $Q$ be the orthogonal projection of $P$ onto the $xy$-plane.
 Let $O$ be the origin as usual. And let $\theta = \angle AOQ$, measured in radians.
+Let $B$ be the point (not on the helix) with coordinates $(0,a,0)$.
+
+Make sure $k=1$ on Line 2 of the above worksheet.
 
 \begin{enumerate}
-\item Express the vector $\overrightarrow{OQ}$ in terms of $a$ and $\theta$.
+\item Express the vector $\overrightarrow{OQ}$ in terms of the vectors $\overrightarrow{OA}$ and $\overrightarrow{OB}$. To better see this, deactivate Line 8 above to hide the cylinder.
+\[
+   \overrightarrow{OQ} = (\answer{\cos\theta})\overrightarrow{OA} + (\answer{\sin\theta})\overrightarrow{OB}
+\]
 
-\item Express the arclength $t$ of the circular arc $AQ$ in terms of $a$ and $\theta$
+\item Express the vector $\overrightarrow{OQ}$ in terms of $a$ and $\theta$. %To better see this, deactivate Line 8 above to hide the cylinder.
+\[
+    \overrightarrow{OQ} = (\cos\theta)\langle \answer{a},\answer{0},\answer{0} \rangle + (\sin\theta)\langle \answer{0},\answer{a},\answer{0} \rangle
+\]
 
-\item Express the vector $\overrightarrow{QP}$ in terms of $a$, $\theta$, and $\phi$.
+
+%\item Express the length $\Big| \overrightarrow{QP}\Big|$ in terms of $a$, $\theta$, and $\phi$.
+
+\item Express the vector $\overrightarrow{QP}$ in terms of $a$, $\theta$, and $\phi$. \emph{Hint:} First express the length of this vector in terms of $t$ and $\phi$, and then in terms of $a$, $\theta$, and $\phi$.
+\[
+         \overrightarrow{QP} = \left( \answer{a\theta \sin\phi} \right) \langle 0,0,1  \rangle
+\]
 
 \item Use the previous parts to express $\overrightarrow{OP}$ in terms of $a$, $\theta$, and $\phi$.
+\[
+         \overrightarrow{OP} =    (\cos\theta)\langle \answer{a},\answer{0},\answer{0} \rangle + (\sin\theta)\langle \answer{0},\answer{a},\answer{0} \rangle +  \left( \answer{a\theta \tan\phi} \right) \langle 0,0,1  \rangle
+\]
 
-\item Express $s$ in terms of $a$, $\theta$, and $\phi$.
+
+\item We're almost there. All that's left is to express $\theta$ in terms of $a$, $s$, and $\phi$.  As a first step, express $\theta$ in terms of the radius $a$ and the length $t$ of circular arc $AQ$. 
+\[
+            \theta = \answer{t/a} .
+\]
+
+\item Now Express $\theta$ in terms of $s$, $a$, and $\phi$. %\emph{Hint:} First express the arclength parameter $s$ in terms of $a$, $\theta$, and $\phi$.
+\[
+     \theta = \frac{t}{a} = \frac{\answer{s \cos\phi}}{a}
+\]
 
 \item Finally, express ${\bf p}(s) = \overrightarrow{OP}$ in terms of $s$, $a$, and $\phi$. Include the appropriate domain for the helix to wrap once around the cylinder as shown.
+\[
+    {\bf p}(s) = \langle   \answer{a \cos \left( \frac{s\cos\phi}{a}\right)}      ,   \answer{a \sin \left( \frac{s\cos\phi}{a}\right)} , \answer {s \sin\phi}           \rangle
+\]
 
 \end{enumerate}
 \end{expandable}
+\end{question}
+
+
 
 
 
