@@ -218,15 +218,15 @@ Make sure $k=1$ on Line 2 of the above worksheet.
 
 %\item Express the length $\Big| \overrightarrow{QP}\Big|$ in terms of $a$, $\theta$, and $\phi$.
 
-\item Express the vector $\overrightarrow{QP}$ in terms of $a$, $\theta$, and $\phi$. \emph{Hint:} First express the length of this vector in terms of $t$ and $\phi$, and then in terms of $a$, $\theta$, and $\phi$.
+\item Express the vector $\overrightarrow{QP}$ in terms of $s$ and $\phi$, and $\phi$. %\emph{Hint:} First express the length of this vector in terms of $t$ and $\phi$, and then in terms of $a$, $\theta$, and $\phi$.
 \[
-         \overrightarrow{QP} = \left( \answer{a\theta \sin\phi} \right) \langle 0,0,1  \rangle
+         \overrightarrow{QP} = \left( \answer{s(\sin\phi)} \right) \langle 0,0,1  \rangle
 \]
 
-\item Use the previous parts to express $\overrightarrow{OP}$ in terms of $a$, $\theta$, and $\phi$.
-\[
-         \overrightarrow{OP} =    (\cos\theta)\langle \answer{a},\answer{0},\answer{0} \rangle + (\sin\theta)\langle \answer{0},\answer{a},\answer{0} \rangle +  \left( \answer{a\theta \tan\phi} \right) \langle 0,0,1  \rangle
-\]
+%\item Use the previous parts to express $\overrightarrow{OP}$ in terms of $a$, $\theta$, and $\phi$.
+%\[
+%         \overrightarrow{OP} =    (\cos\theta)\langle \answer{a},\answer{0},\answer{0} \rangle + (\sin\theta)\langle \answer{0},%\answer{a},\answer{0} \rangle +  \left( \answer{a\theta \tan\phi} \right) \langle 0,0,1  \rangle
+%\]
 
 
 \item We're almost there. All that's left is to express $\theta$ in terms of $a$, $s$, and $\phi$.  As a first step, express $\theta$ in terms of the radius $a$ and the length $t$ of circular arc $AQ$. 
@@ -240,9 +240,10 @@ Make sure $k=1$ on Line 2 of the above worksheet.
 \]
 
 \item Finally, express ${\bf p}(s) = \overrightarrow{OP}$ in terms of $s$, $a$, and $\phi$. Include the appropriate domain for the helix to wrap once around the cylinder as shown.
-\[
-    {\bf p}(s) = \langle   \answer{a \cos \left( \frac{s\cos\phi}{a}\right)}      ,   \answer{a \sin \left( \frac{s\cos\phi}{a}\right)} , \answer {s \sin\phi}           \rangle
-\]
+\begin{align*}
+    {\bf p}(s) &= \overrightarrow{OP}  + \overrightarrow{PQ} \\
+                  & = \langle  a \cos \left( \frac{s\cos\phi}{a}\right)      ,   a \sin \left( \frac{s\cos\phi}{a}\right) , s \sin\phi          \rangle
+\end{align*}
 
 \end{enumerate}
 \end{expandable}
