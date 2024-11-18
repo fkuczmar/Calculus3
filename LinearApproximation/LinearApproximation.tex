@@ -16,25 +16,39 @@ Linear approximations of functions of two or more independent variables.
 
 The function
 \[
-    T = f(x,y) \, , \, x^2 + y^2 \leq 9 ,
+    T = f(x,y) = \sqrt{9-x^2-y^2}
 \]
 expresses the temperature (in Celsius degrees) of a point on a hot plate in terms of its coordinates, measured in meters. 
 
-(a) Use the graph of the level curves of this function shown below to approximate the partials 
+\begin{enumerate}
+
+\item Express the domain of $f$ using set notation. Then sketch the domain.
+
+\item Use set notation to express the range of $f$.
+
+\item Explain the significance of the level sets of $f$ in this particular scenario.
+
+\item Describe the level sets geometrically.
+
+\item Sketch the graph of $T=f(x,y)$.
+
+\item Use the graph of the level curves of $f$ shown below to approximate the partial derivatives 
 \[
     \frac{\partial T}{\partial x}\Big|_{(x,y)=(2,-1)} \text{ and } \frac{\partial T}{\partial y}\Big|_{(x,y)=(2,-1)} .
 \]
+Do this by sliding $n$ (Line 3) to $n=18$ and zooming in on the point $(2,-1)$. Include units in your approximations.
 
-\begin{itemize}
-\item{Do this by turning off the Level Curve Folder in Line 8 and first turning on the Partial x Folder in Line 14. Use the slider $T$ to adjust the level curve $f(x,y)=T$.} 
 
-\item{Then turn off the Partial x Folder, activate the Partial y Folder, and repeat.}
+%\begin{itemize}
+%\item{Do this by turning off the Level Curve Folder in Line 8 and first turning on the Partial x Folder in Line 14. Use the slider $T$ to adjust the level curve $f(x,y)=T$.} 
 
-\item{Follow the directions in Lines 21 and 23 to check your approximations.}
+%\item{Then turn off the Partial x Folder, activate the Partial y Folder, and repeat.}
 
-\item{Include units for the partials and explain their meanings.}
+%\item{Follow the directions in Lines 21 and 23 to check your approximations.}
 
-\end{itemize}
+%\item{Include units for the partials and explain their meanings.}
+
+%\end{itemize}
 
 \pdfOnly{
 Access Desmos interactives through the online version of this text at
@@ -54,24 +68,28 @@ Desmos activity available at
 
 \pskip \pskip
 
+\item Interpret the meanings of the two partial derivatives.
 
-(b) Write an expression for the average rate of change in temperature with respect to the change $w$ in the $x$-coordinate relative to the point $(2,-1)$. Enter this expression on Line 22 of the above worksheet and follow the directions there to approximate 
-\[
-   \frac{\partial T}{\partial x}\Big|_{(x,y)=(2,-1)} .
-\]
-Explain the idea.
 
-(c) Write an expression for the average rate of change in temperature with respect to the change $w$ in the $y$-coordinate relative to the point $(2,-1)$. Enter this expression on Line 24 of the above worksheet and follow the directions there to approximate 
+\item Write an expression for the average rate of change in temperature with respect to the change $w$ in the $x$-coordinate relative to the point $(2,-1)$. Enter this expression on Line 22 of the above worksheet and follow the directions there to approximate 
 \[
-   \frac{\partial T}{\partial y}\Big|_{(x,y)=(2,-1)} .
+   \frac{\partial T}{\partial x}\Big|_{(x,y)=(2,-1)} 
 \]
-Explain the idea.
+numerically. Explain the idea.
 
-(d) Suppose now that 
+\item Write an expression for the average rate of change in temperature with respect to the change $w$ in the $y$-coordinate relative to the point $(2,-1)$. Enter this expression on Line 24 of the above worksheet and follow the directions there to approximate 
 \[
-    T = f(x,y) = \sqrt{9-x^2-y^2} \, , \, x^2 + y^2 \leq 9 .
+   \frac{\partial T}{\partial y}\Big|_{(x,y)=(2,-1)} 
 \]
-Find the exact values of the two partials above and compare them with your estimates.
+numerically. Explain the idea.
+
+\item Now use the expression
+\[
+    T = f(x,y) = \sqrt{9-x^2-y^2} 
+\]
+for $f$ and calculus to find the exact values of the two partials above. Compare these with your estimates.
+
+\end{enumerate}
 
 \end{example}
 
