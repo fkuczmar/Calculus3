@@ -101,31 +101,32 @@ https://www.desmos.com/calculator/dabb7tarx3
 
 Suppose now we're standing on a hot plate, where the temperature varies from point to point. Unlike in one dimension, where we have a  choice of only two directions to walk, we now have an entire circle of directions from which to choose. How can we compute the (instantaneous) rate of change in the temperature if we head off in an arbitrary direction from our point. As in the first example, the rate of change is with respect to distance. There is no time involved here.
 
-It might come as a surprise that knowing the rate of change in any two independent directions (ie. directions that are not directly opposite) allows us to find the rate of change in any direction, provided that the temperature is a differentiable function of position.
+It might come as a surprise that knowing the rate of change in any two independent directions (ie. directions that are not the same nor directly opposite one another) allows us to find the rate of change in any direction, provided that the temperature is a differentiable function of position.
 
 Just as in one dimension, we can use the level curves of the temperature function to approximate the rate of change in any direction. But before we get to this, take a moment to think about the following question.
 
 \begin{question}  \label{Qwerder432}
 Suppose that from your current position, the temperature increases at the rate of $0.02^\circ$C/meter in the direction of the vector $\langle 1, 0 \rangle$ and that it increases at the rate of $0.04^\circ$C/meter in the direction of the vector $\langle 0,1\rangle$. What do you think is true about the rate at which the temperature changes in the direction of the vector ${\bf v} = \langle 1,1\rangle$?
 
-\pskip
+\begin{enumerate}
 
-(a) The temperature increases at the rate of exactly $0.03^\circ$C/meter.
+\item The temperature increases at the rate of exactly $0.03^\circ$C/meter.
 
-(b) The temperature increases at a rate somewhere between $0.02^\circ$C/meter and $0.04^\circ$C/meter, but not necessarily at the exact rate of $0.03^\circ$C/meter.
+\item The temperature increases at a rate somewhere between $0.02^\circ$C/meter and $0.04^\circ$C/meter, but not necessarily at the exact rate of $0.03^\circ$C/meter.
 
-(c) The temperature increases at a rate less than $0.02^\circ$C/meter.
+\item The temperature increases at a rate less than $0.02^\circ$C/meter.
 
-(d) The temperature increases at a rate greater than $0.04^\circ$C/meter.
+\item The temperature increases at a rate greater than $0.04^\circ$C/meter.
 
-(e) The temperature decreases.
+\item The temperature decreases.
 
-(f) We cannot say, even if we assume (as do the above choices) that the temperature is a differentiable function of position.
+\item We cannot say, even if we assume (as do the above choices) that the temperature is a differentiable function of position.
 
-\pskip
+\end{enumerate}
 
 Try to justify your response with an intuitive argument without doing any computations.
-
+\begin{freeResponse}
+\end{freeResponse}
 
 \end{question}
 
@@ -200,27 +201,6 @@ Access Geogebra interactives through the online version of this text at
 
 Some level curves of a temperature function $T = f(x,y)$ are shown below. The output is measured in Celsius degrees and the input in meters.
 
-(a) Find an expression for $f$.
-
-(b) Use the sliders $\theta$ and $s$ to approximate the (instantaneous) rate at which the temperature changes from the origin in the directions of the following vectors. Include units.
-
-\pskip
-
-(i) ${\bf v} = \langle 4 , 3 \rangle $
-
-(ii) ${\bf v} = \langle -3,1\rangle $
-
-\pskip
-
-(c) Usea  difference quotient to compute the exact values of the above rates of change.
-
-(d) Use a difference quotient to compute the rate  at which the temperature changes from the origin in the direction of the vector ${\bf v}=\langle v_x , v_y \rangle$. 
-
-(e) Check that your expression in part (d) has the correct units.
-
-(f) Interpret your expression for the rate of change geometrically.
-
-
 \pdfOnly{
 Access Geogebra interactives through the online version of this text at
  
@@ -236,6 +216,59 @@ Access Geogebra interactives through the online version of this text at
 Access Geogebra interactives through the online version of this text at
  
 \href{https://www.geogebra.org/classic/htee9xke}{163: Directional Derivative}.
+
+
+\begin{enumerate}
+\item Find an expression for $f$.
+\[
+     T = f(x,y) = \answer{2x + 4y}
+\]
+
+\item Use the sliders $\theta$ and $s$ to approximate the (instantaneous) rate at which the temperature changes from the origin in the directions of the following vectors. Include units.
+
+Note:
+
+\begin{itemize}
+
+\item The slider $\Delta s$ controls the distance (in meters) between consecutive tick marks on the number line through the origin. 
+
+\item The slider $k$ controls the temperature of the red level curve. That is, the red level curve has equation $f(x,y)=k$.
+
+\item The slider $\Delta k$ controls the spacing of the level curves. That is, $\Delta k$ is the temperature difference between consecutive level curves.  
+
+\end{itemize}
+
+\begin{enumerate}
+
+\item ${\bf v} = \langle 1 ,2 \rangle$, where $\theta \sim 1.1$
+
+\item ${\bf w} = \langle -3,1\rangle$, where $\theta \sim 2.8$.
+
+\end{enumerate}
+
+\item Use a  difference quotient to compute the exact values of the above rates of change. Then compare these with your estimates. Click the arrow to the lower right for a partial solution.
+
+\begin{expandable}
+Because the temperature function is linear, we can avoid limits and compute the rate of change at the origin in the direction of the vector ${\bf v} = \\angle 1, 2\rangle$ as a difference quotient.
+
+In moving from the origin to the point $(1,2)$ the average rate at which the temperature changes with respect to the distance travelled is
+\[
+   \frac{\Delta T}{\Delta s} = \frac{f(1,2) - f(0,0)}{|\langle 1, 2 \rangle|}\frac{^\circ C}{m} = \frac{10}{\sqrt{5}}\frac{^\circ C}{m} .
+\]
+
+Then make a similar computation for rate of change in the direction of the vector ${\bf w} = \langle -3,1\rangle$.
+\end{expandable}
+
+
+\item Use a difference quotient to compute the rate  at which the temperature changes from the origin in the direction of the vector ${\bf v}=\langle v_x , v_y \rangle$. 
+
+\item Check that your expression in the previous part has the correct units.
+
+\item Interpret your expression for the rate of change as the scalar projection of one vector onto another. Then write this scalar projection as the product of a magnitude of the gradient vector and a trigonometric function of the angle between the gradient vector and the vector ${\bf v}$.
+
+
+
+\end{enumerate}
 \end{question}
 
 
