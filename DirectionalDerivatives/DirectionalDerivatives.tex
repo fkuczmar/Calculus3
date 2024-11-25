@@ -299,7 +299,9 @@ The function
 \[
      T = f(x,y) = x^2 - xy + y^2  
 \]
-expresses the temperature (measured in Celsius degrees) in terms of position (measured in meters). The graph of the function $T= f(x,y)$ is shown below.
+expresses the temperature (measured in Celsius degrees) in terms of position (measured in meters). The graph of the function $T= f(x,y)$ is shown in the right panel below.
+
+
 
 \pdfOnly{
 Access Geogebra interactives through the online version of this text at
@@ -316,6 +318,18 @@ Access Geogebra interactives through the online version of this text at
 Access Geogebra interactives through the online version of this text at
  
 \href{https://www.geogebra.org/classic/rdezhzbs}{163: Directional Derivative Geometry}.
+
+The idea of this exploration is to interpret the derivative of the function $f$ at the point $A(1,0)$ in the direction of the vector ${\bf v} = \langle \cos\theta, \sin\theta\rangle$ as a slope. To do this, we cut the surface $T=f(x,y)$ with a vertical plane through through the point $A$ that is parallel to the vector ${\bf v}$.
+
+The two dimensional curve in the left panel shows this cross-section. It is a graph of the function
+\[
+   g(s) = f(s, f(1+s\cos \theta, s \sin\theta)) , s\in \mathbb{R}.
+\]
+Here $s$ is the signed distance (in meters) measured from the point $(1,0,0)$ in the direction of the vector $ \langle \cos\theta, \sin\theta , 0\rangle$.
+
+%\[
+%      x \sin\theta - y\cos\theta = \sin\theta .
+%\]
 
 \end{exploration}
 
