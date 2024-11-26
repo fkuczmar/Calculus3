@@ -319,13 +319,35 @@ Access Geogebra interactives through the online version of this text at
  
 \href{https://www.geogebra.org/classic/rdezhzbs}{163: Directional Derivative Geometry}.
 
-The idea of this exploration is to interpret the derivative of the function $f$ at the point $A(1,0)$ in the direction of the vector ${\bf v} = \langle \cos\theta, \sin\theta\rangle$ as a slope. To do this, we cut the surface $T=f(x,y)$ with a vertical plane through through the point $A$ that is parallel to the vector ${\bf v}$.
+The idea of this exploration is to use idea of Math 151 to compute the directional derivative directly, without relying on the gradient vector or scalar projections.
 
-The two dimensional curve in the left panel shows this cross-section. It is a graph of the function
+So suppose we wish to determine the rate at which the temperature changes at the point $A(1,0)$ in the $xy$-plane in the direction of the vector ${\bf v} = \langle \cos\theta, \sin\theta \rangle$. As always, the rate of change is with respect to distance travelled (in meters) in the direction of ${\bf v}$. 
+
+Our first step is to find a function
 \[
-   g(s) = f(s, f(1+s\cos \theta, s \sin\theta)) , s\in \mathbb{R}.
-\]
-Here $s$ is the signed distance (in meters) measured from the point $(1,0,0)$ in the direction of the vector $ \langle \cos\theta, \sin\theta , 0\rangle$.
+     T = g(s) , s\in \mathbb{R},
+\] 
+that expresses the temperature (measured in Celsius degrees) in terms of the signed distance from $A$ (measured in meters) along the line through $A$ parallel to ${\bf v}$. We take the postive direction to point in the direction of ${\bf v}$.
+
+Geometrically, we can imagine cutting the surface $T=f(x,y)$ with a vertical plane through through the point $(1,0,0)$ that is parallel to the vector $ \langle \cos\theta, \sin\theta , 0\rangle$. The two dimensional curve in the left panel above shows this cross-section.
+
+\begin{enumerate}
+
+\item Find an expression for the function $T=g(s)$.
+
+\item Differentiate this function to find the rate at which the temperature changes from $A$ in the direction of the vector ${\bf v}$.
+
+\item Compare your result from part (b) with the standard computation that computes the directional derivative as a scalar projection.
+
+\end{enumerate}
+
+%The idea of this exploration is to interpret the derivative of the function $f$ at the point $A(1,0)$ in the direction of the vector ${\bf v} = \langle \cos\theta, \sin\theta\rangle$ as a slope. To do this, we cut the surface $T=f(x,y)$ with a vertical plane through through the point $A$ that is parallel to the vector ${\bf v}$.
+
+%The two dimensional curve in the left panel shows this cross-section. It is a graph of the function
+%\[
+%   g(s) = f(s, f(1+s\cos \theta, s \sin\theta)) , s\in \mathbb{R}.
+%\]
+%Here $s$ is the signed distance (in meters) measured from the point $(1,0,0)$ in the direction of the vector $ \langle \cos\theta, \sin\theta , 0\rangle$.
 
 %\[
 %      x \sin\theta - y\cos\theta = \sin\theta .
@@ -391,6 +413,52 @@ Parameterize the graph of the function $h=g(s)$ that expresses the altitude alon
 
 
 \end{exploration}
+
+
+\section{Exercises}
+
+\begin{question} \label{Q545345ggt55}
+The function
+\[
+     T = f(x,y) = x^2 - xy + y^2  
+\]
+expresses the temperature (measured in Celsius degrees) in terms of position (measured in meters).
+
+In which direction(s) from $A(1,0)$ does the temperature
+\begin{enumerate}
+\item increase at the maximum rate?
+
+\item decrease at the maximum rate?
+
+\item not change?
+
+\item decrease at the rate of $2^\circ$C/m?
+
+\item increase at the rate of $3^\circ$C/m?
+\end{enumerate}
+
+\end{question}
+
+\begin{question}  \label{Q354fgtr4t4}
+Two level curves of the temperature function (temperature measured in Celsius degrees, position in meters)
+\[
+ T = f(x,y)
+\]
+are shown below. The temperature along the green curve is less than the temperature along the blue curve.
+\begin{onlineOnly}
+    \begin{center}
+\desmos{brp7vx683x}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Access Desmos interactives through the online version of this text at
+ 
+\href{https://www.desmos.com/calculator/brp7vx683x}{163: Directional Derivative 6}.
+
+Suppose from the point $A$ the temperature increases at the maximum rate of $4^\circ$C/m. Use the slider $\phi$ to approximate the rate at which the temperature changes at $A$ in the direction directly toward $B$. Explain your reasoning.
+
+
+\end{question}
 
 
 \end{document}
