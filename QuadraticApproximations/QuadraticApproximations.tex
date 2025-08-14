@@ -9,6 +9,62 @@ Using quadratic power series to approximate curves in the plane and in space.
 \end{abstract}
 \maketitle
 
+
+\section{Question about Quadratic Approximations}
+
+That a function $f(x)$ is differentiable at $x=a$ means there is some real number $L=f^\prime(a)$ such that
+\[
+   \lim_{x\to a} \frac{f(x)-f(a)}{x-a} = L.
+\]
+
+This is equivalent to saying that there is a number $L = f^\prime(a)$ that makes the linear approximation
+\[
+      p_1(x) = f(a) +f^\prime(a) (x-a)
+\]
+\emph{good} in the sense that 
+\[
+ \lim_{x\to a} \frac{f(x) - p_1(x)}{x-a} = 0 .
+\]
+
+
+Can we make a similar claim about $f(x)$ being twice differentiable at $x=a$ or do we need to make additional assumptions about the behavior of $f(x)$ near $x=a$?
+
+In particular, what if any additional assumptions guarantee that the quadratic approximation
+\[
+    p_2(x) = f(a) + f^\prime(a) (x-a) + \frac{1}{2}f^{\prime\prime}(a)(x-a)^2
+\]
+is good in the sense that
+\[
+   \lim_{x\to a} \frac{f(x) - p_2(x)}{(x-a)^2} = 0 ?
+\]
+
+Since $f^\prime(x)$ is differentiable at $x=a$, the error function function $e(x)$ defined near $x=a$ by
+\[
+     e(x) = f^\prime(x) - ( f^\prime(a) + f^{\prime\prime}(a)(x-a)) 
+\]
+approaches zero more quickly than $x-a$. That is 
+\[
+     \lim_{x\to a} \frac{e(x)}{x-a} = 0.
+\]
+
+Integrating both sides of the equation
+\[
+    f^\prime(x) = f^\prime(a) + f^{\prime\prime}(a)(x-a) + e(x)
+\]
+gives
+\[
+  f(x) = f(a) + x f^\prime(a) + \frac{1}{2}f^{\prime\prime}(a)(x-a)^2 + \int_0^x e(u)\, du .
+\]
+
+To make sense of the integral we can assume that $e(x)$ is continuous near $x=a$. This amounts to assuming $f^\prime(x)$ is continuous near $x=a$. Assuming this, it seems (using L'Hopital's rule) that
+\begin{align*}
+         \lim_{x\to a} \frac{\int_0^x e(u)\, du}{(x-a)^2} &= \lim_{x\to a} \frac{e(x)}{2(x-a)} = 0.
+\end{align*}
+
+Is this right? We get a good quadratic approximation without needing to assume that $f^{\prime\prime}(x)$ is continuous at $x=a$? There must be some error.
+
+
+
 \section{Linear Approximation}
 In differential calculus we learned about linear approximation. That's just a fancy term meaning to approximate the graph of a function near a point with the tangent line at that point.
 
