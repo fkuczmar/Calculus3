@@ -127,12 +127,12 @@ parallel to ${\bf v}$ by the factor $10$ cm. So
 \end{example}
 
 
-\section{Circles and Spheres}
+\section{Circles}
 A circle is the set of points in a plane a fixed distance from a given point (the circle's center). 
 
 We typically do not think about vectors when writing an equation of a circle, but we can. Here's how.
 
-Suppose, for example, we want to find an equation of the circle of radius $5$ centered at the point $A$ with coordinates $(4,1)$. Then with $O$ as the origin, the point $P(x,y)$ with coordinates lies on this circle if and only if the length of the vector 
+Suppose, for example, we want to find an equation of the circle of radius $5$ centered at the point $A$ with coordinates $(4,1)$. Then with $O$ as the origin, the point $P$ with coordinates $(x,y)$ lies on this circle if and only if the length of the vector 
 \begin{align*}
    \overrightarrow{AP} &= \overrightarrow{OP} - \overrightarrow{OA}  \\
                                  &= \langle x,y \rangle - \langle 4, 1 \rangle \\
@@ -149,11 +149,10 @@ or equivalently as
    \left| \langle x -4 , y-1 \rangle  \right|= 5 .
 \]
 
-It's important to realize that even though we're thinking of vectors when we write this so-called \emph{vector equation}, the circle is still a \emph{set of points}, namely the set
+It's important to realize that even though we're thinking of vectors when we write this so-called \emph{vector equation}, the circle is \emph{not} a set of vectors. It is still a \emph{set of points}, namely the set
 \[
    \{ (x,y) \in \mathbb{R}^2\, | ,   \left|   \langle x,y \rangle - \langle 4, 1 \rangle   \right| = 5 \}.
 \]
-It is \emph{not} a set of vectors.
 
 Of course, since
 \[
@@ -165,8 +164,7 @@ either of the above equations are just disguised forms of the more familiar equa
 \]
 of the same circle.
 
-This way of thinking about vectors when writing an equation of a circle is especially handy in desmos. With $A=(4,1)$ as the center of the circle, Line 2 of the worksheet below shows how to write the vector equation of the circle in desmos.
-
+This way of thinking about vectors when writing an equation of a circle is especially handy in desmos. With $A=(4,1)$ as the center of the circle, Line 2 of the worksheet below shows how to write the vector equation of the circle of radius $5$ centered at $A$.
 
 \begin{onlineOnly}
     \begin{center}
@@ -175,6 +173,39 @@ This way of thinking about vectors when writing an equation of a circle is espec
 \end{onlineOnly}
 
 \href{https://www.desmos.com/calculator/hraab6na4k}{163: Circle Equation}
+
+
+\section{Spheres}
+A sphere is the set of points in space a fixed distance from a given point (the circle's center).
+
+The logic behind writing an equation of a sphere in $\mathbb{R}^3$ is the same as writing an equation of a circle in $\mathbb{R}^2$.
+
+Take, for example, the sphere of radius $4$ centered at the point $A$ with coordinates $(-2,-1,1)$. Then a point $P$ with coordinates $(x,y,z)$ lies on this sphere if and only if
+\[
+       \left| \langle x,y,z \rangle - \langle 2, -1, 1 \rangle \right| = 4.  
+\]
+
+\begin{enumerate}
+\item Write the above vector equation in its more familiar (but longer) form as
+\[
+  \sqrt{\answer{(x-2)^2 + (y+1)^ + (z-1)^2}} = \answer{4}.
+\]
+
+\item Does the point $Q$ with coordinates $(-2,-1,0)$ lie on this sphere? If not, is it inside or outside the sphere? Justify your response. Then activate Line 3 in the worksheet below to check..
+\begin{freeResponse}
+\end{freeResponse}
+
+\end{enumerate}
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{ck3i6fhpyx}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/ck3i6fhpyx}{163: Equation of Sphere}
+
+https://www.desmos.com/3d/ck3i6fhpyx
 
 
 \end{document}
