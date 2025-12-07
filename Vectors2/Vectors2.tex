@@ -1,16 +1,67 @@
 \documentclass{ximera}
-\title{Vectors and Lines}
+\title{Vectors, Part 2}
 
 \newcommand{\pskip}{\vskip 0.1 in}
 %\usepackage{esvect}
 
 \begin{document}
 \begin{abstract}
-Vectors and lines in $\mathbb{R}^2$ and  $\mathbb{R}^3$.
+Circles, spheres, and vectors.
 \end{abstract}
 \maketitle
 
+
+\section{Vectors in Desmos}
+In the worksheet below, point $O$ is the origin and point $A$ has coordinates $(1,2,3)$. To draw the vector $\overrightarrow{OA}$, we use the \emph{vector} command and write $\text{vector}(O,A)$ as in Line 4.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{cizkv51anx}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/cizkv51anx}{163: Vectors and Desmos}
+
+But arithmetically, desmos does not distinguish between points and vectors. For example, we would write the vector that expresses the position of point $B$ relative to point $A$ is
+\[
+  \overrightarrow{AB} =  \overrightarrow{OB} - \overrightarrow{OA} .
+\]
+
+But in desmos, we do arithmetic with the points directly and define a third point, call it $C$, as
+\[
+    C = B - A.
+\]
+To see point $C$, activate Line 6 above.
+
+\emph{Note:} We should not write $C = B-A$ in this class, except in desmos. Instead we should write the vector equation above.
+
+To draw the vector $\overrightarrow{OC} = \overrightarrow{AB}$ from the origin to $C$ activate Line 7.
+
+But to draw the vector $\overrightarrow{AB}$ in what we might think of as its proper position, with its tail at $A$, activate Line 8.
+
+
+
 \section{A Parallelogram Problem}
+
+\begin{question}  \label{Q:df9GG435r34}
+
+\begin{enumerate}
+
+\item  Let $A(1,2,2)$, $B(3,-4,5)$, and $C(-2,1,4)$ be points in space. Let $D$ be the point in $\mathbb{R}^3$ that makes quadrilateral $ABCD$ a parallelogram. Express the vector $\overrightarrow{OD}$ in terms of the vectors $\overrightarrow{OA}$, $\overrightarrow{OB}$, and $\overrightarrow{OC}$. Draw the relevant vectors in the desmos worksheet below.
+
+\item  Use the result of part (b) to determine the coordinates of $D$.
+
+\end{enumerate}
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{hxegp3eszd}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/hxegp3eszd}{163: Parallelogram}
+\end{question}
 
 
 
