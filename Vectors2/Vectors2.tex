@@ -27,13 +27,13 @@ But desmos does not distinguish between points and vectors arithmetically. For e
   \overrightarrow{AB} =  \overrightarrow{OB} - \overrightarrow{OA} .
 \]
 
-But in desmos, we do vector arithmetic with the points directly and define a third point, call it $C$, as
+But in desmos, we do vector arithmetic with the points directly. So we would write the above equation as % and define a third point, call it $C$, as
 \[
-    C = B - A.
+    C = B - A,
 \]
-To see point $C$, activate Line 7 above.
+where $\overrightarrow{OC}$ is equal to the vector $\overrightarrow{AB}$. To see the \emph{point} $C$, activate Line 7 above.
 
-\emph{Note:} We should \emph{not} write $C = B-A$ in this class other than in desmos. Instead we should write the vector equation above.
+\emph{Note:} We should \emph{not} write $C = B-A$ in place of the vector equation above other than in desmos. %Instead we should write the vector equation above.
 
 To draw the vector $\overrightarrow{OC} = \overrightarrow{AB}$ from the origin to $C$ activate Line 8.
 
@@ -56,12 +56,16 @@ But to draw the vector $\overrightarrow{AB}$ in what we might think of as its pr
 
 \begin{enumerate}
 
-\item  Let $A(1,2,2)$, $B(3,-4,5)$, and $C(-2,1,4)$ be points in space. Let $D$ be the point in $\mathbb{R}^3$ that makes quadrilateral $ABCD$ a parallelogram. Express the vector $\overrightarrow{OD}$ in terms of the vectors $\overrightarrow{OA}$, $\overrightarrow{OB}$, and $\overrightarrow{OC}$. Draw the relevant vectors in the desmos worksheet below.
+\item  Let $A$, $B$, and $C$ be points in space. Let $D$ be the point in $\mathbb{R}^3$ that makes quadrilateral $ABCD$ a parallelogram. Express the vector $\overrightarrow{OD}$ in terms of the vectors $\overrightarrow{OA}$, $\overrightarrow{OB}$, and $\overrightarrow{OC}$. Do \emph{not}use the specific coordinates of the points in the worksheet below. Work in general instead. \emph{Note:} Saying that $ABCD$ is a parallelogram means that the vertices $A$, $B$, $C$, $D$ occur in that order and that the opposite sides are parallel.
+\[
+    \overrightarrow{OD} = \overrightarrow{OA} + \overrightarrow{\answer{OC}} - \overrightarrow{\answer{OB}} .
+\]
 
-\item  Use the result of part (b) to determine the coordinates of $D$.
+\item Enter the correct expression for $D$ in Line 2 of the worksheet below. Then activate the folder \emph{Parallelogram} to see if you are correct.
+
+\item Now suppose the points $A$, $B$, $C$, $D$ have respective coordinates $A(1,2,-2)$, $B(3,-4,-5)$, and $C(-2,1,-4)$. Use the result of part (a) to find the coordinates of $D$.
 
 \end{enumerate}
-
 
 \begin{onlineOnly}
     \begin{center}
@@ -72,6 +76,105 @@ But to draw the vector $\overrightarrow{AB}$ in what we might think of as its pr
 \href{https://www.desmos.com/3d/hxegp3eszd}{163: Parallelogram}
 \end{question}
 
+
+\section{Unit Vectors}
+
+When we multiply a vector by a dimensionless scalar (ie. a real number), we multiply its length by the \emph{absolute value of that number}. For example, the vector 
+\[
+   {\bf v} = \langle 1 , 2 \rangle \text{cm}
+\]
+has length 
+\[
+    | {\bf v} | = \sqrt{(1\text{ cm})^2 + (2\text{ cm}^2} = \sqrt{5} \text{ cm}.
+\]
+And the vector
+\[
+   -3 {\bf v} = \langle -3 , -6 \rangle \text{cm}
+\]
+has length
+\[
+   |  -3 {\bf v} | = |-3||{\bf v}| = 3\sqrt{5}\text{cm} .
+\]
+
+
+By definition, A \emph{unit} vector has unit length (ie. length $1$).
+
+To find, for example, a unit vector $\hat{{\bf v}}$ pointing in the same direction as the vector ${\bf v} = \langle 1, 2\rangle$cm, we multiply ${\bf v}$ by the reciprocal of its length. The resulting unit vector is 
+\begin{align*}
+  \hat{{\bf v}} &= \frac{{\bf v}}{|{\bf v}|} \\
+                      &= \left( \frac{1}{\sqrt{5}\text{cm}} \right)\langle 1, 2  \rangle\text{cm} \\
+                      &= \left\langle \frac{1}{\sqrt{5}} , \frac{2}{\sqrt{5}} \right\rangle . 
+\end{align*}
+
+Note this key fact. \emph{Unit vectors are dimensionless}.
+
+\begin{example} \label{ExLFDfefr}
+Find the components of the vector ${\bf w}$ with length $10$ cm that points in the same direction as the vector ${\bf v} = \langle 1, 2\rangle$ cm.
+
+\begin{explanation}
+All we need to do is scale the dimensionless unit vector
+\[
+   \hat{{\bf v}} = \left\langle \frac{1}{\sqrt{5}} , \frac{2}{\sqrt{5}} \right\rangle
+\]
+parallel to ${\bf v}$ by the factor $10$ cm. So 
+\begin{align*}
+  {\bf w} &= (10 \text{ cm}) \hat{{\bf v}} \\
+             & = 10 \left\langle \frac{1}{\sqrt{5}} , \frac{2}{\sqrt{5}} \right\rangle \text{cm} \\
+             &= \left\langle \answer{2\sqrt{5}} , \answer{4\sqrt{5}} \right\rangle \text{cm} .
+\end{align*}
+
+\end{explanation}
+\end{example}
+
+
+\section{Circles and Spheres}
+A circle is the set of points in a plane a fixed distance from a given point (the circle's center). 
+
+We typically do not think about vectors when writing an equation of a circle, but we can. Here's how.
+
+Suppose, for example, we want to find an equation of the circle of radius $5$ centered at the point $A$ with coordinates $(4,1)$. Then with $O$ as the origin, the point $P(x,y)$ with coordinates lies on this circle if and only if the length of the vector 
+\begin{align*}
+   \overrightarrow{AP} &= \overrightarrow{OP} - \overrightarrow{OA}  \\
+                                 &= \langle x,y \rangle - \langle 4, 1 \rangle \\
+                                 & = \langle x -4 , y-1 \rangle 
+\end{align*}
+is $5$. 
+
+So we can write an equation of the circle as
+\[
+        \left|   \langle x,y \rangle - \langle 4, 1 \rangle   \right| = 5
+\]
+or equivalently as
+\[
+   \left| \langle x -4 , y-1 \rangle  \right|= 5 .
+\]
+
+It's important to realize that even though we're thinking of vectors when we write this so-called \emph{vector equation}, the circle is still a \emph{set of points}, namely the set
+\[
+   \{ (x,y) \in \mathbb{R}^2\, | ,   \left|   \langle x,y \rangle - \langle 4, 1 \rangle   \right| = 5 \}.
+\]
+It is \emph{not} a set of vectors.
+
+Of course, since
+\[
+  \left| \langle x -4 , y-1 \rangle  \right| = \sqrt{(x-4)^2 + (y-1)^2} ,
+\]
+either of the above equations are just disguised forms of the more familiar equation
+\[
+        \sqrt{(x-4)^2 + (y-1)^2} =5
+\]
+of the same circle.
+
+This way of thinking about vectors when writing an equation of a circle is especially handy in desmos. With $A=(4,1)$ as the center of the circle, Line 2 of the worksheet below shows how to write the vector equation of the circle in desmos.
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{hraab6na4k}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/hraab6na4k}{163: Circle Equation}
 
 
 \end{document}
