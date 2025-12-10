@@ -26,7 +26,7 @@ Use the ideas in the previous two chapters
 for your solutions.
 
 
-\section{Closest Point on a Circle}
+\section{Closest Point on a Circle/Sphere}
 
 \begin{exercise} \label{EDrR3r3rdfdll}
 For this problem, we are given points $A$, $B$, and $Q$ in the plane. Point $O$ is the origin.
@@ -73,33 +73,76 @@ We are given points $A$, $B$, and $Q$ in $\mathbb{R}^3$. Point $O$ is the origin
 \item Express the postions (relative to the origin) of the points nearest and farthest from $Q$ that lie on the sphere through $B$ centered at $A$ in terms of the vectors $\overrightarrow{OA}$, $\overrightarrow{OB}$, and $\overrightarrow{OQ}$.
 \end{enumerate}
 
-\item Use the worksheet above to check your work.
+\item Use the worksheet above to check your work. You can make the sphere translucent by clicking the wrench in the upper right. Then choose \emph{More Options} and then \emph{Translucent surfaces}.
 
+\end{exercise}
+
+\section{Tangent Spheres}
+
+\begin{exercise}  \label{EQdf4r4r5443}
+\begin{enumerate}
+\item  Drag slider $r_1$ below to see how many spheres centered at the point $B(4,1,5)$ are tangent to the sphere with equation
+\[
+        | \langle x,y,z\rangle - {\bf a} | = 3 ,
+\]
+where
+\[
+   {\bf a} = \overrightarrow{OA}
+\]
+is the vector from the origin to the point $A$ with coordinates $(1,-1,2)$.
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{bvowkb4jl2}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/bvowkb4jl2}{163:Vectors Tangent Spheres 2}
+
+\item Hide the spheres by turning off Lines 2 and 4. Then use vector arithmetic to find the coordinates of the points of tangency. Do this by expressing the vector $\overrightarrow{OP}$ from the origin to a point of tangency in terms of the vectors $\overrightarrow{OA}$ and $\overrightarrow{OB}$. Use the desmos worksheet to check your work.
+
+Work with general points $A$ and $B$ (not the specific ones here) and a given sphere with radius $r_2$ (not $3$ as above). 
+
+Activate and open the folder \emph{Solution} in Line 23 to see the solutions.
+
+\end{enumerate}
 \end{exercise}
 
 
 
-\section{Exercises}
 
-\begin{exercise} \label{EKDFEf3r933}
-\begin{enumerate}
-\item Use vector arithmetic to find the centers of all circles of radius $r$ that pass through the points $A$ and $B$ with respective coordinates $(-2,1)$ and $(4,5)$. Are there any restrictions on $r$?
+\section{Angle Bisectors}
 
-\item Write vector-equations of the circles in part (a). 
+%\begin{exercise} \label{EKDFEf3r933}
+%\begin{enumerate}
+%\item Use vector arithmetic to find the centers of all circles of radius $r$ that pass through the points $A$ and $B$ with respective coordinates $(-2,1)$ and $(4,5)$. Are there any restrictions on $r$?
 
-\item Enter your equations from part (a) in Lines 3 and 4 of the worksheet below. Then drag the slider $r$ in Line ?? to check  your work..
+%\item Write vector-equations of the circles in part (a). 
 
+%\item Enter your equations from part (a) in Lines 3 and 4 of the worksheet below. Then drag the slider $r$ in Line ?? to check  your work..
 
-
-
-\end{enumerate}
-\end{exercise} 
+%\end{enumerate}
+%\end{exercise} 
 
 \begin{exercise} \label{EMDF3r3r3rfD}
 \begin{enumerate}
+
+\item There are two lines that bisect the angles formed by the lines $y=x$ and $y=3x$. Do you think the one that lies in the first and third quadrants has slope
+
+\begin{enumerate}
+\item equal to two,
+
+\item greater than two,
+
+\item or less than two?
+\end{enumerate}
+Explain your thinking. If you're not sure, that's ok. Say so.
+
+
 \item Find equations of the two lines through the origin that bisect the angles formed by the lines $y=x$ and $y=3x$.
 
-\item Enter your equations in Lines 3 and 4 of the worksheet below to check your equations.
+\item Enter your equations in Lines 8 and 9 of the worksheet below to check your equations. Or activate and open the folder \emph{Solutions} in Line 3.
 
 \end{enumerate}
 
@@ -113,8 +156,11 @@ We are given points $A$, $B$, and $Q$ in $\mathbb{R}^3$. Point $O$ is the origin
 
 
 \begin{hint}
-Start by finding two vectors parallel to the lines that have the same length.
+Start by finding two vectors parallel to the lines that have the same length. Then use vector arithmetic to find the directions of the two angle bisectors.
 \end{hint}
 \end{exercise}
+
+
+\section{Circles Tangent to Curves}
 
 \end{document}
