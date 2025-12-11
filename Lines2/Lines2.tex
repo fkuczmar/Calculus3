@@ -12,6 +12,150 @@ Parameterizing lines in $\mathbb{R}^2$ and $\mathbb{R}^3$.
 
 Before parameterizing lines, let's look at a few problems that review vector arithmetic.
 
+\begin{question} \label{Qfer8344422}
+Let $O$ the origin and ${\cal L}$ the line through the points $A(1,2,3)$ and $B(-2,1,1)$.
+
+\begin{enumerate}
+\item Let $P$ be the point on ${\cal L}$ \emph{between} $A$ and $B$ such that
+\[
+      \frac{|\overrightarrow{AP}|}{|\overrightarrow{PB}|} = \frac{3}{5} . 
+\]
+
+\begin{enumerate}
+\item Express the vector $\overrightarrow{OP}$ in terms of the vectors $\overrightarrow{OA}$ and $\overrightarrow{OB}$. 
+
+\item Use the expression from part (a) to find the coordinates of $P$. Check your work in the desmos worksheet below.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{kqq5ktp0jw}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/kqq5ktp0jw}{163: Harmonic Conjugates}
+
+\end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+\item The idea is to describe how to get from the origin to point $P$. One path goes from the origin to $A$ and then from $A$ to $P$. In terms of vectors,
+\[
+   \overrightarrow{OP} = \overrightarrow{OA} + \overrightarrow{\answer{AP}}.
+\]
+Next we'll express vector $\overrightarrow{AP}$ in terms of $\overrightarrow{AB}$ using the given ratio.
+\[
+      \overrightarrow{AP} = \answer{3/8} \overrightarrow{AB} .
+\]
+Then
+\begin{align*}
+  \overrightarrow{OP} &= \overrightarrow{OA} + \overrightarrow{\answer{AP}}  \\
+                                &= \overrightarrow{OA} + \frac{3}{8} \overrightarrow{AB} \\
+                                &= \overrightarrow{OA} + \frac{3}{8} \left( \overrightarrow{\answer{OB}} - \overrightarrow{\answer{OA}}   \right) \\
+                                 &= \answer{\frac{5}{8}} \overrightarrow{OA} + \answer{\frac{3}{8}} \overrightarrow{OB}
+\end{align*}
+
+
+Enter this last expression, writing $A$ for $\overrightarrow{OA}$ and $B$ for $\overrightarrow{OB}$ in Line 10 of the worksheet below. Does this look correct?
+
+
+
+\item Since  %the vector $\overrightarrow{OP}$ has components
+\begin{align*}
+    \overrightarrow{OP} &= \frac{5}{8} \overrightarrow{OA} + \frac{3}{8}\overrightarrow{OB} \\
+                                  &= \langle \answer{-1/8} , \answer{13/8} , \answer{9/4}   \rangle 
+\end{align*}
+and $O$ is the origin, $P$ has coordinates
+\[
+   (x,y,z) = (\answer{-1/8} , \answer{13/8} , \answer{9/4}) .
+\]
+
+\end{enumerate}
+
+\end{explanation}
+
+
+\item  Let $Q$ be the point on ${\cal L}$ \emph{not} between $A$ and $B$ such that
+\[
+      \frac{|\overrightarrow{AQ}|}{|\overrightarrow{QB}|} = \frac{3}{5} . 
+\]
+First express the vector $\overrightarrow{OQ}$ in terms of the vectors $\overrightarrow{OA}$ and $\overrightarrow{OB}$. Then use this expression to find the coordinates of $Q$. Check your work in the desmos worksheet.
+
+\end{enumerate}
+
+\end{question}
+
+
+
+
+\section{Parameterizing Lines}
+A line in any number of dimensions is determined by a point on that line and the line's direction. In the plane, we can describe the direction of a non-vertical line with its slope. But in three dimensions, there are too many directions and one number is not enough.  Instead we use a vector to specify a direction. Here's an example.
+
+ 
+\begin{example} \label{EXLDF93933}
+Paramterize the line ${\cal L}$ in $\mathbb{R}^3$ through the points $A(1,2,3)$ and $B(-2,1,1)$.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{xfnwurvh5n}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/xfnwurvh5n}{163: Parameterizing a Line}
+
+
+\begin{explanation}
+Instead of using the points $A$ and $B$ to find a slope of the line as we would in the plane, we instead use them to find a vector
+\begin{align*}
+ {\bf v} &=  \overrightarrow{OB} - \overrightarrow{OA}  \\
+            &= \langle -2,1,1  \rangle - \langle 1,2,3  \rangle \\
+            &= \langle -3, -1, -2  \rangle   
+\end{align*}
+parallel to the line.
+
+Now a point $P$ with coordinates $(x,y,z)$ lies on the line through $A(1,2,3)$ and $B$ if and only if the vector
+\[
+     \overrightarrow{AP} = \langle x,y,z \rangle - \langle 1, 2, 3 \rangle 
+\]
+points in the same or opposite direction as the vector ${\bf v}$. This is equivalent to saying that $P$ lies on the line if and only if 
+\[
+    \overrightarrow{AP} = t {\bf v}
+\]
+for some scalar $t\in \mathbb{R}$. 
+
+That is, the point $P(x,y,z)$ lies on ${\cal L}$ if and only if
+\[
+    \langle x,y,z \rangle - \langle 1, 2, 3 \rangle = t \langle -3, -1, -2 \rangle  \, , \, \text{for some } t\in \mathbb{R} ,
+\]
+or if and only if
+\[
+  \langle x,y,z \rangle =  \langle 1, 2, 3 \rangle + t \langle -3, -1, -2 \rangle  \, , \, \text{for some } t\in \mathbb{R}.
+\]
+
+This last equation is a vector equation of the line ${\cal L}$ and gives necessary and sufficient conditions for a point $P$ with coordinates $(x,y,z)$ to lie on ${\cal L}$. 
+
+Equating the components of the vectors on the left and right sides of this equation gives a \emph{parameterization} 
+\[
+   (x,y,z) = ( 1-3t , 2-t, 3-2t ) \, , \, t\in \mathbb{R} 
+\]
+of the line.
+
+Pick a value of $t$ and you get a point on the line. As a check, if $t=0$, then
+\[
+     (x,y,z) = (1,2,3) .
+\]
+This is point $A$. And if $t=1$, 
+\[
+     (x,y,z) = (-2, 1, 1).
+\]
+This is point $B$. 
+
+
+\end{explanation}
+
+
+\end{example}
+
+
 
 
 
