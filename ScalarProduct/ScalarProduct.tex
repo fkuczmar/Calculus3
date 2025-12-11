@@ -133,13 +133,16 @@ Access Geogebra interactives through the online version of this text at
 
 
 \begin{question}   \label{Qrasd5r:Scalar}
-(a) Given vectors ${\bf v}, {\bf w} \in \mathbb{R}^n$, use the scalar product to determine the value of the scalar $\lambda\in \mathbb{R}$ that makes the vector
+\begin{enumerate}
+\item Given vectors ${\bf v}, {\bf w} \in \mathbb{R}^n$, use the scalar product to determine the value of the scalar $\lambda\in \mathbb{R}$ that makes the vector
 \[
      {\bf v}_{\perp} = {\bf v} - \lambda {\bf w}
 \]
 perpendicular to ${\bf w}$.
 
-(b) Use part (a) to find an expression for the vector component of ${\bf v}$ in the direction of ${\bf w}$.
+\item Use part (a) to find an expression for the vector component of ${\bf v}$ in the direction of ${\bf w}$.
+
+\end{enumerate}
 
 \begin{explanation}
 The vector ${\bf v}_{\perp}$ is perpendicular to ${\bf w}$ if and only if
@@ -159,6 +162,13 @@ So the vector component of ${\bf v}$ in the direction of ${\bf w}$ is
 \end{explanation}
 \end{question}
 
+\begin{formula}
+The vector component of ${\bf v}$ in the direction of ${\bf w}$ is
+\[
+    \text{proj}_{{\bf w}}({\bf v}) = {\bf v}_{par} = \left( \frac{{\bf v}\cdot {\bf w}}{{\bf w}\cdot {\bf w}} \right) {\bf w}.
+\]
+\end{formula}
+
 
 \section{Concept Checks}
 
@@ -177,10 +187,18 @@ What can you conclude about two vectors if their scalar product is
 \end{question}
 
 \begin{question}  \label{Q3245r432dfg}
-(a) Drag points $D$ and $E$ in the worksheet below so that the vector ${\bf w} = \overrightarrow{DE}$ approximates the vector projection of ${\bf u}=\overrightarrow{AB}$ onto the vector ${\bf v} =\overrightarrow{AC}$.
+\begin{enumerate}
+\item Drag points $D$ and $E$ in the worksheet below so that the vector ${\bf w} = \overrightarrow{DE}$ approximates the vector projection of ${\bf u}=\overrightarrow{AB}$ in the direction of the vector ${\bf v} =\overrightarrow{AC}$.
 
-(b) Compute the vector projection in part (a) and compare it to  your approximation.
+\item Compute the vector projection in part (a) and compare it to  your approximation.
 
+The vector projection of ${\bf u}$ in the direction of ${\bf v}$ is
+\begin{align*}
+     \text{proj}_{{\bf v}}({\bf u})  &= \left( \frac{{\bf u}\cdot {\bf v}}{{\bf v}\cdot {\bf v}} \right) {\bf v} \\
+                                                 &=\answer{\langle 1, -2 \rangle} .
+\end{align*}
+
+\end{enumerate}
 
 \begin{onlineOnly}
     \begin{center}
