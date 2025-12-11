@@ -1,0 +1,225 @@
+\documentclass{ximera}
+\title{Parameterizing Lines}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Parameterizing lines in $\mathbb{R}^2$ and $\mathbb{R}^3$.
+\end{abstract}
+\maketitle
+
+
+Before parameterizing lines, let's look at a few problems that review vector arithmetic.
+
+
+
+
+
+
+\begin{exploration}   \label{Exsd67g:Line}
+Let ${\bf a} = \overrightarrow{OA}$ and  ${\bf b} = \overrightarrow{OB}$.
+
+The parameterization 
+\[
+    {\bf r} = {\bf a} + t({\bf b} - {\bf a}) = t{\bf b} + (1-t){\bf a} , t\in \mathbb{R}
+\]
+is shown below. Slide $t$ and interpret the geometric meaning of the parameter $t$ in terms of the number line through $A$ and $B$ with its zero at $A$. You may drag points $A$ and $B$ in the demonstration below.
+
+\pdfOnly{
+Access Geogebra interactives through the online version of this text at
+ 
+\href{https://www.geogebra.org/classic/xbrvnrtp}.
+}
+ 
+\begin{onlineOnly}
+    \begin{center}
+\geogebra{xbrvnrtp}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\end{exploration}
+
+
+\begin{question} \label{Qf4tlhlnm4}
+\begin{enumerate}
+
+\item Which of the following determine a unique line in $\mathbb{R}^2$? Select all that apply.
+\begin{selectAll}
+\choice[correct]{Two distinct points}
+\choice[correct]{A point and a slope}
+\choice[correct]{A point and a vector parllel to the line}
+\choice[correct]{A point and a vector orthogonal to the line}
+\end{selectAll}
+
+\item Which of the following determine a unique line in $\mathbb{R}^3$? Select all that apply.
+\begin{selectAll}
+\choice[correct]{Two distinct points}
+\choice{A point and a slope}
+\choice[correct]{A point and a vector parllel to the line}
+\choice{A point and a vector orthogonal to the line}
+\end{selectAll}
+
+\end{enumerate}
+\end{question}
+
+\begin{example} \label{Ex3434523093}
+\begin{enumerate}
+\item Find a vector equation of the line in $\mathbb{R}^3$ through the point $A(3,-2,1)$ parallel to the vector ${\bf v}  =\langle 1,4,-2\rangle$.
+
+\item Parameterize the line in part (a).
+
+\item Find the coordinates of the point where the line intesects the $xz$-plane.
+
+\end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+\item A vector equation expresses the positions of all points on the line relative to the origin $O$. For this line (call it ${\cal L}$), a point $P$ lies on ${\cal L}$ if and only if the vector $\overrightarrow{AP}$ is parallel (or anti-parallel) to the vector ${\bf v}$. And this is true if and only if
+\[
+       \overrightarrow{AP} = t {\bf v} \text{ for some scalar } t\in \mathbb{R} .
+\]
+But since
+\[
+    \overrightarrow{AP} = \overrightarrow{OP} - \overrightarrow{OA} ,
+\]
+a point $P$ lies on ${\cal L}$ if and only if
+\[
+    \overrightarrow{OP} = \overrightarrow{OA} + t {\bf v} \text{ for some scalar } t\in \mathbb{R}.
+\]
+This is a vector equation of ${\cal L}$. Think of it as giving directions from the origin to a point $P$ on ${\cal L}$; first go to the point $A$ and then move some distance in the same or the opposite direction of the vector ${\bf v}$.
+
+What distance?
+\begin{multipleChoice}
+\choice{$t$}
+\choice{$|{\bf v}|$}
+\choice{$t|{\bf v}|$}
+\choice[correct]{$|t{\bf v}|$}
+\end{multipleChoice}
+
+\item A line is a set of points, not a set of vectors, and a parameterization of a line expresses the coordinates of all points on the line in terms of some parameter. Supposing a general point $P$ on the line has coordinates $(x,y,z)$, that $A$ has coordinates $(3,-2,1)$, and that ${\bf v} = \langle 1,4,-2\rangle$, we can rewrite the vector equation
+\[
+    \overrightarrow{OP} = \overrightarrow{OA} + t {\bf v} \text{ for some scalar } t\in \mathbb{R}.
+\]
+as
+\[
+    \langle x, y, z \rangle = \langle \answer{3}, \answer{-2}, \answer{1} \rangle + t \langle \answer{1}, \answer{4}, \answer{-2} \rangle \text{ for some scalar } t\in \mathbb{R}.
+\]
+Equating the components of these vectors gives a parameterization of the line ${\cal L}$ as 
+\[
+   (x,y,z) = (3+t , -2 + 4t, \answer{1-2t}) \, , \, t\in \mathbb{R} .
+\]
+
+\item The point $P(x,y,z)$ lies on both the line and the $xz$-plane exactly when
+\[
+     y = -2 + 4t = 0 
+\]
+or exactly when $t=1/2$. So the point where the line intersects the $xz$-plane has coordinates $(\answer{5/2}, \answer{0}, \answer{2})$.
+\end{enumerate} 
+\end{explanation}
+
+\end{example} 
+
+
+\section{Light Reflecting off Plane Mirrors}
+
+\begin{question}  \label{Qdr5577:Lines}
+A light ray parallel to the vector ${\bf v} = \langle 3,2,-4 \rangle$ and passing through the point $P(12, 17,20)$ reflects off the $xy$-plane as if the plane were a mirror.
+
+\begin{enumerate}
+
+\item Parameterize the path of the incoming light ray. Include a domain.
+
+\item Parameterize the path of the reflected ray. Include a domain.
+
+\item Repeat parts (a) and (b) for a light ray parallel to the vector ${\bf v} = \langle 2,1,4 \rangle$ through the point $P(-1,3,-7)$ that reflects off the plane through the origin that is normal to the vector ${\bf n} = \langle  1, -1, 2 \rangle$.
+
+\end{enumerate}
+
+\end{question}
+
+\begin{question}  \label{Q324g4t324r}
+This question generalizes the previous one.
+
+A light ray parallel to the vector ${\bf v}$ passing through the point $P$ reflects off the plane through the origin normal to the vector ${\bf n}$. Parameterize the reflected ray in terms of the vectors ${\bf v}$, ${\bf n}$, and ${\bf p} = \overrightarrow{OP}$ giving the position of $P$ relative to the origin. Avoid working with the components of these vectors. Include a domain for the parameterization.
+
+Here is an outline of the approach:
+
+\begin{enumerate}
+\item To parameterize the reflected ray, we need to find the coordinates of a point $Q$ on the reflected ray and a vector parallel to the reflected ray. 
+
+The only possible choice for $Q$ is the point where the incoming ray intersects the plane. To find the vector $\overrightarrow{OQ}$ giving the position of $Q$ relative to the origin, do the following:
+
+\begin{enumerate}
+
+\item{First write a vector equation of the incoming ray with $t$ as the parameter. This equation will involve the vectors ${\bf v}$ and ${\bf  p}$ and is similar (but not identical) to the parameterization in Exploration 1 above.} 
+
+\item{Next use your vector equation of the incoming ray to find the value of the parameter $t$ that gives the vector $\overrightarrow{OQ}$. Do this by solving an equation that describes the geometric relationship between the vectors $\overrightarrow{OQ}$ and ${\bf n}$. }
+
+\item{Finally, use the value of the parameter in the previous step to find an expression for $\overrightarrow{OQ}$. Input this expression on Line 25 of the desmos worksheet below.}
+
+\end{enumerate}
+
+\item Next find a vector ${\bf w}$ parallel to the reflected ray. Input this on Line 27. %For this, see the section {\bf Light Reflecting off a Mirror} in the {\bf Scalar Product} chapter of our class notes:
+
+%\href{https://ximera.osu.edu/calc3/Calculus3/ScalarProduct/ScalarProduct}{Class Notes}
+
+
+\item Finally put all this together to find a vector equation of the reflected ray. Include the appropriate domain. Input this on Line 29. Does your result look reasonable?
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{znxtexpsnt}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/znxtexpsnt}{163: Ray Reflecting Off a Plane Student Copy 2}
+
+%\item The last step is to check your work in Desmos. %Unfortunately, Desmos does not have a function for the scalar product of two vectors. But we can get around this by defining three scalars,
+%\[
+%    s_{vn} = {\bf v}\cdot {\bf n} ,
+%\]
+%\[
+%    s_{pn} =  {\bf p}\cdot {\bf n},
+%\]
+%and 
+%\[
+%       s_{nn} =  {\bf n}\cdot {\bf n} .
+%\]
+
+%These scalars are imbedded in the Desmos worksheet below and you will need to use them for the scalar products. Follow the directions in the worksheet to check your work. 
+
+
+\end{enumerate}
+
+\end{question}
+
+\section{Lines of Sight}
+A sensor at the point $A(0,2,0)$ measures the line of sight to an object to be in the direction of the vector ${\bf v} = \langle 1, 1, 2 \rangle$. Another sensor at the point $B(3,0,0)$ measures the line of sight to the same object to be in the direction of the vector ${\bf w} = \langle -2,1,1 \rangle$.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{xo9oqgelty}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/xo9oqgelty}{163: Lines of Sight}
+
+\begin{enumerate}
+\item Verify algebraically that the lines of sight do not intersect.
+
+\item Experiment with the sliders $u_A$ and $u_B$ in the worksheet above to approximate the position of the object.
+
+\item Find the exact coordinates of the best approximation to the object's position.
+\end{enumerate}
+
+
+
+
+%Drawing a Square in Space
+
+%\href{https://www.desmos.com/3d/3a19b63ef0}{Square in Space 2}
+
+
+\end{document}
