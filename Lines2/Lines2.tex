@@ -92,7 +92,12 @@ A line in any number of dimensions is determined by a point on that line and the
 
  
 \begin{example} \label{EXLDF93933}
-Paramterize the line ${\cal L}$ in $\mathbb{R}^3$ through the points $A(1,2,3)$ and $B(-2,1,1)$.
+\begin{enumerate}
+\item Parameterize the line ${\cal L}$ in $\mathbb{R}^3$ through the points $A(1,2,3)$ and $B(-2,1,1)$.
+
+\item Use your parameterization to find the coordinates of the point where the line intersects the $xy$-plane.
+
+\end{enumerate}
 
 \begin{onlineOnly}
     \begin{center}
@@ -104,7 +109,9 @@ Paramterize the line ${\cal L}$ in $\mathbb{R}^3$ through the points $A(1,2,3)$ 
 
 
 \begin{explanation}
-Instead of using the points $A$ and $B$ to find a slope of the line as we would in the plane, we instead use them to find a vector
+\begin{enumerate}
+
+\item Instead of using the points $A$ and $B$ to find a slope of the line as we would in the plane, we instead use them to find a vector
 \begin{align*}
  {\bf v} &=  \overrightarrow{OB} - \overrightarrow{OA}  \\
             &= \langle -2,1,1  \rangle - \langle 1,2,3  \rangle \\
@@ -149,7 +156,18 @@ This is point $A$. And if $t=1$,
 \]
 This is point $B$. 
 
+\item To find the coordinates of the point where the line intersects the $xy$-plane, we solve the equation
+\[
+  z = 3-2t = 0
+\]
+to get $t=3/2$.
 
+Then the point where the line interects the $xy$-plane has coordinates
+\[
+   (x,y,z) = \answer{(-2, 1/2, 0)}.
+\]
+
+\end{enumerate}
 \end{explanation}
 
 
