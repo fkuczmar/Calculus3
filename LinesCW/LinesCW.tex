@@ -158,7 +158,7 @@ or exactly when $t=1/2$. So the point where the line intersects the $xz$-plane h
 \begin{question}  \label{QLFeereerfer33r}
 Imagine a hula hoop like the green one in the worksheet below. We wish to parameterize its shadow on the ground (the $xy$-plane below).
 
-This particular hoop has center $(0,0,3)$ meters and radius $b=2$ meters, but try to work in general, with center $(0,0,a)$ and radius $b$.
+This particular hoop has center $(0,0,3)$ meters and radius $b=2$ meters, but we'll work in general with center $(0,0,a)$ and radius $b$.
 
 The orange vector 
 \[
@@ -168,7 +168,7 @@ points in the direction of the sun.
 
 \begin{onlineOnly}
     \begin{center}
-\desmosThreeD{oqrd2iy7r7}{900}{600}
+\desmosThreeD{zungfwwq7r}{900}{600}
 \end{center}
 \end{onlineOnly}
 
@@ -176,9 +176,9 @@ points in the direction of the sun.
 
 
 \begin{enumerate}
-\item Start by using trigonometric functions to paramaterize the hoop in terms of the marked polar angle $\theta$.
+\item We'll start by using trigonometric functions to paramaterize the hoop in terms of the marked polar angle $\theta$.
 
-The vector $\overrightarrow{AP}$ from the center of the hoop to the point $P$ on the hoop with polar angle $\theta$  has components
+The vector $\overrightarrow{AP}$ from the center of the hoop to the point $P$ on the hoop with polar angle $\theta$ (as marked)  has components
 \[
  \overrightarrow{AP} = \langle \answer{0}, \answer{b\cos\theta}, \answer{b\sin \theta}  \rangle. 
 \]
@@ -193,6 +193,22 @@ So the vector $\overrightarrow{OP}$ has components
                                  &= \langle  \answer{0} , \answer{b\cos\theta}, \answer{a+b\sin\theta}  \rangle \, , \, 0\leq \theta \leq 2\pi. 
 \end{align*}
 
+\item Next we'll parameterize the line through $P$ parallel to the vector ${\bf v}$. 
+
+The point $Q$ with coordinates $(x,y,z)$ lies on this line if and only if
+\[
+     \langle x,y,z \rangle = \langle 0, b\cos\theta, a+b\sin\theta \rangle + t \langle \answer{v_1}, \answer{v_2}, \answer{v_3} \rangle \text{ for some } t\in \mathbb{R}.
+\]
+
+\item The line interects the $xy$-plane when $z=\answer{0}$. Solving for the parameter gives
+\[
+    t = \answer{\frac{-a-b\sin\theta}{v_3}} .
+\] 
+
+\item So the shadow of the point $P$ in the $xy$-plane has coordinates
+\[
+  (x,y,z) = \left( \answer{-\frac{(a+b\sin\theta)v_1}{v_3}} , \answer{b\cos\theta -  \frac{(a+b\sin\theta)v_2}{v_3}} , 0\right) .
+\]
 \end{enumerate}
 
 \end{question}
