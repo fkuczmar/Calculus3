@@ -1,0 +1,66 @@
+\documentclass{ximera}
+\title{Intersecting Spheres, Part 1}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Constructing the center of the circle of intersection of two intersecting spheres..
+\end{abstract}
+\maketitle
+
+
+
+
+
+\begin{question}   \label{ExsSpheres}
+This problem is about two intersecting spheres and their circle of intersection.
+
+We'll let 
+\[
+    {\bf p} = \langle x, y ,z \rangle
+\]
+be the position of the point $P$ with coordinates $(x,y,z)$ relative to the origin $O$.
+
+Now suppose the two spheres have equations
+\[
+      |{\bf p} - {\bf a}_1| = r_1
+\]
+ and
+\[
+     |{\bf p} - {\bf a}_2| = r_2,
+\]
+where the vectors 
+\[
+   {\bf a}_i = \overrightarrow{OA_i} \, , \, i=1,2,
+\]
+are the positions of the sphere's centers relative to the origin.
+
+Assuming the spheres intersect (in a circle), our goal is to express the position vector
+\[
+      {\bf c} = \overrightarrow{OC}
+\]
+of the circle's center (relative to $O$) in terms of the vectors ${\bf a}_i$ and the radii $r_i$ of the spheres.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{3tvdaj6do2}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/3tvdaj6do2}{Intersecting Spheres}
+
+The idea is to imagine a point $Q$ (orangle above) on the circle of intersection and consider $\Delta A_1QA_2$. To see this triangle turn off the folder \emph{Spheres} in Line 6 above.
+
+\begin{enumerate}
+
+\item First use the law of cosines in $\Delta A_1QA_2$ to express $\cos (\angle QA_1A_2)$ in terms of the vectors ${\bf a}_i$ and the radii $r_i$.
+
+\item Then find an expression for the vector $\overrightarrow{A_1C}$.
+
+\item Finally, find an expression for the vector $\overrightarrow{OC}$.
+\end{enumerate}
+
+\end{question}
+
+\end{document}
