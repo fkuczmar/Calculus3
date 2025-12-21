@@ -29,9 +29,9 @@ The scalar product.
  \frac{d}{dx}\left( (5x-3)^2) \right) .
 \]
 
-\item Use calculus and the chain rule as in part (b) to find the coordinates of the point on the line in part (a) closest to the point $P(6,8,5)$.
+\item Use calculus and the chain rule as in part (b) to find the coordinates of the point on the line in part (a) closest to the point $P(6,8,5)$. \emph{Hint:} Treat this as an optimization problem.
 
-\item Instead of using calculus, use the scalar prodcut to find the coordinates of the point on the ine in part (a) closest to the point $P(6,8,5)$. \emph{Hint:} The key idea is that a point $Q$ on the line is closest to $P$ if and only if $\overrightarrow{QP}$ is perpendicular to the line.
+\item Instead of calculus, use the scalar product to find the coordinates of the point on the ine in part (a) closest to the point $P(6,8,5)$. \emph{Hint:} The key idea is that a point $Q$ on the line is closest to $P$ if and only if $\overrightarrow{QP}$ is orthogonal to the line.
 
 \item Compare the algebra of your solutions in parts (c) and (d).
 
@@ -69,6 +69,70 @@ There is one segment with its endpoints on the lines that is perpendicular to bo
 \section{Drawing a Circle}
 
 
+\begin{question} \label{Qdf6:CircleandTSquare}
+
+We can draw a circle with a T-square or a rectangle, as illustrated in the animation below. The idea is to slide the rectangle $PQRS$ so that the adjacent sides $PQ$ and $PS$ respectively pass through the two fixed points $A$ and $B$. Then the vertex $P$ traces out a circle.
+
+The  aim of this question is to use the scalar product to prove this statement.
+
+\href{https://www.desmos.com/calculator/mgihe5dswd}{163: Drawing a Circle With a Rectangle}
+
+ 
+\begin{onlineOnly}
+    \begin{center}
+\desmos{mgihe5dswd}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+We'll start by letting ${\bf a}$, ${\bf b}$, and ${\bf p}$ be the position vectors (with respect to some origin) of the respective points $A$, $B$, and $P$. The points $A$ and $B$ are fixed, but the point $P$ varies as we slide the rectangle. 
+
+The curve traced by $P$ is described by the geometric condition that the vectors $\overrightarrow{AP}$ and $\overrightarrow{BP}$ are orthogonal. So a vector equation of the curve traced by $P$ is
+\[
+       \overrightarrow{AP}   \cdot \overrightarrow{BP} = \answer{0} ,
+\]
+or equivalently  
+\[
+     (  {\bf p} -  {\bf a} ) \cdot ({\bf p} - {\bf b}  ) = \answer{0} .
+\]
+
+Note. While this is a vector equation, the curve is still a set of points; namely, the set of points $P$ satstifying the above equation, where ${\bf p} = \overrightarrow{OP}$ is the postion of $P$ relative to the origin.
+
+The idea now is to use algebra to show the curve is a circle in two dimensions or a sphere in three dimensions (or a hypersphere in higher dimensions). Using vectors gives a coordinate-free approach that works for any number of dimensions. 
+
+For the algebra, we complete the square in the usual way by first writing the equation in the form
+\begin{align*}
+0 &= (  {\bf p} -  {\bf a} ) \cdot ({\bf p} - {\bf b}  ) \\
+   &= {\bf p}\cdot {\bf p} - ({\bf a} + {\bf b})\cdot {\bf p} + {\bf a}\cdot {\bf b} .\\
+\end{align*}
+
+Now rewrite this as
+\[
+          {\bf p}\cdot {\bf p} - ({\bf a} + {\bf b})\cdot {\bf p}  = - {\bf a}\cdot {\bf b} .
+\]
+
+Addint 
+\[
+  \frac{1}{4}( {\bf a} + {\bf b} ) \cdot  ( {\bf a} + {\bf b} )
+\]
+to each side gives
+\[
+  {\bf p}\cdot {\bf p} - ({\bf a} + {\bf b})\cdot {\bf p} + \frac{1}{4}( {\bf a} + {\bf b} ) \cdot  ( {\bf a} + {\bf b} ) = \frac{1}{4}( {\bf a} + {\bf b} ) \cdot  ( {\bf a} + {\bf b} ) -  {\bf a}\cdot {\bf b}
+\]
+or
+\[
+     \left( {\bf p} - \frac{1}{2}\left( {\bf a} + {\bf b}  \right)  \right) \cdot \left( {\bf p} - \frac{1}{2}\left( {\bf a} + {\bf b}  \right) \right) = \frac{1}{4}( {\bf a} + {\bf b} ) \cdot  ( {\bf a} + {\bf b} ) -  {\bf a}\cdot {\bf b} .
+\]
+
+And finally,
+\[
+     \left| {\bf p} - \frac{1}{2}\left( {\bf a} + {\bf b} \right) \right| = \frac{1}{2}\sqrt{ ({\bf a} + {\bf b} ) \cdot  ( {\bf a} + {\bf b} ) -  4{\bf a}\cdot {\bf b}} 
+\]
+or
+\[
+  \left| {\bf p} - \frac{1}{2}\left( {\bf a} + {\bf b} \right) \right| = \frac{1}{2}\left| {\bf a} - {\bf b}  \right| .
+\]
+
+\end{question}
 
 
 \end{document}
