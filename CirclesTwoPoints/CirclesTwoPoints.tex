@@ -31,7 +31,7 @@ Let $P$ be the point on the segment $\overline{AB}$ such that
 
 \begin{onlineOnly}
     \begin{center}
-\desmos{cjgf3k2a4k}{900}{600}
+\desmosThreeD{cjgf3k2a4k}{900}{600}
 \end{center}
 \end{onlineOnly}
 
@@ -50,11 +50,7 @@ Find the components of all vectors perpendicular to the vector ${\bf v}=\langle 
 
 This question is about using vectors to find equations of all circles in the plane through two given points having a given radius.
 
-To be able to solve this problem in general, we need a way of finding a vector perpendicular to a given vector. We saw in the previous question, that an easy way to do this is to swap the components and negate one of them. Later in the class we'll learn how to do this with vector operations, but for now we'll use desmos to define a function $j$ that acts on a vector.
-
-
-In desmos, we can do this by defining
-
+To be able to solve this problem in general, we need a way of finding a vector perpendicular to a given vector. We saw in the previous question, that an easy way to do this is to swap the components and negate one of them. Later in the class we'll learn how to do this with vector operations, but for now we'll use desmos to define a function $j$ that acts on a vector ${\bf w}$ and returns the vector we get by rotating ${\bf w}$ by $\pi/2$ radians counterclockwise.
 
 
 \begin{onlineOnly}
@@ -64,6 +60,39 @@ In desmos, we can do this by defining
 \end{onlineOnly}
 
 \href{https://www.desmos.com/calculator/6tpc3cpshx}{163: Circle Through Two Points}
+
+Here is an outline of the method to find equations of the two circles through $A$ and $B$.
+
+\begin{enumerate}
+\item The first step is to think about the centers of all circles through the points $A$ and $B$. 
+
+A point $P$ with coordinates $(x,y)$ is the center of a circle through $A$ and $B$ if and only if $P$ is equidistant (ie. equal distances) from $A$ and $B$, that is if and only if 
+\[
+ \left| \overrightarrow{AP} \right| =  \left| \overrightarrow{BP} \right|.
+\]
+
+So a vector equation of the center set of the circles through $A$ and $B$ is
+\[
+            \left|   \langle (x,y) \rangle - \overrightarrow{OA}   \right| =  \left|   \langle (x,y) \rangle - \overrightarrow{OB}  \right| .
+\]
+
+We'll show later in the course that this set is the perpendicular bisector of segment $\overrightarrow{AB}$. This is the line through the midpoint $M$ of $\overrightarrow{AB}$ that is perpendicular to $\overrightarrow{AB}$.
+
+\item So the first step is to express the vector $\overrightarrow{OM}$ from the origin to $M$ in terms of the vectors $\overrightarrow{OA}$ and $\overrightarrow{OB}$.
+
+Find such an expression and enter its demos-form in Line 13 above.
+
+\item Next find an expression for the vector $\overrightarrow{OC_1}$ from the origin to center of one circle of radius $r$ through $A$ and $B$. This expression should be in terms of the vectors $\overrightarrow{OA}$, $\overrightarrow{OB}$, and ${\bf v}$. Here ${\bf v} = j(\overrightarrow{OB} - \overrightarrow{OA})$ is the vector we get by rotating $\overrightarrow{AB}$ counterclockwise $\pi/2$ radians.
+
+Then enter the desmos version of this expression in Line 18. 
+
+\item Next write a vector equation for the circle of radius $r$ (through $A$ and $B$) centered at $C_1$. Enter the desmos version in Line 20.
+
+\item Repeat the last two steps for the second circle.
+
+\item Drag the slider $r$ in Line 3 to check your work. 
+
+\end{enumerate}
 
 
 \end{question}
