@@ -14,7 +14,62 @@ Constructing the center of the circle of intersection of two intersecting sphere
 
 
 \begin{question}   \label{ExsSpheres}
-This problem is about two intersecting spheres and their circle of intersection.
+This problem is about two intersecting spheres and their circle of intersection. We'll use vectors to find the center of this circle.
+
+The first sphere has center $A_1$ and radius $r_1$. The second has center $A_2$ and radius $r_2$.
+
+\begin{enumerate}
+
+\item We'll start by writing vector equations for each sphere. 
+
+\begin{enumerate}
+
+\item The key idea is that a sphere is the set of points in $\mathbb{R}^3$ a fixed distance from a given point.
+
+So a point $P$ with coordinates $(x,y,z)$ lies on the sphere with center $A_1$ and radius $r_1$ if and only if
+\[
+  \left|  \overrightarrow{A_1P} \right| = \answer{r_1} .
+\]
+Now with $O$ as the origin, 
+\[
+    \overrightarrow{A_1P} = \overrightarrow{\answer{OP}} - \overrightarrow{\answer{OA_1}}
+\]
+and we can write the equation of the sphere as
+\[
+     \left|  \overrightarrow{OP} - \overrightarrow{OA_1}\right| = \answer{r_1} .
+\]
+But since $\overrightarrow{OP}$ has components
+\[
+    \overrightarrow{OP} = \langle \answer{x}, \answer{y}, \answer{z}  \rangle ,
+\]
+we can write the vector equation of the sphere as
+\[
+     \left| \langle \answer{x},\answer{y},\answer{z} \rangle - \overrightarrow{OA_1}  \right| = \answer{r_1} .
+\]
+
+\emph{Key Point:} Even though this is an equation of vectors, the sphere is still a set of \emph{points}. Namely, those points $(x,y,z)$ that satify the above equation and are therefore exactly $r_1$ units from $A_1$.
+
+%\pskip
+
+To write this equation in desmos, we think about points instead of vectors and replace the vector $\langle x, y ,z \rangle$ with the point $(x,y,z)$ and the vector $\overrightarrow{OA_1}$ with the point $A_1$.
+
+Enter this equation in Line 4 of the worksheet below.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{3tvdaj6do2}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/3tvdaj6do2}{Intersecting Spheres}
+
+\item Enter an equation for the sphere of radius $r_2$ centered at the point $A_2$ in Line 6 above.
+
+\end{enumerate}
+
+\item The next step is to imagine the circle of intersection and a random point on this circle.
+\end{enumerate}
+
 
 We'll let 
 \[
@@ -42,11 +97,7 @@ Assuming the spheres intersect (in a circle), our goal is to express the positio
 \]
 of the circle's center (relative to $O$) in terms of the vectors ${\bf a}_i$ and the radii $r_i$ of the spheres.
 
-\begin{onlineOnly}
-    \begin{center}
-\desmosThreeD{3tvdaj6do2}{900}{600}
-\end{center}
-\end{onlineOnly}
+
 
 \href{https://www.desmos.com/3d/3tvdaj6do2}{Intersecting Spheres}
 
