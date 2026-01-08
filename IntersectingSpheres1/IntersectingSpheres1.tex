@@ -16,27 +16,27 @@ Constructing the center of the circle of intersection of two intersecting sphere
 \begin{question}   \label{ExsSpheres}
 This problem is about two intersecting spheres and their circle of intersection. We'll use vectors to find the center of this circle.
 
-The first sphere has center $A_1$ and radius $r_1$. The second has center $A_2$ and radius $r_2$.
+The first sphere has center $A$ and radius $a$. The second has center $B$ and radius $b$.
 
 \begin{enumerate}
 
-\item We'll start by writing vector equations for each sphere. 
+\item We'll start by writing a vector equation for each sphere. 
 
 \begin{enumerate}
 
-\item The key idea is that a sphere is the set of points in $\mathbb{R}^3$ a fixed distance from a given point.
+\item The key idea is that a sphere is the set of points in $\mathbb{R}^3$ a given distance from a given point.
 
-So a point $P$ with coordinates $(x,y,z)$ lies on the sphere with center $A_1$ and radius $r_1$ if and only if
+So a point $P$ with coordinates $(x,y,z)$ lies on the sphere with center $A$ and radius $a$ if and only if
 \[
-  \left|  \overrightarrow{A_1P} \right| = \answer{r_1} .
+  \left|  \overrightarrow{AP} \right| = \answer{a} .
 \]
 Now with $O$ as the origin, 
 \[
-    \overrightarrow{A_1P} = \overrightarrow{\answer{OP}} - \overrightarrow{\answer{OA_1}}
+    \overrightarrow{AP} = \overrightarrow{\answer{OP}} - \overrightarrow{\answer{OA}}
 \]
-and we can write the equation of the sphere as
+and we can write an equation of the sphere as
 \[
-     \left|  \overrightarrow{OP} - \overrightarrow{OA_1}\right| = \answer{r_1} .
+     \left|  \overrightarrow{OP} - \overrightarrow{OA}\right| = \answer{a} .
 \]
 But since $\overrightarrow{OP}$ has components
 \[
@@ -44,73 +44,48 @@ But since $\overrightarrow{OP}$ has components
 \]
 we can write the vector equation of the sphere as
 \[
-     \left| \langle \answer{x},\answer{y},\answer{z} \rangle - \overrightarrow{OA_1}  \right| = \answer{r_1} .
+     \left| \langle \answer{x},\answer{y},\answer{z} \rangle - \overrightarrow{OA}  \right| = \answer{a} .
 \]
 
-\emph{Key Point:} Even though this is an equation of vectors, the sphere is still a set of \emph{points}. Namely, those points $(x,y,z)$ that satify the above equation and are therefore exactly $r_1$ units from $A_1$.
+\emph{Key Point:} Even though this is an equation of vectors, the sphere is still a set of \emph{points}. Namely, those points $(x,y,z)$ that satify the above equation and are therefore exactly $a$ units from $A$.
 
 %\pskip
 
-To write this equation in desmos, we think about points instead of vectors and replace the vector $\langle x, y ,z \rangle$ with the point $(x,y,z)$ and the vector $\overrightarrow{OA_1}$ with the point $A_1$.
+To write this equation in desmos, we think about points instead of vectors and replace the vector $\langle x, y ,z \rangle$ with the point $(x,y,z)$ and the vector $\overrightarrow{OA}$ with the point $A$.
 
 Enter this equation in Line 4 of the worksheet below.
 
 \begin{onlineOnly}
     \begin{center}
-\desmosThreeD{3tvdaj6do2}{900}{600}
+\desmosThreeD{s0luszbdmc}{900}{600}
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/3d/3tvdaj6do2}{Intersecting Spheres}
+\href{https://www.desmos.com/3d/s0luszbdmc}{Intersecting Spheres}
 
-\item Enter an equation for the sphere of radius $r_2$ centered at the point $A_2$ in Line 6 above.
+\item Enter an equation for the sphere of radius $b$ centered at the point $B$ in Line 6 above.
 
 \end{enumerate}
 
-\item The next step is to imagine the circle of intersection and a random point on this circle.
-\end{enumerate}
-
-
-We'll let 
-\[
-    {\bf p} = \langle x, y ,z \rangle
-\]
-be the position of the point $P$ with coordinates $(x,y,z)$ relative to the origin $O$.
-
-Now suppose the two spheres have equations
-\[
-      |{\bf p} - {\bf a}_1| = r_1
-\]
- and
-\[
-     |{\bf p} - {\bf a}_2| = r_2,
-\]
-where the vectors 
-\[
-   {\bf a}_i = \overrightarrow{OA_i} \, , \, i=1,2,
-\]
-are the positions of the sphere's centers relative to the origin.
-
-Assuming the spheres intersect (in a circle), our goal is to express the position vector
-\[
-      {\bf c} = \overrightarrow{OC}
-\]
-of the circle's center (relative to $O$) in terms of the vectors ${\bf a}_i$ and the radii $r_i$ of the spheres.
-
-
-
-\href{https://www.desmos.com/3d/3tvdaj6do2}{Intersecting Spheres}
-
-The idea is to imagine a point $Q$ (orangle above) on the circle of intersection and consider $\Delta A_1QA_2$. To see this triangle turn off the folder \emph{Spheres} in Line 6 above.
+\item The next step is to imagine the circle of intersection and a random point $Q$ on this circle.
 
 \begin{enumerate}
+\item Activate the folder \emph{Circle of Inersection} on LIne 7 to see this circle and the point $Q$.
 
-\item First use the law of cosines in $\Delta A_1QA_2$ to express $\cos (\angle QA_1A_2)$ in terms of the vectors ${\bf a}_i$ and the radii $r_i$.
+\item To find the center $C$ of the circle of intersection, we'll work with triangle $\Delta AQB$. To see this triangle hide your spheres in Lines 4 and 6. Then activate the folder \emph{Triangle} on Line 13.
 
-\item Then find an expression for the vector $\overrightarrow{A_1C}$.
+\item First use the law of cosines in $\Delta AQB$ to express $\cos (\angle QAB)$ in terms of the vectors $\overrightarrow{OA}$, $\overrightarrow{OB}$ and the radii $a$, $b$.
 
-\item Finally, find an expression for the vector $\overrightarrow{OC}$.
+\item Second, find an expression for the vector $\overrightarrow{AC}$ from $A$ to the center of the circle of intersection in terms of the vectors $\overrightarrow{OA}$, $\overrightarrow{OB}$ and the radii $a$, $b$.
+
+\item Third, find an expression for the vector $\overrightarrow{OC}$  in terms of the vectors $\overrightarrow{OA}$, $\overrightarrow{OB}$ and the radii $a$, $b$.
+
+\item Finally, enter this expression in Line 22 of the worksheet. Remember to omit all the $O$'s since desmos works with points instead of vectors.
+
 \end{enumerate}
+
+\end{enumerate}
+
 
 \end{question}
 
