@@ -1,60 +1,13 @@
 \documentclass{ximera}
-\title{Cylinders and Cones}
+\title{Cylinders}
 
 \newcommand{\pskip}{\vskip 0.1 in}
 
 \begin{document}
 \begin{abstract}
-Writing equations of cylinders and cones.
+Writing equations of cylinders.
 \end{abstract}
 \maketitle
-
-
-\section{Motion}
-
-\begin{question} \label{QLfder35r}
-The continuous function 
-\[
-    {\bf v}(t) \, , \, 2 \leq t \leq 10 ,
-\]
-expresses the velocity (in meters/sec) of a mosquito moving in space in terms of the number of seconds past noon.
-
-The mosquito passes the point $(3,2,5)$ meters at time $t=7$ seconds.
-
-\begin{onlineOnly}
-    \begin{center}
-\desmosThreeD{idobesvy1e}{900}{600}
-\end{center}
-\end{onlineOnly}
-
-\href{https://www.desmos.com/3d/idobesvy1e}{163: Mosquito Constant Velocity}
-
-\begin{enumerate}
-\item Find an expression for the function 
-\[
-   {\bf p}(t) \, , \, 2\leq t \leq 10,
-\]
-that gives the position (in meters) of the mosquito relative to the origin at time $t$ seconds past noon.
-
-\item Suppose the mosquito moves with a constant velocity with a speed of $5$ m/sec and that it passes the point $(7,10,13)$ some time after time $t=7$ seconds past noon. 
-
-\begin{enumerate}
-
-\item Use the result of part (a) to find an expression for the function ${\bf p}(t)$ giving the mosquito's position relative to the origin (in meters) at time $t$ seconds past noon.
-
-\item Enter your expression fro the position function in Line 2 of the above worksheet. 
-
-\item Play the slider $t_1$ in Line 4 to check your work. Explain the meanings of the three vectors.
-\begin{freeResponse}
-\end{freeResponse}
-
-\item When does the mosquito pass through the $xz$-plane? Use the worksheet above as a check.
-
-\end{enumerate}
-\end{enumerate}
-
-\end{question}
-
 
 
 \section{The Closest Point on a Line}
@@ -81,6 +34,56 @@ that gives the position (in meters) of the mosquito relative to the origin at ti
 
 \href{https://www.desmos.com/3d/pcav8vrwva}{163: Closest Point on a Line 2}
 \end{question}
+
+
+
+\section{Right Circular Cylinders in $\mathbb{R}^3$}
+
+A right circular cylinder in $\mathbb{R}^3$ is the set of points a fixed distance from a given line. The line is the cylinder's axis of symmetry. In this section we'll find equations of these cylinders.
+
+\begin{question}  \label{QPdfeerld}
+
+This question is about finding an equation of the right circular cylinder of radius $5$ symmetric about the $y$-axis. This cylinder is the set of points in space exactly $5$ units from the $y$-axis.
+
+\begin{enumerate}
+\item Use common sense to find the coordinates of the point $Q$ on the $y$-axis closest to the point $P$ with coordinates $(a,b,c)$.
+
+\item Use the result of part (a) to find an expression for the distance from the point $P$ to the $y$-axis.
+
+\item Use the result of part (b) to find an equation for the cylinder of radius $5$ symmetric about the $y$-axis.
+
+The point $P$ with coordinates $(x,y,z)$ lies on this cylinder if and only if the distance from $P$ to the $y$-axis is equal to $5$, or if and only if
+\[
+        \answer{\sqrt{x^2 + z^2}} = 5 .
+\]
+
+\end{enumerate}
+\end{question}
+
+\begin{question}  \label{QLFfr3r3fsdf3}
+This question is about find an equation of a right circular cylinder of radius $r_1$ symmetric about the line ${\cal L}$ through the origin parallel to the vector ${\bf w}=\langle w_1,w_2,w_3 \rangle$. The cylinder is the set of points in space exactly $r_1$ units from ${\cal L}$.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{bgdw2yzqsl}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/bgdw2yzqsl}{163: Cylinder}
+
+
+\begin{enumerate}
+\item Use calculus to find an expression for the coordinates of the point $Q$ on ${\cal L}$ closest to the point $P$ with coordinates $(a,b,c)$.
+
+\item Enter your expression from part (a) in Line 11 of the worksheet above.
+
+\item Parameterize segment $\overline{PQ}$ in Line 13. Check to see if $Q$ looks correct. Move the sliders $w_1$, $w_2$, $w_3$, $a$, $b$, $c$.
+
+\item Use the result of part (a) to find a equation for the cylinder of radius $r$ symmetric about ${\cal L}$. Enter this equation in Line 14.
+\end{enumerate}
+
+\end{question}
+
 
 
 \end{document}
