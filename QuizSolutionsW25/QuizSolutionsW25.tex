@@ -1,0 +1,75 @@
+\documentclass{ximera}
+\title{Quiz Solutions Winter 2025}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Quiz solutions.
+\end{abstract}
+\maketitle
+
+\section{Quiz 2A}
+
+\begin{question} \label{QDfdf3r0}
+
+Let $O$ be the origin in $\mathbb{R}^3$. 
+
+Let $A$ and $B$ be distinct points in $\mathbb{R}^3$.
+
+Let $P$ be a point on the line through $A$ and $B$ that is four times as far from $A$ as $B$ is from $O$.
+
+Express the position of $P$ relative to the origin in terms of the vectors $\overrightarrow{OA}$ and $\overrightarrow{OB}$. Give all possibilities.
+\end{question}
+
+\begin{explanation}
+
+There are two points on the line a given distance from $A$, one on the same side of the line as $B$, the other on the opposite side.
+
+Let $P_1$ be the point on the same side of the line as $B$ that is four times as far from $A$ as $B$ is from $O$.
+
+To get from the origin to $P_1$, we can first move from the origin to $A$ and then from $A$ to $P_1$. This tells us that
+\[
+      \overrightarrow{OP_1} = \overrightarrow{OA} +\overrightarrow{AP_1}.
+\]
+
+We since $P_1$ is on the same side of the line as $B$, the vector $\overrightarrow{AP_1}$ is some positive multiple of the vector $\overrightarrow{AB}$. Since 
+\[
+         \left|  \overrightarrow{AP_1}   \right| = 4 \left| \overrightarrow{OB}  \right| ,
+\]
+and the vector
+\[
+      {\bf u} =  \frac{1}{|\overrightarrow{AB}|} \cdot \overrightarrow{AB}
+\]
+has unit length,
+\begin{align*}
+       \overrightarrow{AP_1} &= 4\left| \overrightarrow{OB}  \right|  {\bf u}  \\
+                                         & = 4 \frac{\left| \overrightarrow{OB}\right|}{\left| \overrightarrow{AB}\right|}\cdot \overrightarrow{AB} \\
+                                        &=4 \frac{\left| \overrightarrow{OB}\right|}{\left| \overrightarrow{OB} -\overrightarrow{OA} \right|}\cdot \left( \overrightarrow{OB} - \overrightarrow{OA} \right) .
+\end{align*}
+
+Therefore,
+\begin{align*}
+                 \overrightarrow{OP_1} &= \overrightarrow{OA} +\overrightarrow{AP_1} \\
+                                                  &= \overrightarrow{OA} + 4 \frac{\left| \overrightarrow{OB}\right|}{\left| \overrightarrow{OB} -\overrightarrow{OA} \right|}\cdot \left( \overrightarrow{OB} - \overrightarrow{OA} \right) .
+\end{align*}
+
+For the second point $P_2$ on the \emph{opposite side} of $A$ as $B$, 
+\begin{align*}
+                 \overrightarrow{OP_2} &= \overrightarrow{OA} -\overrightarrow{AP_1} \\
+                                                   &= \overrightarrow{OA} - 4 \frac{\left| \overrightarrow{OB}\right|}{\left| \overrightarrow{OB} -\overrightarrow{OA} \right|}\cdot \left( \overrightarrow{OB} - \overrightarrow{OA} \right) .
+\end{align*}
+
+\end{explanation}
+
+
+
+%\begin{onlineOnly}
+%    \begin{center}
+%\desmosThreeD{pmhatuke3f}{900}{600}
+%\end{center}
+%\end{onlineOnly}
+
+%\href{https://www.desmos.com/3d/pmhatuke3f}{163: Hyperboloid 2}
+
+\end{document}
