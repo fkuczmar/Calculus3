@@ -138,7 +138,9 @@ Given points $A$, $B$ in $\mathbb{R}^3$ not colinear with the origin $O$, our ai
 
 By this we mean to express the vectors $\overrightarrow{OC}$ and  $\overrightarrow{OD}$ in terms of the vectors $\overrightarrow{OA}$ and $\overrightarrow{OB}$.
 
-(a) How many possibilites are there for the vertex $C$ of our square? Remember that $A$, $B$, $C$, $D$ are consecutive vertices of square $ABCD$.
+\begin{enumerate}
+
+\item How many possibilites are there for the vertex $C$ of our square? Remember that $A$, $B$, $C$, $D$ are consecutive vertices of square $ABCD$.
 \begin{multipleChoice}
 \choice{none}
 \choice{one}
@@ -150,12 +152,51 @@ By this we mean to express the vectors $\overrightarrow{OC}$ and  $\overrightarr
 
 \begin{onlineOnly}
     \begin{center}
-\desmosThreeD{vyzghwolop}{900}{600}
+\desmosThreeD{awowygd8ks}{900}{600}
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/3d/vyzghwolop}{163: Square 44}
+\href{https://www.desmos.com/3d/awowygd8ks}{163: Square 44B}   %vyzghwolop
 
+
+
+\item To get started, first find an expression for a vector ${\bf n}$ normal to the plane through $A$, $B$, and $O$. Work in general, not with the specific points $A$ and $B$ in the above workseet. 
+
+\item Enter your expression for the normal vector in Line 4 above. Type \emph{cross} for the cross product. Remember also to omit the $O's$ in your vectors. For example, write $\overrightarrow{OA}$ as $A$.
+
+\item Find a vector equation for the plane through $O$, $A$, and $B$. 
+
+The key idea is that a point $P$ with coordinates $(x,y,z)$ lies in this plane if and only if the vector $\overrightarrow{OP}$ is normal (ie. perpendicular) to the vector ${\bf n}$ normal to the plane. So $P(x,y,z)$ lies in the plane if and only if
+\[
+   \overrightarrow{OP} \cdot {\bf n} = \answer{0}
+\]
+or if and only if
+\[
+  \langle x, y, z \rangle \cdot {\bf n} = \answer{0}.
+\]
+
+\item Enter your equation for the plane in Line 5 above. The scalar product in desmos is the * key, above the number $8$.
+
+\item Now to complete the square, we need a vector ${\bf m}$ 
+\begin{enumerate}
+\item perpendicular to the vector $\overrightarrow{AB}$,
+
+\item parallel to the plane (ie. normal to ${\bf n}$), and
+
+\item having the same length as $\overrightarrow{AB}$.
+\end{enumerate}
+
+Find an expression for such a vector ${\bf m}$ (there are two possibilities). Enter  your expression in Line 6.
+
+\item Now use vector addition to express the vector $\overrightarrow{OC}$ from the origin to the third vertex of square $ABCD$ in terms of $\overrightarrow{OA}$, $\overrightarrow{OB}$ and ${\bf m}$. Enter this expression in Line 7.
+
+\item Use vector addition again to find a similar expression for $\overrightarrow{OD}$. Enter this in Line 8.
+
+\item Finally, parameterize the sides $\overline{BC}$, $\overline{CD}$, and $\overline{DA}$ of the square. Enter these parameterizations in Lines 9-11. Don't forget to include the correct domains.
+
+\item Then construct the second square similarly.
+
+\end{enumerate}
 
 \end{question}
 
