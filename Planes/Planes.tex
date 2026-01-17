@@ -36,14 +36,14 @@ So a point $P(x,y)$ lines on the line through $A$ perpendicular to ${\bf n}$ if 
 \[
        \overrightarrow{AP}\cdot {\bf n} = \answer{0},
 \]
-or if and only if 
+or (with $O$ as the origin) if and only if 
 \[
  \left( \langle x,y \rangle - \overrightarrow{OA} \right) \cdot {\bf n} = 0.
 \]
 
 This is a vector equation of the line in \emph{two-dimensions} through $A$ perpendicular to ${\bf n}$. Even though this equation uses vectors, it is important to realize that a line is still a set of \emph{points}, in this case the set of points with coordinates $(x,y)$ satisfying the above equation.
 
-For our particular example, a vector equation of the line through $(2,6)$ parallel to ${\bf n} = \langle 3, 4 \rangle$ is
+For our particular example, a vector equation of the line through $(2,6)$ perpendicular to ${\bf n} = \langle 3, 4 \rangle$ is
 \[
         \langle x - 2, y-6 \rangle \cdot \langle  3, 4 \rangle = 0 .
 \]
@@ -68,6 +68,60 @@ But this last equation $3x + 4y = 30$ hides the idea of orthogonality, and it's 
 
 
 \section{Planes in $\mathbb{R}^3$}
+
+A plane in three dimensions is uniquely determined by a point and a direction normal (ie. perpendicular) to the plane. This means there is a unique plane through a given point  perpendicular to a given vector. Here's an example.
+
+\begin{example}  \label{ExLINE33}
+Find an equation for the plane through the point $A$ with coordinates $(-1,2,-3)$ perpendicular to the vector ${\bf n} = =\langle 2, 3, 4 \rangle$.
+
+\begin{explanation}
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{1mfndx1m9g}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/1mfndx1m9g}{163: Equation of a Plane}
+
+A point $P$ with coordinates $(x,y,z)$ lies on the line through $A$ perpendicular to ${\bf n}$ if and only if the vector $\overrightarrow{AP}$ is perpendicular to ${\bf n}$. 
+
+So a point $P(x,y,z)$ lines on the plane through $A$ perpendicular to ${\bf n}$ if and only if
+\[
+       \overrightarrow{AP}\cdot {\bf n} = \answer{0},
+\]
+or (with $O$ as the origin) if and only if 
+\[
+ \left( \langle x,y,z \rangle - \overrightarrow{OA} \right) \cdot {\bf n} = 0.
+\]
+
+This is a vector equation of the plane in \emph{three-dimensions} through $A$ perpendicular to ${\bf n}$. Even though this equation uses vectors, it is important to realize that a plane is still a set of \emph{points}, in this case the set of points with coordinates $(x,y,z)$ satisfying the above equation.
+
+For our particular example, a vector equation of the plane through $(-1,2,-3)$ normall to ${\bf n} = \langle 2, 3, 4 \rangle$ is
+\[
+        \langle x +1, y-2 , z+3 \rangle \cdot \langle 2, 3, 4 \rangle = 0 .
+\]
+We can lose the vectors altogether by writing the equation as
+\[
+    2(x+1) + 3(y-2) + 4(z+3) = 0
+\]
+or as
+\[
+     2x + 3y + 4z  = -8.
+\]
+
+But this last equation hides the idea of orthogonality, and it's better (at least for now) for us to write the equation as
+\[
+      2(x+1) + 3(y-2) + 4(z+3) = 0 .
+\]
+
+\end{explanation}
+\end{example}
+
+
+
+
 
 
 
