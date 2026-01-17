@@ -1,0 +1,136 @@
+\documentclass{ximera}
+\title{Planes in Space}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Lines in the plane and planes in space.
+\end{abstract}
+\maketitle
+
+
+\section{Lines in the Plane}
+
+We saw that a line in any number of dimensions is uniquely determined by a point and a direction. This means there is a unique line through a given point parallel to a given vector.
+
+But in two dimensions, and in two dimensions only, a line is uniquely determined by a point and a vector normal (ie. perpendicular) to the line. This means that in $\mathbb{R}^2$ there is a unique line  through a given point perpendicular to a given vector. Here's an example.
+
+\begin{example}  \label{ExLINE33}
+Find an equation for the line through the point $A$ with coordinates $(2,6)$ normal to the vector ${\bf n} = =\langle 3, 4 \rangle$.
+
+\begin{explanation}
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{miba03rldg}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/miba03rldg}{163: Equation of a Line}
+
+A point $P$ with coordinates $(x,y)$ lies on the line through $A$ perpendicular to ${\bf n}$ if and only if the vector $\overrightarrow{AP}$ is perpendicular to ${\bf n}$. 
+
+So a point $P(x,y)$ lines on the line through $A$ perpendicular to ${\bf n}$ if and only if
+\[
+       \overrightarrow{AP}\cdot {\bf n} = \answer{0},
+\]
+or if and only if 
+\[
+ \left( \langle x,y \rangle - \overrightarrow{OA} \right) \cdot {\bf n} = 0.
+\]
+
+This is a vector equation of the line in \emph{two-dimensions} through $A$ perpendicular to ${\bf n}$. Even though this equation uses vectors, it is important to realize that a line is still a set of \emph{points}, in this case the set of points with coordinates $(x,y)$ satisfying the above equation.
+
+For our particular example, a vector equation of the line through $(2,6)$ parallel to ${\bf n} = \langle 3, 4 \rangle$ is
+\[
+        \langle x - 2, y-6 \rangle \cdot \langle  3, 4 \rangle = 0 .
+\]
+We can lose the vectors altogether by writing the equation as
+\[
+     3(x-2) + 4(y-6) = 0
+\]
+or as
+\[
+     3x + 4y = 30.
+\]
+
+And you've seen equations of lines written like this many times before (in what's typically called \emph{standard form}). What's new here is our perspective. We now recognize the expression $3x + 4y$ as the scalar product of the vectors $\langle x,y \rangle$ and $\langle 3, 4 \rangle$.
+
+But this last equation $3x + 4y = 30$ hides the idea of orthogonality, and it's better (at least for now) for us to write the equation as
+\[
+  3(x-2) + 4(y-6) = 0 .
+\]
+
+\end{explanation}
+\end{example}
+
+
+\section{Planes in $\mathbb{R}^3$}
+
+
+
+\iffalse
+**************************************************************************************************
+\section{Closest Point on a Line}
+
+\begin{question}  \label{ExLMF3r3Er3}
+
+\begin{enumerate}
+\item Parameterize the line through the points $A(-2,1,3)$ and $B(-1,3,1)$.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{pcav8vrwva}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/pcav8vrwva}{163: Closest Point on a Line 2}
+
+\item Use the chain rule to find an expression for the derivative
+\[
+ \frac{d}{dx}\left( (5x-3)^2) \right) .
+\]
+
+\item Use calculus and the chain rule as in part (b) to find the coordinates of the point on the line in part (a) closest to the point $P(6,8,5)$. \emph{Hint:} Treat this as an optimization problem.
+
+\item Instead of calculus, use the scalar product to find the coordinates of the point on the ine in part (a) closest to the point $P(6,8,5)$. \emph{Hint:} The key idea is that a point $Q$ on the line is closest to $P$ if and only if $\overrightarrow{QP}$ is orthogonal to the line.
+
+\item Compare the algebra of your solutions in parts (c) and (d).
+
+\end{enumerate}
+\end{question}
+
+
+\section{Lines of Sight}
+
+\begin{question} \label{QPFLdfeEfe}
+A sensor at the point $A(0,2,0)$ measures the line of sight to an object to be in the direction of the vector ${\bf v} = \langle 1, 1, 2 \rangle$. Another sensor at the point $B(3,0,0)$ measures the line of sight to the same object to be in the direction of the vector ${\bf w} = \langle -2,1,1 \rangle$.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{qzu8ssds5l}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/qzu8ssds5l}{163: Lines of Sight 2}
+
+\begin{enumerate}
+\item Verify algebraically that the lines of sight do not intersect. Start by parameterizing each line. Be sure to use different parameters. Why?
+
+\item Experiment with the sliders $u_A$ and $u_B$ in the worksheet above to approximate the most likely position of the object.
+
+\begin{hint}
+There is one segment with its endpoints on the lines that is perpendicular to both lines of sight. The best guess is that the object is at the midpoint of this segment. 
+\end{hint}
+
+\item Use the scalar product to find the exact coordinates of the best approximation to the object's position. Click on the \emph{Reveal Hint} button at the top of this question and activate the folder \emph{Solution} in Line 14 for help.
+\end{enumerate}
+
+\end{question}
+
+**************************************************************
+\fi
+
+\end{document}
