@@ -1,5 +1,5 @@
 \documentclass{ximera}
-\title{Quiz Solutions Winter 2025}
+\title{Quiz Solutions Winter 2026}
 
 \newcommand{\pskip}{\vskip 0.1 in}
 
@@ -33,7 +33,7 @@ To get from the origin to $P_1$, we can first move from the origin to $A$ and th
       \overrightarrow{OP_1} = \overrightarrow{OA} +\overrightarrow{AP_1}.
 \]
 
-We since $P_1$ is on the same side of the line as $B$, the vector $\overrightarrow{AP_1}$ is some positive multiple of the vector $\overrightarrow{AB}$. Since 
+Since $P_1$ is on the same side of the line as $B$, the vector $\overrightarrow{AP_1}$ is some positive multiple of the vector $\overrightarrow{AB}$. Since 
 \[
          \left|  \overrightarrow{AP_1}   \right| = 4 \left| \overrightarrow{OB}  \right| ,
 \]
@@ -61,6 +61,58 @@ For the second point $P_2$ on the \emph{opposite side} of $A$ as $B$,
 \end{align*}
 
 \end{explanation}
+
+\section{Quiz 2B}
+
+\begin{question} \label{Q2Bdfd}
+
+\item Let $O$ be the origin in $\mathbb{R}^3$.
+
+Let $A$ and $B$ be distinct points in $\mathbb{R}^3$.
+
+Let $P$ be the point on the sphere with radius $r$ centered at $A$ that is farthest from $B$.
+
+Use vector arithmetic to express the position of $P$ relative to the origin in terms of $r$, $\overrightarrow{OA}$, and $\overrightarrow{OB}$.
+
+\begin{enumerate}
+
+\item Give a thorough explanation of your thinking in complete sentences.
+
+\item Draw a picture to help with your explanation.
+
+\item Preface each computation block with a brief explanation of what you are about to compute.
+
+\end{enumerate}
+
+\begin{explanation}
+The farthest and closest points from a point $B$ that lie on a sphere centered at $A$ lie on the line $AB$. The farthest point $P$ lies on the opposite side of the line as $B$.
+
+To get from the origin to $P$, we can first move from the origin to $A$ and then from $A$ to $P$. This tells us that
+\[
+      \overrightarrow{OP} = \overrightarrow{OA} +\overrightarrow{AP}.
+\]
+
+Since $P$ is on the farthest point on the sphere from $B$, the vector $\overrightarrow{AP}$ is a positive multiple of the vector $\overrightarrow{BA}$. And since 
+\[
+   \left| \overrightarrow{AP} \right| = r,
+\]
+we know
+\begin{align*}
+        \overrightarrow{AP} &=  r \left( \frac{\overrightarrow{BA}}{|\overrightarrow{BA}|}  \right)  \\ \\
+                                      &=  r \left( \frac{\overrightarrow{OA} - \overrightarrow{OB}}{|\overrightarrow{OA} - \overrightarrow{OB}|}  \right) .
+\end{align*}
+
+So the vector
+\begin{align*}
+   \overrightarrow{OP} &= \overrightarrow{OA} +\overrightarrow{AP} \\
+                                 &= \overrightarrow{OA} +  r \left( \frac{\overrightarrow{OA} - \overrightarrow{OB}}{|\overrightarrow{OA} - \overrightarrow{OB}|}  \right)
+\end{align*}
+gives the position (relative to the origin) of the point  $P$ on the sphere with radius $r$ centered at $A$ that is farthest from $B$.
+
+\end{explanation}
+
+\end{question}
+
 
 
 
