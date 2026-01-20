@@ -1,0 +1,258 @@
+\documentclass{ximera}
+\title{The Scalar Product, CW2}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+The scalar product.
+\end{abstract}
+\maketitle
+
+\section{Minimizing Distance}
+
+
+\begin{question}  \label{QLF53fr3r3fsdf3}
+ 
+This question is about finding the position of the point on a given line closest to a given point.  We'll do this two ways, once with vector arithmetic and again with calculus.
+
+Let ${\cal L}$ be the line through the origin parallel to the non-zero vector ${\bf v}$ in $\mathbb{R}^3$. Let $A$ be a point in $\mathbb{R^3}$.
+
+Our goal is to express the position (relative to the origin $O$) of the point on ${\cal L}$ closest to $A$ in terms of the vectors ${\bf v}$ and ${\bf a} = \overrightarrow{OA}$.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{bgdw2yzqsl}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/bgdw2yzqsl}{163: Cylinder}
+
+
+\begin{enumerate}
+
+\item Using vectors:
+
+\begin{enumerate}
+\item Parameterize the line ${\cal L}$ by expressing the vector 
+\[
+  {\bf p} = \overrightarrow{OP} = \langle x, y ,z \rangle
+\]
+from the origin to a point $P$ with coordinates $(x,y,z)$ on ${\cal L}$ in terms of a parameter $t$.
+
+\item Now $P$ is the point on ${\cal L}$ closest to $A$ if and only if the vectors ${\bf v}$ and
+\[
+       t {\bf v} - \answer {\bf a}
+\]
+are orthogonal.  Here $t{\bf v} = \overrightarrow{OP}$ is the position of $P$ relative to $O$.
+
+So $P$ is the point on ${\cal L}$ closest to $A$ if and only if
+\[
+      \left(    t {\bf v} -  {\bf a} \right) \cdot {\bf v} = \answer{0}
+\]
+or if and only if
+\[
+  t = \frac{{\bf a}\cdot {\bf v}}{{\bf  v}\cdot {\bf v}} . 
+\]
+
+Conclusion: The vector 
+\[
+           \left(  \frac{{\bf a}\cdot {\bf v}}{{\bf  v}\cdot {\bf v}} \right) {\bf v}
+\]
+gives the position (relative to the origin) of the point on the line ${\cal L}$ closest to point $A$. This vector is the \emph{vector projection} of the vector ${\bf a}$ in the direction of ${\bf v}$.
+
+
+\end{enumerate}
+
+\item Using calculus:
+
+We'll minimize the distance from $A$ to a general point $P$ of the line. The key is to write the length $|{\bf v}|$ of a vector as
+\[
+     | {\bf v} | = \sqrt{{\bf v}\cdot {\bf v}} .
+\] 
+
+\begin{enumerate}
+\item Minimizing the length of the vector
+\[ 
+\overrightarrow{AP} = \overrightarrow{OP} - \overrightarrow{OA} = t {\bf v} \, , \, t\in \mathbb{R} .
+\] 
+amounts to minimizing the function
+\[
+     \left| t{\bf v} - {\bf a}  \right|  = \sqrt{\left(   t{\bf v} - {\bf a}  \right) \cdot \left(   t{\bf v} - {\bf a}  \right)}\, , \, t\in \mathbb{R}.
+\]
+
+\item Do this by taking the derivative, using both the chain rule and the product rule. Set the derivative equal to zero and solve for $t$. 
+
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{question}
+
+
+
+
+
+\section{Lines of Sight}
+
+\begin{question} \label{QPFLdfeEfe}
+A sensor at the point $A(0,2,0)$ measures the line of sight to an object to be in the direction of the vector ${\bf v} = \langle 1, 1, 2 \rangle$. Another sensor at the point $B(3,0,0)$ measures the line of sight to the same object to be in the direction of the vector ${\bf w} = \langle -2,1,1 \rangle$.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{qzu8ssds5l}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/qzu8ssds5l}{163: Lines of Sight 2}
+
+\begin{enumerate}
+\item Verify algebraically that the lines of sight do not intersect. Start by parameterizing each line. Be sure to use different parameters. Why?
+
+\item Experiment with the sliders $u_A$ and $u_B$ in the worksheet above to approximate the most likely position of the object.
+
+\begin{hint}
+There is one segment with its endpoints on the lines that is perpendicular to both lines of sight. The best guess is that the object is at the midpoint of this segment. 
+\end{hint}
+
+\item Use the scalar product to find the exact coordinates of the best approximation to the object's position. Click on the \emph{Reveal Hint} button at the top of this question and activate the folder \emph{Solution} in Line 14 for help.
+\end{enumerate}
+
+\end{question}
+
+\section{Drawing a Circle}
+
+
+\begin{question} \label{Qdf6:CircleandTSquare}
+
+We can draw a circle with a T-square or a rectangle, as illustrated in the animation below. The idea is to slide the rectangle $PQRS$ so that the adjacent sides $PQ$ and $PS$ respectively pass through the two fixed points $A$ and $B$. Then the vertex $P$ traces out a circle.
+
+The  aim of this question is to use the scalar product to prove this statement.
+
+\href{https://www.desmos.com/calculator/mgihe5dswd}{163: Drawing a Circle With a Rectangle}
+
+ 
+\begin{onlineOnly}
+    \begin{center}
+\desmos{mgihe5dswd}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+We'll start by letting ${\bf a}$, ${\bf b}$, and ${\bf p}$ be the position vectors (with respect to some origin) of the respective points $A$, $B$, and $P$. The points $A$ and $B$ are fixed, but the point $P$ varies as we slide the rectangle. 
+
+The curve traced by $P$ is described by the geometric condition that the vectors $\overrightarrow{AP}$ and $\overrightarrow{BP}$ are orthogonal. So a vector equation of the curve traced by $P$ is
+\[
+       \overrightarrow{AP}   \cdot \overrightarrow{BP} = \answer{0} ,
+\]
+or equivalently  
+\[
+     (  {\bf p} -  {\bf a} ) \cdot ({\bf p} - {\bf b}  ) = \answer{0} .
+\]
+
+Note. While this is a vector equation, the curve is still a set of points; namely, the set of points $P$ satstifying the above equation, where ${\bf p} = \overrightarrow{OP}$ is the postion of $P$ relative to the origin.
+
+The idea now is to use algebra to show the curve is a circle in two dimensions or a sphere in three dimensions (or a hypersphere in higher dimensions). Using vectors gives a coordinate-free approach that works for any number of dimensions. 
+
+For the algebra, we complete the square in the usual way by first writing the equation in the form
+\begin{align*}
+0 &= (  {\bf p} -  {\bf a} ) \cdot ({\bf p} - {\bf b}  ) \\
+   &= {\bf p}\cdot {\bf p} - ({\bf a} + {\bf b})\cdot {\bf p} + {\bf a}\cdot {\bf b} .\\
+\end{align*}
+
+Now rewrite this as
+\[
+          {\bf p}\cdot {\bf p} - ({\bf a} + {\bf b})\cdot {\bf p}  = - {\bf a}\cdot {\bf b} .
+\]
+
+Addint 
+\[
+  \frac{1}{4}( {\bf a} + {\bf b} ) \cdot  ( {\bf a} + {\bf b} )
+\]
+to each side gives
+\[
+  {\bf p}\cdot {\bf p} - ({\bf a} + {\bf b})\cdot {\bf p} + \frac{1}{4}( {\bf a} + {\bf b} ) \cdot  ( {\bf a} + {\bf b} ) = \frac{1}{4}( {\bf a} + {\bf b} ) \cdot  ( {\bf a} + {\bf b} ) -  {\bf a}\cdot {\bf b}
+\]
+or
+\[
+     \left( {\bf p} - \frac{1}{2}\left( {\bf a} + {\bf b}  \right)  \right) \cdot \left( {\bf p} - \frac{1}{2}\left( {\bf a} + {\bf b}  \right) \right) = \frac{1}{4}( {\bf a} + {\bf b} ) \cdot  ( {\bf a} + {\bf b} ) -  {\bf a}\cdot {\bf b} .
+\]
+
+And finally,
+\[
+     \left| {\bf p} - \frac{1}{2}\left( {\bf a} + {\bf b} \right) \right| = \frac{1}{2}\sqrt{ ({\bf a} + {\bf b} ) \cdot  ( {\bf a} + {\bf b} ) -  4{\bf a}\cdot {\bf b}} 
+\]
+or
+\[
+  \left| {\bf p} - \frac{1}{2}\left( {\bf a} + {\bf b} \right) \right| = \frac{1}{2}\left| \answer{{\bf a} - {\bf b}}  \right| .
+\]
+%In the last answer box, type $\{$\textbackslash bf v$\}$ for a vector ${\bf v}$.
+
+
+Interpret this last equation geometrically.
+\begin{freeResponse}
+\end{freeResponse}
+
+\end{question}
+
+\section{Opposite Edges of a Tetrahedron}
+
+
+\begin{question} \label{QLFefrerr30}
+
+Here's a curious fact about tetrahedrons.
+
+If two pairs of opposite edges of a tetrahedron are orthogonal, then so is the third pair.
+
+In the animation below, check visually that all three pairs of opposite edges are orthogonal. Then drag the slider $s$ in Line 2 to see if this stays true.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{ublfq7gavk}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/ublfq7gavk}{163: Tetrahedron Opposite Edges Orthogonal}
+
+To prove this fact, we'll use the scalar product.
+
+Start by letting ${\bf a}$, ${\bf b}$, ${\bf c}$, and ${\bf d}$ be the vectors from the origin to the four vertices of the tetrahedron.
+
+I'll leave this for you to try.
+
+\end{question}
+
+
+
+\section{Twice as Far}
+
+\begin{question}  \label{QMFemf333g4t}
+
+This problem is about describing the set of point twice as far from one given point ($A$) as from another ($B$), whether it two, three or any number of dimensions.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{pmlspmci4g}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/pmlspmci4g}{163: Twice as Far}
+
+
+\begin{enumerate}
+
+\item Drag points $P$, $Q$, and $R$ in the worksheet above so that each is approximately twice as far from point $A$ as from point $B$.
+
+\item Use part (a) to make a hypothesis about the set of points in the plane twice as far from $A$ as from $B$.
+
+\item Write a vector equation of the set in part (b). Use ${\bf a}$ and ${\bf b}$ for the respective vectors $\overrightarrow{OA}$ and $\overrightarrow{OB}$ from the origin to points $A$ and $B$. Use ${\bf p}$ for the position (relative to the origin) of a general point $P$ in the set.
+
+\item Write your equation from part (c) in Line 4 of the worksheet above. Use $(x,y)$ for ${\bf p}$,  $A$ for ${\bf a}$ and $B$ for ${\bf b}$.
+
+\item Use the algebra of vectors to describe the set of points geometrically. You'll need to complete the square twice. 
+
+\end{enumerate}
+\end{question}
+
+
+\end{document}
