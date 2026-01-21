@@ -110,11 +110,85 @@ So the vector
 gives the position (relative to the origin) of the point  $P$ on the sphere with radius $r$ centered at $A$ that is farthest from $B$.
 
 \end{explanation}
-
 \end{question}
 
+\section{Quiz 3A}
+
+\begin{question} \label{Q99e8e}
+\begin{enumerate}
+
+\item Let $O$ be the origin in $\mathbb{R}^3$.
+
+Let $A$ and $B$ be distinct points in $\mathbb{R}^3$.
+
+Let $P$ be the point on the line through $A$ and $B$ \emph{not} between $A$ and $B$ such that
+\[
+     \frac{\left| \overrightarrow{AP} \right|}{\left| \overrightarrow{PB} \right|} = \frac{3}{8} . 
+\]
+
+Use vector arithmetic to express the position of $P$ relative to the origin in terms of $\overrightarrow{OA}$, and $\overrightarrow{OB}$.
+
+\begin{enumerate}
+
+\item Give a thorough explanation of your thinking in complete sentences.
+
+\item Draw a reasonably accurate picture to help with your explanation.
+
+\item Preface each computation block with a brief explanation of what you are about to compute.
 
 
+\end{enumerate}
+\end{enumerate}
+
+\begin{explanation}
+Since
+\[
+   \frac{\left| \overrightarrow{AP} \right|}{\left| \overrightarrow{PB} \right|} = \frac{3}{8}  < 1 ,
+\]
+$P$ is closer to $A$ than it is to $B$. And since $P$ is \emph{not} between $A$ and $B$, it must be that $A$ is between $B$ and $P$ as in the figure below.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{mefaqb0bvv}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/mefaqb0bvv}{163: Quiz 3A}
+
+To get from the origin to $P$, we can first move from the origin to $A$ and then from $A$ to $P$. This tells us that
+\[
+      \overrightarrow{OP} = \overrightarrow{OA} +\overrightarrow{AP}.
+\]
+
+Because $A$ is between $B$ and $P$, 
+\[
+    \overrightarrow{AP} = t \overrightarrow{BA}
+\]
+for some positive scalar $t$. 
+
+But because $A$ is between $B$ and $P$,
+and
+\[
+  \frac{\left| \overrightarrow{AP} \right|}{\left| \overrightarrow{PB} \right|} = \frac{3}{8} ,
+\]
+we know that
+\[
+    \frac{\left| \overrightarrow{AP} \right|}{\left| \overrightarrow{BA} \right|} = \frac{3}{5}.
+\]
+So
+\[
+  \overrightarrow{AP} = \frac{3}{5} \overrightarrow{BA}
+\]
+and
+\begin{align*}
+   \overrightarrow{OP} &= \overrightarrow{OA} +\overrightarrow{AP}  \\
+                                 &=  \overrightarrow{OA} +\frac{3}{5} \overrightarrow{BA} \\
+                                 &=  \overrightarrow{OA} +\frac{3}{5} \left(    \overrightarrow{OA} - \overrightarrow{OB}  \right).
+\end{align*}
+
+\end{explanation}
+
+\end{question}
 
 %\begin{onlineOnly}
 %    \begin{center}
