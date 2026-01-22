@@ -14,6 +14,12 @@ The sliding ladder problem.
 
 \begin{question} \label{QodfREEVCe}
 
+A ladder of length $L$ meters rests vertically in a precarious position against a wall. The top of the ladder then slides down the wall as the bottom end moves along a horizontal floor.
+
+\begin{enumerate}
+
+\item Sketch the path of the point $P$ shown below at rest in the reference frame of the sliding ladder.
+
 \begin{onlineOnly}
     \begin{center}
 \desmos{wsqq0znsnp}{900}{600}
@@ -21,6 +27,49 @@ The sliding ladder problem.
 \end{onlineOnly}
 
 \href{https://www.desmos.com/calculator/wsqq0znsnp}{Sliding Ladder 2}
+
+\item Play the slider $\phi$ in Line 1 to slide the ladder and activate the folder \emph{Path} in Line 2 to see the path traced by the point $P$.
+
+\item Now we'll parameterize the path traced by the point $P$ located $p$ meters from the bottom end ($A$) of the ladder. We'll use the angle $\phi$ the ladder makes with the ground as the parameter. And 
+
+ \begin{enumerate}
+\item Express the position $\overline{OA}$ of the point $A$ relative to the origin in terms of $\phi$ and the length $L$ of the ladder.
+\[
+    \overrightarrow{OP} = \langle \answer{L \cos \phi} , \answer{0} \rangle 
+\]
+
+\item Express the position $\overrightarrow{AP}$ of $P$ relative to $A$ in terms of the distance $p = AP$ and the angle $\phi$.
+\[
+   \overrightarrow{OP} = \langle \answer{-p \cos \phi}, \answer{p \sin \phi} \rangle
+\]
+
+\item Finally, express the position ${\bf p} = \overrightarrow{OP}$ of $P$ relative to $O$ in terms of $L$, $p$, and the parameter $\phi$.
+\[
+     {\bf p} = \langle \answer{L\cos\phi -p \cos \phi}, \answer{p \sin \phi} \rangle \, , \, 0\leq \phi \leq \pi/2.
+\]
+
+\end{enumerate}
+
+\item Now express the velocity of point $P$ in terms of $L$, $p$, $\phi$, and the rotation rate $\omega$ (measured in rad/sec) of the ladder. Do not assume the rotation rate is constant.
+
+\item Write the velocity vector ${\bf v}$ as the sum of two vectors, one parallel to the ladder, the other perpendicular to the ladder.
+
+\item Express the speed of the ladder in terms of  $L$, $p$, $\phi$, and $\omega$.
+
+\item Assuming the ladder rotates at a constant rate, what point of the ladder is moving parallel to the ladder when the ladder makes the angle $\phi$ with the ground?
+
+\item Assuming a constant rotation rate, what point of the ladder is moving the slowest when the ladder makes the angle $\phi$ with the ground? The fastest?
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{m932trb8pd}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/m932trb8pd}{Sliding Ladder}
+
+
+\end{enumerate}
 
 
 \end{question}
