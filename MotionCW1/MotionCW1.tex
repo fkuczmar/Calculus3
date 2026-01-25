@@ -52,6 +52,33 @@ gives the velocity of the fly at that time.
 
 \item Approximate the fly's position relative to the point $(10,4,-10)$ one-tenth of a second later.
 \end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+
+\item Remember the definition of velocity as the rate of change of position with respect to time. So we can approximate the \emph{change} $\Delta {\bf p}$ in the fly's position over the time interval of length $\Delta t = 0.1$ seconds by the product
+\[
+       \Delta {\bf p} \sim {\bf v} \Delta t = (0.1 \text{ sec}) \langle -2, 1, 5 \rangle \text{m/s}  = \langle -0.2, 0.1 , 0.5 \rangle \text{m}.  
+\]
+
+To approximate the position of the fly relative to the origin $0.1$ seconds later we add this change in position to the given position
+\[
+ {\bf p} = \langle 3, -2, 8\rangle \text{ meters} .
+\] 
+So the fly's position relative to the origin $0.1$ seconds later is %approximately
+\[
+  \overrightarrow{OF} \sim {\bf p} + \Delta {\bf p} = \langle 2.8, -1.9, 8.5  \rangle \text{m}.
+\]
+
+\item The fly's position relative to the point $Q(0,4,-10)$ at this time is %the difference
+\begin{align*}
+   \overrightarrow{QF}  &=  \overrightarrow{OF} - \overrightarrow{OQ}  \\
+                                 &\sim  \langle 2.8, -1.9, 8.5  \rangle \text{m} - \langle 10, 4, -10 \rangle \text{m} \\
+                      &= \langle -7.6, -5.9, -1.5  \rangle \text{m}. 
+\end{align*}
+
+\end{enumerate}
+\end{explanation}
 \end{question}
 
 
@@ -93,7 +120,9 @@ expresses the position (in meters) of a mosquito relative to the origin in terms
 \href{https://www.desmos.com/3d/rwetbzlawt}{Fly Without Plane}
 
 \begin{enumerate}
-\item Parameterize the tangent line to the mosquito's path at the point on the path with position ${\bf p}(w)$ relative to the origin. Enter your parameterization in Line 5 of the above worksheet. Unfortunately,  you'll need to use $t$ as the parameter. Keep in mind that this is not the same as the parameter $t$ in the motion parameterized above.
+\item Parameterize the tangent line to the mosquito's path at the point on the path with position ${\bf p}(w)$ relative to the origin. Enter your parameterization in Line 5 of the above worksheet. Include a domain, something like $-20 \leq t \leq 20$.
+
+\emph{Note:} Desmos forces you to use $t$ as the parameter. Keep in mind that this is not the same as the parameter $t$ in the motion parameterized above.
 
 \item Drag the slider $w$ (another name for $t$) in Line 1 to approximate the time(s), if any, when the mosquito is flying directly toward the point $Q(5, -1, 6)$. Then ignore this approximation and use calculus to compute the exact time(s).
 
