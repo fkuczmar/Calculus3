@@ -5,7 +5,7 @@
 
 \begin{document}
 \begin{abstract}
-Motions and Planes.
+Introduction to Motion.
 \end{abstract}
 \maketitle
 
@@ -20,13 +20,15 @@ The figure below shows the path of a beetle moving in the plane, with tracks at 
 
 \item Activate the \emph{Solution} folder in Line 2 to see how you did.
 
+\item Play the slider $u$ in Line 4 to start the motion.  Play particular attention to how the length of the velocity vector changes and make sure you understand these changes.
+
 \begin{onlineOnly}
     \begin{center}
 \desmos{onxs5dhqsm}{900}{600}
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/calculator/onxs5dhqsm}{Average Velocity}
+\href{https://www.desmos.com/calculator/onxs5dhqsm}{Intro to Velocity}
 
 \end{enumerate}
 \end{question}
@@ -71,13 +73,47 @@ that expresses the position of the mosquito (in feet) relative to the origin in 
 \end{question}
 
 
-\begin{question} \label{QPfererer}
+
+
+\begin{question} \label{QLDfer333}
 
 The function 
 \[
   {\bf p}(t) = \langle  t+2,t^{2}-t-3,2t \rangle \, , \, -3\leq t \leq 3,
 \]
-expresses the position (in feet) of a mosquito relative to the origin in terms of the number of seconds past noon.
+expresses the position (in meters) of a mosquito relative to the origin in terms of the number of seconds past noon.
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{rwetbzlawt}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/rwetbzlawt}{Fly Without Plane}
+
+\begin{enumerate}
+\item Parameterize the tangent line to the mosquito's path at the point on the path with position ${\bf p}(w)$ relative to the origin. Enter your parameterization in Line 5 of the above worksheet. Unfortunately,  you'll need to use $t$ as the parameter. Keep in mind that this is not the same as the parameter $t$ in the motion parameterized above.
+
+\item Drag the slider $w$ (another name for $t$) in Line 1 to approximate the time(s), if any, when the mosquito is flying directly toward the point $Q(5, -1, 6)$. Then ignore this approximation and use calculus to compute the exact time(s).
+
+\item Drag the slider $w$ (another name for $t$) in Line 1 to approximate the time(s), if any, when the mosquito is flying directly away from the point $R(1,-5,-3)$. Then ignore this approximation and use calculus to compute the exact time(s).
+
+\item Find all times when the mosquito is flying at a speed of $3$ m/sec.
+
+\end{enumerate}
+
+\end{question}
+
+
+
+\begin{question} \label{QPfererer}
+
+The function 
+\[
+  {\bf p}(t) = \Bigl \langle  \frac{t}{3}+2,\, \frac{t^2}{9}-\frac{t}{3}-3,\, \frac{2}{3}t \Bigr \rangle \, , \, -9\leq t \leq 9,
+\]
+expresses the position (in meters) of a mosquito relative to the origin in terms of the number of seconds past noon.
 
  
 \begin{onlineOnly}
@@ -97,11 +133,11 @@ Then use algebra to find the exact time(s).
 
 \item Drag the slider $w$ to approximate when the mosquito is flying directly away from the plane. Then use algebra to find the exact time(s).
 
-\item Drag the slider to determine if the mosquito is flying toward or away from the plane at time $t=-1$ seconds past noon.
+\item Drag the slider to determine if the mosquito is flying toward or away from the plane at time $t=-3$ seconds past noon.
 
-\item Use vectorss to determine the rate at which the distance between the mosquito and the plane is changing at time $t=-1$ seconds past noon. Start by resolving the velocity vector into components parallel and normal to the plane.
+\item Use vectors to determine the rate at which the distance between the mosquito and the plane is changing at time $t=-3$ seconds past noon. Start by resolving the velocity vector into components parallel and normal to the plane.
 
-\item Use calculus to determine the rate at which the distance between the mosquito and the plane is changing at time $t=-1$ seconds past noon. Start by finding a function that expresses the distance between the mosquito and the plane in terms of the number of seconds past noon.
+\item Use calculus to determine the rate at which the distance between the mosquito and the plane is changing at time $t=-3$ seconds past noon. Start by finding a function that expresses the distance between the mosquito and the plane in terms of the number of seconds past noon.
 
 \end{enumerate}
 
