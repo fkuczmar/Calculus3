@@ -46,6 +46,8 @@ expresses the position (in meters) of a beetle relative to the origin in terms o
 \href{https://www.desmos.com/calculator/itv9aazspj}{163: Escape from Origin 1}
 
 \begin{enumerate}
+\item Play the slider $u$ in Line 2 to start the motion.
+
 \item Find an expression for the function 
 \[
        v = f(t) \, , \, 0\leq t \leq 2\pi
@@ -54,7 +56,25 @@ that gives the beetle's speed (in meters/min) at time $t$ minutes past noon.
 
 \item Find the beetle's speed at noon.
 
-\item At
+\item Is the distance of the beetle from the origin increasing or decreasing at noon? Use calculus to determine this rate. Then compare the rate with the beetle's speed at noon.
+
+\item Resolve the beetle's velocity vector at noon into two components, one parallel to the position vector, the other normal to the position vector. What do you notice? Activate the folder \emph{Resolution of Velocity Vector} in Line 4 to see these components.
+
+\item Is the distance of the beetle from the origin increasing or decreasing at time $t=\pi$ minutes past noon? Use calculus to determine this rate. Compare the rate with the beetle's speed at this time.
+
+\item Resolve the beetle's velocity vector at time $t=\pi$ minutes past  into two components, one parallel to the position vector, the other normal to the position vector. What do you notice?
+
+\item Use the animation to sketch by hand graphs of the functions
+
+\begin{enumerate}
+\item $s=f(t)$ that expresses the distance from the beetle to the origin at time $t$ minutes past noon, and
+
+\item $r=g(t)$  that expresses the rate at which this distance is changing at time $t$ minutes past noon.
+
+\item Activate the folder \emph{Graphs} on Line 8 to see these graphs. Be sure you can reconcile the graph of the function $g$ with the component of the velocity vector in the direction of the position vector. 
+\end{enumerate}
+
+\item Use the animation to approximate the times when the beetle is closest to and farthest from the origin. Then describe the relationship between the velocity and position vectors at these times. Explain why.
 
 \end{enumerate}
 
@@ -63,9 +83,35 @@ that gives the beetle's speed (in meters/min) at time $t$ minutes past noon.
 
 
 \section{Escaping from the Origin} 
-This section under construction. Ignore it for now.
+There are two ideas that I would like to emphasize repeatedly throughout the quarter:
 
-\begin{question}  \label{QE56rerttg}
+\begin{enumerate}
+\item Math is usually about working in general, not with specific numbers or functions. 
+
+\item The whole point of working with vectors is to give a \emph{coordinate-free} description of math and the laws of physics. Avoid working with their components whenever possible.
+\end{enumerate}
+
+With these ideas in mind, let's address the problem of the last question in general.
+
+The question is this:
+
+Given a parameterization ${\bf p}(t)$ of a motion (in the plane, in space, or in any number of dimensions), find an expression for the (instantaneous) rate of change in the distance to the origin.
+
+We'll answer this question twice:
+
+\begin{enumerate}
+\item working with the components of vectors, in violation of the second principle above, 
+
+\item and again, working with just vectors, not with their components. 
+
+\end{enumerate}
+
+
+
+\begin{question}  \label{QE56rertdstg}
+
+Given a parameterization ${\bf p}(t)$ of a motion (in the plane, in space, or in any number of dimensions), find an expression for the (instantaneous) rate of change in the distance to the origin. 
+
 \begin{align*}
 \frac{d}{dt}\Big| {\bf p}(t)  \Big| &=  \frac{d}{dt} \left(\sqrt{x^2+y^2}\right)    &&   \frac{d}{dt}\Big| {\bf p}(t)  \Big| = \frac{d}{dt} \left(  \sqrt{{\bf p} \cdot {\bf p}} \right) \\
  &= \frac{2x \answer{\frac{dx}{dt}} + 2y \answer{\frac{dy}{dt}}}{2\sqrt{x^2 + y^2}}  && \hskip 0.5 in = \frac{{\bf v}\cdot {\bf p} + {\bf p}\cdot {\bf v}}{2\sqrt{{\bf p}\cdot {\bf p}}} \\
@@ -73,6 +119,8 @@ This section under construction. Ignore it for now.
 \end{align*}
 \end{question}
 
+The takeaway is this:
 
+\emph{The rate of change in the distance to the origin is the scalar component of the velocity vector in the direction of the position (relative to the origin) vector.}
 
 \end{document}
