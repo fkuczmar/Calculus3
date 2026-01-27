@@ -112,6 +112,8 @@ We'll answer this question twice:
 
 Given a parameterization ${\bf p}(t)$ of a motion (in the plane, in space, or in any number of dimensions), find an expression for the (instantaneous) rate of change in the distance to the origin. 
 
+Here are the two computations. On the left is the Math 151 version. On the right is the \emph{identical} computation written with vectors.
+
 \begin{align*}
 \frac{d}{dt}\Big| {\bf p}(t)  \Big| &=  \frac{d}{dt} \left(\sqrt{x^2+y^2}\right)    &&   \frac{d}{dt}\Big| {\bf p}(t)  \Big| = \frac{d}{dt} \left(  \sqrt{{\bf p} \cdot {\bf p}} \right) \\
  &= \frac{2x \answer{\frac{dx}{dt}} + 2y \answer{\frac{dy}{dt}}}{2\sqrt{x^2 + y^2}}  && \hskip 0.5 in = \frac{{\bf v}\cdot {\bf p} + {\bf p}\cdot {\bf v}}{2\sqrt{{\bf p}\cdot {\bf p}}} \\
@@ -122,5 +124,63 @@ Given a parameterization ${\bf p}(t)$ of a motion (in the plane, in space, or in
 The takeaway is this:
 
 \emph{The rate of change in the distance to the origin is the scalar component of the velocity vector in the direction of the position (relative to the origin) vector.}
+
+\section{Exercises}
+
+\begin{exercise} \label{ExLdmfee}
+At a certain instant a fly has position
+\[
+  {\bf p} = \langle -4, 5, 9  \rangle \text{ meters} 
+\]
+relative to the origin and velocity
+\[
+  {\bf v} = \langle 4, 2, -1  \rangle \text{ m/sec}.
+\]
+
+\begin{enumerate}
+\item Find the speed of the fly at this instant?
+
+\item Is the distance between the fly and the origin increasing or decreasing at this instant? At what rate?
+
+\item Is the distance between the fly and the point $Q$ with coordinates $(-3, 1,5)$ increasing or decreasing at this instant? At what rate?
+\end{enumerate}
+
+\end{exercise}
+
+
+\begin{exercise} \label{ExLdmf347}
+At a certain instant a fly has position
+\[
+  {\bf p} = \langle -4, 5, 9  \rangle \text{ meters} 
+\]
+relative to the origin and a speed of $10$ m/sec.
+
+
+\begin{enumerate}
+\item Which of the following are possible? Choose all that apply.
+\begin{selectAll}
+  \choice[correct]{The fly is approaching the origin at a rate of $8$ m/sec.}
+  \choice[correct]{The fly is moving away from the origin at a rate of $8$ m/sec.}
+\choice{The fly is approaching the origin at a rate of $12$ m/sec.}
+\end{selectAll}
+
+\item Suppose at this moment the fly is neither approaching nor moving away from the origin. Find a possibility for the fly's velocity  at this time.
+
+\item Suppose at this moment the fly is moving away from the origin at the rate of $4$ m/sec. Use vector arithmetic, \emph{not} algebra, to find a possibility for the fly's velocity  at this time.
+
+\end{enumerate}
+\end{exercise}
+
+
+\begin{exercise} \label{ExLdfr3r3}
+\begin{enumerate}
+\item As a mosquito flies its velocity is always perpendicular to its position relative to the point $A$. What can you say about the path of the mosquito? Prove your assertion.
+
+\item As a mosquito flies its distance from the point $A$ remains constant. What can you say about the velocity of the mosquito? Prove your assertion.
+  
+\end{enumerate}
+\end{exercise}
+
+
 
 \end{document}
