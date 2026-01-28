@@ -190,6 +190,63 @@ and
 
 \end{question}
 
+
+
+\section{Quiz 3B}
+
+\begin{question} \label{QPdre4340}
+
+\begin{enumerate}
+\item The four hydrogen atoms in the methane molecule $CH_4$ form the vertices of a regular tetrahedron surrounding the carbon atom. 
+
+In a rectangular coordinate system the hydrogen atoms have coordinates $H_1(0,0,0)$, $H_2(2,2,0)$, $H_3(2,0,2)$, and $H_4(0,2,2)$. The carbon atom has coordinates $(1, 1, 1)$.
+
+\emph{Use the methods of our textbook (ie. vectors and the scalar product)} to find the exact measure of the bond angle $\angle H_1 C H_2$ formed by two hydrogen atoms and the carbon atom.
+
+No credit for other methods. This problem is meant to test if you did the homework. Its purpose is \emph{not} to see if you can solve the problem another way.
+
+\begin{explanation}
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{uk1fgzyccs}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/v}{163: Quiz 3A}
+
+Let the measure of the bond angle be $\theta$. This is the angle between the vectors
+\begin{align*}
+   \overrightarrow{CH_1} &= \langle 0,0,0\rangle - \langle 1,1,1 \rangle \\
+                                    &= \langle  -1,-1,-1 \rangle 
+\end{align*}
+and
+\begin{align*}
+   \overrightarrow{CH_2} &= \langle 2,2,0\rangle - \langle 1,1,1 \rangle \\
+                                    &= \langle  1,1,-1 \rangle ,
+\end{align*}
+or any other similar such pair.
+
+Then since
+\begin{align*}
+ \cos \theta &= \frac{\overrightarrow{CH_1}\cdot \overrightarrow{CH_2}}{\left| \overrightarrow{CH_1} \right| \left| \overrightarrow{CH_2} \right|} \\
+                  & = \frac{\langle  -1,-1,-1 \rangle \cdot \langle  1,1,-1 \rangle}{|\langle  -1,-1,-1 \rangle ||\langle  1,1,-1 \rangle |} \\
+                  &= -\frac{1}{3},
+\end{align*}
+the bond angle has measure
+\[
+    \theta = \arccos(-1/3).
+\]
+
+\end{explanation}
+
+\end{enumerate}
+
+\end{question}
+
+
+
+
 %\begin{onlineOnly}
 %    \begin{center}
 %\desmosThreeD{pmhatuke3f}{900}{600}
