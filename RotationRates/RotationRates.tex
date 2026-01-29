@@ -75,7 +75,7 @@ Our goal is to find an expression for the function $r = h(t)$ that gives the bee
 \begin{enumerate}
 \item Write an equation that relates the component functions $f(t)$, $g(t$) of the position vector and the signed angle $\theta$ from the positive $x$-axis to the position vector, measured counterclockwise.
 
-\item Then differentiate both sides of your equation with respect to time to find an expression for the rotation rate function $r=h(t)$.
+\item Then differentiate both sides of your equation with respect to time to find an expression for the rotation rate function $r=\omega(t)$.
 
 \item Check that your function is dimensionally correct.
 
@@ -87,7 +87,7 @@ Our goal is to find an expression for the function $r = h(t)$ that gives the bee
 \begin{question}  \label{QLDferfMAZ}
 This question relates the ideas in the previous question to vectors.
 
-The idea is to relate the signed rotation rate about the origin to the vector product 
+The goal here is to relate the signed rotation rate about the origin to the vector product 
 \[
  {\bf L}(t) = {\bf p}(t) \times {\bf v}(t)
 \]
@@ -105,11 +105,27 @@ of the position and velocity vectors of the motion.
 \href{https://www.desmos.com/3d/lq9fvpsrh0}{163: Rotating About the Origin 3D}
 
 \begin{enumerate}
-\item Watch the motion above (the orange vector is ${\bf L}(t)$) and make a conjecture about the relationship between the signed rotation rate and the vector ${\bf L}(t)$. Be sure you understand why the vector ${\bf L}(t)$ points upward at sometimes and downward at others.
 
-\item Prove  your conjecture by finding an expression for ${\bf L}(t)$ for the general motion
+\item What are the units of the vector ${\bf L}(t)$ when the position vector is measured in meters and time in seconds?
+
+\item Watch the motion above (the orange vector is ${\bf L}(t)$). Sometimes ${\bf L}(t)$ points upward, sometimes downward. Why?
+
+\item Let ${\bf k} = \langle 0,0,1\rangle$. What is the relationship between the position and velocity vectors ${\bf p}(t)$, ${\bf v}(t)$ when
+
+\begin{enumerate}
+\item ${\bf L}(t)\cdot {\bf k}>0$.
+
+\item ${\bf L}(t)\cdot {\bf k}<0$.
 \[
-  {\bf p}(t) = \langle f(t), g(t) \rangle
+  {\bf L}(t) = \langle 0,0,0 \rangle.
+\] 
+\end{enumerate}
+
+\item Make a guess and express the signed rotation rate of the motion about the origin in terms of the vectors ${\bf L}(t)$ and ${\bf p}(t)$. Make sure your expression has the correct units.
+
+\item Use the result of Question 1 to prove your conjecture. Start by finding an expression for the vector ${\bf L}(t)$ for the general motion
+\[
+  {\bf p}(t) = \langle f(t), g(t) \rangle .
 \]
 \end{enumerate}
 \end{question}
@@ -119,12 +135,31 @@ The takeaway is this:
 
 The signed rotation rate about the origin for a motion ${\bf p}(t)$ in the $xy$-plane is equal to %the scalar projection
 \[
-   r(t) =  \frac{ ( {\bf p}(t) \times {\bf v}(t) ) \cdot {\bf k}}{\left| {\bf p}(t) \right|^2} .
+   \omega(t) =  \frac{ ( {\bf p}(t) \times {\bf v}(t) ) \cdot {\bf k}}{\left| {\bf p}(t) \right|^2} .
 \]
 This is the quotient of the scalar projection of the vector 
 \[
     {\bf L}(t) = {\bf p}(t) \times {\bf p}^\prime(t)
 \] 
 in the direction ${\bf k} = \langle 0,0,1 \rangle$ of the positive $z$-axis and the square of the distance $|{\bf p}(t)|$ from the origin.
+
+The rotation rate is positive when the motion rotates counterclockwise about the origin when viewed looking down on the $xy$-plane from the positive $z$-axis. It is negative for a clockwise rotation.
+
+We can also write the \emph{absolute} rotation rate as
+\[
+   \left| \omega(t)  \right| = \frac{\left| {\bf v}(t)  \right| \sin\phi}{\left|  {\bf p}(t) \right|} ,
+\]
+where $\phi$ is the angle between the position and velocity vectors. This rate is never negative and does not capture the sense of rotation.
+
+\begin{enumerate}
+\item Check that this expression is dimensionally correct.
+
+\item Use properties of the vector product to show this expression for $\omega(t)$ is equal to the one above.
+
+\item This formula for the rotation rate is closely related to something your learned in trigonometry. What?
+
+\item Explain intuitively why this expression gives the rotation rate.
+
+\end{enumerate}
 
 \end{document}
