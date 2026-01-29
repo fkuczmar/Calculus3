@@ -40,7 +40,91 @@ expresses the position (in meters) of a beetle relative to the origin in terms o
 
 \href{https://www.desmos.com/calculator/fne4ma8yx2}{163: Rotating About the Origin 1}
 
+\begin{enumerate}
+\item Play the slider $u$ in Line 2. Then sketch a graph of the function
+\[
+       \theta = f(t) \, , \, 0\leq t \leq 2\pi ,
+\] 
+that expresses the marked angle $\theta$ (measured in radians) as a function of the number of minutes past noon.
+
+\item Use your graph in part (a) to sketch a graph of the function 
+\[
+  r = \frac{d\theta}{dt} = f^\prime(t) \, , \, 0\leq t \leq 2\pi .
+\]
+
+\item Explain the meaning of the function $r=f^\prime(t)$ in this context. Include units in your explanation.
+
+\item Activate the folder \emph{Graphs} in Line 8 to see how you did.
+
+\end{enumerate}
 \end{question}
 
+
+
+\begin{question}  \label{Q8fre3rr}
+This is a continuation of the first problem, but instead of working with the specific position function there, we'll make things easier and work in general.
+
+So we'll suppose the position function (relative to the origin, measured in meters) is
+\[
+      {\bf p}(t) = \langle f(t), g(t) \rangle ,
+\]
+with input $t$ measured in the number of seconds past noon.
+
+Our goal is to find an expression for the function $r = h(t)$ that gives the beetle's rotation rate (in rad/sec) about the origin at time $t$ seconds past noon. This is really a related-rates problem and we'll use ideas from differential calculus to solve it.
+
+\begin{enumerate}
+\item Write an equation that relates the component functions $f(t)$, $g(t$) of the position vector and the signed angle $\theta$ from the positive $x$-axis to the position vector, measured counterclockwise.
+
+\item Then differentiate both sides of your equation with respect to time to find an expression for the rotation rate function $r=h(t)$.
+
+\item Check that your function is dimensionally correct.
+
+\item Use your function and the position function from Question 1 to determine these rates of rotation at times $t=0$ and $t=3\pi/2$ minutes past noon.
+\end{enumerate}
+
+\end{question}
+
+\begin{question}  \label{QLDferfMAZ}
+This question relates the ideas in the previous question to vectors.
+
+The idea is to relate the signed rotation rate about the origin to the vector product 
+\[
+ {\bf L}(t) = {\bf p}(t) \times {\bf v}(t)
+\]
+of the position and velocity vectors of the motion.
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{lq9fvpsrh0}{900}{600}  % x4nun5yb
+\end{center}
+\end{onlineOnly}
+
+               %\href{https://www.geogebra.org/classicx4nun5yb}{163: Distance to Origin}
+
+\href{https://www.desmos.com/3d/lq9fvpsrh0}{163: Rotating About the Origin 3D}
+
+\begin{enumerate}
+\item Watch the motion above (the orange vector is ${\bf L}(t)$) and make a conjecture about the relationship between the signed rotation rate and the vector ${\bf L}(t)$. Be sure you understand why the vector ${\bf L}(t)$ points upward at sometimes and downward at others.
+
+\item Prove  your conjecture by finding an expression for ${\bf L}(t)$ for the general motion
+\[
+  {\bf p}(t) = \langle f(t), g(t) \rangle
+\]
+\end{enumerate}
+\end{question}
+
+
+The takeaway is this:
+
+The signed rotation rate about the origin for a motion ${\bf p}(t)$ in the $xy$-plane is equal to %the scalar projection
+\[
+   r(t) =  \frac{ ( {\bf p}(t) \times {\bf v}(t) ) \cdot {\bf k}}{\left| {\bf p}(t) \right|^2} .
+\]
+This is the quotient of the scalar projection of the vector 
+\[
+    {\bf L}(t) = {\bf p}(t) \times {\bf p}^\prime(t)
+\] 
+in the direction ${\bf k} = \langle 0,0,1 \rangle$ of the positive $z$-axis and the square of the distance $|{\bf p}(t)|$ from the origin.
 
 \end{document}
