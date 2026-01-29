@@ -213,7 +213,7 @@ No credit for other methods. This problem is meant to test if you did the homewo
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/3d/v}{163: Quiz 3A}
+\href{https://www.desmos.com/3d/v}{163: Quiz 3B}
 
 Let the measure of the bond angle be $\theta$. This is the angle between the vectors
 \begin{align*}
@@ -239,10 +239,106 @@ the bond angle has measure
 \]
 
 \end{explanation}
+\end{enumerate}
+\end{question}
 
+
+\section{Quiz 4A}
+\begin{question} \label{Qldfer33r}
+\begin{enumerate}
+
+\item Let ${\bf v}$ be a non-zero vector in $\mathbb{R}^3$ not parallel to the vector ${\bf w} = \langle 1,2,3\rangle$.
+
+Use vector arithmetic (not algebra) to express the vector ${\bf v}$ as the cross-product of two other vectors.
+
+Explain your reasoning thoroughly. Include pictures to help with your explanation.
+
+Your explanation should include properties of the vector product, concerning both the magnitude and direction of this product.
+
+Work in general with the given vectors ${\bf v}$ and ${\bf w}$, \emph{not} with their components.
 \end{enumerate}
 
+
+\begin{explanation}
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{drkauraaje}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/drkauraaje}{163: Quiz 4A}
+
+The solution is outlined in the worksheet above. Activate the folders in Lines 8 and 11 to see the steps. 
+
+Here is a detailed explanation.
+
+One key idea, to avoid repeatedly using the right-hand rule, is this:
+
+If the vectors ${\bf a}$ and ${\bf b}$ are perpendicular and 
+\[
+    {\bf c} = {\bf a}\times {\bf b},
+\]
+then the vectors ${\bf a}$, ${\bf b}$, ${\bf c}$, in that order, form a \emph{right-handed} system in the sense that 
+\[
+      {\bf b} \times {\bf c} = \lambda_1 {\bf a}
+\]
+and
+\[
+       {\bf c} \times {\bf a} = \lambda_2 {\bf b}
+\]
+for \emph{positive} scalars $\lambda_1$ and $\lambda_2$.
+
+The simplest example is the triple ${\bf a} = \langle 1, 0, 0 \rangle$, ${\bf b} = \langle 0,1,0 \rangle$, and ${\bf c} = \langle 0,0,1\rangle$.
+
+Moving on to the construction, the first step is to construct a unit vector ${\bf u}$ perpendicular to ${\bf v}$. One choice is
+\[
+      {\bf u} =  \frac{{\bf v} \times {\bf w}}{\left| {\bf v} \times {\bf w}\right|} .
+\]
+By the definition of the vector product, we know ${\bf v}\times {\bf w}$, and hence ${\bf u}$, is perpendicular to ${\bf v}$.
+
+To avoid having to draw in three-dimensions, let's picture the vectors ${\bf v}$ and ${\bf u}$ as shown below.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{89y8r8q2ut}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/89y8r8q2ut}{163: Quiz 4A Solution}
+
+The next step in the construction is to define a vector, call it ${\bf a}$, as
+\[
+ {\bf a} = {\bf v} \times {\bf u}.
+\]
+ By the definition of the vector-product, we know 
+\begin{enumerate}
+\item ${\bf a}$ is perpendicular to ${\bf v}$ and ${\bf u}$,
+
+\item ${\bf a}$ points out of the page, directly toward us (the right-hand rule), and
+
+\item 
+\begin{align*}
+   |{\bf a}|  &= |{\bf v} | |{\bf u} | \sin(\pi/2) \\
+                 &= |{\bf v}| .
+\end{align*}
+\end{enumerate}
+
+From this, it follows that 
+\[
+  {\bf v} = {\bf u}\times {\bf a} .
+\]
+
+To justify this claim, we need to check that ${\bf u}\times {\bf a}$ has the same direction and magnitude as ${\bf v}$.
+
+\begin{enumerate}
+\item As
+\end{enumerate}
+
+\end{explanation}
 \end{question}
+
+
 
 
 

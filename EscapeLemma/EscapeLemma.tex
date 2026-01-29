@@ -11,8 +11,20 @@ Speed, velocity, distance and its rate of change.
 
 \section{Introduction}
 
+Here's the question for this chapter.
+
+Suppose at a certain instant, you are driving at a speed of $50$ miles/hour. 
+
+\begin{enumerate}
+\item What can you say about the rate of change (with respect to time) in your distance from home at this instant? Can this distance be increasing at the rate of $40$ miles/hour? Or decreasing at the rate of $60$ miles/hour? 
+
+\item What additional information would you need to determine this rate? 
+\end{enumerate}
+
 \begin{question}  \label{Q34r066tt}
-Interpret the meanings of the expressions 
+\begin{enumerate}
+
+\item Interpret the meanings of the expressions 
 \[ 
       \Big| \frac{d}{dt} \left( {\bf p}(t) \right) \Big|
 \]
@@ -20,9 +32,32 @@ and
 \[
    \frac{d}{dt} \left( |{\bf p}(t)| \right) .
 \]
-for a motion with position function ${\bf p}(t)$ measured in meters (and $t$ in seconds). Inlude units in your interpretations. Be sure to state clearly whether each is a vector or a scalar.
+for a motion with position function (relative to the origin) ${\bf p}(t)$ measured in meters (and $t$ in seconds). Inlude units in your interpretations. Be sure to state clearly whether each is a vector or a scalar.
 \begin{freeResponse}
 \end{freeResponse}
+
+\item One of the expressions above might be negative. Which one?
+
+\item Which of the following inequalities are true? Choose all that apply.
+
+\begin{selectAll}
+\choice{ 
+\[
+        \Big| \frac{d}{dt} \left( {\bf p}(t) \right) \Big| \leq  \frac{d}{dt} \left( |{\bf p}(t)| \right) 
+\]}
+
+\choice[correct]{ 
+\[
+        \frac{d}{dt} \left( |{\bf p}(t)| \right)  \leq   \Big| \frac{d}{dt} \left( {\bf p}(t) \right) \Big| 
+\]}
+
+\choice[correct]{ 
+\[
+     \left|   \frac{d}{dt} \left( |{\bf p}(t)| \right) \right|  \leq   \Big| \frac{d}{dt} \left( {\bf p}(t) \right) \Big| 
+\]}
+\end{selectAll} 
+
+\end{enumerate}
 \end{question}
 
 
@@ -123,7 +158,7 @@ Here are the two computations. On the left is the Math 151 version. On the right
 
 The takeaway is this:
 
-\emph{The rate of change in the distance to the origin is the scalar component of the velocity vector in the direction of the position (relative to the origin) vector.}
+\emph{The rate of change in the distance to the origin is the scalar component of the velocity vector in the direction of the position (relative to the origin) vector. This rate is is equal to the product $v\cos\theta$ of the speed and the cosine of the angle $\theta$ between the position and velocity vectors. In the context of our opening example, $\theta$ is the angle between the direction you're driving and your direction from home.}
 
 \section{Exercises}
 
@@ -169,6 +204,10 @@ relative to the origin and a speed of $10$ m/sec.
 \item Suppose at this moment the fly is moving away from the origin at the rate of $4$ m/sec. Use vector arithmetic, \emph{not} algebra, to find a possibility for the fly's velocity  at this time.
 
 \end{enumerate}
+\end{exercise}
+
+\begin{exercise} \label{ExLdf3eeRE}
+At a certain moment you are driving at a speed of $50$ miles/hour. What can you say about the rate of change in your distance to home at this moment. The rate of change here is \emph{not} with respect to time but with respect to the odometer reading on your car. 
 \end{exercise}
 
 
