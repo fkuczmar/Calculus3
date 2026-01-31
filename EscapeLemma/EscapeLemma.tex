@@ -153,14 +153,120 @@ Here are the two computations. On the left is the Math 151 version. On the right
 
 \begin{align*}
 \frac{d}{dt}\Big| {\bf p}(t)  \Big| &=  \frac{d}{dt} \left(\sqrt{x^2+y^2}\right)    &&   \frac{d}{dt}\Big| {\bf p}(t)  \Big| = \frac{d}{dt} \left(  \sqrt{{\bf p} \cdot {\bf p}} \right) \\
- &= \frac{2x \answer{dx/dt} + 2y \answer{\frac{dy}{dt}}}{2\sqrt{x^2 + y^2}}  && \hskip 0.5 in = \frac{{\bf v}\cdot {\bf p} + {\bf p}\cdot {\bf v}}{2\sqrt{{\bf p}\cdot {\bf p}}} \\
+ &= \frac{2x \frac{\answer{dx}}{\answer{dt}}+ 2y \frac{\answer{dx}}{\answer{dt}}}{2\sqrt{x^2 + y^2}}  && \hskip 0.5 in = \frac{{\bf v}\cdot {\bf p} + {\bf p}\cdot {\bf v}}{2\sqrt{{\bf p}\cdot {\bf p}}} \\
 &= \frac{x \frac{dx}{dt} + y \frac{dy}{dt}}{\sqrt{x^2+y^2}}  &&  \hskip 0.5 in = \frac{{\bf v}\cdot {\bf p}}{|{\bf p}|} 
 \end{align*}
 \end{question}
 
 The takeaway is this:
 
-\emph{The rate of change in the distance to the origin is the scalar component of the velocity vector in the direction of the position (relative to the origin) vector. This rate is is equal to the product $v\cos\theta$ of the speed and the cosine of the angle $\theta$ between the position and velocity vectors. In the context of our opening example, $\theta$ is the angle between the direction you're driving and your direction from home.}
+\emph{The rate of change in the distance to the origin is the scalar component of the velocity vector in the direction of the position (relative to the origin) vector.} This rate is is equal to the product $v\cos\theta$ of the speed and the cosine of the angle $\theta$ between the position and velocity vectors. Symbolically,
+\begin{align*}
+ \frac{d}{dt} \left( \left| {\bf p(t)} \right| \right) & = \frac{{\bf v}\cdot {\bf p}}{|{\bf p}|}  \\
+                                                                      &= v\cos\theta.
+\end{align*}
+
+
+
+%In the context of our opening example, $\theta$ is the angle between the direction you're driving and your direction from home.
+
+Two remarks:
+
+\begin{enumerate}
+
+\item We could have obtained this same result geometrically, \emph{without any computation}. Here's how.
+
+Suppose as shown below we are given the position ${\bf p}(t)$ and velocity ${\bf v}(t)$ vectors of a beetle's motion at time $t$ when the beetle is at point $P$. 
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{9kkzjv8vq9}{900}{600}  % x4nun5yb
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/9kkzjv8vq9}{163: Escape Lemma 54}
+
+\begin{enumerate}
+
+\item The first thing to notice is that the angle $\theta$ between the position and velocity vectors is \emph{not} obtuse (between $\pi/2$ and $\pi$) as it might appear. Rather it is acute (between $0$ and $\pi/2$). Remember, the angle $\theta$ is the angle between the \emph{directions} of the vectors. And to see this angle we should draw the vectors tail to tail.
+
+\item Activate the folder \emph{Angle Between Vectors} on Line 1 to see the angle $\theta$.
+
+\item To approximate the rate of change
+\[
+    \frac{d}{dt} \left( \left| {\bf p(t)} \right| \right)
+\]
+in the distance of the beetle from the origin, we'll suppose it crawls with constant velocity ${\bf p}(t)$ over a small time interval from time $t$ to time $t+\Delta t$ as it moves a distance
+\[
+      \Delta s = |{\bf v}(t)| \Delta t
+\]
+fom point $P$ to point $Q$. To see the beetle at point $Q$, activate the folder \emph{Solution} on Line 10.
+
+\item Now we draw a circular arc centered at $O$ through $Q$ and let this arc intersect the line $OP$ at $R$. Then the change
+\[
+ \Delta \left( |{\bf p}(t)| \right) = |  {\bf p}(t+\Delta t) - {\bf p}(t)  |
+\]
+in the beetle's distance to the origin over this small time interval is just the length of $\overrightarrow{PR}$. But because $\Delta t$ is small, the circular arc from $Q$ to $R$ is approximately a line segment. So we can suppose points $P$, $Q$, and $R$ are the vertices of a right triangle $\Delta QRP$, with right angle at $R$.
+
+Using right triangle trigonometry in $\Delta QRP$ tells us
+\[
+        PR \sim PQ \cos\theta 
+\]
+or that
+\[
+     \Delta \left( |{\bf p}(t)| \right) \sim (\Delta s)\cos\theta . 
+\]
+This approximates the change in the beetle's distance from the origin in terms of the angle $\theta$ between its position and velocity vectors and the distance it crawls.
+
+Dividing both sides by $\Delta t$ we get
+\[
+    \frac{ \Delta \left( |{\bf p}(t)| \right)}{\Delta t} \sim \frac{\Delta s}{\Delta t}\cos\theta . 
+\]
+
+Finally, taking a limit as $\Delta t\to 0$ suggests our result that
+\[
+   \frac{d}{dt} \left( \left| {\bf p(t)} \right| \right) = v\cos\theta.
+\]
+
+\end{enumerate}
+
+\item This is really a related rates problem and you've probably seen one like this before.
+
+\begin{question} \label{Q9odfhonn}
+A kite drifts due east as it maintains a constant altitude. Play the slider $u$ in Line 1 of the worksheet below to watch the motion.
+
+\pdfOnly{
+Access Desmos interactives through the online version of this text at
+ 
+\href{https://www.desmos.com/calculator/qdrzdt4erc}.
+}
+ 
+\begin{onlineOnly}
+   \begin{center}
+\desmos{qdrzdt4erc}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/qdrzdt4erc}{151: Kite}
+
+\begin{enumerate}
+\item Which do you think is greater, the rate at which the string is being let out or the speed of the kite? No computations, just go with your intuition.
+
+\item Express the speed of the kite (not assumed constant) in terms of the rate at which the string is being let out (\emph{not} assumed constant) and the angle $\theta$ the string makes with the horizontal.
+
+\item What can you say if $\theta =  \pi/3$?
+
+\item Was your intuition correct?
+\end{enumerate}
+\end{question}
+
+
+
+\end{enumerate}
+
+
+
+
 
 \section{Exercises}
 
