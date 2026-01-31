@@ -1,0 +1,245 @@
+\documentclass{ximera}
+\title{The Acceleration Vector, Part 1}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Acceleration and speed. 
+\end{abstract}
+\maketitle
+
+In everday English we might say something like ``a car is accelerating'' to mean that the car is speeding up. But this is not really correct. Keep in mind that acceleration measures the rate of change of velocity with respect to time. And since velocity is a vector, so is acceleration. Velocity encodes both speed and direction, so acceleration encodes the rates of change of both speed and direction.
+
+This chapter focuses on determining the rate of change (with respect to time) in speed. For this, we'll need both the acceleration and velocity vectors, or really just the angle between these vectors and the magnitude of the acceleration vector.
+
+Before addressing this question, we'll jump up one level and consider an analogous question about position and velocity. But first, try the following question.
+
+\begin{question}  \label{Q34r05r34gtt}
+\begin{enumerate}
+\item Interpret the meanings of the expressions 
+\[ 
+      \Big| \frac{d}{dt} \left( {\bf p}(t) \right) \Big|
+\]
+and
+\[
+   \frac{d}{dt} \left( |{\bf p}(t)| \right) .
+\]
+for a motion with position function ${\bf p}(t)$ measured in meters (and $t$ in seconds). Inlude units in your interpretations. Be sure to state clearly whether each is a vector or a scalar.
+
+\item One of the expressions 
+\[ 
+      \Big| \frac{d}{dt} \left( {\bf v}(t) \right) \Big|
+\]
+and
+\[
+   \frac{d}{dt} \left( |{\bf v}(t)| \right) .
+\]
+is the magnitude (in $m/s^2)$ of the acceleration vector for a motion with  velocity function ${\bf v}(t)$ measured in meters/sec (and $t$ in seconds). Which one? Interpret the meaning of the other expression.
+ 
+\end{enumerate}
+\begin{freeResponse}
+\end{freeResponse}
+\end{question}
+
+
+
+\section{Escaping from the Origin} 
+This section under construction. Ignore it for now.
+
+\begin{question}  \label{QErerttdfg}
+\begin{align*}
+\frac{d}{dt}\Big| {\bf p}(t)  \Big| &=  \frac{d}{dt} \left(\sqrt{x^2+y^2}\right)    &&   \frac{d}{dt}\Big| {\bf p}(t)  \Big| = \frac{d}{dt} \left(  \sqrt{{\bf p} \cdot {\bf p}} \right) \\
+ &= \frac{2x \answer{\frac{dx}{dt}} + 2y \answer{\frac{dy}{dt}}}{2\sqrt{x^2 + y^2}}  && \hskip 0.5 in = \frac{{\bf v}\cdot {\bf p} + {\bf p}\cdot {\bf v}}{2\sqrt{{\bf p}\cdot {\bf p}}} \\
+&= \frac{x \frac{dx}{dt} + y \frac{dy}{dt}}{\sqrt{x^2+y^2}}  &&  \hskip 0.5 in = \frac{{\bf v}\cdot {\bf p}}{|{\bf p}|} 
+\end{align*}
+\end{question}
+
+
+
+\section{Speed and Acceleration}
+We saw in the last chapter that for a circular motion, we can compute the rate of change in speed with respect to time as the scalar projection of the acceleration vector onto the velocity vector. The same is true for any motion and the proof in this more general case turns out to be very quick.
+
+The idea is to forget about the position function. Instead we'll imagine the hodograph and write the velocity function of a motion
+in polar form as
+\[
+    {\bf v} = v \langle \cos \phi, \sin \phi \rangle .
+\]
+Here $v = | {\bf v}|$ is the speed and $\phi$ the angle from the positive $x$-axis to the velocity vector, measured counterclockwise. 
+
+Now differentiate with respect to time, keeping in mind that both $v$ and $\phi$ are functions of time. Using the product rule, we find that the acceleration vector is
+\[
+    {\bf a} = \frac{d{\bf v}}{dt} = \frac{dv}{dt} \langle \cos\phi, \sin\phi \rangle + v \frac{d\phi}{dt} \langle -\sin\phi, \cos \phi \rangle .
+\] 
+
+The reason for doing this is that the derivative $dv/dt$ is exactly what we want to compute. It is the rate of change of speed with respect to time. To pick off this rate of change we just take the scalar product of the acceleration with the unit vector
+\[
+   \frac{{\bf v}}{|{\bf v}|} = \langle \cos\phi, \sin \phi \rangle
+\]
+in the direction of motion. Then
+\begin{align*}
+{\bf a} \cdot \frac{{\bf v}}{|{\bf v}|} &= {\bf a} \cdot \langle \cos\phi, \sin \phi \rangle \\
+ & = \left(     \frac{dv}{dt} \langle \cos\phi, \sin\phi \rangle + v \frac{d\phi}{dt} \langle -\sin\phi, \cos \phi \rangle      \right) \cdot \langle \cos\phi, \sin \phi \rangle \\
+                    & = \frac{dv}{dt} .
+\end{align*} 
+And that's what we wanted to show.
+
+\emph{The rate of change in the speed of a motion with respect to time is the scalar projection of the acceleration vector onto the velocity vector.}
+
+The advantage of this proof is that it is simple. A disadvantage is that it works only for motions in the plane. The same fact holds for motions in space, but we'll skip the proof for now. Let's look at some examples first.
+
+\section{Projectile Motion}
+\begin{question} \label{Q:3445r45r}
+The animation below shows a projectile motion launched at time $t=0$ seconds from position ${\bf p}(0) = \overrightarrow{OA}$ relative to the origin with initial velocity ${\bf v}_0 = {\bf v}(0)$. The projectile moves with constant acceleration ${\bf g}$.
+
+The animation also shows two graphs. One shows speed as a function of time. The other shows the derivative $dv(t)/dt$ of speed with respect to time. 
+
+\begin{enumerate}
+\item Identify the two graphs in the animation. Which shows speed as a function of time? Which shows the derivative $dv(t)/dt$ of speed with respect to time?
+
+\item Find an expression for the velocity function ${\bf v}(t)$ using a definite integral. Then evaluate the integral.
+
+\item Find an expression for the position function ${\bf p}(t)$ using a definite integral. Then evaluate the integral.
+
+\item Use the specific vectors ${\bf v}_0$ and ${\bf g}$ below for the initial position, the initial velocity, and the acceleration for the projectile motion in the questions that follow. Assume SI units. 
+
+%\item Use part (b) to find expressions for the position, velocity, and acceleration functions.
+
+\item Find the speed of the motion at time $t=2$ seconds.
+
+\item Is the projectile speeding up or slowing down at time $t=2$ seconds? At what rate. Check your results with the graphs below. 
+
+\item Find an expression for the speed function $v(t)$ and evaluate the limit
+\[
+    \lim_{t\to \infty} v^\prime (t) .
+\]
+
+\item How can you visualize the above limit in the two graphs below?
+
+\item How is the above limit related to the acceleration vector? Explain.
+
+\item Identify the vector ${\bf w}$ in the demonstration above as a vector projection. What role does it play in some of the questions above?
+
+\end{enumerate}
+
+\begin{onlineOnly}
+    \begin{center}
+\geogebra{vbnga9rj}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.geogebra.org/classic/vbnga9rj}{163: Projectile Motion Plane}
+
+\end{question}
+
+
+\begin{question}  \label{Q44rft4t4t}
+The animation below shows a projectile motion with position function
+\[
+    {\bf p}(t) = {\bf p}(0) + {\bf v}(0)t + \frac{1}{2}{\bf g}t^2 \, , \, t \in \mathbb{R} .
+\]
+
+Work in general for this problem. Do \emph{not} make specific choices for the initial position ${\bf p}(0)$, the initial velocity ${\bf v}(0)$, and the constant acceleration ${\bf g}$. Do not assume the acceleration vector points downward (ie. in the direction of the negative $z$-axis).
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{6sywrj1v4z}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/clr4mdmltt}{163: Projectile 3}
+
+\begin{enumerate}
+\item Use vectors to determine the time interval during which the projectile is slowing down. 
+
+\item Use vectors to determine the time interval during which the projectile is speeding up. 
+
+\item Assume the trajectory is a parabola and express the position of the vertex relative to the origin in terms of the vectors ${\bf p}(0)$, ${\bf v}(0)$, and ${\bf g}$. Check  your work in the animation above by inputting this position vector on the first blank line.
+
+\item Parameterize the axis of symmetry of the trajectory. Input the parameterization in the worksheet above.
+
+\item Prove algebraically that the trajectory lies in a plane. Find a vector normal to that plane.
+
+\begin{hint}
+First find a vector ${\bf n}$ normal to the plane of the trajectory by using two of the three given vectors. Then show that the velocity of the motion is always perpendicular to ${\bf n}$.
+\end{hint}
+
+
+\item Write an equation of the plane of the trajectory. Input your equation in the worksheet above.
+
+\end{enumerate}
+\end{question}
+
+\section{Motion Along a Cycloid}
+\begin{question} \label{Q49504333}
+You're driving down I-5 at a constant speed of $60$ miles/hour. What can you say about how the speed of a pebble stuck in the tread of your back tire varies? What do you think the maximum speed is? The minimum speed? No computations, just follow your intuition.
+
+\begin{freeResponse}
+\end{freeResponse}
+
+
+This problem is about the motion of a point attached to a circle that rolls on a line. You can imagine a pebble attached to a tire of your car as you drive in a straight line. The pebble traces out a curve called a cycloid.
+
+We suppose the circle has radius $r$ meters. The motion starts with the pebble at the origin at time $t=0$ seconds and the circle rolls in the direction of the postive $x$-axis with constant speed $v$ m/sec.
+
+\begin{onlineOnly}
+    \begin{center}
+\geogebra{rrzgbtfr}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.geogebra.org/classic/rrzgbtfr}{163: Cycloid}
+
+\begin{enumerate}
+\item Our first step is to parameterize the cycloid in terms of the rotation angle $\theta = \angle CBP$ of the circle, measured from its starting point (see the marked angle in the demonstration above). Do this as follows.
+
+\begin{enumerate}
+\item First express the components of the vector $\overrightarrow{OB}$ from the origin to the center of the circle ${\cal C}$ in terms of $r$ and $\theta$. Note that because ${\cal C}$ rolls without slipping, the distance $OC$ from the origin to the point on the $x$-axis in contact with ${\cal C}$ is equal to the length of the (blue) arc subtended by $\angle CBP$.
+
+\item Next express the components of the vector $\overrightarrow{BP}$ from $B$ to the pebble in terms of $r$ and $\theta$.
+
+\item Then use vector arithmetic to express the position of $\overrightarrow{OP}$ of $P$ relative to the origin in terms of $r$ and $\theta$.
+\end{enumerate}
+
+\item Our next step is to investigate how the pebble's speed varies as the wheel's center moves at a constant speed of $v$ m/sec.
+First change the slider $w = \omega$ (the wheel's rotation rate) to $\omega = w = 1.7$ rad/sec in the geogebra activity. But do not use this value, nor the radius in any of the questions below. Continue to work in general.
+
+To reduce the clutter, deactivate the \emph{position vectors} box in the upper left of the geogebra activity.
+
+\begin{enumerate}
+\item Use your result from part (a) to find an expression for the position function ${\bf p}(t)$ of $P$ relative to the origin (measured in meters) in terms of the number of seconds since the pebble left the origin. Do this by first finding an expression for the rotation rate of the wheel $\omega$ (measured in rad/sec) in terms of $r$ and $v$.
+
+\item Find expressions for the velocity ${\bf v}(t)$ (in m/s) and acceleration ${\bf a}(t)$ (in $m/s^2$) functions of $P$.
+
+\item Use vector arithmetic to show that ${\bf v}(t)$ is orthogonal to $\overrightarrow{ CP}$.
+
+\item Express the speed of $P$ in terms $r$, $v$, and $\theta$. Then express this speed in terms of the length of vector $\overrightarrow{CP}$ and $\omega$.
+
+\item At what point(s) of the path is the pebble's speed a minimum? What is this speed? Compare this with your initial guess. Are you surprised?
+ 
+\item At what point(s) of the path is the pebble's speed a maximum? What is this speed? Compare this with your initial guess. Are you surprised?
+
+\end{enumerate}
+
+\item Our final step is to investigate the acceleration of the motion.
+
+\begin{enumerate}
+\item Activate the \emph{acceleration box} at the upper left of the activity to see the acceleration vector. Then use vector arithmetic to show that the acceleration vector points directly toward $B$ and has constant magntitude. Find an expression for this magnitude.
+
+\item Try to visualize the normal and tangential components of acceleration along the path of the motion. Sketch by hand each of these components along separate copies of the cycloid. Then activate the \emph{normal component} and \emph{tangential component} boxes in the activity to see how you did.
+
+%\item Does the normal component of the acceleration have constant length? What does this suggest about the path?
+
+\item Is the scalar component of the acceleration in the direction of the velocity vector constant? What does this component suggest about the speed of the motion? Try to be precise.
+
+\item At what point(s) of the path is the pebble speeding up at the fastest rate? Slowing down at the fastest rate? Or if there are no such points, what can you say about the maximum rates at which the pebble speeds up and slows down? Be precise. Graph the speed function to help you.
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{question}
+
+
+
+\end{document}
