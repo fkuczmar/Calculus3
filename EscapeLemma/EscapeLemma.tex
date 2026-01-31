@@ -216,7 +216,7 @@ or that
 \[
      \Delta \left( |{\bf p}(t)| \right) \sim (\Delta s)\cos\theta . 
 \]
-This approximates the change in the beetle's distance from the origin in terms of the angle $\theta$ between its position and velocity vectors and the distance it crawls.
+This equation approximates the change in the beetle's distance from the origin in terms of the angle $\theta$ and the distance it crawls during a small time interval $\Delta t$.
 
 Dividing both sides by $\Delta t$ we get
 \[
@@ -252,7 +252,9 @@ Access Desmos interactives through the online version of this text at
 \begin{enumerate}
 \item Which do you think is greater, the rate at which the string is being let out or the speed of the kite? No computations, just go with your intuition.
 
-\item Express the speed of the kite (not assumed constant) in terms of the rate at which the string is being let out (\emph{not} assumed constant) and the angle $\theta$ the string makes with the horizontal.
+\item Use ideas of Math 151, \emph{not} vectors, to express the speed of the kite (not assumed constant) in terms of the rate at which the string is being let out (\emph{not} assumed constant) and the angle $\theta$ the string makes with the horizontal.
+
+\item Compare the result of part (b) with what you just learned. Are they consistent?
 
 \item What can you say if $\theta =  \pi/3$?
 
@@ -285,16 +287,72 @@ relative to the origin and velocity
 
 \item Is the distance between the fly and the origin increasing or decreasing at this instant? At what rate?
 
-\item Is the distance between the fly and the point $Q$ with coordinates $(-3, 1,5)$ increasing or decreasing at this instant? At what rate?
+\item Is the distance between the fly and the point $Q$ with coordinates $(-3, 1,5)$ increasing or decreasing at this instant? At what rate (with respect to time)?
+
+\item At what rate, with respect to the distance the fly moves, is the fly's distance from the origin changing at this instant? Be sure to include units.
+\end{enumerate}
+\end{exercise}
+
+
+\begin{question}  \label{QPferr34394}
+
+The position and velocity vectors of a beetle at a moment in time are shown below.
+
+\begin{onlineOnly}
+   \begin{center}
+\desmos{qw2v4hzsdj}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/qw2v4hzsdj}{151: Kite}
+
+Suppose 
+\[
+       |{\bf v}(t) | = 8 m/sec.
+\]
+
+Approximate
+
+\begin{enumerate}
+
+\item the rate of change (with respect to time) in the distance of the beetle from $O$ at this moment.
+
+\item the rate of change in the distance of the beetle from $O$ at this moment. This time the rate of change is with respect to the distance the beetle crawls.
+
 \end{enumerate}
 
-\end{exercise}
+
+\begin{explanation}
+Activate the folder \emph{Solution} in Line 1 above. From this we can see the following:
+
+\begin{enumerate}
+\item At this moment the beetle is approaching the origin at a rate equal to approximately $1/4$ of its speed. So at this moment the rate of change in its distance to the origin is about 
+\[
+  - \frac{1}{4}\left( 8 \text{ m/s}\right) = -2 \text{ m/s}.
+\]
+
+\item And at this moment it distance to the origin is changing at the rate of about 
+\[
+  - \frac{1}{4} \text{ m/m}.
+\]
+More simply put, the beetle is approaching the origin at a rate equal to about $1/4$ of its speed (whatever that speed might be).
+
+\end{enumerate}
+
+\end{explanation}
+
+\end{question}
+
+
+
+
+
 
 
 \begin{exercise} \label{ExLdmf347}
 At a certain instant a fly has position
 \[
-  {\bf p} = \langle -4, 5, 9  \rangle \text{ meters} 
+  {\bf p} = \langle -4, 3  \rangle \text{ meters} 
 \]
 relative to the origin and a speed of $10$ m/sec.
 
@@ -309,7 +367,7 @@ relative to the origin and a speed of $10$ m/sec.
 
 \item Suppose at this moment the fly is neither approaching nor moving away from the origin. Find a possibility for the fly's velocity  at this time.
 
-\item Suppose at this moment the fly is moving away from the origin at the rate of $4$ m/sec. Use vector arithmetic, \emph{not} algebra, to find a possibility for the fly's velocity  at this time.
+\item Suppose at this moment the fly is moving away from the origin at the rate of $7$ m/sec. Use vector arithmetic, \emph{not} algebra, to find a possibility for the fly's velocity  at this time.
 
 \end{enumerate}
 \end{exercise}
