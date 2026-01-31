@@ -130,18 +130,20 @@ With these ideas in mind, let's address the problem of the last question in gene
 
 The question is this:
 
-Given a parameterization ${\bf p}(t)$ of a motion (in the plane, in space, or in any number of dimensions), find an expression for the (instantaneous) rate of change in the distance to the origin.
+Given a motion ${\bf p}(t)$ (in the plane, in space or in any number of dimensions) that expresses position relative to the origin as a function of time, we wish to find an expression for the (instantaneous) rate of change in the distance to the origin.
 
 We'll answer this question twice:
 
 \begin{enumerate}
-\item working with the components of vectors, in violation of the second principle above, 
+\item once (in violation of the second principle above) working with the components of vectors, where we'll assume the motion 
+\[
+   {\bf p}(t) = \langle x , y \rangle = \langle f(t), g(t) \rangle 
+\]
+is in the plane,
 
 \item and again, working with just vectors, not with their components. 
 
 \end{enumerate}
-
-
 
 \begin{question}  \label{QE56rertdstg}
 
@@ -151,7 +153,7 @@ Here are the two computations. On the left is the Math 151 version. On the right
 
 \begin{align*}
 \frac{d}{dt}\Big| {\bf p}(t)  \Big| &=  \frac{d}{dt} \left(\sqrt{x^2+y^2}\right)    &&   \frac{d}{dt}\Big| {\bf p}(t)  \Big| = \frac{d}{dt} \left(  \sqrt{{\bf p} \cdot {\bf p}} \right) \\
- &= \frac{2x \answer{\frac{dx}{dt}} + 2y \answer{\frac{dy}{dt}}}{2\sqrt{x^2 + y^2}}  && \hskip 0.5 in = \frac{{\bf v}\cdot {\bf p} + {\bf p}\cdot {\bf v}}{2\sqrt{{\bf p}\cdot {\bf p}}} \\
+ &= \frac{2x \answer{dx/dt} + 2y \answer{\frac{dy}{dt}}}{2\sqrt{x^2 + y^2}}  && \hskip 0.5 in = \frac{{\bf v}\cdot {\bf p} + {\bf p}\cdot {\bf v}}{2\sqrt{{\bf p}\cdot {\bf p}}} \\
 &= \frac{x \frac{dx}{dt} + y \frac{dy}{dt}}{\sqrt{x^2+y^2}}  &&  \hskip 0.5 in = \frac{{\bf v}\cdot {\bf p}}{|{\bf p}|} 
 \end{align*}
 \end{question}
