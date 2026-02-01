@@ -18,7 +18,14 @@ Suppose at a certain instant, you are $20$ miles from home and driving at a spee
 \begin{enumerate}
 \item What can you say, if anything, about the rate (with respect to time) at which you are rotating about your home at this instant? Can you find lower and upper bounds for this rate?
 
-\item What additional information would you need to determine this rate? 
+To answer these questions, consider the following:
+\begin{enumerate}
+\item Suppose you are driving directly toward home, what is the rotation rate of the vector that gives your position relative to home? If you are driving directly away from home?
+
+\item In which direction should you drive to maximize this rotation rate?
+\end{enumerate}
+
+\item What additional information would you need to determine the rate at which you are rotating about home? 
 \end{enumerate}
 
 
@@ -36,27 +43,47 @@ expresses the position (in meters) of a beetle relative to the origin in terms o
 \end{center}
 \end{onlineOnly}
 
-               %\href{https://www.geogebra.org/classicx4nun5yb}{163: Distance to Origin}
-
 \href{https://www.desmos.com/calculator/fne4ma8yx2}{163: Rotating About the Origin 1}
 
+
+The animation shows the motion above. The worksheet shows also graphs of the functions
 \begin{enumerate}
-\item Play the slider $u$ in Line 2. Then sketch a graph of the function
+\item 
 \[
        \theta = f(t) \, , \, 0\leq t \leq 2\pi ,
-\] 
-that expresses the marked angle $\theta$ (measured in radians) as a function of the number of minutes past noon.
-
-\item Use your graph in part (a) to sketch a graph of the function 
+\]
+that expresses the polar angle $\theta$ of the position vector in terms of the number of minutes past noon, and its derivative
 \[
-  r = \frac{d\theta}{dt} = f^\prime(t) \, , \, 0\leq t \leq 2\pi .
+    r = \frac{d\theta}{dt} = f^\prime(t) \, , \, 0\leq t \leq 2\pi .
 \]
 
 \item Explain the meaning of the function $r=f^\prime(t)$ in this context. Include units in your explanation.
 
-\item Activate the folder \emph{Graphs} in Line 8 to see how you did.
+\item To make it easier for you to see both the sense and rotation rate of the position vector ${\bf p}(t)$, we have sketched the unit vector
+\[
+     {\bf u}(t) = \frac{{\bf p}(t)}{| {\bf p}(t) |}
+\]
+with its tail at the point $O_1$. 
+
+The tip $P_1$ of the vector ${\bf u}(t)$ moves along the unit circle centered at $O_1$ as $P$ moves around the ellipse. The derivative
+\[
+          \frac{d}{dt}\left( {\bf u}(t) \right) = \frac{d}{dt} \left(  \frac{{\bf p}(t)}{| {\bf p}(t) |}    \right) 
+\]
+gives the velocity of $P_1$ (the red vector) and the magnitude 
+\[
+         \left|  \frac{d}{dt}\left( {\bf u}(t) \right) \right|  =  \left| \frac{d}{dt} \left(  \frac{{\bf p}(t)}{| {\bf p}(t) |}    \right) \right| 
+\]
+its speed. The key point is that the speed of $P_1$ measures the absolute (ie. unsigned) rotation rate of the position vector ${\bf p}(t)$ about the orign. 
+
+\begin{enumerate}
+\item Explain why.
+\item Check that the speed of $P_1$ has the correct units.
+\end{enumerate}
+\begin{freeResponse}
+\end{freeResponse}
 
 \end{enumerate}
+
 \end{question}
 
 
@@ -66,11 +93,11 @@ This is a continuation of the first problem, but instead of working with the spe
 
 So we'll suppose the position function (relative to the origin, measured in meters) is
 \[
-      {\bf p}(t) = \langle f(t), g(t) \rangle ,
+      {\bf p}(t) = \langle x, y \rangle = \langle f(t), g(t) \rangle ,
 \]
 with input $t$ measured in the number of seconds past noon.
 
-Our goal is to find an expression for the function $r = h(t)$ that gives the beetle's rotation rate (in rad/sec) about the origin at time $t$ seconds past noon. This is really a related-rates problem and we'll use ideas from differential calculus to solve it.
+Our goal is to find an expression for the function $r = h(t)$ that gives the beetle's signed rotation rate (in rad/sec and negative when sense of rotation is clockwise) about the origin at time $t$ seconds past noon. This is really a related-rates problem and we'll use ideas from differential calculus to solve it.
 
 \begin{enumerate}
 \item Write an equation that relates the component functions $f(t)$, $g(t$) of the position vector and the signed angle $\theta$ from the positive $x$-axis to the position vector, measured counterclockwise.
@@ -82,7 +109,104 @@ Our goal is to find an expression for the function $r = h(t)$ that gives the bee
 \item Use your function and the position function from Question 1 to determine these rates of rotation at times $t=0$ and $t=3\pi/2$ minutes past noon.
 \end{enumerate}
 
+\begin{explanation}
+Since 
+\[
+   \tan\theta = \frac{y}{x},
+\]
+differentiating both sides with respect to $t$ and using the chain rule on the left, the chain and quotient rules on the right gives
+\[
+    \left(  \sec^2\theta \right) \left( \frac{d\theta}{dt} \right) \ =  \frac{x \frac{dy}{dt} - y \frac{dx}{dt}}{x^2} .
+\]
+
+Substituting 
+\[
+       \sec^2\theta = 1 + \tan^2\theta = \frac{\answer{x^2 + y^2}}{x^2}
+\]
+and solving for $d\theta/dt$,
+\[
+    \frac{d\theta}{dt} = \frac{x \frac{dy}{dt} - y \frac{dx}{dt}}{\answer{x^2 + y^2}} .
+\]
+This expression gives us the signed rotation rate of the position vector ${bf p}(t)$ about the origin. For this example where $t$ is measured in minutes, this rate has units radians/sec. It is positive (negative) when ${\bf p}(t)$ swings counterclockwise (clockwise) about the origin.
+
+\end{explanation}
 \end{question}
+
+
+To get a better understanding of this expression for the signed rotation rate, we'll turn to vectors. One approach is to keep working in two dimensions. Another is to put the $xy$-plane in $\mathbb{R}^3$ and work in three dimensions.
+
+For now, we'll keep working in two dimensions.
+
+You might have noticed the denominator in the expression for the rotation rate $d\theta/dt$ is the square
+\[
+     x^2 + y^2 =  |{\bf p}(t)  |^2 
+\]
+of the distance $|{\bf p}(t)|$ from the origin. 
+
+To interpret the numerator, we'll express it as the scalar product
+\[
+   x \frac{dy}{dt} - y \frac{dx}{dt}  =  \langle x,y \rangle \cdot  \biggr \langle \frac{dy}{dt} , -\frac{dx}{dt} \biggr \rangle .
+\]
+
+Now the vector 
+\[
+   {\bf v}_\perp = \biggr \langle \frac{dy}{dt} , -\frac{dx}{dt} \biggr \rangle
+\]
+is perpendicular to the velocity vector
+\[
+   {\bf v} = \biggr \langle \frac{dx}{dt} , \frac{dy}{dt} \biggr \rangle .
+\]
+And these two vectors also have the same magnitude. The means we can get the vector ${\bf v}_\perp$ by rotating ${\bf v}$ either clockwise or counterclockwise by $\pi/2$ radians. I'll leave it to you to check that a clockwise rotation by $\pi/2$ radians takes ${\bf v}$ to ${\bf v}_\perp$.
+
+So if $\theta_\perp$ ($0\leq \theta_\perp \leq \pi$) is the angle between ${\bf p}(t)$ to ${\bf v}_\perp$ and $\theta$ the signed angle ($-\pi/2 \leq \theta \leq \pi/2$) from ${\bf p}(t)$ to ${\bf v}(t)$, then
+\[
+       \theta_\perp =  \theta + \pi/2 . 
+\] 
+
+This tells us
+\begin{align*}
+  x \frac{dy}{dt} - y \frac{dx}{dt}  & =  \langle x,y \rangle \cdot  \biggr \langle \frac{dy}{dt} , -\frac{dx}{dt} \biggr \rangle  \\
+                                                  &= {\bf p}(t) \cdot {\bf v}_\perp \\
+                                                   &= \left|  {\bf p}(t)\right| \left| {\bf v}_\perp  \right| \cos\theta_\perp. \\
+                                                   &= \left|  {\bf p}(t)\right| \left| {\bf v}  \right| \sin\theta .
+\end{align*}
+
+Our conclusion is that
+\begin{align*}
+    \frac{d\theta}{dt}  &= \frac{x \frac{dy}{dt} - y \frac{dx}{dt}}{\answer{x^2 + y^2}}  \\
+                                &= \frac{\left|  {\bf p}(t)\right| \left| {\bf v} \right|}{|{\bf p}(t)|^2} \sin\theta \\
+                                &= \frac{|{\bf v}(t)|\sin\theta}{|{\bf p}(t)|} .
+\end{align*}
+
+
+
+\begin{question} \label{QPdferr}
+The discussion above was too complicated. 
+
+Let's take a more geometric approach to understanding the expression  %signed rotation rate
+%The above expression %for the rotation rate
+\[
+ \frac{d\theta}{dt} = \frac{|{\bf v}(t)|\sin\theta}{|{\bf p}(t)|}
+\]
+for the signed rotation rate of the position vector about the origin. The expression is in terms of the beetle's speed $|{\bf v}(t)|$, its distance $|{\bf p}(t)|$ from the origin, and the signed angle $\theta$ from ${\bf p}(t)$ to ${\bf v}(t)$.
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{kzb0kmaiez}{900}{600}  % x4nun5yb
+\end{center}
+\end{onlineOnly}
+
+               %\href{https://www.geogebra.org/classicx4nun5yb}{163: Distance to Origin}
+
+\href{https://www.desmos.com/calculator/kzb0kmaiez}{163: Rotation About the Origin 54}
+
+
+
+ 
+\end{question}
+
+
 
 \begin{question}  \label{QLDferfMAZ}
 This question relates the ideas in the previous question to vectors.
