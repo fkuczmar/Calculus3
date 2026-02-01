@@ -158,24 +158,24 @@ is perpendicular to the velocity vector
 \]
 And these two vectors also have the same magnitude. The means we can get the vector ${\bf v}_\perp$ by rotating ${\bf v}$ either clockwise or counterclockwise by $\pi/2$ radians. I'll leave it to you to check that a clockwise rotation by $\pi/2$ radians takes ${\bf v}$ to ${\bf v}_\perp$.
 
-So if $\theta_\perp$ ($0\leq \theta_\perp \leq \pi$) is the angle between ${\bf p}(t)$ to ${\bf v}_\perp$ and $\theta$ the signed angle ($-\pi/2 \leq \theta \leq \pi/2$) from ${\bf p}(t)$ to ${\bf v}(t)$, then
+So if $\phi_\perp$ ($0\leq \phi_\perp \leq \pi$) is the angle between ${\bf p}(t)$ to ${\bf v}_\perp$ and $\phi$ the signed angle ($-\pi/2 \leq \phi \leq \pi/2$) from ${\bf p}(t)$ to ${\bf v}(t)$, then
 \[
-       \theta_\perp =  \theta + \pi/2 . 
+       \phi_\perp =  \phi + \pi/2 . 
 \] 
 
 This tells us
 \begin{align*}
   x \frac{dy}{dt} - y \frac{dx}{dt}  & =  \langle x,y \rangle \cdot  \biggr \langle \frac{dy}{dt} , -\frac{dx}{dt} \biggr \rangle  \\
                                                   &= {\bf p}(t) \cdot {\bf v}_\perp \\
-                                                   &= \left|  {\bf p}(t)\right| \left| {\bf v}_\perp  \right| \cos\theta_\perp. \\
-                                                   &= \left|  {\bf p}(t)\right| \left| {\bf v}  \right| \sin\theta .
+                                                   &= \left|  {\bf p}(t)\right| \left| {\bf v}_\perp  \right| \cos\phi_\perp. \\
+                                                   &= \left|  {\bf p}(t)\right| \left| {\bf v}  \right| \sin\phi .
 \end{align*}
 
 Our conclusion is that
 \begin{align*}
     \frac{d\theta}{dt}  &= \frac{x \frac{dy}{dt} - y \frac{dx}{dt}}{\answer{x^2 + y^2}}  \\
-                                &= \frac{\left|  {\bf p}(t)\right| \left| {\bf v} \right|}{|{\bf p}(t)|^2} \sin\theta \\
-                                &= \frac{|{\bf v}(t)|\sin\theta}{|{\bf p}(t)|} .
+                                &= \frac{\left|  {\bf p}(t)\right| \left| {\bf v} \right|}{|{\bf p}(t)|^2} \sin\phi \\
+                                &= \frac{|{\bf v}(t)|\sin\phi}{|{\bf p}(t)|} .
 \end{align*}
 
 
@@ -186,9 +186,9 @@ The discussion above was too complicated.
 Let's take a more geometric approach to understanding the expression  %signed rotation rate
 %The above expression %for the rotation rate
 \[
- \frac{d\theta}{dt} = \frac{|{\bf v}(t)|\sin\theta}{|{\bf p}(t)|}
+ \frac{d\theta}{dt} = \frac{|{\bf v}(t)|\sin\phi}{|{\bf p}(t)|}
 \]
-for the signed rotation rate of the position vector about the origin. The expression is in terms of the beetle's speed $|{\bf v}(t)|$, its distance $|{\bf p}(t)|$ from the origin, and the signed angle $\theta$ from ${\bf p}(t)$ to ${\bf v}(t)$.
+for the signed rotation rate of the position vector about the origin. The expression is in terms of the beetle's speed $|{\bf v}(t)|$, its distance $|{\bf p}(t)|$ from the origin, and the signed angle $\phi$ from ${\bf p}(t)$ to ${\bf v}(t)$.
 
 
 \begin{onlineOnly}
@@ -201,7 +201,18 @@ for the signed rotation rate of the position vector about the origin. The expres
 
 \href{https://www.desmos.com/calculator/kzb0kmaiez}{163: Rotation About the Origin 54}
 
+Use the picture above to find an expression for $d\theta/dt$ as follows.
 
+\begin{enumerate}
+\item Use right triangle trigonometry in $\Delta PRQ$ to express the angle $\phi$ and the length $PR$ in terms of the distance
+\[
+        PQ = \left| \overrightarrow{PQ} \right| = v \Delta t .
+\]
+
+\item Next express the change $\Delta \theta$ in the polar angle in terms of $v$, $\Delta t$, $|{\bf p}(t)|$,  and $\phi$.
+
+\item Finally, divide both sides of your last equation by $\Delta t$ and take a limit as $\Delta t\to 0$.
+\end{enumerate}
 
  
 \end{question}
@@ -209,14 +220,15 @@ for the signed rotation rate of the position vector about the origin. The expres
 
 
 \begin{question}  \label{QLDferfMAZ}
-This question relates the ideas in the previous question to vectors.
-
-The goal here is to relate the signed rotation rate about the origin to the vector product 
+The goal here is to relate the signed rotation rate $d\theta/dt$ of a motion's position vector to the vector product 
 \[
  {\bf L}(t) = {\bf p}(t) \times {\bf v}(t)
 \]
-of the position and velocity vectors of the motion.
-
+of the position and velocity vectors of the motion. We'll assume the motion 
+\[
+     \langle x, y , 0  \rangle = \langle f(t), g(t), 0\rangle 
+\] 
+lies in the $xy$-plane of three-dimensional space.
 
 \begin{onlineOnly}
     \begin{center}
@@ -245,12 +257,21 @@ of the position and velocity vectors of the motion.
 \] 
 \end{enumerate}
 
-\item Make a guess and express the signed rotation rate of the motion about the origin in terms of the vectors ${\bf L}(t)$ and ${\bf p}(t)$. Make sure your expression has the correct units.
+%\item Make a guess and express the signed rotation rate of the motion about the origin in terms of the vectors ${\bf L}(t)$ and ${\bf p}(t)$. Make sure your expression has the correct units.
 
-\item Use the result of Question 1 to prove your conjecture. Start by finding an expression for the vector ${\bf L}(t)$ for the general motion
+\item Find an expression for the vector ${\bf L}(t)$ for the motion
 \[
-  {\bf p}(t) = \langle f(t), g(t) \rangle .
+  {\bf p}(t) = \langle f(t), g(t) , 0\rangle .
 \]
+
+\item Now use our previous expression
+\[
+    \frac{d\theta}{dt} = \frac{x \frac{dy}{dt} - y \frac{dx}{dt}}{\answer{x^2 + y^2}} .
+\]
+for the rotation rate of the position vector to express this same rate in terms of the vectors ${\bf L}(t)$, ${\bf p}(t)$, and ${\bf k} = \angle 0,0, 1 \rangle$.
+
+\item Check your expression for $d\theta/dt$ has the correct units.
+
 \end{enumerate}
 \end{question}
 
