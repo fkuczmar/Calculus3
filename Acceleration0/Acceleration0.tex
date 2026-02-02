@@ -9,18 +9,96 @@ Acceleration and speed.
 \end{abstract}
 \maketitle
 
-In everday English we might say something like ``a car is accelerating'' to mean that the car is speeding up. But this is not really correct. Keep in mind that \emph{acceleration measures the rate of change of velocity with respect to time.} And since velocity is a vector, so is acceleration. Velocity encodes both speed and direction, so acceleration encodes the rates of change of both speed and direction.
+Here's the question for this chapter.
+
+\begin{question}  \label{QPfdefer43445r}
+Suppose we are given the velocity and acceleration vectors of a motion at a certain time, either graphically or numerically. How would we determine whether the object is speeding up or slowing down at this instant? And how can we approximate or compute this rate of change of speed with respect to time?
+
+For example, suppose the velocity and acceleration vectors at time $t$ seconds are as illustrated below.  Suppose also that 
+\[
+ |{\bf a}(t)| = 10 \text{ (m/s)/s} .
+\]
+
+\begin{enumerate}
+\item Do you think the object is speeding up or slowing down at this time? Why?
+
+\item How would you approximate the rate of change in the speed (with respect to time) at this instant?
+\end{enumerate}
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{76rs0m8ofp}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/76rs0m8ofp}{163: Tangential Component of Acceleration}
+
+\begin{explanation}
+We can answer this question in several ways.
+
+\begin{enumerate}
+
+\item The first is to ammend the picture above by activating the folder \emph{Solution} in Line 1 to approximate the change in speed over a small time interval $\Delta t$. Fill in the details to show 
+\[
+     \frac{d}{dt}\left( |{\bf v}(t)| \right) = \frac{{\bf a}\cdot {\bf v}}{|{\bf v}|} .
+\] 
+ 
+In other words, the rate of change of speed with respect to time is the scalar projection of the acceleration vector in the direction of motion (ie. in the direction of the velocity vector). 
+
+\item Use the chain rule and the product rule to compute the derivative
+\[
+ \frac{d}{dt}\left( |{\bf v}(t)| \right) = \frac{d}{dt} \left( \sqrt{{\bf v}(t) \cdot {\bf v}(t)}   \right) .
+\]
+
+\item The idea is to forget about the position function. Instead we'll imagine the hodograph and write the velocity function of a motion
+in polar form as
+\[
+    {\bf v} = v \langle \cos \phi, \sin \phi \rangle .
+\]
+Here $v = | {\bf v}|$ is the speed and $\phi$ the angle from the positive $x$-axis to the velocity vector, measured counterclockwise. 
+
+Now differentiate with respect to time, keeping in mind that both $v$ and $\phi$ are functions of time. Using the product rule, we find that the acceleration vector is
+\[
+    {\bf a} = \frac{d{\bf v}}{dt} = \frac{dv}{dt} \langle \cos\phi, \sin\phi \rangle + v \frac{d\phi}{dt} \langle -\sin\phi, \cos \phi \rangle .
+\] 
+
+The reason for doing this is that the derivative $dv/dt$ is exactly what we want to compute. It is the rate of change of speed with respect to time. To pick off this rate of change we just take the scalar product of the acceleration with the unit vector
+\[
+   \frac{{\bf v}}{|{\bf v}|} = \langle \cos\phi, \sin \phi \rangle
+\]
+in the direction of motion. Then
+\begin{align*}
+{\bf a} \cdot \frac{{\bf v}}{|{\bf v}|} &= {\bf a} \cdot \langle \cos\phi, \sin \phi \rangle \\
+ & = \left(     \frac{dv}{dt} \langle \cos\phi, \sin\phi \rangle + v \frac{d\phi}{dt} \langle -\sin\phi, \cos \phi \rangle      \right) \cdot \langle \cos\phi, \sin \phi \rangle \\
+                    & = \frac{dv}{dt} .
+\end{align*} 
+And that's what we wanted to show.
+
+\emph{The rate of change in the speed of a motion with respect to time is the scalar projection of the acceleration vector onto the velocity vector.}
+
+The advantage of this proof is that it is simple. A disadvantage is that it works only for motions in the plane. The same fact holds for motions in space, but we'll skip the proof for now. Let's look at some examples first.
+
+
+\end{enumerate}
+
+\end{explanation}
+\end{question}
+
+\section{Comments About Acceleration}
+
+In everyday English we might say something like ``a car is accelerating'' to mean that the car is speeding up. But this is not really correct. Keep in mind that \emph{acceleration measures the rate of change of velocity with respect to time.} And since velocity is a vector, so is acceleration. Velocity encodes both speed and direction, so acceleration encodes the rates of change of both speed and direction.
 
 This chapter focuses on determining the rate of change (with respect to time) in speed. For this, we'll need both the acceleration and velocity vectors.
 
-Let's first clear up two common misconceptions. One is that acceleration measures the rate at which an object's speed is changing. This cannot possibly be true. Acceleration is a vector, but the rate of change of speed with respect to time is a scalar.
+Let's first clear up two common misconceptions. One is that acceleration measures the rate of change in an object's speed with respect to time. This cannot possibly be true. Acceleration is a vector, but the rate of change of speed with respect to time is a scalar.
 
-The other is that for circular motion the acceleration vector always points towad the path's center. The first example below shows that this is false.
+The other is that for circular motion the acceleration vector always points directly toward the center of motion. The first example below shows that this is false.
 
-Now one question that might arise is how to visualize the acceleration vector. One idea is to gather the velocity vectors together by pinning their tails at a common origin. The tips of these pinned vectors trace out a curve called the \emph{hodograph}, but it might as well be called the velocity curve. As a point $P$ follows the motion, the tip $P^*$ of the velocity vector traces the hodograph and is a motion itself. The derivative of this new motion, with respect to time, is the acceleration vector. So the acceleration vector is tangent to the hodograph. And the magnitude of the acceleration measures the speed of $P^*$ as it moves along the hodograph. Here's an example.
+To visualize the acceleration vector we gather the velocity vectors together by pinning their tails at a common origin. The tips of these pinned vectors trace out a curve called the \emph{hodograph} (from the Greek \emph{hodos} for path, literally \emph{path-writer}. other related words include odometer, method, exodus, period, cathode, anode), but it might as well be called the velocity curve. As a point $P$ follows the motion, the tip $P^*$ of the velocity vector traces the hodograph and is a motion itself. The derivative of this new motion, with respect to time, is the acceleration vector. This makes the acceleration vector tangent to the hodograph. And the magnitude of the acceleration is just the speed of $P^*$ as it moves along the hodograph. Here's an example.
 
 
 \begin{example} \label{EX98df3rhg}
+The point $P$ oscillates back and forth on the circular path shown below.
 
 \begin{onlineOnly}
     \begin{center}
@@ -31,7 +109,26 @@ Now one question that might arise is how to visualize the acceleration vector. O
 \href{https://www.desmos.com/calculator/cbveovq3co}{163: Acceleration Vector 1}
 
 
+\item Drag or play the slider $u$ in Line 2 to start the motion.
+
+\item Look at the velocity vector and the hodograph to make sure you understand how the hodograph is determined.
+
+\item Watch the acceleration vector (green) in the motion and on the hodograph to make sure you understand what's going on.
+
+\item Activate the folder in Line 1 to resolve the accelaration vector into components parallel and normal to the velocity vector.
+
+\item Look at the graphs of the speed function and the rate of change in the speed function. How is the latter related to the acceleration vector? 
+
 \end{example}
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{dcba538898}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/dcba538898}{163: Simple Harmonic Motion 23}
 
 
 
@@ -83,33 +180,6 @@ This section under construction. Ignore it for now.
 \section{Speed and Acceleration}
 We saw in the last chapter that for a circular motion, we can compute the rate of change in speed with respect to time as the scalar projection of the acceleration vector onto the velocity vector. The same is true for any motion and the proof in this more general case turns out to be very quick.
 
-The idea is to forget about the position function. Instead we'll imagine the hodograph and write the velocity function of a motion
-in polar form as
-\[
-    {\bf v} = v \langle \cos \phi, \sin \phi \rangle .
-\]
-Here $v = | {\bf v}|$ is the speed and $\phi$ the angle from the positive $x$-axis to the velocity vector, measured counterclockwise. 
-
-Now differentiate with respect to time, keeping in mind that both $v$ and $\phi$ are functions of time. Using the product rule, we find that the acceleration vector is
-\[
-    {\bf a} = \frac{d{\bf v}}{dt} = \frac{dv}{dt} \langle \cos\phi, \sin\phi \rangle + v \frac{d\phi}{dt} \langle -\sin\phi, \cos \phi \rangle .
-\] 
-
-The reason for doing this is that the derivative $dv/dt$ is exactly what we want to compute. It is the rate of change of speed with respect to time. To pick off this rate of change we just take the scalar product of the acceleration with the unit vector
-\[
-   \frac{{\bf v}}{|{\bf v}|} = \langle \cos\phi, \sin \phi \rangle
-\]
-in the direction of motion. Then
-\begin{align*}
-{\bf a} \cdot \frac{{\bf v}}{|{\bf v}|} &= {\bf a} \cdot \langle \cos\phi, \sin \phi \rangle \\
- & = \left(     \frac{dv}{dt} \langle \cos\phi, \sin\phi \rangle + v \frac{d\phi}{dt} \langle -\sin\phi, \cos \phi \rangle      \right) \cdot \langle \cos\phi, \sin \phi \rangle \\
-                    & = \frac{dv}{dt} .
-\end{align*} 
-And that's what we wanted to show.
-
-\emph{The rate of change in the speed of a motion with respect to time is the scalar projection of the acceleration vector onto the velocity vector.}
-
-The advantage of this proof is that it is simple. A disadvantage is that it works only for motions in the plane. The same fact holds for motions in space, but we'll skip the proof for now. Let's look at some examples first.
 
 \section{Projectile Motion}
 \begin{question} \label{Q:3445r45r}

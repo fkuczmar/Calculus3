@@ -280,31 +280,32 @@ The takeaway is this:
 
 The signed rotation rate about the origin for a motion ${\bf p}(t)$ in the $xy$-plane is equal to %the scalar projection
 \[
-   \omega(t) =  \frac{ ( {\bf p}(t) \times {\bf v}(t) ) \cdot {\bf k}}{\left| {\bf p}(t) \right|^2} .
+   \omega(t) = \frac{d\theta}{dt} =  \frac{ ( {\bf p}(t) \times {\bf v}(t) ) \cdot {\bf k}}{\left| {\bf p}(t) \right|^2} .
 \]
 This is the quotient of the scalar projection of the vector 
 \[
     {\bf L}(t) = {\bf p}(t) \times {\bf p}^\prime(t)
 \] 
-in the direction ${\bf k} = \langle 0,0,1 \rangle$ of the positive $z$-axis and the square of the distance $|{\bf p}(t)|$ from the origin.
+in the direction ${\bf k} = \langle 0,0,1 \rangle$ and the square of the distance $|{\bf p}(t)|$ from the origin.
 
-The rotation rate is positive when the motion rotates counterclockwise about the origin when viewed looking down on the $xy$-plane from the positive $z$-axis. It is negative for a clockwise rotation.
+The rotation rate is positive when the motion rotates counterclockwise about the origin when viewed looking down on the $xy$-plane from the positive $z$-axis. It is negative for a clockwise rotation from this same viewpoint.
 
-We can also write the \emph{absolute} rotation rate as
+We can use the expression for $\omega(t)$ to write the signed rotation rate as
 \[
-   \left| \omega(t)  \right| = \frac{\left| {\bf v}(t)  \right| \sin\phi}{\left|  {\bf p}(t) \right|} ,
+    \omega(t)  = \frac{\left| {\bf v}(t)  \right| \sin\phi}{\left|  {\bf p}(t) \right|} ,
 \]
-where $\phi$ is the angle between the position and velocity vectors. This rate is never negative and does not capture the sense of rotation.
+where $\phi$ is the signed angle from the position to the velocity vector. %This rate is never negative and does not capture the sense of rotation.
 
 \begin{enumerate}
-\item Check that this expression is dimensionally correct.
+\item Use properties of the vector product and scalar product to show this expression for $\omega(t)$ is equal to the one above.
 
-\item Use properties of the vector product to show this expression for $\omega(t)$ is equal to the one above.
+\item Check that this expression is dimensionally correct.
 
 \item This formula for the rotation rate is closely related to something your learned in trigonometry. What?
 
-\item Explain intuitively why this expression gives the rotation rate.
-
 \end{enumerate}
+
+
+\section{Exercises}
 
 \end{document}
