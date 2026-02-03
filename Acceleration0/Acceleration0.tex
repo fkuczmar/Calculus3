@@ -1,5 +1,5 @@
 \documentclass{ximera}
-\title{The Acceleration Vector, Part 1}
+\title{The Acceleration Vector, Introduction}
 
 \newcommand{\pskip}{\vskip 0.1 in}
 
@@ -12,9 +12,12 @@ Acceleration and speed.
 Here's the question for this chapter.
 
 \begin{question}  \label{QPfdefer43445r}
-Suppose we are given the velocity and acceleration vectors of a motion at a certain time, either graphically or numerically. How would we determine whether the object is speeding up or slowing down at this instant? And how can we approximate or compute this rate of change of speed with respect to time?
+Given the velocity and acceleration vectors of a motion at a certain time, either graphically or numerically, how would we determine whether the object is speeding up or slowing down at this instant? And how can we approximate or compute this rate of change of speed with respect to time?
 
-For example, suppose the velocity and acceleration vectors at time $t$ seconds are as illustrated below.  Suppose also that 
+For example, suppose the velocity and acceleration vectors at time $t$ seconds are as illustrated below.  Suppose also that
+\[
+    |{\bf v}(t)| = 18 \text{ (m/s)} 
+\] 
 \[
  |{\bf a}(t)| = 10 \text{ (m/s)/s} .
 \]
@@ -23,6 +26,8 @@ For example, suppose the velocity and acceleration vectors at time $t$ seconds a
 \item Do you think the object is speeding up or slowing down at this time? Why?
 
 \item How would you approximate the rate of change in the speed (with respect to time) at this instant?
+
+\item How would you approximate the object's velocity $0.1$ seconds later? Its speed?
 \end{enumerate}
 
 \begin{onlineOnly}
@@ -50,7 +55,7 @@ In other words, the rate of change of speed with respect to time is the scalar p
  \frac{d}{dt}\left( |{\bf v}(t)| \right) = \frac{d}{dt} \left( \sqrt{{\bf v}(t) \cdot {\bf v}(t)}   \right) .
 \]
 
-\item The idea is to forget about the position function. Instead we'll imagine the hodograph and write the velocity function of a motion
+\item The idea is to forget about the position function. Instead we'll write the velocity function of a motion
 in polar form as
 \[
     {\bf v} = v \langle \cos \phi, \sin \phi \rangle .
@@ -62,7 +67,7 @@ Now differentiate with respect to time, keeping in mind that both $v$ and $\phi$
     {\bf a} = \frac{d{\bf v}}{dt} = \frac{dv}{dt} \langle \cos\phi, \sin\phi \rangle + v \frac{d\phi}{dt} \langle -\sin\phi, \cos \phi \rangle .
 \] 
 
-The reason for doing this is that the derivative $dv/dt$ is exactly what we want to compute. It is the rate of change of speed with respect to time. To pick off this rate of change we just take the scalar product of the acceleration with the unit vector
+The derivative $dv/dt$ is exactly what we want to compute. It is the rate of change of speed with respect to time. To pick off this rate of change we just take the scalar product of the acceleration with the unit vector
 \[
    \frac{{\bf v}}{|{\bf v}|} = \langle \cos\phi, \sin \phi \rangle
 \]
@@ -76,7 +81,9 @@ And that's what we wanted to show.
 
 \emph{The rate of change in the speed of a motion with respect to time is the scalar projection of the acceleration vector onto the velocity vector.}
 
-The advantage of this proof is that it is simple. A disadvantage is that it works only for motions in the plane. The same fact holds for motions in space, but we'll skip the proof for now. Let's look at some examples first.
+The advantage of this proof is that it is simple. A disadvantage is that it works only for motions in the plane. The same fact holds for motions in space as the proofs in parts (a) and (b) show.
+
+Next a few comments about acceleration. Then we'll look at some examples.
 
 
 \end{enumerate}
@@ -122,6 +129,10 @@ The point $P$ oscillates back and forth on the circular path shown below.
 \end{example}
 
 
+\section{Simple Harmonic Motion}
+
+Play the slider in Line 1 to activate the animation below and see a mass oscillating in simple harmonic motion. Pay particular attention to the velocity and acceleration vectors as wel as the graphs of the speed function (orange) and the function that gives the rate of change of speed with respect to time (red).
+
 \begin{onlineOnly}
     \begin{center}
 \desmos{dcba538898}{900}{600}
@@ -130,12 +141,22 @@ The point $P$ oscillates back and forth on the circular path shown below.
 
 \href{https://www.desmos.com/calculator/dcba538898}{163: Simple Harmonic Motion 23}
 
+To better understand the velocity and acceleration vectors, we need to first realize that simple harmonic motion is driven by uniform (constant speed) circular motion. To see what this means activate the folder \emph{Circle} on Line 2 above.
+
+You'll see a point $P$ moving around a circle at a constant speed, along with its velocity and acceleration vectors. Note that these vectors are orthogonal. Explain why.
+\begin{freeResponse}
+\end{freeResponse}
+
+We get the simple harmonic motion of the mass by projecting the uniform circular motion of $P$ orthogonally onto the horizontal diameter. Then the velocity and acceleration of the mass are the vector projections of the veloicty and acceleration of $P$ in the horizontal direction. Make sure you can see this in the animation.
 
 
 
-Before addressing this question, we'll jump up one level and consider an analogous question about position and velocity. But first, try the following question.
 
-\begin{question}  \label{Q34r05r34gtt}
+%Before addressing this question, we'll jump up one level and consider an analogous question about position and velocity. But first, try the following question.
+
+\section{Exercises}
+
+\begin{exercise}  \label{Q34r05r34gtt}
 \begin{enumerate}
 \item Interpret the meanings of the expressions 
 \[ 
@@ -160,28 +181,68 @@ is the magnitude (in $m/s^2)$ of the acceleration vector for a motion with  velo
 \end{enumerate}
 \begin{freeResponse}
 \end{freeResponse}
-\end{question}
+\end{exercise}
+
+%\section{Escaping from the Origin} 
+%This section under construction. Ignore it for now.
+
+%\begin{question}  \label{QErerttdfg}
+%\begin{align*}
+%\frac{d}{dt}\Big| {\bf p}(t)  \Big| &=  \frac{d}{dt} \left(\sqrt{x^2+y^2}\right)    &&   \frac{d}{dt}\Big| {\bf p}(t)  \Big| = \frac{d}{dt} \left(  \sqrt{{\bf p} \cdot {\bf p}} \right) \\
+% &= \frac{2x \answer{\frac{dx}{dt}} + 2y \answer{\frac{dy}{dt}}}{2\sqrt{x^2 + y^2}}  && \hskip 0.5 in = \frac{{\bf v}\cdot {\bf p} + {\bf p}\cdot {\bf v}}{2\sqrt{{\bf p}\cdot {\bf p}}} \\
+%&= \frac{x \frac{dx}{dt} + y \frac{dy}{dt}}{\sqrt{x^2+y^2}}  &&  \hskip 0.5 in = \frac{{\bf v}\cdot {\bf p}}{|{\bf p}|} 
+%\end{align*}
+%\end{question}
+
+
+\begin{exercise} \label{Ex87d3}
+
+\begin{enumerate}
+
+\item The continuous function ${\bf g_1}(t)$, $t\geq 0$, gives the acceleration (in m/s/s) of a rock at time $t$ seconds. The rock has velocity ${\bf v}_2$ at time $t=2$ seconds and position ${\bf p}_2$ relative to the orign at this time.
+
+Find expressions for the rock's velocity ${\bf v}(t)$(in meters/sec) and position ${\bf p}(t)$ (in meters) functions.
+
+\item Suppose now that the acceleration is constant and equal to ${\bf g}$. Use the result of part (a) to find expressions for the veloicty and position functions.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{ggn3h1fpm1}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/ggn3h1fpm1}{163: Projectile Motion 24}
+
+\item Write and solve the appropriate inequality to determine when the rock is slowing down.
+
+\item Suppose as in the animation above that
+\[
+ {\bf g} = \langle  -1, -1, -3\rangle \text{ m/s/s} , 
+\]
+\[
+     {\bf v}_2 = \langle  -1, 2, 1\rangle \text{ m/s} , 
+\]
+and
+\[
+ {\bf p}_2 = \langle  2, 1, 4\rangle \text{ m} . 
+\]
+
+Find all times when the rock is slowing down. 
+
+\item Activate the folders \emph{Resolution of Acceleration Vector} in Line 12 and \emph{Graphs, speed function, rate of change of speed function} in Line 17. Reconcile the graphs with the motion and the tangential component of acceleration.
+
+\item Back to working in general, prove that the motion lies in a plane and find an equation of this plane.
+
+\item 
+
+\end{enumerate}
+
+
+\end{exercise}
 
 
 
-\section{Escaping from the Origin} 
-This section under construction. Ignore it for now.
-
-\begin{question}  \label{QErerttdfg}
-\begin{align*}
-\frac{d}{dt}\Big| {\bf p}(t)  \Big| &=  \frac{d}{dt} \left(\sqrt{x^2+y^2}\right)    &&   \frac{d}{dt}\Big| {\bf p}(t)  \Big| = \frac{d}{dt} \left(  \sqrt{{\bf p} \cdot {\bf p}} \right) \\
- &= \frac{2x \answer{\frac{dx}{dt}} + 2y \answer{\frac{dy}{dt}}}{2\sqrt{x^2 + y^2}}  && \hskip 0.5 in = \frac{{\bf v}\cdot {\bf p} + {\bf p}\cdot {\bf v}}{2\sqrt{{\bf p}\cdot {\bf p}}} \\
-&= \frac{x \frac{dx}{dt} + y \frac{dy}{dt}}{\sqrt{x^2+y^2}}  &&  \hskip 0.5 in = \frac{{\bf v}\cdot {\bf p}}{|{\bf p}|} 
-\end{align*}
-\end{question}
-
-
-
-\section{Speed and Acceleration}
-We saw in the last chapter that for a circular motion, we can compute the rate of change in speed with respect to time as the scalar projection of the acceleration vector onto the velocity vector. The same is true for any motion and the proof in this more general case turns out to be very quick.
-
-
-\section{Projectile Motion}
+%\section{Projectile Motion}
 \begin{question} \label{Q:3445r45r}
 The animation below shows a projectile motion launched at time $t=0$ seconds from position ${\bf p}(0) = \overrightarrow{OA}$ relative to the origin with initial velocity ${\bf v}_0 = {\bf v}(0)$. The projectile moves with constant acceleration ${\bf g}$.
 
