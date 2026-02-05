@@ -40,20 +40,157 @@ Suppose the motion ${\bf p}(t)$ of Question 1 lies in the $xy$-plane of three-di
 \end{question}
 
 
+\section{Approximating a Motion}
+
+\begin{question} \label{QM99df83Z}
+
+The purpose of this question is to approximate the motion
+\[
+     {\bf p}(t) = \Biggr \langle  t, \frac{t^2}{2} -2, \frac{t^3}{8} \Biggr \rangle \, , \, -4 \leq t \leq 4 ,
+\]
+near time $t=-2$.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{whqv470rod}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/whqv470rod}{163: Approximating a Motion}
+
+\begin{enumerate}
+\item The first approximation is linear. It is a motion with a constant velocity. Use integration to parameterize this approximation ${\bf p}_1(t)$.
+
+\item Activate the folder \emph{Constant Velocity Approximation} on Line 5 to see the path of the linear approximation. Then play the slider $t_3$ in Line 1 to check its accuracy.
+
+\item The second approximation is a quadratic function. It is a motion with constant acceleration. Use integration to parameterize this quadratic approximation ${\bf p}_2(t)$.
+
+\item Activate the folder \emph{Constant Acceleration Approximation} on Line 9 to see the path of the quadratic approximation. Then play the slider $t_3$ in Line 1 to to check its accuracy.
+
+\end{enumerate}
+\end{question}
+
+\section{The Osculating Plane}
+The quadratic approximation to a motion near time $t_0$ in $\mathbb{R}^3$ lies in a plane. This plane is called the \emph{osculating  plane} to the curve at the point $P$ of the motion.
+
+\begin{question}  \label{Qdfderre}
+\begin{enumerate}
+\item How can we use the velocity and acceleration vectors of a motion ${\bf p}(t)$ to find a unit vector ${\bf B}(t)$ normal to the osculating plane at time $t$? Choose the vector ${\bf B}(t)$ that makes ${\bf v}(t)$, ${\bf a}(t)$, ${\bf B}(t)$ a right-handed system.
+
+\item Compute the \emph{binormal} vector ${\bf B}(t)$ for the motion
+\[
+  {\bf p}(t) = \Biggr \langle  t, \frac{t^2}{2} -2, \frac{t^3}{8} \Biggr \rangle \, , \, -4 \leq t \leq 4 ,
+\] 
+at time $t=-2$.
+
+\item Find an equation for the osculating plane at time $t=-2$. Use the worksheet in Question 3 to check your equation.
+\end{enumerate}
+\end{question}
+
+ 
 \section{The Principal Normal Vector}
 
-Let ${\bf p}(t)$ be a beetle's position function and let ${\bf v}(t)$ and ${\bf a}(t)$ be its velocity and acceleration functions.
+%Let ${\bf p}(t)$ be a beetle's position function and let ${\bf v}(t)$ and ${\bf a}(t)$ be its velocity and acceleration functions.
 
-The unit tangent 
-\[
-   {\bf T}(t)  =\frac{{\bf v}(t)}{|{\bf v}(t)|}
-\]
-of the motion is easy to understand. It's just the unit vector in the direction of motion.
+%The unit tangent 
+%\[
+%   {\bf T}(t)  =\frac{{\bf v}(t)}{|{\bf v}(t)|}
+%\]
+%of the motion is easy to understand. It's just the unit vector in the direction of motion.
 
 The \emph{principal normal} ${\bf N}(t)$ is a vector normal to ${\bf T}(t)$. For a motion in two-dimensions there are two directions normal to ${\bf T}(t)$. The vector ${\bf N}(t)$ points in the direction in which the beetle is turning. So if the beetle is making a left turn, the principal normal is normal to the curve and points to the beetle's left. For a right turn, ${\bf N}(t)$ points to the beetle's left.
 
 But in three dimensions, there is an entire circle of directions normal to the unit tangent. How is it possible to pick out one of these as being the unit normal? 
 
+The principal normal ${\bf N}(t)$ is a unit vector normal to the path and parallel to the osculating plane. It makes  ${\bf T}(t)$, ${\bf N}(t)$, ${\bf B}(t)$ a right-handed coordinate system. Here ${\bf T}(t)$ is the unit vector parallel to the velocity
+\[
+     \frac{d}{dt} \left( {\bf p}(t) \right)  = {\bf v}(t).
+\]
+
+Here are three ways to compute the principal normal.
+
+\begin{enumerate}
+\item As the unit vector in the direction of the derivative
+\[
+     \frac{d}{dt} \left( {\bf T}(t) \right) .
+\]
+This is often computationally difficult.
+
+\item First compute the vector projection of the acceleration vector ${\bf a}(t)$ in the direction of the velocity vector ${\bf v}(t)$. Then use vector arithmetic to compute ${\bf N}(t)$ as the unit vector in the direction of the component of ${\bf a}(t)$ normal to ${\bf v}(t)$.
+
+\item The easiest way is to use the binormal and unit tangent vectors. 
+
+
+\begin{question} \label{Qdf3rr3}
+Use methods (c) and (b) above to compute the principal normal and binormal of the motion
+\[
+  {\bf p}(t) = \Biggr \langle  t, \frac{t^2}{2} -2, \frac{t^3}{8} \Biggr \rangle \, , \, -4 \leq t \leq 4 ,
+\]
+at the point $P(2,2,1)$.
+\end{question}
+
+
+   
+%Then the princicpal normal ${\bf N}(t)$ is one of two units vectors normal to both ${\bf b}(t)$ and ${\bf v}(t)$. You can find the direction of ${\bf N}(t)$ by computing another vector product. Which one? It is important to think about the correct order here. For this, keep in mind Question 2 above about turning and that the principal normal points in the direction in which the curve turns, ie. in the direction of the vector
+\[
+     \frac{d}{dt} \left( {\bf T}(t) \right) .
+\]
+
+As an additional bonus, we get the third vector of the TNB frame. It is the unit vector ${\bf B}(t)$ in the direction of the vector ${\bf b}(t)$. This \emph{binormal} vector is normal to the osculating plane.
+
+\end{enumerate}
+
+%We can think of it this way. Pick an arbitrary unit vector ${\bf n}$ normal to ${\bf T}(t)$ at the point $P$ of the path and draw the plane through $P$ parallel to ${\bf n}$ and ${\bf T}(t)$. Many of these planes will cut the path quite sharply. We're looking for the one (the \emph{osculating plane}) that fits the curve best near $P$. Best means that of all these possible planes tangent to the path at $P$, the curve near $P$ comes closest to lying in that one osculating plane. There are two unit normals to the curve that ....
+
+
+\begin{question} \label{Wmfdfr3r0b}
+\begin{enumerate}
+
+\item Activate the Folder in Line 2 below to show the plane through the point $P$ of the curve that is parallel to the unit tangent ${\bf T}$ (blue) and an arbitrary vector ${\bf n}$ (orange) normal to the curve at $P$.
+
+\item Then drag the slider $t_2$ in Line 1 to change the direction of ${\bf n}$ and choose the plane that you think best fits the curve near $P$.
+
+\item Activate the folder \emph{Osculating Plane} in Line 4 to see the true osculating plane at $P$.
+
+\item Turn off the folder in LIne 2 and activate the folder TNB in Line 6 to see the TNB frame.
+
+\end{enumerate}
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{3ko6jyj3be}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/3ko6jyj3be}{163: Osculating Plane}
+
+\end{question}
+
+
+\section{Computing the Principal Normal}
+Here are three ways to compute the principal normal.
+
+\begin{enumerate}
+\item As the unit vector in the direction of the derivative
+\[
+     \frac{d}{dt} \left( {\bf T}(t) \right) .
+\]
+This is often computationally difficult.
+
+\item First compute the vector projection of the acceleration vector ${\bf a}(t)$ in the direction of the velocity vector ${\bf v}(t)$. Then use vector arithmetic to compute ${\bf N}(t)$ as the unit vector in the direction of the component of ${\bf a}(t)$ normal to ${\bf v}(t)$.
+
+\item Or perhaps the easiest way is to first compute the vector product
+\[
+   {\bf b}(t) = {\bf v} \times {\bf a} .
+\]
+Then the princicpal normal ${\bf N}(t)$ is one of two units vectors normal to both ${\bf b}(t)$ and ${\bf v}(t)$. You can find the direction of ${\bf N}(t)$ by computing another vector product. Which one? It is important to think about the correct order here. For this, keep in mind Question 2 above about turning and that the principal normal points in the direction in which the curve turns, ie. in the direction of the vector
+\[
+     \frac{d}{dt} \left( {\bf T}(t) \right) .
+\]
+
+As an additional bonus, we get the third vector of the TNB frame. It is the unit vector ${\bf B}(t)$ in the direction of the vector ${\bf b}(t)$. This \emph{binormal} vector is normal to the osculating plane.
+
+\end{enumerate}
 
 
 
