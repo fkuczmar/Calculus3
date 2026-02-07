@@ -360,6 +360,73 @@ First find a vector ${\bf n}$ normal to the plane of the trajectory by using two
 \item Write an equation of the plane of the trajectory. Input your equation in the worksheet above.
 
 \end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+
+\item The projectile is slowing down if and only if the angle between the velocity and acceleration vectors is obtuse. This implies the projectile is slowing down if and only if
+\[
+  {\bf v}(t) \cdot {\bf g} < 0 .
+\]
+Since 
+\begin{align*}
+   {\bf v}(t)  &= \frac{d}{dt} \left( {\bf p}(t)  \right)  \\
+                  &= \frac{d}{dt} \left( {\bf p}(0) + {\bf v}(0)t + \frac{1}{2}{\bf g}t^2  \right)  \\ 
+                  &= {\bf v}(0) + {\bf g} t,
+\end{align*}
+we know
+\begin{align*}
+  {\bf v}(t) \cdot {\bf g} &= \left(   {\bf v}(0) + {\bf g} t   \right) \cdot {\bf g} \\
+                                    &= {\bf v}(0) \cdot {\bf g} + t {\bf g}  \cdot {\bf g} .
+\end{align*}
+So the slowing-down condition is that
+\[
+  {\bf v}(0) \cdot {\bf g} + t {\bf g}  \cdot {\bf g} < 0 .
+\]
+Solving this inequality for $t$ (and noting that ${\bf g}\cdot {\bf g}>0$) tells us the projectile is slowing down if and only if
+\[
+     t < - \frac{{\bf v}(0) \cdot {\bf g}}{{\bf g}  \cdot {\bf g}} .
+\]
+
+\item The projectile is speeding up when the angle between the acceleration and velocity vectors is acute. This happens exactly when
+\[
+     t > - \frac{{\bf v}(0) \cdot {\bf g}}{{\bf g}  \cdot {\bf g}} .
+\]
+
+\item At the vertex of its parbolic path, the velocity and acceleration vectors are perpendicular (and the speed is a minimum). This happens when ${\bf a}\cdot {\bf v} = 0$ or when
+\[
+       t_0 = - \frac{{\bf v}(0) \cdot {\bf g}}{{\bf g}  \cdot {\bf g}} .
+\]
+
+At this time the projectile has position
+\begin{align*}
+      {\bf p}(t_0)  &= {\bf p}(0) + {\bf v}(0)t_0 + \frac{1}{2}{\bf g}t_0^2  \\
+                         &=  {\bf p}(0) -  \left( \frac{{\bf v}(0) \cdot {\bf g}}{{\bf g}  \cdot {\bf g}}  \right) {\bf v}(0) +\frac{1}{2}\left( \frac{{\bf v}(0) \cdot {\bf g}}{{\bf g}  \cdot {\bf g}}  \right)^2 {\bf g} .
+ \end{align*}
+
+\item Since the axis of symmetry is parallel to ${\bf g}$, we can parameterize the axis of symmetry as
+\[
+ {\bf p}_2(t) = {\bf p}(0) -  \left( \frac{{\bf v}(0) \cdot {\bf g}}{{\bf g}  \cdot {\bf g}}  \right) {\bf v}(0) +\frac{1}{2}\left( \frac{{\bf v}(0) \cdot {\bf g}}{{\bf g}  \cdot {\bf g}}  \right)^2 {\bf g} + t {\bf g} \, , \, t\in \mathbb{R}.
+\] 
+
+\item Skip this for now. 
+
+\item The path lies in the plane through the point with position ${\bf p}(0)$ (relative to the origin) that is parallel to the vectors ${\bf v}(0)$ and ${\bf g}$.
+
+So a vector normal to the plane of the path is
+\[
+ {\bf n} = {\bf v}(0) \times {\bf g} .
+\]
+So a point $P$ with coordinates $(x,y,z)$ lies in the plane of the path if and only if
+\[
+  \left(  \langle x, y, z \rangle - {\bf p}(0)   \right) \cdot (   {\bf v}(0) \times {\bf g} ) = 0.
+\]
+
+
+\end{enumerate}
+
+\end{explanation}
+
 \end{question}
 
 \section{Motion Along a Cycloid}
