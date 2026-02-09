@@ -348,8 +348,86 @@ pointing directly out of the page. Then we can check with the right-hand rule th
 \end{explanation}
 \end{question}
 
+\section{Quiz 5B}
+
+\begin{question} \label{Qkfdser}
+
+Find a vector-parameterization of the tangent line to the curve
+\[
+   {\bf p}(t) = \Biggr \langle  \, 3\cos\left( \frac{\pi}{4}t \right), 4 \ln \left(\frac{t}{2} \right) , e^{5(t-2)} \Biggr \rangle , \, 1\leq t \leq 4 ,
+\] 
+at the point $P$ with coordinates $(0,0,1)$.
+
+\begin{enumerate}
+\item Explain your reasoning thoroughly.
+
+\item Annotate the picture below to help explain the logic behind the parameterization of the tangent line by labeling the coordinates of the three points and drawing the appropriate vectors.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{gycfdbogol}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/gycfdbogol}{163: Quiz 5B}
+
+\end{enumerate}
+
+\begin{explanation}
+At the point $P(0,0,1)$, since the $y$-component of the position vector is 
+\[
+     y = 4\ln (t/2) = 0,
+\]
+we know $t=2$ at the point $P$ (you should check that the $x$ and $z$ components are correct).
+
+To parameterize the tangent line to the curve at $P$, we need a vector that gives the direction of the tangent line. One such vector is the derivative ${\bf p}^\prime(2)$. 
+
+Using the chain rule when necessary, we differentiate the three components of the position vector.
+
+\begin{enumerate}
+\item
+\begin{align*}
+    \frac{d}{dt}\left( 3\cos\left( \frac{\pi}{4}t \right) \right)  &= -3 \sin  \left( \frac{\pi}{4}t \right) \frac{d}{dt}\left(  \frac{\pi}{4}t \right) \\
+        &= -\frac{3\pi}{4} \sin  \left( \frac{\pi}{4}t \right)
+\end{align*}
+
+\item 
+\begin{align*}
+    \frac{d}{dt}\left( 4 \ln \left( \frac{t}{2}  \right) \right)  &=  4 \frac{d}{dt}\left( \ln t - \ln 2 \right)   \\
+        &= \frac{4}{t} .
+\end{align*}
+
+\begin{align*}
+    \frac{d}{dt}\left(  e^{5(t-2)} \right)  &= e^{5(t-2)} \frac{d}{dt}\left( 5(t-2) \right) \\
+        &= 5 e^{5(t-2)} .
+\end{align*}
+
+\end{enumerate}
+
+So the tangent line to the curve at the point $P$ is parallel to the vector
+\[
+ {\bf v} =  \frac{d}{dt}\left( {\bf p}(t) \right)\Big|_{t=2} = \biggr \langle -\frac{3\pi}{4} , 2, 5  \biggr \rangle . 
+\] 
+
+A
+
+To annotate the figure,  label the coordinates of the points as $O(0,0,0)$, $P(0,0,1)$, and $Q(x,y,z)$. We should also draw vectors $\overrightarrow{OP}$, $\overrightarrow{PQ}$, and  $\overrightarrow{OQ}$.
+
+Now a point $Q$ with coordinates $(x,y,z)$ lies on the line through $P$ parallel to the vector ${\bf v}$ if and only if
+\[
+   \overrightarrow{OQ} = \overrightarrow{OP} + t {\bf v} 
+\]
+for some real number $t$.
+
+So a vector equation of the tangent line at $P$ is
+\[
+ \langle x, y, z\rangle  = \langle 0,0,1 \rangle + t \biggr \langle -\frac{3\pi}{4} , 2, 5  \biggr \rangle,  t\in \mathbb{R}.
+\]
 
 
+\end{explanation}
+
+\end{question}
 
 
 
