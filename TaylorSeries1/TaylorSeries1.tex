@@ -11,7 +11,7 @@ Approximating functions with polynomials. Bounding the errors in the approximati
 
 
 \section{Introduction: Two Motions and Their Polynomial Approximations}
-\begin{question}  \label{QPfKKDC433445r}
+\begin{example}  \label{QPfKKDC433445r}
 
 \begin{enumerate}
 
@@ -58,10 +58,99 @@ The position is measured in meters and time $t$ in seconds.
 \end{freeResponse}
 
 \end{enumerate}
-\end{question}
+\end{example}
 
 
 \section{Bounding the Error in Polynomial Approximations}
+What you should have noticed in the example above was that the successive approximations to the motion 
+\[
+   {\bf p}(t) = \biggr \langle 0, 4\sin\left( \frac{1}{2} t \right) \biggr \rangle  \, , \, t\in \mathbb{R},
+\]
+near $t=0$ get more accurate as the degree of the polymomial approximation increases. 
+
+The same was true for the motion
+\[
+  {\bf p}(t) = \biggr \langle 0, 4\arctan\left( \frac{1}{2} t \right) \biggr \rangle  \, , \, t\in \mathbb{R} ,
+\]
+\emph{but only for a certain interval of times near $t=0$}. For times outside this interval, the approximations seemed to get progressively worse.
+
+How can we account for this difference?
+
+We can start by trying to get some idea of the errors in the approximations. In fact, an approximation is not usually not very useful unless we can say something about its error. While it might seem impossible to get an idea of the error if we don't know the actual value of what we are trying to approximate, that is not always true. For polynomial approximations of smooth functions, we can in fact bound the error.
+
+Let's begin by thinking about this for a one-dimensional motion along the $y$-axis, where our first approximation is a motion with constant velocity. %In this case, the approximation would be exact if the motion in fact had a constant velocity
+
+\begin{question} \label{QLdfr3rf}
+Suppose for a one-dimensional motion 
+\[
+ {\bf p}(t) = \langle 0, f(t) \rangle \, , \, t\in \mathbb{R}
+\]
+along the $y$-axis (position measured in meters, time $t$ in seconds), we know the position
+\[
+     {\bf p}(0) = \langle 0, 8\rangle ,
+\]
+and velocity
+\[
+        {\bf v}(0) = \frac{d}{dt} \left( {\bf p}(t) \right)\Big|_{t=0} = \langle 0, 5 \rangle ,
+\]
+at time $t=0$.
+
+Suppose we also know something about the acceleration at all times, namely that
+\[
+       \left| {\bf a}(t) \right| = \left| \frac{d^2}{dt^2} \left( {\bf p}(t) \right)  \right| \leq 3 \, , \, t\in \mathbb{R} .
+\]
+
+What can we say about the accuracy of the linear approximation to the motion near time $t=0$?
+
+At one extreme, it might be that the motion has constant acceleration
+\[
+        {\bf a}_1(t) = \langle 0, 3 \rangle
+\]
+and at the other extreme constant acceleration
+\[
+    {\bf a}_1(t) = \langle 0, 3 \rangle .
+\]
+
+This tells us something about the $y$-component $v(t) = f^\prime (t)$ of the velocity function, namely that 
+\[
+               5 - 3u \leq   v(u)  \leq 5 + 3u \, , \, u\in \mathbb{R} . 
+\] 
+
+\begin{enumerate}
+
+\item Integrating all sides of the above compound inequality with repsect to time over the interval $[0,t]$ tells us something about the change
+\[
+       f(t) - f(0)
+\] 
+in the position function over that interval, namely that
+\[
+       \answer{5t - \frac{3}{2}t^2}  \leq      f(t) - f(0)  \leq \answer{5t + \frac{3}{2}t^2}
+\]
+
+So the true $y$-coordinate $f(t)$ of the position at time $t$ seconds is between
+\[
+	         \answer{8 + 5t - \frac{3}{2}t^2}  \leq    f(t) \leq \answer{8 + 5t + \frac{3}{2}t^2}
+\]
+
+
+And the error 
+\[
+    e_1(t) = f(t)  - p_1(t)
+\]
+in our linear approximation %that assumes a cons
+\[
+     p_1(t) = \answer{8 + 5t}
+\]
+to the position function near time $t=0$ is between
+\[
+     - \frac{3}{2}t^2  \leq e_1(t) \leq  \frac{3}{2}t^2
+\]
+
+
+\item Use the above bounds for the error in the linear approximation to determine the values of $t$ for which the linear approximation to the position function has an absolute error of at most $0.1$ meters.
+\end{enumerate}
+
+\end{question}
 
 
 
