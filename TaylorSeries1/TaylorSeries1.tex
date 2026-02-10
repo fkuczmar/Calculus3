@@ -21,7 +21,7 @@ Approximating functions with polynomials. Bounding the errors in the approximati
 \]
 near time $t=0$ seconds for the function
 \[
-    f(t) = 4 \sin \left( \frac{1}{2}t \right).
+    f(t) = 4 \sin \left( 2t \right).
 \]
 The position is measured in meters and time $t$ in seconds.
 
@@ -47,11 +47,11 @@ The position is measured in meters and time $t$ in seconds.
 
 \begin{onlineOnly}
     \begin{center}
-\desmos{wxbfrcfqch}{900}{600}
+\desmos{6ojtolenjs}{900}{600}
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/calculator/wxbfrcfqch}{163: Motion and Taylor Series 2}
+\href{https://www.desmos.com/calculator/6ojtolenjs}{163: Motion and Taylor Series 3}
 
 \item Compare the behavior of the successive approximations to the motions in parts (a) and (b).
 \begin{freeResponse}
@@ -74,9 +74,41 @@ The same was true for the motion
 \]
 \emph{but only for a certain interval of times near $t=0$}. For times outside this interval, the approximations seemed to get progressively worse.
 
-How can we account for this difference?
+How can we account for this difference? We can get some idea why by looking at the higher order derivatives of the two position functions at time $t=0$. To see these derivatives for the motions, open the folder in Line 5 of the animations above.
 
-We can start by trying to get some idea of the errors in the approximations. In fact, an approximation is not usually not very useful unless we can say something about its error. While it might seem impossible to get an idea of the error if we don't know the actual value of what we are trying to approximate, that is not always true. For polynomial approximations of smooth functions, we can in fact bound the error.
+
+
+
+
+If we find the approximations to these motions, we get for the first where $f(t) = 4\sin(2t)$, the successive approximations near $t=0$ are
+\[
+  p_1(t) = p_2(t) = 8t
+\]
+\[
+   p_3(t) = p_4(t) = 8t-\frac{32}{3}t^3,
+\]
+\[
+     p_5(t) = p_6(t) = 8t-\frac{16}{3}t^3 + \frac{16}{15}t^5 .
+\]
+
+And for the second where $f(t) = 4\arctan(t/2)$, the approximations are
+\[
+      p_1(t) = p_2(t) = 2t ,
+\]
+\[
+   p_3(t) =p_4(t) =  2t - \frac{1}{6} t^3 , 
+\]
+\[
+     p_5(t) = p_6(t) = 2t - \frac{1}{6} t^3 + \frac{1}{40}t^5
+\]
+
+
+
+
+
+\section{A More Careful Look at the Errors}
+
+Let's start by trying to get some idea of the errors in the approximations. In fact, an approximation is not usually not very useful unless we can say something about its error. While it might seem impossible to get an idea of the error if we don't know the actual value of what we are trying to approximate, that is not always true. For polynomial approximations of smooth functions, we can in fact bound the error.
 
 Let's begin by thinking about this for a one-dimensional motion along the $y$-axis, where our first approximation is a motion with constant velocity. %In this case, the approximation would be exact if the motion in fact had a constant velocity
 
