@@ -10,8 +10,211 @@ Geometric sequences and series
 \maketitle
 
 
+\section{Geometric Series}
+\begin{question} \label{Q9d98fbg}
+Let
+\[
+     s_n = \sum_{i=0}^n 2^i .
+\]
+
+\begin{enumerate}
+\item  Compute the values of $s_1$, $s_2$, $s_3$, and $s_4$.
+
+\item Guess an expression for $s_n$.
+
+\item Here's another way to see that
+\[
+     s_n = 2^{n+1} - 1.
+\]
+
+\begin{enumerate}
+\item Simplify the expression
+\[
+         2^{i+1} - 2^i .
+\]
+
+\item Use the result of part (i) to find an expression for $s_n$.
+
+\end{enumerate}
+
+\item Does $\lim_{n \to \infty} s_n$ exist?
+\end{enumerate}
+\end{question}
+
+
+\begin{question} \label{Qpferr3r3r}
+Repeat Question 1 fof the sums
+\[
+     s_n = \sum_{i=0}^n 3^i .
+\]
+\end{question}
 
 
 
+
+\begin{question} \label{OrerR8vmZ}
+Let
+\[
+    s_n = \sum_{i=1}^n \left( \frac{1}{2} \right)^i .
+\]
+
+\begin{enumerate}
+\item Compute the values of $s_1$, $s_2$, $s_3$, and $s_4$. Leave as fractions, not decimals.
+
+\item Do you see a pattern? Can you guess an expression for $s_n$?
+
+\item Take a piece of paper. 
+
+\begin{enumerate}
+\item Cut it in half. Keep half and give the other half to your friend.
+
+\item Cut what you have left in half. Keep half of that and give the other half to your friend. What fraction of the original do you have? Your friend?
+
+\item Keep repeating this process. After $n$ cuts, what fraction of the original do you have? Your friend?
+
+\end{enumerate}
+
+
+\item Here's another way to prove that
+\[
+     \sum_{i=1}^n \left( \frac{1}{2} \right)^i = 1 - 2^{-n} .
+\]
+
+\begin{enumerate}
+\item Simplify the expression
+\[
+    \left( \frac{1}{2} \right)^{i-1} - \left( \frac{1}{2} \right)^{i} .
+\]
+
+\item Use the result of part (i) to express
+
+\item Use the result of (i) to find a simplified expression for
+\[
+    s_n = \sum_{i=1}^n \left( \frac{1}{2} \right)^i .
+\]
+ 
+\end{enumerate}
+
+
+\item Evaluate $\lim_{n \to \infty}s_n$.
+
+\item Evaluate the sum
+\[
+  \sum_{i=1}^\infty  \left( \frac{1}{2} \right)^i  = \lim_{n\to \infty} \sum_{i=1}^n  \left( \frac{1}{2} \right)^i
+\]
+
+\item Evaluate the sum
+\[
+  \sum_{i=0}^\infty  \left( \frac{1}{2} \right)^i  = \lim_{n\to \infty} \sum_{i=0}^n  \left( \frac{1}{2} \right)^i
+\]
+
+\item Evaluate the sum
+\[
+  \sum_{i=0}^\infty 12 \left( \frac{1}{2} \right)^i  = \lim_{n\to \infty} \sum_{i=0}^n 12  \left( \frac{1}{2} \right)^i
+\]
+
+\end{enumerate}
+\end{question}
+
+
+\begin{question} \label{Ore33R8vmZ}
+Let
+\[
+    s_n = \sum_{i=1}^n \left( \frac{1}{3} \right)^i .
+\]
+
+\begin{enumerate}
+\item Compute the values of $s_1$, $s_2$, $s_3$, and $s_4$. Leave as fractions, not decimals.
+
+\item Do you see a pattern? Can you guess an expression for $s_n$?
+
+\item Take a piece of paper. 
+
+\begin{enumerate}
+\item Cut it in half. Put one half aside. Keep the other half.
+
+\item Now take $2/3$ of your half and give it to your friend. What fraction of the original do you have? Your friend?
+
+\item Keep repeating this process, always giving $2/3$ of what you have left to your friend. After $n$ cuts, what fraction of the original do you have? Your friend? Keep in mind the $1/2$ fraction you set aside at the start.
+
+\end{enumerate}
+
+
+
+\item Here's another way to prove that
+\[
+     \sum_{i=1}^n \left( \frac{1}{3} \right)^i = \frac{1}{2}\left( 1 - 3^{-n}\right) .
+\]
+
+\begin{enumerate}
+\item Simplify the expression
+\[
+    \left( \frac{1}{3} \right)^{i-1} - \left( \frac{1}{3} \right)^{i} .
+\]
+
+\item Use the result of (i) to find a simplified expression for
+\[
+    s_n = \sum_{i=1}^n \left( \frac{1}{3} \right)^i .
+\]
+ 
+\end{enumerate}
+
+\item Evaluate $\lim_{n \to \infty}s_n$.
+
+\item Evaluate the sum
+\[
+  \sum_{i=1}^\infty  \left( \frac{1}{3} \right)^i  = \lim_{n\to \infty} \sum_{i=1}^n  \left( \frac{1}{3} \right)^i
+\]
+
+\item Evaluate the sum
+\[
+  \sum_{i=0}^\infty  \left( \frac{1}{3} \right)^i  = \lim_{n\to \infty} \sum_{i=0}^n  \left( \frac{1}{3} \right)^i
+\]
+
+\item Evaluate the sum
+\[
+  \sum_{i=0}^\infty 5 \left( \frac{1}{3} \right)^i  = \lim_{n\to \infty} \sum_{i=0}^n 5  \left( \frac{1}{3} \right)^i
+\]
+
+\end{enumerate}
+\end{question}
+
+
+\section{A Taylor Series}
+
+\begin{question} \label{QPD33Lrdfr}
+Let's look at the function
+\[
+    f(x) = \ln (1+x) \, , \, x>-1,
+\]
+near $x=0$.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{7royyumxbz}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/7royyumxbz}{163: Motion and Taylor Series 5}
+
+
+\begin{enumerate}
+\item Find expressions for the polynomial approximations from degree 1 to degree 4, or until you notice a pattern.
+
+\item Compare the graphs of the approximations with the graph of the function in the worksheet above by dragging the sldier $n$ (the degree of the approximation) in Line 4. 
+What do you notice?
+\begin{freeResponse}
+\end{freeResponse}
+
+\item Use the worksheet above to find successive approximations to $\ln 2$ with Taylor polynomials $p_i(x)$, $i=1,...,9$.
+
+\item Bound the error in the estimate for $\ln 2$ from $p_9(x)$.
+
+\item Use the worksheet above find successive approximations to $\ln(0.5)$ with Taylor polynomials $p_i(x)$, $i=1,...,9$.
+
+\item Use the earlier ideas about geometric series to bound the error in the estimate for $\ln (0.5)$ from $p_9(x)$.
+
+\end{enumerate}
+\end{question}
 
 \end{document}
