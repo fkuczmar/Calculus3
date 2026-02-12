@@ -409,8 +409,6 @@ So the tangent line to the curve at the point $P$ is parallel to the vector
  {\bf v} =  \frac{d}{dt}\left( {\bf p}(t) \right)\Big|_{t=2} = \biggr \langle -\frac{3\pi}{4} , 2, 5  \biggr \rangle . 
 \] 
 
-A
-
 To annotate the figure,  label the coordinates of the points as $O(0,0,0)$, $P(0,0,1)$, and $Q(x,y,z)$. We should also draw vectors $\overrightarrow{OP}$, $\overrightarrow{PQ}$, and  $\overrightarrow{OQ}$.
 
 Now a point $Q$ with coordinates $(x,y,z)$ lies on the line through $P$ parallel to the vector ${\bf v}$ if and only if
@@ -423,13 +421,101 @@ So a vector equation of the tangent line at $P$ is
 \[
  \langle x, y, z\rangle  = \langle 0,0,1 \rangle + t \biggr \langle -\frac{3\pi}{4} , 2, 5  \biggr \rangle,  t\in \mathbb{R}.
 \]
-
-
 \end{explanation}
-
 \end{question}
 
 
+
+\section{Quiz 6A}
+
+\begin{question}  \label{Qdf5r4r54tr}
+
+The function
+\[
+   {\bf p}(t) = \biggr \langle  \, 3\cos\left( 2t-4 \right), 4 \ln (t/2) , e^{3(t-2)} \biggr \rangle , \, 1 \leq t \leq 4 ,
+\] 
+expresses the position of a fly relative to the origin (in meters) in terms of the number of seconds past noon.
+
+\begin{enumerate}
+\item Find the fly's speed at time $t=2$ seconds past noon.
+
+\item Is distance between the fly and the point $(1,2,4)$ increasing or decreasing at this time? At what rate?
+
+\item Is the fly speeding up or slowing down at this time? At what rate?
+
+\end{enumerate}
+
+
+\begin{explanation}
+\begin{enumerate}
+\item The velocity of the fly at time $t$ seconds past noon is
+\begin{align*}
+   {\bf v} (t) & = \frac{d}{dt}({\bf p}(t)) \\
+               & = \biggr \langle -6\sin(2t-4) , \frac{4}{t} , 3e^{3(t-2)}  \biggr \rangle 
+\end{align*}
+
+So at time $t=2$, the fly has velocity 
+\[
+    {\bf v}(2) = \langle 0 , 2, 3  \rangle \text{ m/s} 
+\]
+and speed
+\[
+ |{\bf v}(2)| = \sqrt{13} \text{ m/s} .
+\]
+
+\item The rate of change in the distance between the fly and the point $(1,2,4)$ is equal to the derivative
+\begin{align*}
+   \frac{d}{dt} \left| {\bf p}(t) - \langle 1,2,4 \rangle) \right| &= \frac{d}{dt} \left( \sqrt{({\bf p}(t) - \langle 1,2,4 \rangle)\cdot({\bf p}(t) - \langle 1,2,4 \rangle)} \right)   \\ \\
+               &= \frac{{\bf v}(t)\cdot({\bf p}(t) - \langle 1,2,4 \rangle)}{|{\bf p}(t) - \langle 1,2,4 \rangle|} .
+\end{align*}
+This is the scalar projection of the fly's velocity vector in the direction of the fly's position relative to the point $(1,2,4)$. 
+
+At time $t=2$, the fly has position
+\[
+ {\bf p}(2) = \langle 3, 0, 1\rangle \text{ meters}
+\]
+relative to the origin and position
+\[
+    \langle 3, 0, 1\rangle \text{ m} - \langle 1,2,4\rangle \text{ m}  = \langle 2, -2, -3 \rangle \text{ m}
+\]
+relative to $(1,2,4)$ .
+
+So at time $t=2$ seconds past noon, the distance between the fly and the point $(1,2,4)$ is changing at the rate of
+\begin{align*}
+     \langle 0,2,3 \rangle \text{ m/s} \cdot \left(\frac{1}{\sqrt{17}}\langle 2,-2,-3\rangle\right)   = -\frac{13}{\sqrt{17}} \text{ m/s} .
+\end{align*}
+So at time $t=2$ the distance between the fly and the point $(1,2,4)$ is decreasing at the rate of 
+\[
+ \frac{13}{\sqrt{17}} \text{ m/s} .
+\]
+
+
+\item The rate of change in the fly's speed with respect to time is equal to the derivative
+\begin{align*}
+   \frac{d}{dt}\left( \sqrt{{\bf v}(t)\cdot {\bf v}(t)} \right) = \frac{{\bf a}(t)\cdot {\bf v}(t)}{|{\bf v}(t)|} .
+\end{align*}
+
+This rate of change is the scalar projection of the fly's acceleration in the direction of motion.
+
+Differentiating the velocity vector above with respect to time, gives the acceleration vector 
+\[
+    {\bf a}(t) = \biggr \langle -12 \cos(2t-4) , -\frac{4}{t^2} , 9e^{3(t-2)} \biggr \rangle 
+\]
+
+So at time $t=2$ seconds past noon, the fly has acceleration
+\[
+  {\bf a}(2) = \langle -12, -1, 9 \rangle \frac{\text{m}}{\text{s}^2} . 
+\]
+At this time, its speed is increasing at the rate of
+\begin{align*}
+   \frac{{\bf a}(2)\cdot {\bf v}(2)}{|{\bf v}(2)|} &= \langle -12, -1, 9 \rangle \frac{\text{m}}{\text{s}^2} \cdot \left(\frac{1}{\sqrt{13}}\langle 0,2,3\rangle\right) \\
+         & = \frac{25}{\sqrt{13}} \frac{\text{m}}{\text{s}^2} .
+\end{align*}
+
+\end{enumerate}
+\end{explanation}
+
+\end{question}
 
 %\begin{onlineOnly}
 %    \begin{center}
