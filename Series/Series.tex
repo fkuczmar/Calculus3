@@ -10,7 +10,7 @@ Convergent and divergent series.
 \maketitle
 
 
-\section{Converge of Diverge}
+\section{Converge or Diverge?}
 
 
 \begin{question} \label{Q9d5nvfbg}
@@ -19,23 +19,20 @@ Convergent and divergent series.
 \[
   \sum_{i=1}^\infty a_n
 \]
-to 
-\begin{enumerate}
-\item converge
+to converge.
 
-\item diverge.
-\end{enumerate}
+\item Explain what it means for the series in (a) to diverge.
 
 \item Give a specific example of a series that converges.
 
-\item Give a specif example of a series that diverges.
+\item Give a specific example of a series that diverges.
 
 \end{enumerate}
 \end{question}
 
 
 \begin{question} \label{QPfef912321e}
-Determine whether each series converges or diverges. Find the value of those that converge if you can.
+Determine whether each series converges or diverges. Find the values of those that converge.
 
 \begin{enumerate}
 \item 
@@ -62,7 +59,10 @@ Determine whether each series converges or diverges. Find the value of those tha
 
 \end{question}
 
-\section{Monotonic Series}
+
+
+
+\section{The Integral Test}
 
 \begin{question} \label{QLdfef}
 Determine whether each of the following sequences converges or diverges by comparing each with an improper integral. 
@@ -123,6 +123,77 @@ converges or diverges? Use the worksheet below to help explain your reasoning (D
 \href{https://www.desmos.com/calculator/rc8ladgvek}{163: Alternating Series 1}
 
 \end{question}
+
+
+\section{The Monotone Convergence Theorem}
+
+Suppose we start with a \emph{sequence} $a_n$, $n=1,2,3,...$ of \emph{non-negative numbers} and wish to determine if the \emph{series}
+\[
+ \sum_{i=1}^\infty a_n
+\]
+converges or diverges. Because all the terms of the sequence $a_n$ are at least zero, the \emph{sequence}
+\[
+   s_n = \sum_{i=1}^n a_n
+\]
+of partial sums is increasing (ie. $s_{n+1} \geq s_n$ for $n=1, 2, 3, ...$). Then there are two possibilities.
+\begin{enumerate}
+\item The sequence of partial sums is \emph{bounded}. This means all the partial sums are less than some positive number $M$. In this case the sequence of partial sums, and therefore the series, converges.
+
+\item The sequence of partial sums is \emph{not} bounded. This means the partial sums eventually get larger than any number. In this case 
+\[
+     \lim_{n \to \infty} s_n = \infty.
+\]
+So the sequence of partial sums, and therefore the series, diverges. 
+ 
+\end{enumerate}
+
+Keep this idea in mind when answering the following questions.
+
+\begin{question} \label{Q8dfMFe4131}
+This problem is about the series
+\[
+    \sum_{k=0}^\infty \frac{1}{k!} .
+\]
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{z9vi7g79xs}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/z9vi7g79xs}{163: Series for e}
+
+
+\begin{enumerate}
+
+\item Show that $s_n< 3$ for $n=1,2,3,...$. Then use the motonone convergence theorem to prove the series converges.
+
+\item Bound the error in approximating the sum
+\[
+   L = \sum_{k=0}^\infty \frac{1}{k!}
+\]
+with the partial sum
+\[
+     s_9 = \sum_{k=0}^9 \frac{1}{k!} . 
+\]
+Do this by showing the error
+\[
+     \sum_{k=10}^\infty \frac{1}{k!}
+\]
+in the approxiation is less than
+\[
+   \frac{1}{10!}\left( \frac{11}{10}  \right) .
+\]
+\emph{Hint: Use a geometric series.}
+
+\item Which partial sums approximate $L$ with an error of at most $10^{-12}$? Use desmos to compute the smallest of these partial sums. 
+
+
+\end{enumerate}
+
+\end{question}
+
+
 
 \section{A Taylor Series}
 
