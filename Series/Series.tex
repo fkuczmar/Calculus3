@@ -1,0 +1,164 @@
+\documentclass{ximera}
+\title{Series}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Convergent and divergent series.
+\end{abstract}
+\maketitle
+
+
+\section{Converge of Diverge}
+
+
+\begin{question} \label{Q9d5nvfbg}
+\begin{enumerate}
+\item Explain what it means for the series
+\[
+  \sum_{i=1}^\infty a_n
+\]
+to 
+\begin{enumerate}
+\item converge
+
+\item diverge.
+\end{enumerate}
+
+\item Give a specific example of a series that converges.
+
+\item Give a specif example of a series that diverges.
+
+\end{enumerate}
+\end{question}
+
+
+\begin{question} \label{QPfef912321e}
+Determine whether each series converges or diverges. Find the value of those that converge if you can.
+
+\begin{enumerate}
+\item 
+\[
+      \sum_{i=1}^\infty (-1)^i
+\]
+
+\item 
+\[
+      \sum_{i=2}^\infty \left( -1/3 \right)^i 
+\]
+
+\item 
+\[
+      \sum_{i=2}^\infty \left( \frac{10}{9} \right)^i 
+\]
+
+\item 
+\[
+      \sum_{i=1}^\infty 9 \left( \frac{1}{10} \right)^i 
+\]
+
+\end{enumerate}
+
+\end{question}
+
+\section{Monotonic Series}
+
+\begin{question} \label{QLdfef}
+Determine whether each of the following sequences converges or diverges by comparing each with an improper integral. 
+
+\begin{enumerate}
+\item Draw  pictures to help with your explanations.
+
+\item Find lower and upper bounds for each convergent series. 
+
+\end{enumerate}
+
+\begin{enumerate}
+\item 
+\[
+      \sum_{j=1}^\infty \frac{1}{j}
+\]
+
+\item 
+\[
+      \sum_{k=1}^\infty \frac{2}{k^2}
+\]
+
+\item 
+\[
+      \sum_{k=1}^\infty \frac{2}{k^{1.01}}
+\]
+
+\item 
+\[
+      \sum_{k=0}^\infty \frac{1}{k^2 + 1}
+\]
+
+\item 
+\[
+      \sum_{k=2}^\infty \frac{1}{k^2 - 1} \text{   No integral here.}
+\]
+
+
+\end{enumerate}
+\end{question}
+
+
+\section{Alternating Series}
+
+\begin{question} \label{Q8df3fdm3r3r}
+Do  you think the series
+\[
+   \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n}
+\]
+converges or diverges? Use the worksheet below to help explain your reasoning (Drag the slider $n$ in Line 2).
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{rc8ladgvek}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/rc8ladgvek}{163: Alternating Series 1}
+
+\end{question}
+
+\section{A Taylor Series}
+
+\begin{question} \label{QPD33Lrdfr}
+Let's look at the function
+\[
+    f(x) = \ln (1+x) \, , \, x>-1,
+\]
+near $x=0$.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{7royyumxbz}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/7royyumxbz}{163: Motion and Taylor Series 5}
+
+
+\begin{enumerate}
+\item Find expressions for the polynomial approximations from degree 1 to degree 4, or until you notice a pattern.
+
+\item Compare the graphs of the approximations with the graph of the function in the worksheet above by dragging the sldier $n$ (the degree of the approximation) in Line 4. 
+What do you notice?
+\begin{freeResponse}
+\end{freeResponse}
+
+\item Use the worksheet above to find successive approximations to $\ln 2$ with Taylor polynomials $p_i(x)$, $i=1,...,9$.
+
+\item Bound the error in the estimate for $\ln 2$ from $p_9(x)$.
+
+\item Use the worksheet above find successive approximations to $\ln(0.5)$ with Taylor polynomials $p_i(x)$, $i=1,...,9$.
+
+\item Use ideas about geometric series to bound the error in the estimate for $\ln (0.5)$ from $p_9(x)$.
+
+\end{enumerate}
+\end{question}
+
+\end{document}
