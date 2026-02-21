@@ -1,0 +1,50 @@
+\documentclass{ximera}
+\title{Power Series in Physics}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Applications of power series.
+\end{abstract}
+\maketitle
+
+
+\section{Einstein's Special Relativity}
+
+From the English translation (1920) of Einstein's \emph{Relativity: The Special and the General Theory}, 1916. 
+
+
+Classical mechanics required to be modified before it could come in line with the demands of special relativity. For the main part, however, this modification affects only the laws for rapid motions, in which the velocities of matter $v$ are not very small as compared with the velocity of light. We have experience of such rapid motions only in the case of electrons and ions; for other motions the variations from the laws are too small to make themselves evident in practice. We shall not consider the motion of stars until we come to speak of the general theory of relativity. In accordance with the theory of relativity the kinetic energy of a material point of mass $m$ is no longer given by the well-known expression
+\[
+  \frac{1}{2}mv^2 ,
+\]
+but by the expression
+\[
+\frac{mc^2}{\sqrt{1-\frac{v^2}{c^2}}}.
+\]
+This expression approaches infinity as the velocity $v$ approaches the speed of light $c$. The velocity of light must therefore always remain less than $c$, however great may be the energies used to produce the acceleration. If we develop the expression for the kinetic energy in the form of a series, we obtain
+\[
+  mc^2 + \frac{1}{2}mv^2 + \frac{3}{8}m \frac{v^4}{c^2} + \ldots .
+\]
+
+When $v^2/c^2$ is small compared with unity, the third of these terms is always small in comparison with the second, which last alone is considered in classical mechanics. The fist term $mc^2$ does not contain the velocity, and requires no consideration if we are only dealing with the question as to how the energy of a point mass depends on the velocity. We shall speak of it later.
+
+\begin{question} \label{Q87wedrrme}
+
+\begin{enumerate}
+\item Compute the first four terms of the Maclaurin series for the function 
+\[
+  f(u) = \frac{1}{\sqrt{1-u^2}} .
+\]
+
+\item Use the result of part (a) to verify Einstein's power series above.
+
+\end{enumerate}
+
+\end{question}
+
+\end{document}
+
+
+
