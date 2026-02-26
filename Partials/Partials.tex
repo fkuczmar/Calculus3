@@ -37,7 +37,7 @@ that expresses the magnitude $T_1 = |\overrightarrow{T_1}|$ of the tension in ro
 
 %Work in general, \emph{not} with the specific values of the parameters shown above.
 
-\item Check your expression by substituting $w=6$, $\theta_1 = 1$, and $\theta_2=0.6$.
+\item Check your expression with the worksheet above by substituting $\theta_1 = 0.5$, and $\theta_2=0.6$.
 
 \item Drag sliders $\theta_1$ above to see how the tension in rope $BA_1$ changes as $\theta_1$ changes. Summarize your findings.
 
@@ -78,5 +78,53 @@ Include units.
 \end{enumerate}
 \end{question}
 
+\section{Distances on a Sphere}
+The function
+\[
+ s = f(\theta,\phi) = \arccos(\sin\theta \cos \phi) \, , \, 0\leq \theta \leq 2\pi, -\pi/2\leq \phi \leq \pi/2 ,
+\]
+expresses the distance (in miles) from $(0,1,0)$ of a point $P$ on a sphere with radius $1$ miles in terms of its latitude $\theta$ (in radians) and longitude $\phi$ (in radians). The distance is measured along the sphere.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{diqbhi8jch}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/diqbhi8jch}{163: Distances on Sphere 3D}
+
+Some level sets of the function $f$ are graphed below.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{njngjntwn0}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/njngjntwn0}{163: Level Sets Distances on Sphere}
+
+
+\begin{enumerate}
+\item Drag point $P$ above to get a sense of how the distance changes as the latitude and longitude of $P$ change.
+
+\item Use the level curves to approximate the partials
+\[
+    \frac{\partial s}{\partial \theta} \Big|_{(\theta, \phi)=(2,1)}
+\]
+and
+\[
+     \frac{\partial s}{\partial \phi} \Big|_{(\theta, \phi)=(2,1)} .
+\]
+Include units.
+
+\item Use the expression for $f$ above to compute the exact values of these partials.
+
+\item Use the results of (b) and (c) to approximate the latitude of the point on the sphere near $P$ with longitude $\theta=2.1$ radians that is the same distance from $(0,1,0)$ as $P$.
+
+\item Use ideas of Math 151 and implicit differentiation to answer part (d).
+
+
+
+\end{enumerate}
 
 \end{document}
