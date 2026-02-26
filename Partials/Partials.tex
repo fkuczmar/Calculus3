@@ -14,13 +14,8 @@ Introduction to partial derivatives and level sets.
 \section{The Hanging Weight}
 \begin{question} \label{ExMD3fetet39}
 
-The function
-\[
-   z = f(x,y)
-\]
-gives the temperature (in Celsius degrees) at the point in the plane with coordinates $(x,y)$ (measured in meters).
+A block $B$ with weight $w = 5$ pounds hangs suspended from two ropes attached to the ceiling at points $A_1$, $A_2$ and making respective angles $\theta_1$ and $\theta_2$ with the vertical as shown below. 
 
-Some level sets of the function $f$ are graphed below.
 
 \begin{onlineOnly}
     \begin{center}
@@ -31,6 +26,26 @@ Some level sets of the function $f$ are graphed below.
 \href{https://www.desmos.com/calculator/0fudotupws}{163: Hanging Weight and Tension 3}
 
 
+\item Our next task is to find an expression for the magnitude $T_1 = |\overrightarrow{T_1}|$ of the tension in rope $BA_1$.
+
+\begin{enumerate}
+\item Use triangle trigonometry to find an expression for the function
+\[
+   T_1 = f(\theta_1, \theta_2) \, , \, 0 <  \theta_1 \leq \pi/2 \, , \,  0 <  \theta_2 \leq \pi/2.  
+\]
+that expresses the magnitude $T_1 = |\overrightarrow{T_1}|$ of the tension in rope $BA_1$ in terms of the angles $\theta_1$ and $\theta_2$. %Your expression should also include $w$ (the weight of the block in pounds), but for the remainder of the question we'll regard the weight as constant.
+
+%Work in general, \emph{not} with the specific values of the parameters shown above.
+
+\item Check your expression by substituting $w=6$, $\theta_1 = 1$, and $\theta_2=0.6$.
+
+\item Drag sliders $\theta_1$ above to see how the tension in rope $BA_1$ changes as $\theta_1$ changes. Summarize your findings.
+
+\item Drag $\theta_1$ back to $\theta_1=0.5$. Then drag slider $\theta_2$ to see how the tension  in rope $BA_1$ changes as $\theta_2$ changes. Summarize your findings.
+
+\item Some level sets of the function $f$ are shown below. The sets are spaced at intervals of $\Delta T_1 = 0.5$ pounds.
+
+
 \begin{onlineOnly}
     \begin{center}
 \desmos{iahtoxdhzu}{900}{600}
@@ -39,7 +54,28 @@ Some level sets of the function $f$ are graphed below.
 
 \href{https://www.desmos.com/calculator/iahtoxdhzu}{163: Hanging Weight Level Curves}
 
+\item Use the level sets to approximate the partial derivatives
+\[
+    \frac{\partial T_1}{\partial \theta_1} \Big|_{(\theta_1, \theta_2)=(0.5, 0.6)}
+\]
+and
+\[
+    \frac{\partial T_1}{\partial \theta_2} \Big|_{(\theta_1, \theta_2)=(0.5, 0.6)} .
+\]
+Include units.
 
+
+\item Use your expression for the function $T_1 = f(\theta_1, \theta_2)$ to compute these partials.
+
+\item Use the results of part (g) to approximate the change in $T_1$ as $\theta_1$ increases from $0.5$ radians to $0.55$ radians and $\theta_2$ is held constant at $0.6$ radians. Then compare this approximation with the actual change.
+
+\item Use the results of part (g) to approximate the change in $T_1$ as $\theta_2$ decreases from $0.6$ radians to $0.55$ radians and $\theta_1$ is held constant at $0.5$ radians.. Then compare this approximation with the actual change.
+
+%\item Use part (g) to approximate the 
+
+%\item Use ideas of implicit differentiation to approximate the change in 
+
+\end{enumerate}
 \end{question}
 
 
