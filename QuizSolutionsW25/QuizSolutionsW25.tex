@@ -514,8 +514,55 @@ At this time, its speed is increasing at the rate of
 
 \end{enumerate}
 \end{explanation}
+\end{question}
+
+\section{Quiz 8A}
+
+\begin{question} \label{QmWMr3490}
+
+Use the first three terms 
+\[
+   p(x) =  1 + \frac{1}{2}x + \frac{3}{8}x^2
+\]
+of the Maclaurin series for the function
+\[
+   f(x) =  \frac{1}{\sqrt{1-x}} 
+\]
+to find the first three terms of the Maclaurin series for the function
+\[
+ g(x) = \arcsin x .
+\]
+
+\begin{explanation}
+Since
+\[
+    \frac{d}{dx} \left(\arcsin x \right) = \frac{1}{\sqrt{1-x^2}},
+\]
+%we substitute $x^2$ for $x$ in the expression for $p(x)$ to get
+%\[
+%    p(x^2) = 1 + \frac{1}{2}x^2 + \frac{3}{8}x^4 .
+%\]
+for $x\sim 0$,
+\[
+      \frac{d}{dx} \left(\arcsin x \right) = \frac{1}{\sqrt{1-x^2}} \sim p(x^2)  = 1 + \frac{1}{2}x^2 + \frac{3}{8}x^4 .
+\]
+Then 
+\begin{align*}
+\int_0^x \frac{dt}{\sqrt{1-t^2}} & \sim \int_0^x \left( 1 + \frac{1}{2}t^2 + \frac{3}{8}t^4  \right) dt ,
+ %\int_0^x \left( 1 + \frac{1}{2}t^2 + \frac{3}{8}t^4  \right) dt &= 1 + \frac{1}{2}x^2 + \frac{3}{8}x^4 \right)
+\end{align*}
+and
+\[
+      \arcsin x - \arcsin 0 \sim x + \frac{1}{6}x^3 + \frac{1}{40}x^5 . 
+\]
+Since $\arcsin 0 = 0$,  %the first three terms of the MacLaurin series for $\arcsin x$ are
+\[
+  \arcsin x  \sim x + \frac{1}{6}x^3 + \frac{1}{40}x^5 .
+\]
+\end{explanation}
 
 \end{question}
+
 
 %\begin{onlineOnly}
 %    \begin{center}
