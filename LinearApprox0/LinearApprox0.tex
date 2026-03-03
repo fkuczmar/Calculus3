@@ -12,10 +12,41 @@ Introduction to linear approximation.
 
 \section{Linear Functions}
 
-\begin{question} \label{Qkdf3r3f00}
-The function $z = f(x,y)$ expresses the temperature (in Celsius degrees) of a point in the $xy$-plane in terms of its coordinates (measured in meters).
+\begin{question} \label{Q9f93r33}
+A thin rod lies on the $x$-axis between $x=-3$ and $x=3$, coordinates measured in meters.
 
-Some level curves of the function $z=f(x,y)$ are shown below. The level curves are spaced at intervals of $1^\circ$ C.
+The function 
+\[
+      T = f(x) \, , \, -3\leq x \leq 3 ,  
+\]
+expresses the temperature (in Celsius degrees) of a point on the rod in terms of its $x$-coordinate. Some level sets of the function $T=f(x)$ are shown below. The sets are spaced at intervals of $1^\circ$ C.
+
+\begin{enumerate}
+\item Make a reasonable assumption about the function $f$ based on the level sets. Then use your assumption to find an expression for the temperature function $T=f(x)$. Drag point $P$ below to help.
+\end{enumerate}
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{tokaicoaz7}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/tokaicoaz7}{163: Level Sets Linear Function 2}
+
+
+
+
+\end{question}
+
+\begin{question} \label{Qkdf3r3f00}
+The function $T = f(x,y)$ expresses the temperature (in Celsius degrees) of a point in the $xy$-plane in terms of its coordinates (measured in meters).
+
+Some level sets of the function $T=f(x,y)$ are shown below. The level sets are spaced at intervals of $1^\circ$ C.
+
+\begin{enumerate}
+\item Make a reasonable assumption about the function $f$ based on the level sets. Then use your assumption to find an expression for the temperature function $T=f(x)$. Drag point $P$ below to help.
+\end{enumerate}
 
 \begin{onlineOnly}
     \begin{center}
@@ -24,8 +55,6 @@ Some level curves of the function $z=f(x,y)$ are shown below. The level curves a
 \end{onlineOnly}
 
 \href{https://www.desmos.com/calculator/9ofxjbrege}{163: Level Sets Linear Function}
-
-Make a reasonable assumption about the function $f$ and then find an expression for $f(x,y)$. Explain your reasoning.
 
 \end{question}
 
@@ -43,6 +72,50 @@ Hold a rectangular piece of cardboard so that one of its corners rests on a tabl
 Use vectors to express the height of the opposite corner above the table in terms of the heights of the other two corners.
 
 \end{question}
+
+
+\begin{question} \label{Q9e8f3rg}
+The function
+\[
+   T = f(x,y)
+\]
+exrpresses the temperature (in Celsius degrees) of a point in the $xy$-plane in terms of its coordinates (in meters).
+
+Suppose
+\begin{enumerate}
+\item $f(5,4) = 12$ ,
+
+\item 
+\[
+      \frac{\partial T}{\partial x}\Big|_{(x,y) = (5,4)} = -2, 
+\]
+and
+\item 
+\[
+      \frac{\partial T}{\partial y}\Big|_{(x,y) = (5,4)} = 3, 
+\]
+
+\end{enumerate}
+
+Now do the following.
+
+\begin{enumerate}
+\item Approximate the temperature at the point $(5.2, 4)$. Explain your reasoning.
+
+\item Approximate the temperature at the point $(5, 4.3)$. 
+
+\item Approximate the temperature at the point $(5.2, 4.3)$. Explain your reasoning and how this question is related to Question 3  above.
+
+\item Find a linear function $L(x,y)$ that approximates the temperature function at the point with coordinates $(x,y)$. Assume $(x,y) \sim (5,4)$.
+
+\item What additional information might you need to know about the function $f$ to put a bound on the error in your approximation?
+
+\end{enumerate}
+
+
+\end{question}
+
+
 
 \section{The Main Ideas}
 
@@ -85,42 +158,7 @@ But I find it easier to look instead at the level curves of the function $f$ in 
 
 
 
-\begin{question} \label{Q9e8f3rg}
-The function
-\[
-   T = f(x,y)
-\]
-exrpresses the temperature (in Celsius degrees) of a point in the $xy$-plane in terms of its coordinates (in meters).
 
-Suppose
-\begin{enumerate}
-\item $f(5,4) = 12$ ,
-
-\item 
-\[
-      \frac{\partial T}{\partial x}\Big|_{(x,y) = (5,4)} = -2, 
-\]
-and
-\item 
-\[
-      \frac{\partial T}{\partial y}\Big|_{(x,y) = (5,4)} = 3, 
-\]
-
-\end{enumerate}
-
-Now do the following.
-
-\begin{enumerate}
-\item Approximate the temperature at the point $(5.2, 4,3)$.
-
-\item Find a linear function $L(x,y)$ that approximates the temperature function at the point with coordinates $(x,y)$. Assume $(x,y) \sim (5,4)$.
-
-\item What additional information might you need to know about the function $f$ to put a bound on the error in your approximation?
-
-\end{enumerate}
-
-
-\end{question}
 
 
 \end{document}
