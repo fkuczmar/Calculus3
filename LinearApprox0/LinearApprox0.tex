@@ -29,8 +29,6 @@ Make a reasonable assumption about the function $f$ and then find an expression 
 
 \end{question}
 
-
-\section{The Basic Idea}
 \begin{question} \label{ExMD3fetet3933}
 Hold a rectangular piece of cardboard so that one of its corners rests on a table as shown below.
 
@@ -45,6 +43,46 @@ Hold a rectangular piece of cardboard so that one of its corners rests on a tabl
 Use vectors to express the height of the opposite corner above the table in terms of the heights of the other two corners.
 
 \end{question}
+
+\section{The Main Ideas}
+
+Intuititvely, a function $y=f(x)$ of a single variable is \emph{differentiable} at $x=a$ if its graph looks more and more like a non-vertical straight line as we zoom in toward the point $(a,f(a))$. And the slope of that line is the derivative 
+\[
+   \frac{dy}{dx}\Big|_{x=a} = f^\prime(a).
+\]
+
+Somewhat more precisely, a function $y=f(x)$ is differentiable at $x=a$ if the function can be well-approximated by a linear function near $x=a$. Well-approximated in the sense that the error in the approximation approaches zero faster than the change in the $x$-coordinate.
+
+What this means is that we can find a number $m$ such that the linear approximation
+\[
+   L(x) = f(a) + m(x-a)
+\]
+is good near $x=a$ in the sense that
+\[
+   \lim_{x\to a} \frac{f(x) - L(x)}{x-a} = 0.
+\]
+
+The value of $m$ is the derivative $f^\prime(a)$ and this definition of differentiability is equivalent to requiring
+\[
+ \lim_{x\to a} \frac{f(x) - f(a)}{x-a} 
+\]
+to exist (as a real number). If so, then this limit is by definition the derivative $m=f^\prime(a)$. 
+
+Intuitively, saying a function $z=f(x,y)$ is \emph{differentiable} at $(a,b)$ the graph of $z=f(x,y)$ near the point $P(a,b,f(a,b))$ looks more and more like a non-vertical plane as zoom in closer and closer to $P$. Here non-vertical means not parallel to the $z$-axis.
+
+But I find it easier to look instead at the level curves of the function $f$ in the $xy$-plane.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{lyquf7jmbb}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/lyquf7jmbb}{163: Linear Approximation Level Sets}
+
+
+
+
 
 
 \begin{question} \label{Q9e8f3rg}
