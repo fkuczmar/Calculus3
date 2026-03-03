@@ -34,9 +34,6 @@ expresses the temperature (in Celsius degrees) of a point on the rod in terms of
 
 \href{https://www.desmos.com/calculator/tokaicoaz7}{163: Level Sets Linear Function 2}
 
-
-
-
 \end{question}
 
 \begin{question} \label{Qkdf3r3f00}
@@ -45,7 +42,17 @@ The function $T = f(x,y)$ expresses the temperature (in Celsius degrees) of a po
 Some level sets of the function $T=f(x,y)$ are shown below. The level sets are spaced at intervals of $1^\circ$ C.
 
 \begin{enumerate}
-\item Make a reasonable assumption about the function $f$ based on the level sets. Then use your assumption to find an expression for the temperature function $T=f(x)$. Drag point $P$ below to help.
+\item Approximate the partials 
+\[
+   \frac{\partial T}{\partial x}\Big|_{(x,y) = (1,2)}
+\]
+and
+\[
+   \frac{\partial T}{\partial y}\Big|_{(x,y) = (1,2)}.
+\]
+Include units.
+
+\item Make a reasonable assumption about the function $f$ based on the level sets. Then use your assumption to find an expression for the temperature function $T=f(x,y)$. Drag point $P$ below to help.
 \end{enumerate}
 
 \begin{onlineOnly}
@@ -100,19 +107,72 @@ and
 Now do the following.
 
 \begin{enumerate}
+
+\item State the units of the above partials.
+
 \item Approximate the temperature at the point $(5.2, 4)$. Explain your reasoning.
 
 \item Approximate the temperature at the point $(5, 4.3)$. 
 
-\item Approximate the temperature at the point $(5.2, 4.3)$. Explain your reasoning and how this question is related to Question 3  above.
+\item Approximate the temperature at the point $(5.2, 4.3)$. Explain your reasoning and how this question is related to Question 3  above and the picture below.
 
-\item Find a linear function $L(x,y)$ that approximates the temperature function at the point with coordinates $(x,y)$. Assume $(x,y) \sim (5,4)$.
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{et3nquim6f}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/et3nquim6f}{163: Linear Approximation 1}
+
+
+\item Find a linear function $L(x,y)$ that approximates the temperature function near the point $(5,4)$.
 
 \item What additional information might you need to know about the function $f$ to put a bound on the error in your approximation?
 
 \end{enumerate}
+\end{question}
 
 
+\begin{question} \label{Q90f3mmrzx}
+The function $T = f(x,y)$ expresses the temperature (in Celsius degrees) of a point in the $xy$-plane in terms of its coordinates (measured in meters).
+
+Some level sets of the function $T=f(x,y)$ are shown below. 
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{lyquf7jmbb}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/lyquf7jmbb}{163: Linear Approximation Level Sets}
+
+\begin{enumerate}
+\item Drag the slider $k$ in Line 2 to zoom in on the point $(1,1)$. Zoom in close enough so that the level sets look like those of a linear function.
+
+\item Keeping your eye on Line 4 (the spacing of the level sets), approximate partials
+\[
+   \frac{\partial T}{\partial x}\Big|_{(x,y) = (1,1)}
+\]
+and
+\[
+   \frac{\partial T}{\partial y}\Big|_{(x,y) = (1,1)} .
+\]
+Include units.
+
+\item Now use the fact that 
+\[
+    T =f(x,y) = x^{2}-.5xy^{2}+y^{3}
+\]
+to compute the exact values of the partials above. Compare these with your estimates.
+
+\item Find a linear function $L(x,y)$ that approximates the temperature function near the point $(1,1)$. 
+\end{enumerate}
+
+\end{question}
+
+
+\begin{question} \label{QKnDe2111}
+This is a continuation of Question 
 \end{question}
 
 
