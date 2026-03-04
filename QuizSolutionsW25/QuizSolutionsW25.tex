@@ -534,31 +534,170 @@ to find the first three terms of the Maclaurin series for the function
 \]
 
 \begin{explanation}
-Since
+The key idea is that
 \[
-    \frac{d}{dx} \left(\arcsin x \right) = \frac{1}{\sqrt{1-x^2}},
+    \frac{d}{dx} \left(\arcsin x \right) = \frac{1}{\sqrt{1-x^2}}.
 \]
 %we substitute $x^2$ for $x$ in the expression for $p(x)$ to get
 %\[
 %    p(x^2) = 1 + \frac{1}{2}x^2 + \frac{3}{8}x^4 .
 %\]
-for $x\sim 0$,
+
+Since the first three terms of the MacLaurin series for the function 
 \[
-      \frac{d}{dx} \left(\arcsin x \right) = \frac{1}{\sqrt{1-x^2}} \sim p(x^2)  = 1 + \frac{1}{2}x^2 + \frac{3}{8}x^4 .
+    f(x) = \frac{1}{\sqrt{1-x}}
 \]
-Then 
-\begin{align*}
-\int_0^x \frac{dt}{\sqrt{1-t^2}} & \sim \int_0^x \left( 1 + \frac{1}{2}t^2 + \frac{3}{8}t^4  \right) dt ,
+are
+\[
+  p(x) =  1 + \frac{1}{2}x + \frac{3}{8}x^2,
+\]
+the first three terms of the MacLaurin series for the function
+\[
+    f(x^2) = \frac{1}{\sqrt{1-x^2}}
+\]
+are
+\[
+   p(x^2) = 1 + \frac{1}{2}x^2 + \frac{3}{8}x^4 .
+\]
+
+So the first three terms of the MacLaurin series for
+\[
+   \int_0^x \frac{dt}{\sqrt{1-t^2}} = \arcsin x - \arcsin 0
+\]
+are
+\[
+   \int_0^x \left( 1 + \frac{1}{2}t^2 + \frac{3}{8}t^4  \right) dt = x + \frac{1}{6}x^3 + \frac{1}{40}x^5 . 
+\]
+
+And the first three terms of the MacLaurin series for $\arcsin x$ are
+\[
+    \arcsin 0 + x + \frac{1}{6}x^3 + \frac{1}{40}x^5 = x + \frac{1}{6}x^3 + \frac{1}{40}x^5.
+\]
+
+%\[
+%      \frac{d}{dx} \left(\arcsin x \right) = \frac{1}{\sqrt{1-x^2}} \sim p(x^2)  = 1 + \frac{1}{2}x^2 + \frac{3}{8}x^4 .
+%\]
+%Then 
+%\begin{align*}
+%\int_0^x \frac{dt}{\sqrt{1-t^2}} & \sim \int_0^x \left( 1 + \frac{1}{2}t^2 + \frac{3}{8}t^4  \right) dt ,
  %\int_0^x \left( 1 + \frac{1}{2}t^2 + \frac{3}{8}t^4  \right) dt &= 1 + \frac{1}{2}x^2 + \frac{3}{8}x^4 \right)
-\end{align*}
+%\end{align*}
+%and 
+%\[
+%      \arcsin x - \arcsin 0 \sim x + \frac{1}{6}x^3 + \frac{1}{40}x^5 . 
+%\]
+%Since $\arcsin 0 = 0$,  %the first three terms of the MacLaurin series for $\arcsin x$ are
+%\[
+ % \arcsin x  \sim x + \frac{1}{6}x^3 + \frac{1}{40}x^5 .
+%\]
+\end{explanation}
+
+\end{question}
+
+\section{Quiz 9A}
+
+\begin{question} \label{Q111QWQWQ}
+Let 
+\[
+     z = h(x,y) = 3 - \sqrt{64 - x^2 - 2y^2} .
+\] 
+
+\begin{enumerate}
+\item Sketch the domain of $h$. Label the axes with the appropriate variable names. Include scales on the axes. Explain your reasoning.
+
+\item Write the domain of $h$ in set-builder notation.
+
+\item Find the range of $h$ and write it in set-builder notation. Explain your reasoning.
+
+\item Find equations of three level sets of the function $h$. Then sketch them below. Label the axes with the appropriate variable names. Include scales on the axes. 
+
+\end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+\item The point $(x,y)$ is in the domain of $f$ if and only if
+\[
+          64 - x^2 - 2y^2 \geq 0,
+\]
+or equivalently if and only if
+\[
+    x^2 + 2y^2 \leq 64.
+\]
+
+So the domain is the set of points on or inside the ellipse
+\[
+       x^2 + 2y^2 = 64.
+\]
+The ellipse has intercepts $(\pm 8, 0)$ and $(0, \pm \sqrt{32})$ and the domain of $f$ is sketched below.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{eoemyi7rjd}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\item The domain of $f$ is the set
+\[
+ \{ (x,y)\in \mathbb{R}^2 |  x^2 + 2y^2 \leq 64  \}.
+\]
+
+\item Since 
+\[
+     0\leq  64 - x^2 - 2y^2 \leq 64
+\]
+for $(x,y)$ in the domain of $f$,
+\[
+  0\leq  \sqrt{64 - x^2 - 2y^2} \leq 8, 
+\]
 and
 \[
-      \arcsin x - \arcsin 0 \sim x + \frac{1}{6}x^3 + \frac{1}{40}x^5 . 
+   -5 \leq 3 - \sqrt{64 - x^2 - 2y^2} \leq 3 .
 \]
-Since $\arcsin 0 = 0$,  %the first three terms of the MacLaurin series for $\arcsin x$ are
+So the range of the function
 \[
-  \arcsin x  \sim x + \frac{1}{6}x^3 + \frac{1}{40}x^5 .
+  z = f(x,y) = 3 - \sqrt{64 - x^2 - 2y^2}
 \]
+is the set
+\[
+ \{ z \in \mathbb{R} | -5 \leq z \leq 3 \}.
+\]
+
+\item The level set for $z=-5$ is the curve
+\[
+   -5 = 3 - \sqrt{64 - x^2 - 2y^2}
+\]
+or  equivalently the curve
+\[
+     x^2 + 2y^2 = 0.
+\]
+This level set is the origin $(0,0)$.
+
+The level set for $z=3$ is the curve
+\[
+     3 = 3 - \sqrt{64 - x^2 - 2y^2}
+\]
+or the ellipse
+\[
+     x^2 + 2y^2 = 64.
+\]
+
+The level set for $z=-1$ is the curve
+\[
+     -1 = 3 - \sqrt{64 - x^2 - 2y^2}.
+\]
+This is the ellipse
+\[
+  x^2 + 2y^2 = 48.
+\]
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{hfblaiafvk}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+
+\end{enumerate}
 \end{explanation}
 
 \end{question}
