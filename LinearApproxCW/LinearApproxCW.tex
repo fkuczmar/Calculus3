@@ -10,21 +10,33 @@ Linear approximations of functions of two or more independent variables.
 \maketitle
 
 
+\section{A Distance Function}
+
 \begin{question} \label{QLf3rfds444f}
  
 \begin{enumerate}
 
 \item Find an expression for the function $z=f(x,y)$ that gives the distance (in meters) from the origin to the point with coordinates $(x,y)$ (measured in meters).
 
-\item Sketch the graph of this function. 
-
 \item Sketch some level sets of the function.
 
-\item Find an equation of the tangent plane to the surface $z=f(x,y)$ at the point $(3,4,f(3,4))$.
+\item Sketch the graph of this function by hand. Check your work by activating  
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{vsrw96fijo}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Desmos activity available at
+
+\href{https://www.desmos.com/3d/vsrw96fijo}{163: Distance Function}
+
+\item Find an equation of the tangent plane to the surface $z=f(x,y)$ at the point $(3,4,f(3,4))$. Enter this equation in Line 4 above.
 
 \item Find an expression for the linear function $z=L(x,y)$ that best approximates $f$ near the point $(3,4)$.
 
-\item Use your function in part (e) to approximate the distance from the origin to the point $(3..2, 3.9)$.
+\item Use your function in part (e) to approximate the distance from the origin to the point $(2.8, 4.3)$.
 
 \item Is  your approximation in part (f) greater or less than the actual distance? Explain your reasoning. Do not use a calculator.
 
@@ -32,17 +44,48 @@ Linear approximations of functions of two or more independent variables.
 
 \end{enumerate}
 
-
-
 \begin{onlineOnly}
     \begin{center}
-\desmos{mrbwyydrcm}{900}{600}
+\desmos{eqr9rtyyde}{900}{600}
 \end{center}
 \end{onlineOnly}
 
 Desmos activity available at
 
-\href{https://www.desmos.com/calculator/mrbwyydrcm}{163: Level Curves Hemisphere}
+\href{https://www.desmos.com/calculator/eqr9rtyyde}{163: Distance Function}
+
+\end{question}
+
+\section{Measuring the Height of a Tree}
+
+\begin{question} \label{Qler3r3efr}
+
+You measure your distance from the base of a tree and the angle of elevation to the top of the tree. You then use these measurements to compute the height of the tree above eye level. Suppose the measured distance to be $s$ feet and the computed height to be $h$ feet.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{9wszawkbiy}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Desmos activity available at
+
+\href{https://www.desmos.com/calculator/9wszawkbiy}{163: Height of a Tree}
+
+
+\begin{enumerate}
+
+\item Use the appropriate linear approximation to estimate the error in the computed height of the tree above eye level. Express the error in terms of $s$, $h$, the error $\Delta s$ (in feet) in measuring $s$, and the error $\Delta \theta$ (in radians) in measuring the angle of elevation. Your expression should not involve the measured angle of elevation $\theta$.
+
+\item  Suppose the relative error in measuring the distance is at most $p\%$ and the absolute error in measuring the angle is at most $M$ radians (ie. that $|\Delta \theta|\leq M$). Approximate an upper bound for the relative error in the computed height of the tree above eye level. Your expression should be in terms of  $p\%$, $M$, $s$, and $h$.            %the relative error in the measured distance and the (absolute) error in the measured angle. 
+
+\item Suppose $s=100$, $h=200$, and $p=2$. Use part (b) to approximate the maximum error in measuring the angle of elevation to make the relative error in the computed height at most $5\%$.
+
+\item Suppose $s=400$, $h=200$, and $p=2$. Use part (b) to approximate the maximum error in measuring the angle of elevation to make the relative error in the computed height at most $5\%$.
+
+\item Suppose  you can stand any distance from the tree and still have an unobstructed view of its top. Suppose also that the error in measuring the angle of elevation is at most $\Delta \theta$ radians and that the relative error in measuring the distance to the base of the tree is at most $p\%$. Approximately where should you stand to minimize the relative error in the computed height of the tree above eye level?
+
+\end{enumerate}
 
 \end{question}
 
