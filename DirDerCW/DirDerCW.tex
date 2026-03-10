@@ -11,7 +11,7 @@ Introduction to directional derivatives.
 
 \section{Introduction}
 
-We've learned how to compute rate of change of a temperature function $T=f(x,y)$ in the directions of the vectors ${\bf i} = \langle 1, 0\rangle$, and ${\bf j} = \langle 0, 1 \rangle$. This section is about computing the rate of change of the temperature function (with respect to distance) in the direction given by a vector ${\bf v} = \langle v_1 ,v_2 \rangle$. 
+We've learned how to compute rate of change of a temperature function $T=f(x,y)$ in the directions of the vectors ${\bf i} = \langle 1, 0\rangle$, and ${\bf j} = \langle 0, 1 \rangle$. This section is about computing the rate of change of the temperature function (with respect to distance) in the direction given by a vector ${\bf v} = \langle v_x ,v_y \rangle$. 
 
 The idea is to approximate the temperature function with a linear function in the neighborhood of a point. So we'll start by assuming the temperature function is linear.
 
@@ -20,7 +20,7 @@ The idea is to approximate the temperature function with a linear function in th
 
 \section{Linear Functions}
 
-\begin{question}  \label{Ee53efehhy}
+\begin{question}  \label{Ee53efehdhy}
 
 Some level curves of a temperature function $T = f(x,y)$ are shown below. The output is measured in Celsius degrees and the input in meters.
 
@@ -92,6 +92,45 @@ Then make a similar computation for rate of change in the direction of the vecto
 \end{enumerate}
 \end{question}
 
+
+
+
+\section{General Differentiable Functions}
+
+\begin{question} \label{Qdlf3r3r3}
+
+Some level curves of a temperature function $T = f(x,y)$ are shown below. The output is measured in Celsius degrees and the input in meters.
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{s1u2zdsq99}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Access desmos interactives through the online version of this text at
+ 
+\href{https://www.desmos.com/calculator/s1u2zdsq99}{163: Linear Approximation Level Sets 2}.
+
+\begin{enumerate}
+\item Drag the slider $k$ to zoom in on the point $(1,1)$. Then estimate the rate of change of temperature with respect to distance at the point $(1,1)$ in the direction of the vector ${\bf v}=\langle -2, -1 \rangle$. Include units.
+
+\item Use the fact that 
+\[
+  T  = f\left(x,y\right)=x^{2}-0.5xy^{2}+y^{3}
+\]
+to compute the exact rate of change in part (a).
+
+\item In what direction from the point $(1,1)$ does the temperature increase at the fastest rate? Find this rate.
+
+\item In what direction from the point $(1,1)$ does the temperature decrease at the fastest rate? Find this rate.
+
+\item In what directions from the point $(1,1)$ does the temperature increase at one-third of its maximum rate? Use vector arithmetic, not algebra to find the direction(s)..
+
+\item Find all directions from the point $(1,1)$ in which the  temperature remains constant.
+\end{enumerate}
+
+\end{question}
 
 
 
