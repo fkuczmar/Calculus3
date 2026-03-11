@@ -65,7 +65,7 @@ Note:
 
 \item ${\bf v} = \langle 1 ,2 \rangle$, where $\theta \sim 1.1$
 
-\item ${\bf w} = \langle -3,1\rangle$, where $\theta \sim 2.8$.
+\item ${\bf w} = \langle 2, -3\rangle$, where $\theta \sim 5.3$.
 
 \end{enumerate}
 
@@ -97,6 +97,35 @@ Then make a similar computation for rate of change in the direction of the vecto
 
 \section{General Differentiable Functions}
 
+
+\begin{question} \label{Qmer34}
+
+Suppose that from your current position, the temperature increases at the rate of $0.02^\circ$C/meter in the direction of the vector $\langle 1, 0 \rangle$ and that it increases at the rate of $0.04^\circ$C/meter in the direction of the vector $\langle 0,1\rangle$. What do you think is true about the rate at which the temperature changes in the direction of the vector ${\bf v} = \langle 1,1\rangle$?
+
+\begin{enumerate}
+
+\item The temperature increases at the rate of exactly $0.03^\circ$C/meter.
+
+\item The temperature increases at a rate somewhere between $0.02^\circ$C/meter and $0.04^\circ$C/meter, but not necessarily at the exact rate of $0.03^\circ$C/meter.
+
+\item The temperature increases at a rate less than $0.02^\circ$C/meter.
+
+\item The temperature increases at a rate greater than $0.04^\circ$C/meter.
+
+\item The temperature decreases.
+
+\item We cannot say, even if we assume (as do the above choices) that the temperature is a differentiable function of position.
+
+Try to justify your response with an intuitive argument without doing any computations.
+\begin{freeResponse}
+\end{freeResponse}
+
+\item Compute the exact rate of change to see if you were correct.
+\end{enumerate}
+
+\end{question}
+
+
 \begin{question} \label{Qdlf3r3r3}
 
 Some level curves of a temperature function $T = f(x,y)$ are shown below. The output is measured in Celsius degrees and the input in meters.
@@ -121,6 +150,8 @@ Access desmos interactives through the online version of this text at
 \]
 to compute the exact rate of change in part (a).
 
+\item Find the exact rate of change in the temperature with respect to distance at the point $(2,2)$ in the direction toward the point $(-1,1)$.
+
 \item In what direction from the point $(1,1)$ does the temperature increase at the fastest rate? Find this rate.
 
 \item In what direction from the point $(1,1)$ does the temperature decrease at the fastest rate? Find this rate.
@@ -132,6 +163,35 @@ to compute the exact rate of change in part (a).
 
 \end{question}
 
+\section{A Lake Floor}
 
+\begin{question} \label{Q761zd}
+Relative to the horizontal, the bottom of a lake directly below your rowboat slopes downward at an angle of $\alpha=\arctan(0.3)$ in the direction due east. The bottom slopes  downward at an angle of $\beta=\arctan(0.2)$ in the direction due east.
+
+Assume the depth of the lake below your boat is a differentiable function of your position.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{16qfpy1rei}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Access desmos interactives through the online version of this text at
+ 
+\href{https://www.desmos.com/3d/16qfpy1rei}{163: Lake Floor}
+
+\begin{enumerate}
+\item What angle with the horizontal does the bottom make with the horizontal under your boat in the direction of the bearing $\theta_1 = 0.5$ radians? The bearing is measured counterclockwise from the east.
+
+\item In what directions does the lake bottom beneath your boat slope upward?
+
+\item In what direction does the lake bottom beneath your boat slope upward at the steepest angle? Find this angle.
+
+\item If you happened to be passing your current position with a speed of $4$ meters/sec heading directly due northeast, at what rate would the depth of the water beneath your boat have been changing at this instant? 
+
+\item A fish swimming on the bottom of the lake stays directly below your boat at all times. Find the fish's speed at the moment in part (d).
+\end{enumerate}
+
+\end{question}
 
 \end{document}
